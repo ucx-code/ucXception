@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_3	2016-03-30 03:13:27.227540000 +0100
+@@ -25,7 +25,7 @@
+     Reset();
+     FILE* infile = fopen(filename, "rb");
+     if (!infile) {
+-        fprintf(stderr, "Unable to open file: %s\n", filename);
++        ;
+         ErrorCode = OpenError;
+         return false;
+     }

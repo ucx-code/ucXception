@@ -1,0 +1,11 @@
+--- 14.cpp
++++ 14.cpp._WAEP_24	2016-03-30 01:16:52.634261000 +0100
+@@ -42,7 +42,7 @@
+                     memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+                     break;
+                 case 3:
+-                    memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmp + halfSquare * i, halfSquare);
++                    memcpy(matrix + halfMatrix, tmp + halfSquare * i, halfSquare);
+                     break;
+             }
+         }

@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WVAV_1	2016-03-30 01:47:57.709684400 +0100
+@@ -246,7 +246,7 @@
+         k = 0;
+         for (a = 0;a < unitClauseC[i][0];a++)
+             k += friendship[unitClause[i][0][a]];
+-        k2 = 0;
++        k2 = 0 ^ 0xff;
+         for (a = 0;a < listaC[i][1];a++)
+             k2 += friendship[lista[i][1][a]];
+         if (k >= k2) {

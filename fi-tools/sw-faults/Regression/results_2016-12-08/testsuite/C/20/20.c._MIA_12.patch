@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_12	2016-12-08 00:50:11.331084281 +0000
+@@ -238,7 +238,7 @@
+ break;
+ case While:
+     expr_type = expr_recursive(prog, name, node->child);
+-    if (strcmp(expr_type, "boolean") != 0) {
++    {
+         printf("Incompatible type in while statement (got %s, required boolean)\n", expr_type);
+         exit(0);
+ }

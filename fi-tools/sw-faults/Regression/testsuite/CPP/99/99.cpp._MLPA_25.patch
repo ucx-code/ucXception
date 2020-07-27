@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_25	2016-03-30 02:05:05.158175500 +0100
+@@ -190,8 +190,6 @@
+     lastRobotZ = 0.0;
+     robotYDir = 1;
+     disparo = 0;
+-    CAMERA = -1;
+-    iniciarPrograma();
+ }
+ 
+ void iniciaParticulasChuva(int i)

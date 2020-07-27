@@ -1,0 +1,11 @@
+--- 24.cpp
++++ 24.cpp._MIA_2	2016-03-30 01:24:10.331542600 +0100
+@@ -22,7 +22,7 @@
+                 ++count;
+             }
+             for (a = 0;a < counter[i];a++){
+-                if (tmp[vizinhos[i][a]] == 0) {
++                {
+                     tmp[vizinhos[i][a]] = 1;
+                     ++count;
+                 }

@@ -1,0 +1,13 @@
+--- 83.cpp
++++ 83.cpp._MLPA_8	2016-03-30 01:55:36.317185900 +0100
+@@ -88,10 +88,6 @@
+     int i;
+     for (i = begin + 1;i < end;i++){
+         c[i] = 1;
+-        upJK(c, i, end);
+-        rec(c, i, end);
+-        c[i] = 0;
+-        upJK(c, i, end);
+     }
+ }
+ int c[200];

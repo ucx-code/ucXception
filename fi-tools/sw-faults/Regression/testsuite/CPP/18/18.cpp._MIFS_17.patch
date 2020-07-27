@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MIFS_17	2016-03-30 01:21:26.015707000 +0100
+@@ -134,8 +134,6 @@
+             if (encontrou) 
+                 break;
+         }
+-        if (!encontrou) 
+-            printf("No Path!\n");
+     }
+     return 0;
+ }

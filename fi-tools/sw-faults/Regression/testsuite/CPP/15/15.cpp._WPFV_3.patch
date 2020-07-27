@@ -1,0 +1,11 @@
+--- 15.cpp
++++ 15.cpp._WPFV_3	2016-03-30 01:17:01.842931600 +0100
+@@ -13,7 +13,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target, r);
++        rec(n + 1, target, target);
+     }else{
+         unsigned int halfSquare = quickPow[n - 1];
+         unsigned int halfSquare2 = quickPow[(n - 1) * 2];

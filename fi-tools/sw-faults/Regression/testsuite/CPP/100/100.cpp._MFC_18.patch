@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_18	2016-03-30 03:16:44.500618300 +0100
+@@ -123,7 +123,7 @@
+ {
+     FILE* outfile = fopen(filename, "wb");
+     if (!outfile) {
+-        fprintf(stderr, "Unable to open file: %s\n", filename);
++        ;
+         ErrorCode = OpenError;
+         return false;
+     }

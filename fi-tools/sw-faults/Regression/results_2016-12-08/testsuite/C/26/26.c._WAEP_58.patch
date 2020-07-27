@@ -1,0 +1,11 @@
+--- ./26.c
++++ ./26.c._WAEP_58	2016-12-08 00:50:27.435083993 +0000
+@@ -119,7 +119,7 @@
+                             verifica(l, c + 1, '/', aux);
+ 
+                         if (ant[1] != c - 1 && encont == 0) 
+-                            verifica(l, c - 1, '/', aux);
++                            verifica(l, c, '/', aux);
+                     }
+ 
+             if (encont == 1) 

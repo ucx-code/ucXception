@@ -1,0 +1,13 @@
+--- 100.cpp
++++ 100.cpp._MLPA_42	2016-03-30 03:14:49.342932200 +0100
+@@ -87,10 +87,7 @@
+ short RgbImage::readShort(FILE* infile)
+ {
+     unsigned char lowByte, hiByte;
+-    lowByte = fgetc(infile);
+-    hiByte = fgetc(infile);
+     short ret = hiByte;
+-    ret <<= 8;
+     ret |= lowByte;
+     return ret;
+ }

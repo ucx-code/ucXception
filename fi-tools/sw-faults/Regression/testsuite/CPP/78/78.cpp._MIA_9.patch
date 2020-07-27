@@ -1,0 +1,10 @@
+--- 78.cpp
++++ 78.cpp._MIA_9	2016-03-30 01:51:24.423558600 +0100
+@@ -129,7 +129,6 @@
+             return;
+         }
+         int actual = calcB(c, begin, end);
+-        if (actual > best) 
+             return;
+     }
+     if (begin == end) {

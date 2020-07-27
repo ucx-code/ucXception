@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2372	2016-03-30 02:52:50.735773100 +0100
+@@ -1227,9 +1227,6 @@
+     glRotatef(angR, 0.0, 1.0, 0.0);
+     if (op_robot == 1) {
+         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, silverAmb);
+-        glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, silverDif);
+-        glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, silverSpec);
+-        glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, silverCoef);
+     }else
+         if (op_robot == 2) {
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, bronzeAmb);

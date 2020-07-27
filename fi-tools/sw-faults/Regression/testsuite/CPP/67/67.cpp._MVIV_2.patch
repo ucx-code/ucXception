@@ -1,0 +1,11 @@
+--- 67.cpp
++++ 67.cpp._MVIV_2	2016-03-30 01:44:20.154791400 +0100
+@@ -76,7 +76,7 @@
+     quick_sort(&begin[0], n);
+     quick_sort(&end[0], n);
+     unsigned int conta = 0;
+-    unsigned int a = 0;
++    unsigned int a = a;
+     for (i = 0;i < n;i++){
+         if (begin[i] < end[a]) 
+             ++conta;

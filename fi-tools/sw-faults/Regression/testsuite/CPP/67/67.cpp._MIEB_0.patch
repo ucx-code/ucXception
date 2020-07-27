@@ -1,0 +1,12 @@
+--- 67.cpp
++++ 67.cpp._MIEB_0	2016-03-30 01:44:20.378819600 +0100
+@@ -78,9 +78,6 @@
+     unsigned int conta = 0;
+     unsigned int a = 0;
+     for (i = 0;i < n;i++){
+-        if (begin[i] < end[a]) 
+-            ++conta;
+-        else
+             ++a;
+     }
+     printf("%d\n", conta);

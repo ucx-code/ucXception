@@ -1,0 +1,11 @@
+--- 2.cpp
++++ 2.cpp._MFC_14	2016-03-30 01:10:18.033435600 +0100
+@@ -87,7 +87,7 @@
+                 if (recurseSize != 0) 
+                     printf(",");
+ 
+-                printf("(%d,%d)", getY(pos), getX(pos));
++                ;
+                 return 1;
+             }
+         }

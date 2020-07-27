@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WAEP_20	2016-03-30 00:33:40.757298600 +0100
+@@ -133,7 +133,7 @@
+     int j;
+     if (li < ls) {
+         j = rearranjaCol(v, li, ls);
+-        QsortCol(v, li, j - 1);
++        QsortCol(v, li, j);
+         QsortCol(v, j + 1, ls);
+     }
+ }

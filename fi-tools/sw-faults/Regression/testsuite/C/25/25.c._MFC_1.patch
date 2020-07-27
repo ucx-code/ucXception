@@ -1,0 +1,11 @@
+--- 25.c
++++ 25.c._MFC_1	2016-03-30 00:52:21.483276000 +0100
+@@ -20,7 +20,7 @@
+         int halfSquare2 = halfSquare * halfSquare;
+         int halfMatrix = halfSquare2 * 2;
+         int i;
+-        memcpy(tmp, matrix, halfSquare2);
++        ;
+         for (i = 0;i < halfSquare2;i++)
+             tmpInv[i] = 97 - tmp[i];
+         for (i = 0;i < halfSquare;i++){

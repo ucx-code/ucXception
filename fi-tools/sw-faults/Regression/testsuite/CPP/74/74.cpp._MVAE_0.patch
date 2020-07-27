@@ -1,0 +1,10 @@
+--- 74.cpp
++++ 74.cpp._MVAE_0	2016-03-30 01:49:12.452516700 +0100
+@@ -132,7 +132,6 @@
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+ 
+             choices[i][a++] = tmp;
+-            k = tmp;
+             scanf("%d", &tmp);
+         }
+         if (a == 1) {

@@ -1,0 +1,12 @@
+--- 37.cpp
++++ 37.cpp._MIA_0	2016-03-30 01:33:40.385079900 +0100
+@@ -9,9 +9,7 @@
+ int rec(int pos, int n, int count, int estadoCounter)
+ {
+     ++count;
+-    if (count > n / 2) 
+         return -1;
+-
+     if (count >= melhor) 
+         return -1;
+ 

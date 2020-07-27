@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_51	2016-03-30 02:10:09.297053200 +0100
+@@ -355,7 +355,7 @@
+ {
+     int i;
+     for (i = 0;i < 14;i++){
+-        glGenTextures(1, &texture[i]);
++        ;
+         glBindTexture(GL_TEXTURE_2D, texture[i]);
+         if (i == 0) 
+             imag.LoadBmpFile("tex/chao.bmp");

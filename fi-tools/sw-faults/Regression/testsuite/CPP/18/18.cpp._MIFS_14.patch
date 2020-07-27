@@ -1,0 +1,12 @@
+--- 18.cpp
++++ 18.cpp._MIFS_14	2016-03-30 01:21:11.717390100 +0100
+@@ -104,9 +104,6 @@
+ {
+     int i, width, height;
+     while (true){
+-        if (scanf("%d %d\n", &height, &width) != 2) 
+-            return 0;
+-
+         int matrixSize = (width + 1) * height;
+         for (i = 0;i < matrixSize;i++){
+             buffer[i] = getchar();

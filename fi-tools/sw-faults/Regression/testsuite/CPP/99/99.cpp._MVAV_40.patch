@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_40	2016-03-30 02:58:40.235590100 +0100
+@@ -1720,7 +1720,6 @@
+             pontos = 0;
+             instrucoes = 0;
+             acerca = 0;
+-            iniciarjogo = 0;
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }
+         if ((x > 105) && (x < 135) && (y > 253) && (y < 264)) {

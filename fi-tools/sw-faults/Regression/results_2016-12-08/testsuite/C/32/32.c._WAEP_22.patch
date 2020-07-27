@@ -1,0 +1,11 @@
+--- ./32.c
++++ ./32.c._WAEP_22	2016-12-08 00:50:45.807083664 +0000
+@@ -80,7 +80,7 @@
+         gerarMatrix(lvl, rot);
+         for (i = 0;i < size;i++){
+             matrix[i][size] = '\0';
+-            printf("%s\n", matrix[i]);
++            printf("%s\n", matrix);
+         }
+     }
+     return 0;

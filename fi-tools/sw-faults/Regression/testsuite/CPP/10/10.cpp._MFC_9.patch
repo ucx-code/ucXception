@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._MFC_9	2016-03-30 01:15:24.247008500 +0100
+@@ -97,7 +97,7 @@
+                             printf(",");
+ 
+                         int posTmp = answer.top();
+-                        printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));
++                        ;
+                         answer.pop();
+                     }
+                     printf("\n");

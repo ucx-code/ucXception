@@ -1,0 +1,11 @@
+--- 33.c
++++ 33.c._WPFV_16	2016-03-30 01:00:59.865068900 +0100
+@@ -47,7 +47,7 @@
+         return;
+     }
+     for (i = pos + 1;i < n;i++){
+-        addPrint(i, nPrint + 1, print);
++        addPrint(nPrint, nPrint + 1, print);
+     }
+     print[pos]--;
+     for (i = 0;i < n;i++){

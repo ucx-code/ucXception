@@ -1,0 +1,13 @@
+--- 44.cpp
++++ 44.cpp._MIEB_0	2016-03-30 01:38:18.383729200 +0100
+@@ -13,9 +13,7 @@
+     for (i = 1;i <= n;i++){
+         for (j = 1;j <= m;j++){
+             for (a = 1;a <= nCoursesDept[i];a++){
+-                if (w[i][a] > j) 
+-                    K[i][j] = K[i - 1][j];
+-                else{
++                {
+                     int maximo = K[i][j];
+                     if (K[i - 1][j] > maximo) 
+                         maximo = K[i - 1][j];

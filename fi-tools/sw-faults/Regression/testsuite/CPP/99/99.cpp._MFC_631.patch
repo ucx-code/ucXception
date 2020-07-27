@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_631	2016-03-30 02:53:13.683652500 +0100
+@@ -1294,7 +1294,7 @@
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whitePlasticAmb);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, whitePlasticDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whitePlasticSpec);
+-            glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, whitePlasticCoef);
++            ;
+         }else
+             if (op_robot == 3) {
+                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, yellowRubberAmb);

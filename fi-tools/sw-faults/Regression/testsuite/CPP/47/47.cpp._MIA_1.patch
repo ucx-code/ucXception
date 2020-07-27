@@ -1,0 +1,10 @@
+--- 47.cpp
++++ 47.cpp._MIA_1	2016-03-30 01:38:49.414815500 +0100
+@@ -19,7 +19,6 @@
+                 register unsigned int la = w[i][a];
+                 if (la <= j) {
+                     novoValor = K[before][j - w[i][a]] + v[i][a];
+-                    if (novoValor > melhorValor) 
+                         melhorValor = novoValor;
+                 }
+             }

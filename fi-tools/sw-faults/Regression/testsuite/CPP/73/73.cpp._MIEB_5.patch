@@ -1,0 +1,13 @@
+--- 73.cpp
++++ 73.cpp._MIEB_5	2016-03-30 01:47:46.044011100 +0100
+@@ -216,9 +216,7 @@
+             scanf("%d", &tmp);
+         }
+         if (a == 1) {
+-            if (k < 0) {
+-                unitClause[abs(k) - 1][0][unitClauseC[abs(k) - 1][0]++] = i;
+-            }else{
++            {
+                 unitClause[abs(k) - 1][1][unitClauseC[abs(k) - 1][1]++] = i;
+             }
+         }

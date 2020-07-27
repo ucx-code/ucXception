@@ -1,0 +1,11 @@
+--- 7.cpp
++++ 7.cpp._MLPA_3	2016-03-30 01:13:47.282838400 +0100
+@@ -66,8 +66,6 @@
+                 tmp2[squared] = '\0';
+                 printf("%s\n", tmp2);
+             }else{
+-                memcpy(matrix2, tmp2 + (i * squared), squared);
+-                matrix2[squared] = '\0';
+                 printf("%s\n", matrix2);
+             }
+         }

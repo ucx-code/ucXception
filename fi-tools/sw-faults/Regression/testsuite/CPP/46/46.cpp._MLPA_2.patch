@@ -1,0 +1,12 @@
+--- 46.cpp
++++ 46.cpp._MLPA_2	2016-03-30 01:38:37.029241100 +0100
+@@ -24,9 +24,6 @@
+             }
+             K[agora][j] = melhorValor;
+         }
+-        agora = agora ^ before;
+-        before = agora ^ before;
+-        agora = agora ^ before;
+     }
+     return K[before][m];
+ }

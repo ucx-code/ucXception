@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2299	2016-03-30 02:52:24.613311000 +0100
+@@ -1373,9 +1373,6 @@
+                 }
+         }
+     }
+-    glPopMatrix();
+-    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, blackPlasticAmb);
+-    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, blackPlasticDif);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+     glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+     glPushMatrix();

@@ -1,0 +1,11 @@
+--- 67.cpp
++++ 67.cpp._WPFV_2	2016-03-30 01:44:19.401195600 +0100
+@@ -73,7 +73,7 @@
+     madvise(src, statbuf.st_size, MADV_WILLNEED | MADV_SEQUENTIAL);
+     readM();
+     madvise(src, statbuf.st_size, MADV_DONTNEED);
+-    quick_sort(&begin[0], n);
++    quick_sort(&begin[0], i);
+     quick_sort(&end[0], n);
+     unsigned int conta = 0;
+     unsigned int a = 0;

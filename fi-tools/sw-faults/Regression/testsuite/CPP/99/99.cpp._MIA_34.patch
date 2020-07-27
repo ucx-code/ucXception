@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_34	2016-03-30 02:54:25.024783200 +0100
+@@ -1467,7 +1467,7 @@
+ 
+ void TimerRobot(int value)
+ {
+-    if (pausegame == 1) {
++    {
+         if (robotYDir == 1) 
+             robotY += 0.06 * robotYDir;
+         else

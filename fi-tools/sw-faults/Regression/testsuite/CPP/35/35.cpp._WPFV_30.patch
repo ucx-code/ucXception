@@ -1,0 +1,11 @@
+--- 35.cpp
++++ 35.cpp._WPFV_30	2016-03-30 01:31:43.027895300 +0100
+@@ -55,7 +55,7 @@
+ {
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", counter);
+         return 0;
+     }
+     int tmpA, tmpB;

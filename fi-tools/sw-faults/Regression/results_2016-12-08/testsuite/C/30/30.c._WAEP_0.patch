@@ -1,0 +1,11 @@
+--- ./30.c
++++ ./30.c._WAEP_0	2016-12-08 00:50:40.287083763 +0000
+@@ -103,7 +103,7 @@
+     short line = 0, col = 0, count = 0, aux, i;
+     while (scanf("%hd %hd", &nlines, &ncols) != EOF){
+         for (i = 0;i < nlines;i++){
+-            scanf("%s", map[i]);
++            scanf("%s", map);
+         }
+         for (col = 0;col < ncols;col++){
+             if (map[0][col] == '\\') {

@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._MLPA_0	2016-03-30 00:30:48.141890300 +0100
+@@ -9,8 +9,6 @@
+     int nString, i, tam = 0;
+     char** pWord;
+     char *numStrings, *actWord, *finalWord;
+-    numStrings = (char*)malloc(5 * sizeof (char));
+-    scanf("%s", numStrings);
+     while (checkWord(numStrings) == 1)
+         scanf("%s", numStrings);
+     nString = atoi(numStrings);

@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MFC_30	2016-03-30 00:36:22.153823400 +0100
+@@ -126,7 +126,7 @@
+             printf("\telse_%d:\n", if_c);
+             printf("\t%%%d = load i8** @.false\n", ++counter);
+             printf("\t%%%d = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i8* %%%d)\n", counter + 1, counter);
+-            printf("\tbr label %%ifcount_%d\n", if_c);
++            ;
+             counter++;
+             printf("\tifcount_%d:\n", if_c);
+         }

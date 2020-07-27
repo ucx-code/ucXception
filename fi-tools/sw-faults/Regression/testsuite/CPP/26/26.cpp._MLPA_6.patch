@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MLPA_6	2016-03-30 01:25:27.919403700 +0100
+@@ -91,8 +91,6 @@
+     }
+     int tmpA, tmpB;
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+-        vizinhos[tmpA - 1][counter[tmpA - 1]] = tmpB - 1;
+-        vizinhos[tmpB - 1][counter[tmpB - 1]] = tmpA - 1;
+         counter[tmpA - 1]++;
+         counter[tmpB - 1]++;
+     }

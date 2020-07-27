@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_458	2016-03-30 02:44:01.083489200 +0100
+@@ -959,7 +959,7 @@
+                 glTranslatef(debris[i].position[0], debris[i].position[1], debris[i].position[2]);
+                 glRotatef(debris[i].orientation[0], 1.0, 0.0, 0.0);
+                 glRotatef(debris[i].orientation[1], 0.0, 1.0, 0.0);
+-                glRotatef(debris[i].orientation[2], 0.0, 0.0, 1.0);
++                ;
+                 glScalef(debris[i].scale[0], debris[i].scale[1], debris[i].scale[2]);
+                 glBegin (GL_TRIANGLES);
+                 glVertex3f(0.0, 0.5, 0.0);

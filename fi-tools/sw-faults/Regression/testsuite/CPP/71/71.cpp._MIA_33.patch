@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MIA_33	2016-03-30 01:46:06.188910000 +0100
+@@ -138,7 +138,7 @@
+         fread(buffer, 1, matrixSize, stdin);
+         bool encontrou = false;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+-            if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {
++            {
+                 recurseSize = 0;
+                 int result = recurse(i, matrixSize, width);
+                 if (result == 1) {

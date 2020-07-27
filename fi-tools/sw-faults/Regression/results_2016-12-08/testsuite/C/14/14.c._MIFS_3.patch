@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MIFS_3	2016-12-08 00:49:47.307084712 +0000
+@@ -115,9 +115,6 @@
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = type;
+     type->next = id;
+-    if (moreIDS != NULL) 
+-        id->next = moreIDS;
+-
+     node->type = VarDecl;
+     node->id = NULL;
+     return node;

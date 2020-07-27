@@ -1,0 +1,11 @@
+--- 89.cpp
++++ 89.cpp._MIA_0	2016-03-30 02:01:45.865464800 +0100
+@@ -7,7 +7,7 @@
+ 
+ bool dfs(int node, int c)
+ {
+-    if ((color[node] == c) || (color[node] == -c)) {
++    {
+         if (color[node] == c) {
+             return true;
+         }else{

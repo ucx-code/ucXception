@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._MLPA_8	2016-03-30 01:52:59.837235300 +0100
+@@ -175,8 +175,6 @@
+             else
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+ 
+-            choices[i][a++] = tmp;
+-            k = tmp;
+             scanf("%d", &tmp);
+         }
+         if (a == 1) {

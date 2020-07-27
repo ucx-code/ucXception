@@ -1,0 +1,11 @@
+--- 70.cpp
++++ 70.cpp._MIFS_4	2016-03-30 01:45:28.065922300 +0100
+@@ -62,8 +62,6 @@
+         int conta;
+         for (conta = 0;conta < 4;conta++){
+             scanf("%d", &escolhas[i][conta]);
+-            if (escolhas[i][conta] == 0) 
+-                break;
+         }
+         counterEscolhas[i] = conta;
+     }

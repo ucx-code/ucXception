@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MFC_22	2016-03-30 00:36:11.955255000 +0100
+@@ -116,7 +116,7 @@
+             expr = gen_expression(method_name, node->child, prog);
+             if_c++;
+             printf("\t%%ifcond_%d = icmp eq i1 1 , %s\n", if_c, expr);
+-            printf("\tbr i1 %%ifcond_%d, label %%then_%d, label %%else_%d\n", if_c, if_c, if_c);
++            ;
+             printf("\tthen_%d:\n", if_c);
+             counter++;
+             printf("\t%%%d = load i8** @.true\n", counter);

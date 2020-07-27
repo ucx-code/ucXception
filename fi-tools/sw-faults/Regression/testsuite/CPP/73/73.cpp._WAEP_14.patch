@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WAEP_14	2016-03-30 01:47:25.968397600 +0100
+@@ -185,7 +185,7 @@
+ 
+     if (gp1 >= best) {
+         c[begin] = 1;
+-        rec(c, begin + 1, end);
++        rec(c, begin, end);
+     }
+     if (gn1 >= best) {
+         c[begin] = 0;

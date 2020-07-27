@@ -1,0 +1,10 @@
+--- 28.c
++++ 28.c._MVAE_0	2016-03-30 00:57:14.965628300 +0100
+@@ -30,7 +30,6 @@
+         while (fila[k][0] != 0){
+             if (fila[k][0] < fila[ant][1] && fila[k][1] > fila[ant][1]) {
+                 alt += (fila[k][1] - fila[ant][1]);
+-                ant = k;
+             }else
+                 if (fila[k][0] > fila[ant][1]) {
+                     alt += (fila[k][1] - fila[k][0]);

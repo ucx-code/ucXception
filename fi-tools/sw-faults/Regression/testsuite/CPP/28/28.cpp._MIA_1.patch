@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._MIA_1	2016-03-30 01:26:07.285007500 +0100
+@@ -27,7 +27,7 @@
+         printf("%d", state[i]);
+     printf("\n");
+     for (i = 1;i <= n;i++){
+-        if (state[i] == 2) {
++        {
+             for (a = 0;a < counter[i];a++){
+                 printf("Marquei o %d\n", vizinhos[i][a]);
+                 marca[vizinhos[i][a]] = 1;

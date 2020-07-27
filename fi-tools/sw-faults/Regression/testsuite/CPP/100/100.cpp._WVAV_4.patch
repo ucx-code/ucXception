@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WVAV_4	2016-03-30 03:16:50.106830400 +0100
+@@ -152,7 +152,7 @@
+             fputc(*(cPtr + 2), outfile);
+             fputc(*(cPtr + 1), outfile);
+             fputc(*(cPtr + 0), outfile);
+-            cPtr += 3;
++            cPtr += 0 ^ 0xff;
+         }
+         int k = 3 * NumCols;
+         for (;k < GetNumBytesPerRow();k++){

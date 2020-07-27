@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._WPFV_30	2016-03-30 01:48:48.379956600 +0100
+@@ -102,7 +102,7 @@
+     c[begin] = 0;
+     actual = calcB(c, begin + 1, end);
+     c[begin] = 1;
+-    actual2 = calcB(c, begin + 1, end);
++    actual2 = calcB(c, begin + 1, n);
+     if (actual2 < best) {
+         c[begin] = 1;
+         rec(c, begin + 1, end);

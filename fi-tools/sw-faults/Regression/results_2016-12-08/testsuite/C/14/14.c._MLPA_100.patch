@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_100	2016-12-08 00:49:48.871084684 +0000
+@@ -218,9 +218,6 @@
+ is_node* insertST_ret_null()
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = NULL;
+-    node->next = NULL;
+-    node->type = Return;
+     node->id = NULL;
+     return node;
+ }

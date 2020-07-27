@@ -1,0 +1,11 @@
+--- 36.c
++++ 36.c._MLAC_0	2016-03-30 01:02:09.010105600 +0100
+@@ -12,7 +12,7 @@
+             scanf("%hd %hd", &aux1, &aux2);
+             if (z == 0) {
+                 for (k = 0;k < ects;k++){
+-                    if (aux1 == (k + 1) && sack[i - 1][k] < aux2) {
++                    if (sack[i - 1][k] < aux2) {
+                         sack[i][k] = aux2;
+                     }else
+                         if (aux1 < (k + 1) && sack[i - 1][k] < (aux = (aux2 + sack[i - 1][k - aux1]))) {

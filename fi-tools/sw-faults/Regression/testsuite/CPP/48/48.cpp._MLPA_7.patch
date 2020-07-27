@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MLPA_7	2016-03-30 01:39:06.639004100 +0100
+@@ -69,8 +69,6 @@
+                 if (recurseSize != 0) 
+                     strcat2((char*)",", 1);
+ 
+-                sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
+                 return 1;
+             }
+         }

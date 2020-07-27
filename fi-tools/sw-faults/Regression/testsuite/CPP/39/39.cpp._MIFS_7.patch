@@ -1,0 +1,18 @@
+--- 39.cpp
++++ 39.cpp._MIFS_7	2016-03-30 01:36:39.288017900 +0100
+@@ -55,15 +55,6 @@
+                 return 1;
+             }
+         }
+-        if (bufferPosWidth2 == '\\') {
+-            if (recurse(pos - width - 2, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    printf(",");
+-
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
+-                return 1;
+-            }
+-        }
+     }
+     if ((bufferPos == '\\')) {
+         if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {

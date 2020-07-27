@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._MLAC_3	2016-03-30 01:15:05.920679300 +0100
+@@ -35,7 +35,7 @@
+     int bufferPos2 = (buffer[pos + 2] & 0x7F);
+     int bufferPosN1 = (buffer[pos - 1] & 0x7F);
+     int bufferPosN2 = (buffer[pos - 2] & 0x7F);
+-    if (((bufferPos == '/') && (bufferPosWidth == '|')) || ((bufferPos == '/') && (bufferPosWidth == '/')) || ((bufferPos == '|') && (bufferPosWidth == '/'))) {
++    if (((bufferPos == '/')) || ((bufferPos == '/') && (bufferPosWidth == '/')) || ((bufferPos == '|') && (bufferPosWidth == '/'))) {
+         if (recurse(pos + width, max, width) == 1) {
+             answer.push(pos);
+             return 1;

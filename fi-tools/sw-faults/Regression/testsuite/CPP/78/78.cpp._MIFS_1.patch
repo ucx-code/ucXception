@@ -1,0 +1,14 @@
+--- 78.cpp
++++ 78.cpp._MIFS_1	2016-03-30 01:51:13.682692100 +0100
+@@ -33,11 +33,6 @@
+                 for (k = 0;k < 3;k++){
+                     if (choices[j][k] == 0) 
+                         break;
+-
+-                    if (choices[j][k] == i + 1) {
+-                        tem = true;
+-                        break;
+-                    }
+                 }
+             }
+             if (tem == true) {

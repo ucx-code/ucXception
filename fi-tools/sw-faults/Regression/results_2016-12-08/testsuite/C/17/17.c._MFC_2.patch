@@ -1,0 +1,11 @@
+--- ./17.c
++++ ./17.c._MFC_2	2016-12-08 00:49:58.215084516 +0000
+@@ -47,7 +47,7 @@
+     scanf("%hd", &n);
+     for (i = 1;i <= n;i++)
+         scanf("%f %f", &supermarkets[i][0], &supermarkets[i][1]);
+-    scanf("%f %f", &supermarkets[0][0], &supermarkets[0][1]);
++    ;
+     for (i = 0;i < n;i++){
+         for (j = i + 1;j <= n;j++){
+             distancias[i][j] = arred(sqrt(pow((supermarkets[i][0] - supermarkets[j][0]), 2) + pow((supermarkets[i][1] - supermarkets[j][1]), 2)));

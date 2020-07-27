@@ -1,0 +1,20 @@
+--- ./23.c
++++ ./23.c._WPFV_0	2016-12-08 00:50:17.695084167 +0000
+@@ -11,7 +11,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target);
++        rec(n + 1, n);
+     }else{
+         int halfSquare = pow(2, n) / 2;
+         int i;
+@@ -42,3 +42,8 @@
+         printf("%s\n", tmp);
+     }
+ }
++, tmp);
++	
++	}
++//	fwrite(matrix, 1, 40, stdout);
++}

@@ -1,0 +1,12 @@
+--- 49.cpp
++++ 49.cpp._MIFS_0	2016-03-30 01:39:53.742501000 +0100
+@@ -12,9 +12,6 @@
+         register int a;
+         int begin, end;
+         scanf("%d %d", &begin, &end);
+-        if (end > maximoEnd) 
+-            maximoEnd = end;
+-
+         for (a = begin;a <= end;a++)
+             time[a]++;
+     }

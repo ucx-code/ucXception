@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MIA_2	2016-03-30 01:51:02.693795600 +0100
+@@ -47,7 +47,7 @@
+ {
+     int z;
+     int i;
+-    if (x == nIngredienteS) {
++    {
+         return;
+     }
+     if (unhapiness < l_unhapiness && unhapiness >= 0) {

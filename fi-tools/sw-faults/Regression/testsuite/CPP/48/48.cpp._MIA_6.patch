@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MIA_6	2016-03-30 01:39:06.330465500 +0100
+@@ -65,7 +65,7 @@
+     int bufferPosN2 = (buffer[pos - 2] & 0x7F);
+     if (bufferPos == '|') {
+         if (bufferPosWidth == '/') {
+-            if (recurse(pos - width, max, width) == 1) {
++            {
+                 if (recurseSize != 0) 
+                     strcat2((char*)",", 1);
+ 

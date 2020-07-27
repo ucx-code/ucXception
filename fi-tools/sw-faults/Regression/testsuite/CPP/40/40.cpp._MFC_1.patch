@@ -1,0 +1,11 @@
+--- 40.cpp
++++ 40.cpp._MFC_1	2016-03-30 01:37:06.045418400 +0100
+@@ -54,7 +54,7 @@
+     int m;
+     scanf("%d %d", &n, &m);
+     for (i = 1;i <= n;i++){
+-        scanf("%d", &nCoursesDept[i]);
++        ;
+         int a;
+         for (a = 1;a <= nCoursesDept[i];a++){
+             scanf("%d %d", &w[i][a], &v[i][a]);

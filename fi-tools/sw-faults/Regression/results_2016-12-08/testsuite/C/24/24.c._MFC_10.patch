@@ -1,0 +1,11 @@
+--- ./24.c
++++ ./24.c._MFC_10	2016-12-08 00:50:20.395084119 +0000
+@@ -54,7 +54,7 @@
+     while (scanf("%d %d", &n, &r) != EOF){
+         rec(0, n, r % 4);
+         for (i = 0;i < pow(2, n);i++){
+-            memcpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
++            ;
+             tmp[(int)pow(2, n)] = '\0';
+             printf("%s\n", tmp);
+         }

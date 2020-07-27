@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2388	2016-03-30 02:53:01.955213700 +0100
+@@ -1265,8 +1265,6 @@
+         glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, chromeCoef);
+     }else
+         if (op_robot == 2) {
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, bronzeAmb);
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, bronzeDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, bronzeSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, bronzeCoef);
+         }else

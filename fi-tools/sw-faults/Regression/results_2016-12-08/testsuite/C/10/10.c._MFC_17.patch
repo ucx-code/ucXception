@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_17	2016-12-08 00:49:30.451085013 +0000
+@@ -90,7 +90,7 @@
+             case VarDecl:
+                 aux = node->child->next;
+                 while (aux != NULL){
+-                    printf("\t%%%s = alloca %s\n", aux->id, gen_code_type(gen_type[node->child->type]));
++                    ;
+                     aux = aux->next;
+             }
+             break;

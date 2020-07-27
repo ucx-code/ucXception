@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._WPFV_1	2016-03-30 01:22:52.936205900 +0100
+@@ -43,7 +43,7 @@
+             printf("Estado ");
+             for (k = 0;k < n;k++)
+                 printf("%d", state[i][k]);
+-            printf("\nCheguei %d\n", nivel);
++            printf("\nCheguei %d\n", counter);
+             return;
+         }
+     }

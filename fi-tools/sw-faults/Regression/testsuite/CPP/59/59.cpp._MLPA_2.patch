@@ -1,0 +1,11 @@
+--- 59.cpp
++++ 59.cpp._MLPA_2	2016-03-30 01:41:29.496453500 +0100
+@@ -64,8 +64,6 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+     }
+-    qsort(slot, n, sizeof (struct _slot), compare);
+-    a[1] = -slot[0].end;
+     for (i = 1;i < n;i++){
+         if (-a[1] < slot[i].begin) {
+             replace(-slot[i].end);

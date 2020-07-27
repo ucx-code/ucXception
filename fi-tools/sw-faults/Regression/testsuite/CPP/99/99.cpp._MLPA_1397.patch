@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1397	2016-03-30 02:36:21.409941500 +0100
+@@ -792,10 +792,6 @@
+     glTexCoord2f(0.0f, 1.0f);
+     glVertex3f(50.0, -15.0, -50);
+     glTexCoord2f(1.0f, 1.0f);
+-    glVertex3f(50.0, -15.0, 50);
+-    glTexCoord2f(1.0f, 0.0f);
+-    glVertex3f(-50.0, -15.0, 50);
+-    glTexCoord2f(0.0f, 0.0f);
+     glVertex3f(-50.0, -15.0, -50);
+     glEnd();
+     glPopMatrix();

@@ -1,0 +1,12 @@
+--- 77.cpp
++++ 77.cpp._MIFS_3	2016-03-30 01:51:02.853816300 +0100
+@@ -50,9 +50,6 @@
+     if (x == nIngredienteS) {
+         return;
+     }
+-    if (unhapiness < l_unhapiness && unhapiness >= 0) {
+-        l_unhapiness = unhapiness;
+-    }
+     for (z = x + 1;z < nIngredienteS;z++){
+         marca(z);
+         select_ingredients(z);

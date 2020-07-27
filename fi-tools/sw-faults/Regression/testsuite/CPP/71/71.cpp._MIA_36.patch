@@ -1,0 +1,10 @@
+--- 71.cpp
++++ 71.cpp._MIA_36	2016-03-30 01:46:10.620473300 +0100
+@@ -150,7 +150,6 @@
+             if (encontrou) 
+                 break;
+         }
+-        if (!encontrou) 
+             printf("No Path!\n");
+     }
+     return 0;

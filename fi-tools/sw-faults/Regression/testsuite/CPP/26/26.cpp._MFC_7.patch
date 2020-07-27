@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MFC_7	2016-03-30 01:25:13.404558900 +0100
+@@ -51,7 +51,7 @@
+         tmpU.erase(std::remove(tmpU.begin(), tmpU.end(), sets[S[maiorID]][i]), tmpU.end());
+     }
+     printf("OLHA O NOVO UNIVERSO: %d\n", c);
+-    mostraVector(tmpU);
++    ;
+     if (tmpU.size() == 0) {
+         if (c < melhor) 
+             melhor = c;

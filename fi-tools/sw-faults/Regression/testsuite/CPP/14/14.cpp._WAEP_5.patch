@@ -1,0 +1,11 @@
+--- 14.cpp
++++ 14.cpp._WAEP_5	2016-03-30 01:16:46.264452200 +0100
+@@ -21,7 +21,7 @@
+         unsigned int halfMatrix = halfSquare2 * 2;
+         memcpy(tmp, matrix, halfSquare2);
+         for (i = 0;i < halfSquare;i++){
+-            memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
++            memcpy(matrix + ((i * 2) * halfSquare), halfSquare * i, halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+         memcpy(matrix + halfMatrix, matrix, halfMatrix);

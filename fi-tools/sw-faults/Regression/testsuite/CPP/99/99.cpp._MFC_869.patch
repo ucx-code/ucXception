@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MFC_869	2016-03-30 03:09:12.308410000 +0100
+@@ -2052,6 +2052,6 @@
+     glutTimerFunc(delay_cube, TimerCube, 1);
+     glutTimerFunc(delay_cha, TimerCha, 1);
+     glutMouseFunc(cliqueRato);
+-    glutMainLoop();
++    ;
+     return 0;
+ }

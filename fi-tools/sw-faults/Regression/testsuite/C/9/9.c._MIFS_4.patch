@@ -1,0 +1,14 @@
+--- 9.c
++++ 9.c._MIFS_4	2016-03-30 00:33:08.940740700 +0100
+@@ -131,11 +131,6 @@
+ void QsortCol(int v[], int li, int ls)
+ {
+     int j;
+-    if (li < ls) {
+-        j = rearranjaCol(v, li, ls);
+-        QsortCol(v, li, j - 1);
+-        QsortCol(v, j + 1, ls);
+-    }
+ }
+ 
+ int rearranjaCol(int vect[], int li, int ls)

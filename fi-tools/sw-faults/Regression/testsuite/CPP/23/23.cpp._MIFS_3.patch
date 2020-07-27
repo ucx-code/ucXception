@@ -1,0 +1,12 @@
+--- 23.cpp
++++ 23.cpp._MIFS_3	2016-03-30 01:23:49.918948600 +0100
+@@ -54,9 +54,6 @@
+ }
+ void shortPath(int v, int len)
+ {
+-    if (len >= best) 
+-        return;
+-
+     if ((soma(visit) == n) && (len < best)) {
+         best = len;
+         return;

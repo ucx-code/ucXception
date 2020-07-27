@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WAEP_0	2016-03-30 03:13:46.406476500 +0100
+@@ -33,7 +33,7 @@
+     int bChar = fgetc(infile);
+     int mChar = fgetc(infile);
+     if (bChar == 'B' && mChar == 'M') {
+-        skipChars(infile, 4 + 2 + 2 + 4 + 4);
++        skipChars(infile, 4 + 2 + 2 + 4);
+         NumCols = readLong(infile);
+         NumRows = readLong(infile);
+         skipChars(infile, 2);

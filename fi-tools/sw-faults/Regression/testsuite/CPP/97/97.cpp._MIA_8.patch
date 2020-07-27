@@ -1,0 +1,11 @@
+--- 97.cpp
++++ 97.cpp._MIA_8	2016-03-30 02:03:54.091895100 +0100
+@@ -44,7 +44,7 @@
+                 return 1;
+             }
+         }
+-        if (buffer[pos - width - 2] == '\\') {
++        {
+             if (recurse(pos - width - 2) == 1) {
+                 if (recurseSize != 0) 
+                     printf(",");

@@ -1,0 +1,11 @@
+--- 78.cpp
++++ 78.cpp._MFC_4	2016-03-30 01:51:25.157151500 +0100
+@@ -135,7 +135,7 @@
+     if (begin == end) {
+         int soma = calc(c, end);
+         if (soma == 407) 
+-            showC(c, end);
++            ;
+ 
+         if (soma < best) 
+             best = soma;

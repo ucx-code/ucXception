@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLAC_0	2016-12-08 00:49:47.947084700 +0000
+@@ -144,7 +144,7 @@
+     node->type = IfElse;
+     node->id = NULL;
+     node->child = expr;
+-    if (stat != NULL && stat2 != NULL) {
++    if (stat2 != NULL) {
+         expr->next = stat;
+         stat->next = stat2;
+     }else

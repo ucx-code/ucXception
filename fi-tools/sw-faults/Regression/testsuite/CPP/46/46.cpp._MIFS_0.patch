@@ -1,0 +1,14 @@
+--- 46.cpp
++++ 46.cpp._MIFS_0	2016-03-30 01:38:38.568937000 +0100
+@@ -16,11 +16,6 @@
+             unsigned int kk = nCoursesDept[i];
+             for (a = 1;a <= kk;a++){
+                 unsigned int la = w[i][a];
+-                if (la <= j) {
+-                    novoValor = K[before][j - w[i][a]] + v[i][a];
+-                    if (novoValor > melhorValor) 
+-                        melhorValor = novoValor;
+-                }
+             }
+             K[agora][j] = melhorValor;
+         }

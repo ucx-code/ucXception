@@ -1,0 +1,11 @@
+--- ./26.c
++++ ./26.c._WPFV_37	2016-12-08 00:50:26.135084016 +0000
+@@ -84,7 +84,7 @@
+                     verifica(l + 1, c - 1, '/', aux);
+ 
+                 if (encont == 0) 
+-                    verifica(l + 1, c, '|', aux);
++                    verifica(l + 1, nColunas, '|', aux);
+ 
+                 if (encont == 0) 
+                     verifica(l + 1, c + 1, '\\', aux);

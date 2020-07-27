@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MLPA_0	2016-03-30 01:45:49.442138500 +0100
+@@ -88,8 +88,6 @@
+                 if (recurseSize != 0) 
+                     printf(",");
+ 
+-                printf("(%d,%d),", getY(pos - 1, width), getX(pos - 1, width));
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
+                 return 1;
+             }
+         }

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2289	2016-03-30 02:52:22.165450000 +0100
+@@ -1388,8 +1388,6 @@
+     glRotatef(-90.0, 1.0, 0.0, 0.0);
+     glutSolidTorus(0.05, 2, 32, 32);
+     glPopMatrix();
+-    glPushMatrix();
+-    glTranslatef(0.0, torusin, 0.0);
+     glRotatef(-90.0, 1.0, 0.0, 0.0);
+     glutSolidTorus(0.05, 2.4, 32, 32);
+     glPopMatrix();

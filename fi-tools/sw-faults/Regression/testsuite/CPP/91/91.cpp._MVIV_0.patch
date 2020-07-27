@@ -1,0 +1,11 @@
+--- 91.cpp
++++ 91.cpp._MVIV_0	2016-03-30 02:02:17.151330000 +0100
+@@ -57,7 +57,7 @@
+     char* begin = src;
+     int n, m;
+     register int i;
+-    int it = 0;
++    int it = it;
+     while (true){
+         if (begin + statbuf.st_size == src) 
+             break;

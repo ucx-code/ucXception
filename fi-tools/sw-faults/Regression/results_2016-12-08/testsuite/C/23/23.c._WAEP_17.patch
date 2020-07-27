@@ -1,0 +1,11 @@
+--- ./23.c
++++ ./23.c._WAEP_17	2016-12-08 00:50:18.055084161 +0000
+@@ -37,7 +37,7 @@
+     rec(0, n);
+     for (i = 0;i < pow(2, n);i++){
+         char tmp[1000];
+-        strncpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
++        strncpy(tmp, (int)(i * pow(2, n)), pow(2, n));
+         tmp[(int)pow(2, n)] = '\0';
+         printf("%s\n", tmp);
+     }

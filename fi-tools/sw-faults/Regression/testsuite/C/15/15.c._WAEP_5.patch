@@ -1,0 +1,11 @@
+--- 15.c
++++ 15.c._WAEP_5	2016-03-30 00:42:30.394510600 +0100
+@@ -67,7 +67,7 @@
+     while (scanf("%d %d", &i, &j) == 2){
+         connections[i - 1][j - 1] = '1';
+     }
+-    memset(printers, '#', nr * sizeof (char));
++    memset(printers, '#', sizeof (char));
+     calc(0, nr, 1);
+     printf("%d\n", best);
+     return 0;

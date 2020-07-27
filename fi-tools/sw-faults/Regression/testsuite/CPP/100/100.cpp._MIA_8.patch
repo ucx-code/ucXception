@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MIA_8	2016-03-30 03:17:01.484276500 +0100
+@@ -220,7 +220,7 @@
+     glGetIntegerv(GL_VIEWPORT, viewportData);
+     int& vWidth = viewportData[2];
+     int& vHeight = viewportData[3];
+-    if (ImagePtr == 0) {
++    {
+         NumRows = vHeight;
+         NumCols = vWidth;
+         ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];

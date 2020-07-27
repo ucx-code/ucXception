@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_11	2016-12-08 00:49:29.983085022 +0000
+@@ -50,7 +50,7 @@
+                 else{
+                     char* return_type = gen_code_type(gen_type[aux->child->type]);
+                     is_node* params = aux->child->next->next;
+-                    printf("\ndefine %s @%s(", return_type, method_name);
++                    ;
+                     if (params->child != NULL) {
+                         is_node* paramDecl = params->child;
+                         while (paramDecl != NULL){

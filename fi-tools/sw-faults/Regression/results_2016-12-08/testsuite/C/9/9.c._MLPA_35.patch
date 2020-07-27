@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MLPA_35	2016-12-08 00:51:14.479083150 +0000
+@@ -142,8 +142,6 @@
+ {
+     int a, down, up, temp;
+     a = vect[li];
+-    down = li;
+-    up = ls;
+     while (down < up){
+         while (vect[down] >= a && down < ls)
+             down++;

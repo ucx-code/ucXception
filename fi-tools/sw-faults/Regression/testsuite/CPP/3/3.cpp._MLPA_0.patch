@@ -1,0 +1,11 @@
+--- 3.cpp
++++ 3.cpp._MLPA_0	2016-03-30 01:11:12.380500400 +0100
+@@ -54,8 +54,6 @@
+     while (scanf("%d %d", &n, &r) != EOF){
+         rec(0, n, r % 4);
+         for (i = 0;i < pow(2, n);i++){
+-            memcpy(tmp, matrix + (int)(i * pow(2, n)), (int)pow(2, n));
+-            tmp[(int)pow(2, n)] = '\0';
+             printf("%s\n", tmp);
+         }
+     }

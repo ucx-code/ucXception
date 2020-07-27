@@ -1,0 +1,11 @@
+--- 13.cpp
++++ 13.cpp._WAEP_32	2016-03-30 01:16:39.452586400 +0100
+@@ -56,7 +56,7 @@
+         squared = quickPow[n];
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+-            fwrite(matrix + (squared * i), 1, squared, stdout);
++            fwrite(matrix, 1, squared, stdout);
+             putchar('\n');
+         }
+     }

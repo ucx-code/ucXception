@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_265	2016-03-30 02:09:49.218501500 +0100
+@@ -337,9 +337,6 @@
+ 
+ void KillALData()
+ {
+-    alDeleteBuffers(1, &Buffer);
+-    alDeleteSources(1, &Source);
+-    alDeleteBuffers(1, &BufferEx);
+     alDeleteSources(1, &SourceEx);
+     alutExit();
+ }

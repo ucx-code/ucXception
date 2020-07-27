@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_22	2016-03-30 03:14:15.667151400 +0100
+@@ -52,8 +52,6 @@
+     }
+     ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+     if (!ImagePtr) {
+-        fprintf(stderr, "Unable to allocate memory for %ld x %ld bitmap: %s.\n", NumRows, NumCols, filename);
+-        Reset();
+         ErrorCode = MemoryError;
+         fclose(infile);
+         return false;

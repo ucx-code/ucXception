@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._MIA_12	2016-03-30 01:15:20.693057300 +0100
+@@ -63,7 +63,7 @@
+         }
+     }
+     if (bufferPos == '/') {
+-        if ((bufferPosN1 == '\\') && (bufferPosN2 == '/')) {
++        {
+             if (recurse(pos - 2, max, width) == 1) {
+                 answer.push(pos - 1);
+                 answer.push(pos);

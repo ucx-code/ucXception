@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2271	2016-03-30 02:52:11.959966900 +0100
+@@ -1317,11 +1317,6 @@
+     glPopMatrix();
+     glPushMatrix();
+     glTranslatef(-0.75, 1.5, -2.2);
+-    glutSolidSphere(0.3, 32, 32);
+-    glPopMatrix();
+-    glPushMatrix();
+-    glTranslatef(0, 1.5, 0);
+-    desenhaMira();
+     glPopMatrix();
+     checkLimit();
+     if (disparo == 1) {

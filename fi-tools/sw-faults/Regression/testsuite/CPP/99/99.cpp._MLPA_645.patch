@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_645	2016-03-30 02:17:13.862606000 +0100
+@@ -632,9 +632,6 @@
+     glPushMatrix();
+     glTranslatef(-6.7, pos_seta_robot_y, 0);
+     glBegin(GL_QUADS);
+-    glNormal3f(0.0f, 1.0f, 0.0f);
+-    glTexCoord2f(0.0f, 1.0f);
+-    glVertex2f(-0.5f, 0.5f);
+     glTexCoord2f(1.0f, 1.0f);
+     glVertex2f(0.5f, 0.5f);
+     glTexCoord2f(1.0f, 0.0f);

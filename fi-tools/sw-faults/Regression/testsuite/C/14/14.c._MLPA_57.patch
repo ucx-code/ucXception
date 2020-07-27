@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_57	2016-03-30 00:40:13.032833800 +0100
+@@ -103,8 +103,6 @@
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = type;
+     type->next = id;
+-    node->type = ParamDeclaration;
+-    node->id = NULL;
+     if (extra_node != NULL) 
+         node->next = extra_node;
+ 

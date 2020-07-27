@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WPFV_115	2016-03-30 02:07:51.998182300 +0100
+@@ -256,7 +256,7 @@
+                 par_sys[loop].life = -1.0;
+             }
+             if (par_sys[loop].life < 0.0) {
+-                iniciaParticulasChuva(loop);
++                iniciaParticulasChuva(acerca);
+             }
+         }
+     }

@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_140	2016-03-30 03:16:50.527383800 +0100
+@@ -168,8 +168,6 @@
+ {
+     unsigned char byte0, byte1, byte2, byte3;
+     byte0 = (unsigned char)(data & 0x000000ff);
+-    byte1 = (unsigned char)((data >> 8) & 0x000000ff);
+-    byte2 = (unsigned char)((data >> 16) & 0x000000ff);
+     byte3 = (unsigned char)((data >> 24) & 0x000000ff);
+     fputc(byte0, outfile);
+     fputc(byte1, outfile);

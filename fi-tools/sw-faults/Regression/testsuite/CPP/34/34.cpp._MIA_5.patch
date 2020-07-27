@@ -1,0 +1,10 @@
+--- 34.cpp
++++ 34.cpp._MIA_5	2016-03-30 01:31:09.233600100 +0100
+@@ -67,7 +67,6 @@
+         for (i = 1;i < n;i++){
+             int a;
+             memosSet();
+-            if (rec(i, n, 0, 0, z) == 1) 
+                 goto fim;
+         }
+     printf("BANG\n");

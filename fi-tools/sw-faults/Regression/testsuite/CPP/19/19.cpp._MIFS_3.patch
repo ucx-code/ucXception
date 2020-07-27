@@ -1,0 +1,12 @@
+--- 19.cpp
++++ 19.cpp._MIFS_3	2016-03-30 01:21:41.123201400 +0100
+@@ -34,9 +34,6 @@
+ 
+ void rec(int begin, int len)
+ {
+-    if (len >= best) 
+-        return;
+-
+     if (verifica() == 0) {
+         if (len < best) 
+             best = len;

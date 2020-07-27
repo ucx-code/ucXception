@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLOC_13	2016-03-30 02:54:30.312197200 +0100
+@@ -1493,7 +1493,7 @@
+ void TimerCha(int value)
+ {
+     move_cha += 0.1 * cha_dir;
+-    if ((move_cha > 5.0) || (move_cha < 0.0)) {
++    if ((move_cha > 5.0)) {
+         cha_dir = cha_dir * -1.0;
+     }
+     glutPostRedisplay();

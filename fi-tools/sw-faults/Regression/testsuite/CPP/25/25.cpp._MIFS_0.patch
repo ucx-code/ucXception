@@ -1,0 +1,13 @@
+--- 25.cpp
++++ 25.cpp._MIFS_0	2016-03-30 01:24:35.751773300 +0100
+@@ -17,10 +17,6 @@
+     for (i = 0;i < end && count < end;i++){
+         if (visit[i] == 1) {
+             ++tmpBest;
+-            if (tmp[i] == 0) {
+-                tmp[i] = 1;
+-                ++count;
+-            }
+             for (a = 0;a < i;a++){
+                 if (vizinhos[a][i] == 1 && tmp[a] != 1) {
+                     tmp[a] = 1;

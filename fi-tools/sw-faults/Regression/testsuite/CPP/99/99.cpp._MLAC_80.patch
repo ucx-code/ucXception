@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLAC_80	2016-03-30 02:56:28.549173400 +0100
+@@ -1623,7 +1623,7 @@
+                 if ((x > 208) && (x < 320) && (y > 185) && (y < 205)) {
+                     glutSetCursor (GLUT_CURSOR_INFO);
+                 }else
+-                    if ((x > 208) && (x < 320) && (y > 212) && (y < 230)) {
++                    if ((x > 208) && (x < 320) && (y > 212)) {
+                         glutSetCursor (GLUT_CURSOR_INFO);
+                     }else{
+                         glutSetCursor (GLUT_CURSOR_LEFT_ARROW);

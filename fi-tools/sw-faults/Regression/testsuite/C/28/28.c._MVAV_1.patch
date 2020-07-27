@@ -1,0 +1,10 @@
+--- 28.c
++++ 28.c._MVAV_1	2016-03-30 00:57:30.523105400 +0100
+@@ -64,7 +64,6 @@
+             fila[k][0] = aux1;
+             fila[k][1] = aux2;
+         }else{
+-            k = 0;
+             while ((fila[k][1] != begin[j][1] && fila[k][0] != begin[j][3]) && fila[k][0] != 0)
+                 k++;
+             while (fila[k][0] != 0){

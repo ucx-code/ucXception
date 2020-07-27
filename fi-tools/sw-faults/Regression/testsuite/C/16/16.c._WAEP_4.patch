@@ -1,0 +1,11 @@
+--- 16.c
++++ 16.c._WAEP_4	2016-03-30 00:43:41.256828300 +0100
+@@ -59,7 +59,7 @@
+     int arr_size = sizeof (arr) / sizeof (arr[0]);
+     printf("Given array is \n");
+     printArray(arr, arr_size);
+-    mergeSort(arr, 0, arr_size - 1);
++    mergeSort(arr, 0, arr_size);
+     printf("\nSorted array is \n");
+     printArray(arr, arr_size);
+     return 0;

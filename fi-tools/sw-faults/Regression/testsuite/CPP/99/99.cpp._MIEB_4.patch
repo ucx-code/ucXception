@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MIEB_4	2016-03-30 02:56:28.716501100 +0100
+@@ -1629,9 +1629,7 @@
+                         glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+                     }
+ 
+-        if ((x > 395) && (x < 475) && (y > 445) && (y < 490)) {
+-            glutSetCursor (GLUT_CURSOR_INFO);
+-        }else{
++        {
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }
+         if ((x > 105) && (x < 135) && (y > 253) && (y < 264)) {

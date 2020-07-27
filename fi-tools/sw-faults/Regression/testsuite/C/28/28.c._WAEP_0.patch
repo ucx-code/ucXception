@@ -1,0 +1,11 @@
+--- 28.c
++++ 28.c._WAEP_0	2016-03-30 00:57:10.328538600 +0100
+@@ -19,7 +19,7 @@
+         begin[i][3] = begin[i - 1][1];
+         i++;
+     }
+-    qsort(begin, i, 4 * sizeof (int), sorting);
++    qsort(begin, i, 4, sorting);
+     fila[0][0] = begin[0][1];
+     fila[0][1] = begin[0][3];
+     for (j = 1;j < i;j++){

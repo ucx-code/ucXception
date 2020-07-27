@@ -1,0 +1,12 @@
+--- 10.c
++++ 10.c._MLPA_60	2016-03-30 00:35:54.161176900 +0100
+@@ -118,9 +118,6 @@
+             printf("\t%%ifcond_%d = icmp eq i1 1 , %s\n", if_c, expr);
+             printf("\tbr i1 %%ifcond_%d, label %%then_%d, label %%else_%d\n", if_c, if_c, if_c);
+             printf("\tthen_%d:\n", if_c);
+-            counter++;
+-            printf("\t%%%d = load i8** @.true\n", counter);
+-            printf("\t%%%d = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i8* %%%d)\n", counter + 1, counter);
+             printf("\tbr label %%ifcount_%d\n", if_c);
+             counter++;
+             printf("\telse_%d:\n", if_c);

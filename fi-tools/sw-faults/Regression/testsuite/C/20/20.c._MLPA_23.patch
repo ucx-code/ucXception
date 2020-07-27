@@ -1,0 +1,12 @@
+--- 20.c
++++ 20.c._MLPA_23	2016-03-30 00:49:21.990159300 +0100
+@@ -360,9 +360,7 @@
+ char* getType(char* nameP, prog_env* prog, char* methodName)
+ {
+ table_element* temp;
+-temp = prog->global;
+ environment_list* aux;
+-aux = prog->methods;
+ while (aux != NULL){
+ if (strcmp(aux->name, methodName) == 0) {
+     table_element* local = aux->locals;

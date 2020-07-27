@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._MFC_2	2016-03-30 01:48:15.582552100 +0100
+@@ -65,7 +65,7 @@
+ {
+     register int i, a;
+     unsigned char estado[2000];
+-    memcpy(estado, preCalculated[begin - 1], sizeof (unsigned char) * m);
++    ;
+     for (i = 0;i < begin;i++){
+         if (c[i] == 0) 
+             for (a = 0;a < listaC[i][0];a++){

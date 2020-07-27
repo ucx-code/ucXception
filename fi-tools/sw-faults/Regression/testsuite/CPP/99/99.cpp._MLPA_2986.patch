@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2986	2016-03-30 03:06:54.718973700 +0100
+@@ -2028,10 +2028,6 @@
+     glutInitWindowSize(largura, altura);
+     glutInitWindowPosition(340, 100);
+     glutCreateWindow("Bombs away!! [Projeto CG 2014 by DiFa, JoPe, PeRe]");
+-    iniciarPrograma();
+-    init();
+-    glutDisplayFunc(ecra);
+-    glutReshapeFunc(redimensionarJanela);
+     glutKeyboardFunc(teclado);
+     glutKeyboardUpFunc(teclasUp);
+     glutPassiveMotionFunc(passivemotion);

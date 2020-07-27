@@ -1,0 +1,14 @@
+--- 9.c
++++ 9.c._MIFS_2	2016-03-30 00:32:18.269237900 +0100
+@@ -80,11 +80,6 @@
+ void QsortLines(int v[], int li, int ls)
+ {
+     int j;
+-    if (li < ls) {
+-        j = rearranjaLines(v, li, ls);
+-        QsortLines(v, li, j - 1);
+-        QsortLines(v, j + 1, ls);
+-    }
+ }
+ 
+ int rearranjaLines(int vect[], int li, int ls)

@@ -1,0 +1,12 @@
+--- ./20.c
++++ ./20.c._MIA_16	2016-12-08 00:50:11.807084273 +0000
+@@ -295,9 +295,7 @@
+     if (strcmp(aux->name, method_name) == 0) {
+         table_element* local = aux->locals;
+         while (local != NULL){
+-            if (strcmp(local->name, node->id) == 0) 
+                 found = 1;
+-
+             local = local->next;
+         }
+     }

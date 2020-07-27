@@ -1,0 +1,11 @@
+--- 11.cpp
++++ 11.cpp._MFC_7	2016-03-30 01:15:43.679892000 +0100
+@@ -37,7 +37,7 @@
+                     memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+                 else
+                     if (r == 2) 
+-                        memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
++                        ;
+                     else
+                         if (r == 3) 
+                             memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmp + halfSquare * i, halfSquare);

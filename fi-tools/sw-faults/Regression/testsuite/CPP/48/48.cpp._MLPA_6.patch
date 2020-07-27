@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MLPA_6	2016-03-30 01:39:05.109309600 +0100
+@@ -50,8 +50,6 @@
+ 
+     buffer[pos] |= 0x80;
+     if (pos <= width) {
+-        sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-        strcat2(tmp);
+         return 1;
+     }
+     ++recurseSize;

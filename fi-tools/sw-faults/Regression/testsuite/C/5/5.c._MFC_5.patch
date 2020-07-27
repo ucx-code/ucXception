@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._MFC_5	2016-03-30 00:30:22.492431600 +0100
+@@ -111,7 +111,7 @@
+             for (i = 0;i < 8;i++){
+                 printf(" %d", moedasRec[i]);
+             }
+-            printf(" Troco indisponivel!");
++            ;
+         }else{
+             printf("Troco: %.2f", (recebido - despesa));
+             for (i = 0;i < 8;i++){

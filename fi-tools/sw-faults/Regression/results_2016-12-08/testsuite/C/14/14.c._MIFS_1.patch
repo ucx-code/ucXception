@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MIFS_1	2016-12-08 00:49:47.007084717 +0000
+@@ -88,9 +88,6 @@
+     type->next = id;
+     node->type = ParamDeclaration;
+     node->id = NULL;
+-    if (moreNodes != NULL) 
+-        node->next = moreNodes;
+-
+     MethodParamsnode->child = node;
+     MethodParamsnode->next = NULL;
+     MethodParamsnode->id = NULL;

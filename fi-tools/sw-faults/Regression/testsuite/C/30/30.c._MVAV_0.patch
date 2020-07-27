@@ -1,0 +1,10 @@
+--- 30.c
++++ 30.c._MVAV_0	2016-03-30 00:58:31.429192100 +0100
+@@ -149,7 +149,6 @@
+         if (aux == 0) {
+             printf("No Path!\n");
+         }else{
+-            i = 1;
+             printf("(%hd,%hd)", path[0][0], path[0][1]);
+             while (path[i][0] != 0){
+                 printf(",(%hd,%hd)", path[i][0], path[i][1]);

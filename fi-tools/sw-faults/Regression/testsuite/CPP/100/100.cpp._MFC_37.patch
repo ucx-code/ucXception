@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_37	2016-03-30 03:16:49.796791600 +0100
+@@ -150,7 +150,7 @@
+         int j;
+         for (j = 0;j < NumCols;j++){
+             fputc(*(cPtr + 2), outfile);
+-            fputc(*(cPtr + 1), outfile);
++            ;
+             fputc(*(cPtr + 0), outfile);
+             cPtr += 3;
+         }

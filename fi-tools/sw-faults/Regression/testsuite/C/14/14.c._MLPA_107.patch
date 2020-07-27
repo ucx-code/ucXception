@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_107	2016-03-30 00:41:01.673333400 +0100
+@@ -277,8 +277,6 @@
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = expr1;
+-    expr1->next = expr2;
+-    node->type = LoadArray;
+     node->id = NULL;
+     return node;
+ }

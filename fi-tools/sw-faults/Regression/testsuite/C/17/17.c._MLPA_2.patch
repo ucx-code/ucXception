@@ -1,0 +1,11 @@
+--- 17.c
++++ 17.c._MLPA_2	2016-03-30 00:44:03.124789900 +0100
+@@ -54,8 +54,6 @@
+             distancias[j][i] = distancias[i][j];
+         }
+     }
+-    solution[0] = 1;
+-    shortestPath(0, 0);
+     printf("%hd\n", best);
+     return 0;
+ }

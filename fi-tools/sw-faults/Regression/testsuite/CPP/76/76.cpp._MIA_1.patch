@@ -1,0 +1,12 @@
+--- 76.cpp
++++ 76.cpp._MIA_1	2016-03-30 01:50:54.625770000 +0100
+@@ -25,8 +25,7 @@
+                     if (j == lista[kk]) 
+                         no = true;
+             }
+-            for (int kk = 0;kk < 3;kk++)
+-                if (lista[kk] == 0) {
++            for (int kk = 0;kk < 3;kk++){
+                     lista[kk] = j;
+                     break;
+                 }

@@ -1,0 +1,11 @@
+--- 31.cpp
++++ 31.cpp._WPFV_9	2016-03-30 01:28:32.948186300 +0100
+@@ -21,7 +21,7 @@
+     for (i = 0;i < n;i++){
+         if (estado[i] <= 0) {
+             todosTemAcesso = false;
+-            rec(i, n, count, estado);
++            rec(i, counter, count, estado);
+         }
+     }
+     if ((todosTemAcesso)&&(count < melhor)) 

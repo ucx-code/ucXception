@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MIA_27	2016-03-30 00:49:28.651111800 +0100
+@@ -403,7 +403,7 @@
+ environment_list* aux;
+ aux = prog->methods;
+ while (aux != NULL){
+-if (strcmp(method_called, aux->name) == 0) {
++{
+     int counter = 0;
+     table_element* local = aux->locals;
+     local = local->next;

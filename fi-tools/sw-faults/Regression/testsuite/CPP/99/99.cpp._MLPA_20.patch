@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_20	2016-03-30 02:04:57.826243700 +0100
+@@ -185,8 +185,6 @@
+     incVisao = 20.0f;
+     angB = -45;
+     pastX = 0.0;
+-    pastZ = 0.0;
+-    lastRobotX = 0.0;
+     lastRobotZ = 0.0;
+     robotYDir = 1;
+     disparo = 0;

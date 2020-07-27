@@ -1,0 +1,14 @@
+--- 75.cpp
++++ 75.cpp._MIEB_1	2016-03-30 01:49:44.311065800 +0100
+@@ -45,11 +45,6 @@
+     unsigned char estado[2000];
+     memset(estado, 0, sizeof (unsigned char) * m);
+     for (i = 0;i < max;i++){
+-        if (c[i] == 0) 
+-            for (a = 0;a < listaC[i][0];a++){
+-                estado[lista[i][0][a]] = 1;
+-            }
+-        else
+             for (a = 0;a < listaC[i][1];a++){
+                 estado[lista[i][1][a]] = 1;
+             }

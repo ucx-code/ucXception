@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_485	2016-03-30 02:45:44.861278500 +0100
+@@ -1110,7 +1110,7 @@
+ void desenhaTexto(char* string)
+ {
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, rubyAmb);
+-    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, rubyDif);
++    ;
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, rubySpec);
+     glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, rubyCoef);
+     glRasterPos2f(2, 9);

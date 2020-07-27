@@ -1,0 +1,11 @@
+--- 91.cpp
++++ 91.cpp._MFC_1	2016-03-30 02:02:17.603386600 +0100
+@@ -62,7 +62,7 @@
+         if (begin + statbuf.st_size == src) 
+             break;
+ 
+-        readLine(&n, &m);
++        ;
+         for (i = 0;i < m;i++){
+             int a, b;
+             readLine(&a, &b);

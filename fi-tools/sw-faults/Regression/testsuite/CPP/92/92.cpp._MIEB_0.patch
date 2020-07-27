@@ -1,0 +1,14 @@
+--- 92.cpp
++++ 92.cpp._MIEB_0	2016-03-30 02:02:29.153855800 +0100
+@@ -73,11 +73,7 @@
+             vizinhos[b][vizinhosC[b]++] = a;
+         }
+         ++it;
+-        if (dfs(1, it) == true) 
+-            printf("NOT SURE\n");
+-        else
+             printf("NO\n");
+-
+         memset(vizinhosC, 0, sizeof (int) * (n + 1));
+     }
+     return 0;

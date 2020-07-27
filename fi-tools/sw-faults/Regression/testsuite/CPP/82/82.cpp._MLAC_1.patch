@@ -1,0 +1,11 @@
+--- 82.cpp
++++ 82.cpp._MLAC_1	2016-03-30 01:54:05.089910300 +0100
+@@ -27,7 +27,7 @@
+             if (choices[i][a] == 0) 
+                 break;
+ 
+-            if ((choices[i][a] > 0) && (c[absoluto] == 1)) {
++            if ((choices[i][a] > 0)) {
+                 favoravel = true;
+                 break;
+             }

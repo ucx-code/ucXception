@@ -1,0 +1,11 @@
+--- 67.cpp
++++ 67.cpp._MLPA_4	2016-03-30 01:44:13.619960700 +0100
+@@ -68,8 +68,6 @@
+ int main()
+ {
+     unsigned int i;
+-    fstat(STDIN_FILENO, &statbuf);
+-    src = (char*)mmap(0, statbuf.st_size, PROT_READ, MAP_PRIVATE, 0, 0);
+     madvise(src, statbuf.st_size, MADV_WILLNEED | MADV_SEQUENTIAL);
+     readM();
+     madvise(src, statbuf.st_size, MADV_DONTNEED);

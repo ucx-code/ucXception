@@ -1,0 +1,11 @@
+--- 75.cpp
++++ 75.cpp._WPFV_30	2016-03-30 01:50:21.806598800 +0100
+@@ -121,7 +121,7 @@
+         return;
+ 
+     c[begin] = 1;
+-    rec(c, begin + 1, end);
++    rec(c, begin + 1, best);
+     c[begin] = 0;
+     rec(c, begin + 1, end);
+ }

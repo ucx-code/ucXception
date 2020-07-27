@@ -1,0 +1,19 @@
+--- 80.cpp
++++ 80.cpp._MIFS_3	2016-03-30 01:52:37.840300000 +0100
+@@ -68,16 +68,6 @@
+                     break;
+ 
+                 int absChoice = abs(choices[i][a]) - 1;
+-                if (absChoice <= begin) {
+-                    if ((choices[i][a] < 0) && (c[absChoice] == 0)) {
+-                        satisfeito = 1;
+-                        break;
+-                    }else
+-                        if ((choices[i][a] > 0) && (c[absChoice] == 1)) {
+-                            satisfeito = 1;
+-                            break;
+-                        }
+-                }
+             }
+             if (satisfeito == 0) 
+                 estado[i] = 0;

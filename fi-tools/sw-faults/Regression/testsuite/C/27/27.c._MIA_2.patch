@@ -1,0 +1,10 @@
+--- 27.c
++++ 27.c._MIA_2	2016-03-30 00:56:27.077439200 +0100
+@@ -31,7 +31,6 @@
+             }
+         }else
+             if (color[vector[node][i]] == GREY && p[node] != vector[node][i]) {
+-                if (low[node] > dfs[vector[node][i]]) 
+                     low[node] = dfs[vector[node][i]];
+             }
+     }

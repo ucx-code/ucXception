@@ -1,0 +1,11 @@
+--- 22.cpp
++++ 22.cpp._MFC_4	2016-03-30 01:23:30.034421100 +0100
+@@ -42,7 +42,7 @@
+ void dfs(int nivel)
+ {
+     int i;
+-    memcpy(stateOld, state, sizeof (char) * 35 * MAX_MEM);
++    ;
+     int oldCounter = stateCounter;
+     stateCounter = 0;
+     for (i = 0;i < oldCounter;i++){

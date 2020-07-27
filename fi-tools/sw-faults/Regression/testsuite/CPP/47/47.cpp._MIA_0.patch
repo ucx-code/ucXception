@@ -1,0 +1,11 @@
+--- 47.cpp
++++ 47.cpp._MIA_0	2016-03-30 01:38:49.029266200 +0100
+@@ -17,7 +17,7 @@
+             register unsigned int kk = nCoursesDept[i];
+             for (a = 1;a <= kk;a++){
+                 register unsigned int la = w[i][a];
+-                if (la <= j) {
++                {
+                     novoValor = K[before][j - w[i][a]] + v[i][a];
+                     if (novoValor > melhorValor) 
+                         melhorValor = novoValor;

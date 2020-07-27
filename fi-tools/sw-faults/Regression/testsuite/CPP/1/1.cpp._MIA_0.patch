@@ -1,0 +1,12 @@
+--- 1.cpp
++++ 1.cpp._MIA_0	2016-03-30 01:08:07.673854200 +0100
+@@ -20,9 +20,7 @@
+ 
+ int recurse(int pos, int max, int width)
+ {
+-    if (hitCount[pos] > 0) 
+         return -1;
+-
+     ++hitCount[pos];
+     if ((pos >= max - width - 1) && (pos < max)) {
+         answer.push(pos);

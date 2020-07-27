@@ -1,0 +1,12 @@
+--- 25.cpp
++++ 25.cpp._MIFS_3	2016-03-30 01:24:41.355486000 +0100
+@@ -45,9 +45,6 @@
+ 
+ void shortPath(int begin, int end, int len)
+ {
+-    if (len > best) 
+-        return;
+-
+     if (verifica(end) == 0) {
+         return;
+     }

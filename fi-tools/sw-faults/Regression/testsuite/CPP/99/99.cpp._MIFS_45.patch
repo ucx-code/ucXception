@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MIFS_45	2016-03-30 03:08:53.772054000 +0100
+@@ -2039,10 +2039,6 @@
+     srand (time(NULL));
+     alutInit(NULL, 0);
+     alGetError();
+-    if (LoadALData() == AL_FALSE) {
+-        printf("Error loading data.");
+-        return 0;
+-    }
+     SetListenerValues();
+     atexit(KillALData);
+     glutTimerFunc(enemyCreateDelay, dropEnemy, 1);

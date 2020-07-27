@@ -1,0 +1,11 @@
+--- 78.cpp
++++ 78.cpp._WPFV_1	2016-03-30 01:51:22.214776600 +0100
+@@ -125,7 +125,7 @@
+ {
+     if (begin != end) {
+         if (forced[begin] == 1) {
+-            rec(c, begin + 1, end);
++            rec(c, begin + 1, choices);
+             return;
+         }
+         int actual = calcB(c, begin, end);

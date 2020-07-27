@@ -1,0 +1,11 @@
+--- 19.c
++++ 19.c._WPFV_38	2016-03-30 00:46:20.481461000 +0100
+@@ -45,7 +45,7 @@
+         if (solution[i] == 0) {
+             if (cap >= distancias[i][17]) {
+                 solution[i] = 1;
+-                shortestPath(i, len + distancias[v][i], cap, bound - distancias[i][18]);
++                shortestPath(i, len + distancias[v][i], count, bound - distancias[i][18]);
+                 solution[i] = 0;
+             }
+         }

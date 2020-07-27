@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_138	2016-03-30 03:16:49.532257800 +0100
+@@ -150,9 +150,6 @@
+         int j;
+         for (j = 0;j < NumCols;j++){
+             fputc(*(cPtr + 2), outfile);
+-            fputc(*(cPtr + 1), outfile);
+-            fputc(*(cPtr + 0), outfile);
+-            cPtr += 3;
+         }
+         int k = 3 * NumCols;
+         for (;k < GetNumBytesPerRow();k++){

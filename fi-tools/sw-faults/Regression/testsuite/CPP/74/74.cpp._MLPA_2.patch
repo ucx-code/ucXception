@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._MLPA_2	2016-03-30 01:48:22.355912700 +0100
+@@ -101,8 +101,6 @@
+     int actual2 = 0;
+     c[begin] = 0;
+     actual = calcB(c, begin + 1, end);
+-    c[begin] = 1;
+-    actual2 = calcB(c, begin + 1, end);
+     if (actual2 < best) {
+         c[begin] = 1;
+         rec(c, begin + 1, end);

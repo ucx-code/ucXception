@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MFC_1	2016-03-30 01:50:59.240357200 +0100
+@@ -21,7 +21,7 @@
+     int taste;
+     scanf("%d %d\n", &nIngredienteS, &nAmigos);
+     for (i = 0;i < nAmigos;i++){
+-        scanf("%d", &valor_amizades[i]);
++        ;
+         while (true){
+             scanf("%d", &taste);
+             if (taste == 0) {

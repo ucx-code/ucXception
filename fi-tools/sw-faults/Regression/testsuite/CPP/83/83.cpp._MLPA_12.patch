@@ -1,0 +1,12 @@
+--- 83.cpp
++++ 83.cpp._MLPA_12	2016-03-30 01:56:09.673925500 +0100
+@@ -101,9 +101,7 @@
+     int i;
+     scanf("%d %d", &n, &m);
+     for (i = 0;i < m;i++){
+-        scanf("%d", &friendship[i]);
+         int tmp;
+-        scanf("%d", &tmp);
+         int a = 0;
+         while (tmp != 0){
+             choices[i][a++] = tmp;

@@ -1,0 +1,11 @@
+--- 87.cpp
++++ 87.cpp._MFC_21	2016-03-30 02:01:31.422128600 +0100
+@@ -132,7 +132,7 @@
+         }
+         printf("No Path!");
+         terminei_matrix_sucesso:
+-        printf("\n");
++        ;
+     }
+     return 0;
+ }

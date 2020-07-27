@@ -1,0 +1,13 @@
+--- 6.c
++++ 6.c._MIEB_0	2016-03-30 00:30:34.825378100 +0100
+@@ -22,9 +22,7 @@
+         printf("%d\n", jogadores[j][0]);
+         printf("Media: %g\n", media);
+         printf("Equilibrio: %g\n", eq);
+-        if (media > eq) {
+-            printf("Classificacao: %g\n", media);
+-        }else{
++        {
+             printf("Classificacao: %g\n", media / 2);
+         }
+     }

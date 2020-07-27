@@ -1,0 +1,11 @@
+--- ./15.c
++++ ./15.c._WAEP_0	2016-12-08 00:49:53.083084608 +0000
+@@ -10,7 +10,7 @@
+     int count = 0, i, j;
+     int best1 = 0;
+     char aux[nr];
+-    memset(aux, '*', nr * sizeof (char));
++    memset(aux, '*', nr);
+     for (i = 0;i < nr && count < nr;i++){
+         if (printers[i] == '1') {
+             best1++;

@@ -1,0 +1,11 @@
+--- 15.c
++++ 15.c._MVIV_0	2016-03-30 00:41:44.564250600 +0100
+@@ -8,7 +8,7 @@
+ int checkAll(int nr)
+ {
+     int count = 0, i, j;
+-    int best1 = 0;
++    int best1 = best1;
+     char aux[nr];
+     memset(aux, '*', nr * sizeof (char));
+     for (i = 0;i < nr && count < nr;i++){

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WVAV_3	2016-03-30 02:44:12.148921800 +0100
+@@ -1010,7 +1010,7 @@
+             puts("tiro no inimigo");
+             score += 10;
+             enemysList[i].show = 1;
+-            aux = 1;
++            aux = 0 ^ 0xff;
+             break;
+         }
+         if (enemysList[i].show == 1 && enemysList[i].fuel == 0) 

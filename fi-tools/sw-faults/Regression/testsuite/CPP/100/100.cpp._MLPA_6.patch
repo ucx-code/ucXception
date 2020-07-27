@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_6	2016-03-30 03:13:39.576609500 +0100
+@@ -33,8 +33,6 @@
+     int bChar = fgetc(infile);
+     int mChar = fgetc(infile);
+     if (bChar == 'B' && mChar == 'M') {
+-        skipChars(infile, 4 + 2 + 2 + 4 + 4);
+-        NumCols = readLong(infile);
+         NumRows = readLong(infile);
+         skipChars(infile, 2);
+         int bitsPerPixel = readShort(infile);

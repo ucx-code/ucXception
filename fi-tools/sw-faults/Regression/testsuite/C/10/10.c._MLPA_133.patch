@@ -1,0 +1,20 @@
+--- 10.c
++++ 10.c._MLPA_133	2016-03-30 00:36:58.251241500 +0100
+@@ -203,8 +203,6 @@
+ case Length:
+     c = (char*)malloc(sizeof (char*));
+     counter++;
+-    printf("\t%%%d = sub i32 %%.argc, 1\n", counter);
+-    sprintf(c, "%%%d", counter);
+     return c;
+     break;
+ case LoadArray:
+@@ -214,8 +212,6 @@
+ case NewBool:
+     break;
+ case ParseArgs:
+-    counter++;
+-    printf("\t%%%d = getelementptr inbounds i8** %%.argv, i64 %d\n", counter, atoi(expr->child->next->id) + 1);
+     printf("\t%%%d = load i8** %%%d\n", counter + 1, counter);
+     counter += 2;
+     printf("\t%%%d = call i32 @atoi(i8* %%%d)\n", counter, counter - 1);

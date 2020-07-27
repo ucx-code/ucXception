@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2894	2016-03-30 03:01:39.387277400 +0100
+@@ -2002,8 +2002,6 @@
+                             glDisable(GL_STENCIL_TEST);
+                             glEnable (GL_BLEND);
+                             glColor4f(1, 1, 1, 0.7);
+-                            desenhaSkyBox();
+-                            glDisable(GL_BLEND);
+                         }
+ 
+     glutSwapBuffers();

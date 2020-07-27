@@ -1,0 +1,11 @@
+--- 16.c
++++ 16.c._MLPA_16	2016-03-30 00:43:35.472330900 +0100
+@@ -59,8 +59,5 @@
+     int arr_size = sizeof (arr) / sizeof (arr[0]);
+     printf("Given array is \n");
+     printArray(arr, arr_size);
+-    mergeSort(arr, 0, arr_size - 1);
+-    printf("\nSorted array is \n");
+-    printArray(arr, arr_size);
+     return 0;
+ }

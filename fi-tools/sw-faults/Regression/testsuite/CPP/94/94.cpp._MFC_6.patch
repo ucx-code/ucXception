@@ -1,0 +1,11 @@
+--- 94.cpp
++++ 94.cpp._MFC_6	2016-03-30 02:02:58.337621700 +0100
+@@ -44,7 +44,7 @@
+         if (bipartite == true) 
+             printf("NOT SURE\n");
+         else
+-            printf("NO\n");
++            ;
+     }
+     return 0;
+ }

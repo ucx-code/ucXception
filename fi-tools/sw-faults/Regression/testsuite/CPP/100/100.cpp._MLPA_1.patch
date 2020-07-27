@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_1	2016-03-30 03:13:06.704431100 +0100
+@@ -4,8 +4,6 @@
+ RgbImage::RgbImage(int numRows, int numCols)
+ {
+     NumRows = numRows;
+-    NumCols = numCols;
+-    ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+     if (!ImagePtr) {
+         fprintf(stderr, "Unable to allocate memory for %ld x %ld bitmap.\n", NumRows, NumCols);
+         Reset();

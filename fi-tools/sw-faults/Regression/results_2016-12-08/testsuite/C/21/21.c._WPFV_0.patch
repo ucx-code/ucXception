@@ -1,0 +1,9 @@
+--- ./21.c
++++ ./21.c._WPFV_0	2016-12-08 00:50:14.195084230 +0000
+@@ -19,5 +19,5 @@
+         printAST(node->child, tabs + 1);
+ 
+     if (node->next) 
+-        printAST(node->next, tabs);
++        printAST(node->next, i);
+ }

@@ -1,0 +1,10 @@
+--- 70.cpp
++++ 70.cpp._MIA_1	2016-03-30 01:45:12.356426100 +0100
+@@ -24,7 +24,6 @@
+                     if (combinacao[escolhas[a][i] - 1] == 1) 
+                         estado[a] = 1;
+                 }else{
+-                    if (combinacao[abs(escolhas[a][i]) - 1] == 0) 
+                         estado[a] = 1;
+                 }
+         }

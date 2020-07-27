@@ -1,0 +1,12 @@
+--- 45.cpp
++++ 45.cpp._MIA_1	2016-03-30 01:38:29.317760900 +0100
+@@ -15,9 +15,7 @@
+             int melhorValor = K[i - 1][j];
+             for (a = 1;a <= nCoursesDept[i];a++){
+                 if (w[i][a] <= j) {
+-                    if (K[i - 1][j] > melhorValor) 
+                         melhorValor = K[i - 1][j];
+-
+                     int novoValor = K[i - 1][j - w[i][a]] + v[i][a];
+                     if (novoValor > melhorValor) 
+                         melhorValor = novoValor;

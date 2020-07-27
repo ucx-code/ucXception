@@ -1,0 +1,12 @@
+--- 78.cpp
++++ 78.cpp._MIA_12	2016-03-30 01:51:28.787612100 +0100
+@@ -137,9 +137,7 @@
+         if (soma == 407) 
+             showC(c, end);
+ 
+-        if (soma < best) 
+             best = soma;
+-
+         return;
+     }
+     c[begin] = 0;

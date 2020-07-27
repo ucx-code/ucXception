@@ -1,0 +1,11 @@
+--- 22.c
++++ 22.c._MFC_8	2016-03-30 00:50:04.640135100 +0100
+@@ -41,7 +41,7 @@
+             strcpy(new_symbol->type, "void");
+         else
+             if (strcmp(ele_type, "Bool") == 0) 
+-                strcpy(new_symbol->type, "boolean");
++                ;
+             else
+                 if (strcmp(ele_type, "IntArray") == 0) 
+                     strcpy(new_symbol->type, "int[]");

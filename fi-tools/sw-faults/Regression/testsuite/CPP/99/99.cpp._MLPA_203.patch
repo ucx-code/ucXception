@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_203	2016-03-30 02:08:02.351498200 +0100
+@@ -265,10 +265,6 @@
+ void initNevoeiro(void)
+ {
+     glFogfv(GL_FOG_COLOR, fogColor);
+-    glFogi(GL_FOG_MODE, GL_EXP);
+-    glFogf(GL_FOG_START, 0);
+-    glFogf(GL_FOG_END, 50);
+-    glHint(GL_FOG_HINT, GL_NICEST);
+     glFogf(GL_FOG_DENSITY, 0.016);
+     glEnable (GL_FOG);
+ }

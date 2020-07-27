@@ -1,0 +1,11 @@
+--- ./31.c
++++ ./31.c._MFC_14	2016-12-08 00:50:43.179083711 +0000
+@@ -53,7 +53,7 @@
+             }else
+                 if (R == 3) {
+                     for (i = 0;i < comp;i++){
+-                        memcpy(&tab[i][comp], &tab[i][0], comp * sizeof (char));
++                        ;
+                         memcpy(&tab[i + comp][comp], &tab[i][0], comp * sizeof (char));
+                     }
+                     invert(comp, 0, comp);

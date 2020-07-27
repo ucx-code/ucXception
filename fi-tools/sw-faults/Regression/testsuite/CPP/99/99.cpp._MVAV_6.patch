@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_6	2016-03-30 02:54:16.308440800 +0100
+@@ -1422,7 +1422,6 @@
+             printf("MESMO SITIO\n");
+             for (i = 0;i < enemysList.size();i++){
+                 if (enemysList[i].position[0] == pastX && enemysList[i].position[2] == pastZ) {
+-                    aux = 1;
+                     break;
+                 }
+             }

@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_34	2016-12-08 00:50:11.431084280 +0000
+@@ -242,7 +242,7 @@
+         printf("Incompatible type in while statement (got %s, required boolean)\n", expr_type);
+         exit(0);
+ }
+-semantic_statements(prog, name, node->child->next);
++;
+ break;
+ default:
+     break;

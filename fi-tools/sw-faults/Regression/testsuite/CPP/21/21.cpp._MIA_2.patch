@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._MIA_2	2016-03-30 01:22:48.061586800 +0100
+@@ -38,7 +38,7 @@
+                 break;
+             }
+         }
+-        if (tudoPreenchido == true) {
++        {
+             int k;
+             printf("Estado ");
+             for (k = 0;k < n;k++)

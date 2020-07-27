@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MFC_12	2016-03-30 01:21:19.323357000 +0100
+@@ -120,7 +120,7 @@
+                     int l;
+                     for (l = 0;l < tamanhoCaminho;l++){
+                         if (l != 0) 
+-                            printf(",");
++                            ;
+ 
+                         int posTmp = answer.top();
+                         printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));

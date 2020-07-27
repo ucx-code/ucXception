@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._MIA_5	2016-03-30 01:32:09.383399400 +0100
+@@ -60,7 +60,7 @@
+         if (countVizinhos(translator[estadoCounter][0], 0) - countVizinhos(translator[estadoCounter][i], 0) == 0) 
+             ++maxi;
+     }
+-    if (maxi > 1) {
++    {
+         estadoCounterT = estadoCounter - 1;
+         qsort(translator[estadoCounter], maxi, sizeof (int), desempate);
+     }

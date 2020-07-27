@@ -1,0 +1,16 @@
+--- 6.cpp
++++ 6.cpp._MLPA_4	2016-03-30 01:13:11.077844000 +0100
+@@ -122,13 +122,10 @@
+                 rec0(0, n);
+                 break;
+             case 1:
+-                rec1(0, n);
+                 break;
+             case 2:
+-                rec2(0, n);
+                 break;
+             case 3:
+-                rec3(0, n);
+                 break;
+         }
+         for (i = 0;i < squared;i++){

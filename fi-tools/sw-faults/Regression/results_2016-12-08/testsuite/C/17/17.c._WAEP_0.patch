@@ -1,0 +1,11 @@
+--- ./17.c
++++ ./17.c._WAEP_0	2016-12-08 00:49:58.099084518 +0000
+@@ -30,7 +30,7 @@
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {
+             solution[i] = 1;
+-            shortestPath(i, len + distancias[v][i]);
++            shortestPath(i, len);
+             solution[i] = 0;
+         }
+     }

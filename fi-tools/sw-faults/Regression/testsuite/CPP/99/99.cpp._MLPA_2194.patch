@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2194	2016-03-30 02:51:44.746313400 +0100
+@@ -1281,9 +1281,6 @@
+     glRotatef(90.0, 1.0, 0.0, 0.0);
+     GLUquadricObj* quadratic;
+     quadratic = gluNewQuadric();
+-    gluCylinder(quadratic, 3.0, 3.0, 10.0, 32, 32);
+-    glPopMatrix();
+-    glPushMatrix();
+     if (op_robot == 1) {
+         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, chromeAmb);
+         glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, chromeDif);

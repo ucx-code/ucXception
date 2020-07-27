@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2628	2016-03-30 02:56:53.650042800 +0100
+@@ -1658,10 +1658,6 @@
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }else
+             if ((opcoes == 0) && (x > 150) && (x < 350) && (y > 190) && (y < 250) && (iniciarjogo != 1)) {
+-                inicio = 0;
+-                opcoes = 1;
+-                pontos = 0;
+-                instrucoes = 0;
+                 acerca = 0;
+                 iniciarjogo = 0;
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);

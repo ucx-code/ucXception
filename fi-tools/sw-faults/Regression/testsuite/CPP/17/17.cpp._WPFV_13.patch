@@ -1,0 +1,11 @@
+--- 17.cpp
++++ 17.cpp._WPFV_13	2016-03-30 01:18:38.375701000 +0100
+@@ -34,7 +34,7 @@
+ 
+     for (i = pos + 1;i < n;i++){
+         if (estadosP[i] == 0) {
+-            rec(i, n, count);
++            rec(i, i, count);
+         }
+     }
+     for (i = 0;i < counter[pos];i++){

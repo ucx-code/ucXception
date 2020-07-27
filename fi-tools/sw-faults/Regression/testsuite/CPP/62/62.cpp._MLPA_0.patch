@@ -1,0 +1,11 @@
+--- 62.cpp
++++ 62.cpp._MLPA_0	2016-03-30 01:42:00.825083100 +0100
+@@ -36,8 +36,6 @@
+ inline void upheap(int k)
+ {
+     register int v;
+-    v = a[k];
+-    a[0] = -999999;
+     while (a[k / 2] >= v){
+         a[k] = a[k / 2];
+         k = k / 2;

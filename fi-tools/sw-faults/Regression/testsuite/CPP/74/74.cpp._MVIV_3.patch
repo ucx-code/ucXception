@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._MVIV_3	2016-03-30 01:48:32.740232200 +0100
+@@ -98,7 +98,7 @@
+         return;
+     }
+     int actual = 0;
+-    int actual2 = 0;
++    int actual2 = actual2;
+     c[begin] = 0;
+     actual = calcB(c, begin + 1, end);
+     c[begin] = 1;

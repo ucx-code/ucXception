@@ -1,0 +1,11 @@
+--- 69.cpp
++++ 69.cpp._WPFV_11	2016-03-30 01:44:49.509022700 +0100
+@@ -76,7 +76,7 @@
+     if ((begin == -1) || (calcB(c, begin + 1, end) < best)) {
+         for (i = begin + 1;i < end;i++){
+             c[i] = 1;
+-            marca(c, i);
++            marca(c, end);
+             rec(c, i, end);
+             desmarca(c, i);
+             c[i] = 0;

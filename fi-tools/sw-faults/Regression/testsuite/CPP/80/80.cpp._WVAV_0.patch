@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WVAV_0	2016-03-30 01:52:36.208091700 +0100
+@@ -57,7 +57,7 @@
+ 
+             int absChoice = abs(choices[i][a]) - 1;
+             if (absChoice <= begin) {
+-                possuiIngredienteParcial = 1;
++                possuiIngredienteParcial = 0 ^ 0xff;
+                 break;
+             }
+         }

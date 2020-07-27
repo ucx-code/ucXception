@@ -1,0 +1,11 @@
+--- 96.cpp
++++ 96.cpp._MLPA_7	2016-03-30 02:03:30.348377600 +0100
+@@ -51,8 +51,6 @@
+         jump:
+         for (i = 0;i <= n;i++)
+             G[i].clear();
+-        memset(partition, 0, sizeof (int) * (n + 1));
+-        memset(visited, 0, sizeof (int) * (n + 1));
+     }
+     return 0;
+ }

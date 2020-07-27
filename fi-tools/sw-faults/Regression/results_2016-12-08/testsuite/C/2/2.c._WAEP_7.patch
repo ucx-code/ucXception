@@ -1,0 +1,11 @@
+--- ./2.c
++++ ./2.c._WAEP_7	2016-12-08 00:50:06.027084376 +0000
+@@ -22,7 +22,7 @@
+             tmpInv[i] = (tmp[i] == '0') ? '1' : '0';
+         for (i = 0;i < halfSquare;i++){
+             if (r == 2) 
+-                memcpy(matrix + ((i * 2) * halfSquare), tmpInv + halfSquare * i, halfSquare);
++                memcpy(matrix + ((i * 2) * halfSquare), halfSquare * i, halfSquare);
+             else
+                 memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+ 

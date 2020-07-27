@@ -1,0 +1,13 @@
+--- 8.c
++++ 8.c._MIFS_1	2016-03-30 00:31:11.189332300 +0100
+@@ -54,10 +54,6 @@
+             tamAux++;
+             for (j = idxAux;j < i;j++){
+                 if (word[i] == word[j]) {
+-                    if (tam < tamAux) {
+-                        tam = tamAux;
+-                        idxI = idxAux;
+-                    }
+                     tamAux = 1;
+                     idxAux = j + 1;
+                     i = j + 2;

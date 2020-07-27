@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIA_67	2016-03-30 03:03:02.330266500 +0100
+@@ -1940,9 +1940,7 @@
+                                 if (CAMERA == 1) 
+                                     gluLookAt(obsPini[0], obsPini[1], obsPini[2], robotX, obsPfin[1], robotZ, 0, 1, 0);
+ 
+-                            if (health > 0) 
+                                 desenhaRobot();
+-
+                             desenhaLagrima();
+                             desenhaBombas();
+                             desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));

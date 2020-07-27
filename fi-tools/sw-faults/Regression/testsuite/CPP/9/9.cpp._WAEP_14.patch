@@ -1,0 +1,11 @@
+--- 9.cpp
++++ 9.cpp._WAEP_14	2016-03-30 01:14:45.528587700 +0100
+@@ -29,7 +29,7 @@
+         int a;
+         for (i = 0;i <= halfSquare * (halfSquare / 2);i++)
+             tmpInv[i] = tmp[i] ^ 1;
+-        memcpy(tmpInv + (halfSquare * halfSquare / 2) + 1, tmpInv, halfSquare * halfSquare / 2);
++        memcpy(tmpInv + (halfSquare * halfSquare / 2) + 1, tmpInv, halfSquare * halfSquare);
+         if (r == 0) {
+             for (i = halfSquare / 2 - 1;i <= halfSquare;i++)
+                 for (a = 0;a <= halfSquare / 2;a++)

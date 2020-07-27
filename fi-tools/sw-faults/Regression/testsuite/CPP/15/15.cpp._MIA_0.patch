@@ -1,0 +1,12 @@
+--- 15.cpp
++++ 15.cpp._MIA_0	2016-03-30 01:16:59.654153800 +0100
+@@ -8,9 +8,7 @@
+ 
+ void rec(unsigned int n, unsigned int target, unsigned int r)
+ {
+-    if (n > target) 
+         return;
+-
+     if (n == 0) {
+         matrix[0] = '0';
+         rec(n + 1, target, r);

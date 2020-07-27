@@ -1,0 +1,11 @@
+--- 39.c
++++ 39.c._MLPA_1	2016-03-30 01:03:04.728699500 +0100
+@@ -42,8 +42,6 @@
+         }
+         for (i = 0;i < m;i++){
+             scanf("%d %d", &x, &y);
+-            vector[x][(++vector[x][0])] = y;
+-            vector[y][(++vector[y][0])] = x;
+         }
+         if (GCP(1) == TRUE) 
+             printf("NOT SURE\n");

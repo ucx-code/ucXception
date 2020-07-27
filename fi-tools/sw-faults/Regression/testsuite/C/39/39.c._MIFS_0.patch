@@ -1,0 +1,12 @@
+--- 39.c
++++ 39.c._MIFS_0	2016-03-30 01:02:59.096983500 +0100
+@@ -9,9 +9,6 @@
+ int GCP(int v)
+ {
+     int i, j, pos;
+-    if (v == n + 1) 
+-        return TRUE;
+-
+     for (i = 1;i <= 2;i++){
+         pos = TRUE;
+         for (j = 1;j <= vector[v][0];j++){

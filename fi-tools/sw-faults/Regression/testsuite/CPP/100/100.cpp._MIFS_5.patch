@@ -1,0 +1,16 @@
+--- 100.cpp
++++ 100.cpp._MIFS_5	2016-03-30 03:14:25.159357500 +0100
+@@ -73,13 +73,6 @@
+             *(cPtr++) = 0;
+         }
+     }
+-    if (feof(infile)) {
+-        fprintf(stderr, "Premature end of file: %s.\n", filename);
+-        Reset();
+-        ErrorCode = ReadError;
+-        fclose(infile);
+-        return false;
+-    }
+     fclose(infile);
+     return true;
+ }

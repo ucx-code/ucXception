@@ -1,0 +1,11 @@
+--- 35.c
++++ 35.c._MLAC_0	2016-03-30 01:01:56.283425900 +0100
+@@ -23,7 +23,7 @@
+                             v[dept][j] = valor + v[dept - 1][j - custo];
+                     }
+                 }else{
+-                    if (v[dept][j] < valor + v[dept - 1][j - custo] && custo < j) 
++                    if (custo < j) 
+                         v[dept][j] = valor + v[dept - 1][j - custo];
+                 }
+             }

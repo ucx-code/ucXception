@@ -1,0 +1,14 @@
+--- 26.cpp
++++ 26.cpp._MLPA_2	2016-03-30 01:25:00.981979900 +0100
+@@ -42,11 +42,8 @@
+             maiorID = i;
+         }
+     }
+-    printf("Set of maximum cardinality is %d\n", maiorID);
+     std::vector<int> c1;
+-    c1.push_back(maiorID);
+     std::vector<int> tmpS(S), tmpU(U);
+-    tmpS.erase(tmpS.begin() + maiorID);
+     for (i = 0;i < sizeSet[S[maiorID]];i++){
+         tmpU.erase(std::remove(tmpU.begin(), tmpU.end(), sets[S[maiorID]][i]), tmpU.end());
+     }

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_69	2016-03-30 03:08:55.995837700 +0100
+@@ -2039,7 +2039,7 @@
+     srand (time(NULL));
+     alutInit(NULL, 0);
+     alGetError();
+-    if (LoadALData() == AL_FALSE) {
++    {
+         printf("Error loading data.");
+         return 0;
+     }

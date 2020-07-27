@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_106	2016-12-08 00:49:49.195084678 +0000
+@@ -276,8 +276,6 @@
+ is_node* insert_expr_squares_expr(is_node* expr1, is_node* expr2)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = expr1;
+-    expr1->next = expr2;
+     node->type = LoadArray;
+     node->id = NULL;
+     return node;

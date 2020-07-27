@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._MIFS_7	2016-03-30 01:52:45.695798200 +0100
+@@ -141,8 +141,6 @@
+ {
+     if (begin != end) {
+         int actual = calcB3(c, begin, end);
+-        if (actual + minas[begin] > best) 
+-            return;
+     }
+     if (begin == end) {
+         int soma = calc(c, end);

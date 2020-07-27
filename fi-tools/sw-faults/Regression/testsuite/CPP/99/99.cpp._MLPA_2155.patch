@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2155	2016-03-30 02:51:17.887972900 +0100
+@@ -1246,9 +1246,6 @@
+ 
+     glPushMatrix();
+     glTranslatef(3.5, -3.0, -1.5);
+-    glRotatef(angB, 1.0, 0.0, 0.0);
+-    glTranslatef(0.0, 0.0, -2.0);
+-    glScalef(1.0, 1.0, 3.0);
+     glutSolidCube(1.5);
+     glPopMatrix();
+     glPushMatrix();

@@ -1,0 +1,11 @@
+--- 34.cpp
++++ 34.cpp._MLPA_0	2016-03-30 01:30:46.934266100 +0100
+@@ -20,8 +20,6 @@
+     bool todosTemAcesso = true;
+     for (i = 0;i < n;i++){
+         if (estadosP[estadoCounter][i] == 0) {
+-            todosTemAcesso = false;
+-            memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
+             if (rec(i, n, count, estadoCounter + 1, limit) == 1) 
+                 return 1;
+         }

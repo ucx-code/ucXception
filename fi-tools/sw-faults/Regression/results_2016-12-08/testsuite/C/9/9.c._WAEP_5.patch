@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._WAEP_5	2016-12-08 00:51:12.535083185 +0000
+@@ -36,7 +36,7 @@
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+         free(tableLines[i]);
+-        free(tableColumns[i]);
++        free(i);
+     }
+     free(table);
+     free(tableLines);

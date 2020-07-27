@@ -1,0 +1,11 @@
+--- ./13.c
++++ ./13.c._MFC_0	2016-12-08 00:49:41.167084822 +0000
+@@ -29,7 +29,7 @@
+     int n, i, j, m, z;
+     while (scanf("%d", &n) != EOF){
+         for (i = 0;i < n;i++){
+-            scanf("%d", &nSeq);
++            ;
+             for (j = 0;j < nSeq;j++){
+                 scanf("%d", &vec[j]);
+             }

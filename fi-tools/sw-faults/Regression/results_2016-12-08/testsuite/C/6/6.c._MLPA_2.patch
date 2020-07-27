@@ -1,0 +1,11 @@
+--- ./6.c
++++ ./6.c._MLPA_2	2016-12-08 00:51:04.387083331 +0000
+@@ -19,8 +19,6 @@
+         float soma = soma_golos(j);
+         float media = (soma / 5);
+         float eq = equilibrio(j, media);
+-        printf("%d\n", jogadores[j][0]);
+-        printf("Media: %g\n", media);
+         printf("Equilibrio: %g\n", eq);
+         if (media > eq) {
+             printf("Classificacao: %g\n", media);

@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MFC_5	2016-03-30 01:25:08.435427200 +0100
+@@ -46,7 +46,7 @@
+     std::vector<int> c1;
+     c1.push_back(maiorID);
+     std::vector<int> tmpS(S), tmpU(U);
+-    tmpS.erase(tmpS.begin() + maiorID);
++    ;
+     for (i = 0;i < sizeSet[S[maiorID]];i++){
+         tmpU.erase(std::remove(tmpU.begin(), tmpU.end(), sets[S[maiorID]][i]), tmpU.end());
+     }

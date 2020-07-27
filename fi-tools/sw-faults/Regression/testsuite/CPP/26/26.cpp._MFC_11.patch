@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MFC_11	2016-03-30 01:25:19.408821900 +0100
+@@ -72,7 +72,7 @@
+     int i;
+     for (i = 0;i < n;i++){
+         int a;
+-        printf("(%d,", i);
++        ;
+         sets[i][sizeSet[i]++] = i;
+         for (a = 0;a < counter[i];a++){
+             printf("%d,", vizinhos[i][a]);

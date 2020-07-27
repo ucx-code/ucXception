@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MFC_34	2016-03-30 01:39:44.552322800 +0100
+@@ -178,7 +178,7 @@
+                 recurseSize = 0;
+                 int result = recurse(i, matrixSize, width);
+                 if (result == 1) {
+-                    strcat2((char*)"\n", 1);
++                    ;
+                     encontrou = true;
+                     break;
+                 }

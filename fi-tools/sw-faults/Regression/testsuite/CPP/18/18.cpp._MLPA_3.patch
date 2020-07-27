@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MLPA_3	2016-03-30 01:21:16.718525200 +0100
+@@ -123,8 +123,6 @@
+                             printf(",");
+ 
+                         int posTmp = answer.top();
+-                        printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));
+-                        answer.pop();
+                     }
+                     printf("\n");
+                     encontrou = true;

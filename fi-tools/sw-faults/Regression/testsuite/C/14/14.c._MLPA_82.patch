@@ -1,0 +1,13 @@
+--- 14.c
++++ 14.c._MLPA_82	2016-03-30 00:40:44.781369200 +0100
+@@ -187,10 +187,6 @@
+ is_node* insertST_id_expr_assign_expr(is_node* id, is_node* expr1, is_node* expr2)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = id;
+-    id->next = expr1;
+-    expr1->next = expr2;
+-    node->type = StoreArray;
+     node->id = NULL;
+     return node;
+ }

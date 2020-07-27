@@ -1,0 +1,15 @@
+--- 100.cpp
++++ 100.cpp._MIFS_8	2016-03-30 03:17:02.265876100 +0100
+@@ -224,12 +224,6 @@
+         NumRows = vHeight;
+         NumCols = vWidth;
+         ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+-        if (!ImagePtr) {
+-            fprintf(stderr, "Unable to allocate memory for %ld x %ld buffer.\n", NumRows, NumCols);
+-            Reset();
+-            ErrorCode = MemoryError;
+-            return false;
+-        }
+     }
+     assert(vWidth >= NumCols && vHeight >= NumRows);
+     int oldGlRowLen;

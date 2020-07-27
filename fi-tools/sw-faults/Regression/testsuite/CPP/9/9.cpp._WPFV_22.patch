@@ -1,0 +1,11 @@
+--- 9.cpp
++++ 9.cpp._WPFV_22	2016-03-30 01:14:57.603122400 +0100
+@@ -74,7 +74,7 @@
+     int i, squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+         squared = quickPow[n];
+-        rec(0, n, r % 4);
++        rec(0, quickPow, r % 4);
+         for (i = 0;i < squared;i++){
+             fwrite(matrix + (i * squared), 1, squared, stdout);
+             putchar('\n');

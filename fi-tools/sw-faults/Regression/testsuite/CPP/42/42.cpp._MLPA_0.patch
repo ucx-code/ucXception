@@ -1,0 +1,11 @@
+--- 42.cpp
++++ 42.cpp._MLPA_0	2016-03-30 01:37:22.496126900 +0100
+@@ -38,8 +38,6 @@
+             }
+         }
+         int tmp = agora;
+-        agora = anterior;
+-        anterior = tmp;
+     }
+     return maximoFinal;
+ }

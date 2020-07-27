@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1883	2016-03-30 02:46:56.818221900 +0100
+@@ -1148,8 +1148,6 @@
+     int i;
+     for (i = 0;i < enemysList.size();i++){
+         if (enemysList[i].show == 0) {
+-            glPushMatrix();
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, blackRubberAmb);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, blackRubberDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackRubberSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackRubberCoef);

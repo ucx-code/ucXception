@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_44	2016-03-30 02:59:42.301978700 +0100
+@@ -1749,7 +1749,6 @@
+     }
+     if ((iniciarjogo != 1) && (opcoes != 1) && (pontos == 1) && (instrucoes != 1) && (acerca != 1)) {
+         if ((x > 395) && (x < 475) && (y > 445) && (y < 490)) {
+-            inicio = 1;
+             opcoes = 0;
+             pontos = 0;
+             instrucoes = 0;

@@ -1,0 +1,11 @@
+--- 22.cpp
++++ 22.cpp._WAEP_1	2016-03-30 01:23:17.854873500 +0100
+@@ -21,7 +21,7 @@
+ int criaEstados(unsigned char* estado, int nivel)
+ {
+     unsigned char novoEstado[35];
+-    memcpy(novoEstado, estado, 35 * sizeof (char));
++    memcpy(novoEstado, estado, sizeof (char));
+     int i;
+     for (i = 0;i < n;i++){
+         if (estado[i] == 0) {

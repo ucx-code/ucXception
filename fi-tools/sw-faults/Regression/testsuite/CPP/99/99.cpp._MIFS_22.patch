@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIFS_22	2016-03-30 02:54:34.513673400 +0100
+@@ -1520,9 +1520,6 @@
+                         particles[i].color[1] = 0.0;
+                     }
+                     particles[i].color[2] -= 1.0 / 50.0;
+-                    if (particles[i].color[2] < 0.0) {
+-                        particles[i].color[2] = 0.0;
+-                    }
+                 }
+                 for (i = 0;i < NUM_DEBRIS;i++){
+                     debris[i].position[0] += debris[i].speed[0] * 0.1;

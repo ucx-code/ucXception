@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MLPA_2	2016-12-08 00:50:08.639084330 +0000
+@@ -28,8 +28,6 @@
+                 insert_global_table(prog, node->id, "");
+                 break;
+             case VarDecl:
+-                aux_type = sem_type[node->child->type];
+-                aux = node->child->next;
+                 while (aux != NULL){
+                     insert_global_table(prog, aux->id, aux_type);
+                     aux = aux->next;

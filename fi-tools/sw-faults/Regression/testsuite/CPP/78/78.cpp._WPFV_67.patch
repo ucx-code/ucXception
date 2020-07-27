@@ -1,0 +1,10 @@
+--- 78.cpp
++++ 78.cpp._WPFV_67	2016-03-30 01:51:58.823600400 +0100
+@@ -200,6 +200,6 @@
+         }
+     }
+     showC(forced, n);
+-    rec(c, 0, n);
++    rec(c, 0, friendship);
+     printf("%d\n", best);
+ }

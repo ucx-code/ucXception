@@ -1,0 +1,11 @@
+--- ./16.c
++++ ./16.c._MIA_0	2016-12-08 00:49:55.767084560 +0000
+@@ -37,7 +37,7 @@
+ 
+ void mergeSort(int arr[], int l, int r)
+ {
+-    if (l < r) {
++    {
+         int m = l + (r - l) / 2;
+         mergeSort(arr, l, m);
+         mergeSort(arr, m + 1, r);

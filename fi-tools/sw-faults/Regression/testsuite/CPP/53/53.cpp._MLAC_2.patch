@@ -1,0 +1,11 @@
+--- 53.cpp
++++ 53.cpp._MLAC_2	2016-03-30 01:40:19.626290700 +0100
+@@ -37,7 +37,7 @@
+                 ++maximo;
+                 master = i;
+             }else
+-                if ((slot[i].begin != -1) && (nextBegin == -1)) 
++                if ((slot[i].begin != -1)) 
+                     nextBegin = 1;
+ 
+             if (slot[i].begin != -1) 

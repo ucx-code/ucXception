@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._MIA_5	2016-03-30 01:48:54.428225200 +0100
+@@ -103,7 +103,7 @@
+     actual = calcB(c, begin + 1, end);
+     c[begin] = 1;
+     actual2 = calcB(c, begin + 1, end);
+-    if (actual2 < best) {
++    {
+         c[begin] = 1;
+         rec(c, begin + 1, end);
+     }

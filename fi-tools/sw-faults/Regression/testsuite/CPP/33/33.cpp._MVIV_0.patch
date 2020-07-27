@@ -1,0 +1,11 @@
+--- 33.cpp
++++ 33.cpp._MVIV_0	2016-03-30 01:29:47.661732300 +0100
+@@ -23,7 +23,7 @@
+     for (i = 0;i < counter[pos];i++){
+         estadosP[estadoCounter][vizinhos[pos][i]] = 1;
+     }
+-    bool todosTemAcesso = true;
++    bool todosTemAcesso = todosTemAcesso;
+     for (i = 0;i < n;i++){
+         if (estadosP[estadoCounter][i] == 0) {
+             todosTemAcesso = false;

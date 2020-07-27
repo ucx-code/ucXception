@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MLPA_96	2016-12-08 00:49:33.083084966 +0000
+@@ -184,8 +184,6 @@
+ case Add:
+     expr_type = gen_expression(method_name, expr->child, prog);
+     expr_type1 = gen_expression(method_name, expr->child->next, prog);
+-    printf("\t%%%d = add i32 %s,%s\n", ++counter, expr_type, expr_type1);
+-    sprintf(c, "%%%d", counter);
+     return c;
+     break;
+ case Sub:

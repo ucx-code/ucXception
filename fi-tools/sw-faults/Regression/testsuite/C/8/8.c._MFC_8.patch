@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._MFC_8	2016-03-30 00:31:06.350216500 +0100
+@@ -40,7 +40,7 @@
+     for (i = 0;i < nString;i++)
+         free(pWord[i]);
+     free(actWord);
+-    free(pWord);
++    ;
+     free(finalWord);
+     return 0;
+ }

@@ -1,0 +1,11 @@
+--- 21.c
++++ 21.c._MIA_0	2016-03-30 00:49:36.320417200 +0100
+@@ -6,7 +6,7 @@
+ 
+ void printAST(is_node* node, int tabs)
+ {
+-    if (node->type != NoNode) {
++    {
+         int i;
+         for (i = 0;i < tabs;i++)
+             printf("  ");

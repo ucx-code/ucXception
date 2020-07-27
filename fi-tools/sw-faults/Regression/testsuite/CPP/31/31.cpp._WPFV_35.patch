@@ -1,0 +1,11 @@
+--- 31.cpp
++++ 31.cpp._WPFV_35	2016-03-30 01:28:41.420763400 +0100
+@@ -53,7 +53,7 @@
+     int i;
+     for (i = 0;i < n;i++){
+         memset(estado, 0, sizeof (int) * 35);
+-        rec(i, n, 0, estado);
++        rec(i, estadosP, 0, estado);
+     }
+     printf("%d\n", melhor);
+     return 0;

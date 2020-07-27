@@ -1,0 +1,11 @@
+--- 19.c
++++ 19.c._MFC_2	2016-03-30 00:46:36.216687300 +0100
+@@ -61,7 +61,7 @@
+ {
+     int i, j, bound = 0;
+     unsigned int x, y;
+-    scanf("%d", &n);
++    ;
+     for (i = 1;i <= n;i++)
+         scanf("%f %f %d", &supermarkets[i][0], &supermarkets[i][1], &distancias[i][17]);
+     scanf("%f %f %d", &supermarkets[0][0], &supermarkets[0][1], &distancias[i][17]);

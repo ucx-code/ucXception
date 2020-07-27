@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MFC_0	2016-03-30 01:08:10.185686900 +0100
+@@ -25,7 +25,7 @@
+ 
+     ++hitCount[pos];
+     if ((pos >= max - width - 1) && (pos < max)) {
+-        answer.push(pos);
++        ;
+         return 1;
+     }
+     if (((buffer[pos] == '/') && (buffer[pos + width] == '|')) || ((buffer[pos] == '/') && (buffer[pos + width] == '/')) || ((buffer[pos] == '|') && (buffer[pos + width] == '/'))) {

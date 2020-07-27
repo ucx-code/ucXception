@@ -1,0 +1,12 @@
+--- 52.cpp
++++ 52.cpp._MIA_0	2016-03-30 01:40:11.529761600 +0100
+@@ -26,9 +26,7 @@
+     for (i = 0;i < n;i++){
+         int extra = 0;
+         for (a = i + maior;a < n;a++){
+-            if (slot[a].begin >= slot[i].end) 
+                 break;
+-
+             ++extra;
+         }
+         maior += extra;

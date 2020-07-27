@@ -1,0 +1,14 @@
+--- 28.cpp
++++ 28.cpp._MIFS_0	2016-03-30 01:26:01.078718900 +0100
+@@ -11,9 +11,8 @@
+ int saoVizinhos(int i, int j)
+ {
+     int a;
+-    for (a = 0;a < counter[i];a++)
+-        if (vizinhos[i][a] == j) 
+-            return 1;
++    for (a = 0;a < counter[i];a++);
++
+     return 0;
+ }
+ 

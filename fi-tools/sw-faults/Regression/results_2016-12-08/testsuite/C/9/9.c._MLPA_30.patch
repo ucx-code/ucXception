@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MLPA_30	2016-12-08 00:51:13.719083164 +0000
+@@ -99,8 +99,6 @@
+         while (vect[up] > a)
+             up--;
+         if (down < up) {
+-            temp = vect[down];
+-            vect[down] = vect[up];
+             vect[up] = temp;
+         }
+     }

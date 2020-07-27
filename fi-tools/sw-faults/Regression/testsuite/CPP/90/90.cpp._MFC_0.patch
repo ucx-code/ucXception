@@ -1,0 +1,11 @@
+--- 90.cpp
++++ 90.cpp._MFC_0	2016-03-30 02:02:07.881822500 +0100
+@@ -55,7 +55,7 @@
+ 
+         for (i = 0;i < m;i++){
+             int a, b;
+-            readLine(&a, &b);
++            ;
+             vizinhos[a][vizinhosC[a]++] = b;
+             vizinhos[b][vizinhosC[b]++] = a;
+         }

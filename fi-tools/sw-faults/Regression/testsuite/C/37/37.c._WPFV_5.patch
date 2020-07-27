@@ -1,0 +1,11 @@
+--- 37.c
++++ 37.c._WPFV_5	2016-03-30 01:02:28.940150700 +0100
+@@ -17,7 +17,7 @@
+         scanf("%d %d", &ini[i], &fim[i]);
+     }
+     qsort(ini, n, sizeof (int), compare);
+-    qsort(fim, n, sizeof (int), compare);
++    qsort(fim, fim, sizeof (int), compare);
+     for (i = 1;i < n;i++){
+         if (fim[j] > ini[i]) {
+             totalROOMS++;

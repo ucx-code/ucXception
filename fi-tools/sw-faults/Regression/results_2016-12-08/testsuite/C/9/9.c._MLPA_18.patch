@@ -1,0 +1,14 @@
+--- ./9.c
++++ ./9.c._MLPA_18	2016-12-08 00:51:10.643083219 +0000
+@@ -28,11 +28,6 @@
+     }
+     tableColumns = orderByColumns(table, lines, columns);
+     tableLines = orderByLines(table, lines, columns);
+-    printTable(table, lines, columns);
+-    printf("\n");
+-    printTable(tableLines, lines, columns);
+-    printf("\n");
+-    printTable(tableColumns, lines, columns);
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+         free(tableLines[i]);

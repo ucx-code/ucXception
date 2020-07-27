@@ -1,0 +1,10 @@
+--- 5.c
++++ 5.c._MVAE_11	2016-03-30 00:30:17.379640100 +0100
+@@ -87,7 +87,6 @@
+             troco = troco - (moedasTroco[5] * 0.05);
+         }
+         if (troco / 0.02 >= 1 && moedas[6] > 0) {
+-            x = troco / 0.02;
+             if (x > moedas[6]) {
+                 moedasTroco[6] = moedas[6];
+             }else{

@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._MFC_0	2016-03-30 00:30:02.692364800 +0100
+@@ -10,7 +10,7 @@
+     for (i = 0;i < 8;i++){
+         scanf("%d", &moedas[i]);
+     }
+-    scanf("%f", &despesa);
++    ;
+     for (i = 0;i < 8;i++){
+         scanf("%d", &moedasRec[i]);
+         recebido = recebido + (moedasRec[i] * valores[i]);

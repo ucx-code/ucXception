@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAE_8	2016-03-30 02:45:30.270869700 +0100
+@@ -1091,7 +1091,6 @@
+             }
+         }
+         if (aux == 0) {
+-            lastRobotZ = robotZ;
+             lastRobotX = robotX;
+         }
+     }

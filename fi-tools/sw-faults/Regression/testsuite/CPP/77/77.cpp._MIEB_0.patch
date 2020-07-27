@@ -1,0 +1,14 @@
+--- 77.cpp
++++ 77.cpp._MIEB_0	2016-03-30 01:51:01.391130200 +0100
+@@ -27,10 +27,7 @@
+             if (taste == 0) {
+                 break;
+             }
+-            if (taste < 0) {
+-                moods[i]++;
+-                opinions[i][abs(taste) - 1] = -1;
+-            }else{
++            {
+                 opinions[i][taste - 1] = 1;
+             }
+         }

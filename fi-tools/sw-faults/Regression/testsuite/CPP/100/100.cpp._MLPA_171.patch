@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_171	2016-03-30 03:16:59.690048100 +0100
+@@ -195,9 +195,6 @@
+ {
+     assert(row < NumRows && col < NumCols);
+     unsigned char* thePixel = GetRgbPixel(row, col);
+-    *(thePixel++) = red;
+-    *(thePixel++) = green;
+-    *(thePixel) = blue;
+ }
+ 
+ unsigned char RgbImage::doubleToUnsignedChar(double x)

@@ -1,0 +1,11 @@
+--- 94.cpp
++++ 94.cpp._MLPA_1	2016-03-30 02:02:46.706086000 +0100
+@@ -33,8 +33,6 @@
+             a[a2][b2] = 1;
+             a[b2][a2] = 1;
+         }
+-        bipartite = true;
+-        memset(mark, false, sizeof (bool) * n);
+         memset(color, 0, sizeof (int) * n);
+         for (i = 0;i < n;i++)
+             if (mark[i] == false) 

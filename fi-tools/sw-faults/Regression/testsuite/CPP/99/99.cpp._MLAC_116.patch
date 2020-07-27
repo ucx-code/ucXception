@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLAC_116	2016-03-30 02:57:29.003837200 +0100
+@@ -1675,7 +1675,7 @@
+                     iniciarjogo = 0;
+                     glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+                 }else
+-                    if ((instrucoes == 0) && (x > 150) && (x < 350) && (y > 360) && (y < 395) && (iniciarjogo != 1)) {
++                    if ((instrucoes == 0) && (x > 150) && (x < 350) && (y > 360) && (y < 395)) {
+                         inicio = 0;
+                         opcoes = 0;
+                         pontos = 0;

@@ -1,0 +1,11 @@
+--- 25.cpp
++++ 25.cpp._MLPA_0	2016-03-30 01:24:41.925058200 +0100
+@@ -54,8 +54,6 @@
+     int i;
+     for (i = begin;i < end;i++){
+         if (visit[i] == 0) {
+-            visit[i] = 1;
+-            shortPath(i, end, len + 1);
+             visit[i] = 0;
+         }
+     }

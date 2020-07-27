@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_118	2016-12-08 00:49:49.999084663 +0000
+@@ -311,9 +311,6 @@
+ is_node* insert_new_exp(node_type type, is_node* expr)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = expr;
+-    node->type = type;
+-    node->id = NULL;
+     return node;
+ }
+ is_node* insert_ParseInt(is_node* id, is_node* expr)

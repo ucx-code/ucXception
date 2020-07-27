@@ -1,0 +1,11 @@
+--- 16.c
++++ 16.c._MFC_0	2016-03-30 00:43:09.086409600 +0100
+@@ -39,7 +39,7 @@
+ {
+     if (l < r) {
+         int m = l + (r - l) / 2;
+-        mergeSort(arr, l, m);
++        ;
+         mergeSort(arr, m + 1, r);
+         merge(arr, l, m, r);
+     }

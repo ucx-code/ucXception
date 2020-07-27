@@ -1,0 +1,16 @@
+--- 73.cpp
++++ 73.cpp._MIA_11	2016-03-30 01:47:56.517033500 +0100
+@@ -239,11 +239,10 @@
+         int k2 = 0;
+         for (a = 0;a < listaC[i][0];a++)
+             k2 += friendship[lista[i][0][a]];
+-        if (k >= k2) {
++        {
+             forced[i] = 1;
+             continue;
+-        }
+-        k = 0;
++        }k = 0;
+         for (a = 0;a < unitClauseC[i][0];a++)
+             k += friendship[unitClause[i][0][a]];
+         k2 = 0;

@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_10	2016-12-08 00:49:44.535084761 +0000
+@@ -38,9 +38,6 @@
+         id->next = methodParams;
+     }
+     is_node* methodBody = (is_node*)malloc(sizeof (is_node));
+-    methodBody->type = MethodBody;
+-    methodBody->id = NULL;
+-    methodBody->next = NULL;
+     methodBody->child = NULL;
+     if (changes == 1) 
+         params->next = methodBody;

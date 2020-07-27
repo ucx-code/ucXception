@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WPFV_152	2016-03-30 02:09:23.218165100 +0100
+@@ -317,7 +317,7 @@
+             alSourcef(SourceEx, AL_GAIN, 1.0);
+             alSourcefv(SourceEx, AL_POSITION, SourcePosEx);
+             alSourcefv(SourceEx, AL_VELOCITY, SourceVelEx);
+-            alSourcei(SourceEx, AL_LOOPING, loop);
++            alSourcei(SourceEx, AL_LOOPING, pontos);
+         }
+         if (alGetError() == AL_NO_ERROR) 
+             return AL_TRUE;

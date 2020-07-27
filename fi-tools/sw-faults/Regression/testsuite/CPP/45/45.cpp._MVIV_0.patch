@@ -1,0 +1,11 @@
+--- 45.cpp
++++ 45.cpp._MVIV_0	2016-03-30 01:38:27.867576800 +0100
+@@ -9,7 +9,7 @@
+ int knapsack3(int n, int m)
+ {
+     int j, i, a;
+-    int mesmo = 0;
++    int mesmo = mesmo;
+     for (i = 1;i <= n;i++){
+         for (j = 1;j <= m;j++){
+             int melhorValor = K[i - 1][j];

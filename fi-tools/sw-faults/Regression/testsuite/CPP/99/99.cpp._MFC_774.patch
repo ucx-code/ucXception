@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_774	2016-03-30 03:02:03.983245800 +0100
+@@ -1908,7 +1908,7 @@
+                             sprintf(textoPontos, "Health: %d\nScore : %d", health, score);
+                             desenhaTexto(textoPontos);
+                             if (cenario == 3) 
+-                                initNevoeiro();
++                                ;
+ 
+                             if (cenario == 2) 
+                                 desenhaChuva();

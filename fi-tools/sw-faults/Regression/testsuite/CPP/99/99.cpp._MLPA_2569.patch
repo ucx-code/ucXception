@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2569	2016-03-30 02:55:13.915529300 +0100
+@@ -1572,10 +1572,6 @@
+     GLfloat Foco_al = 0.05f;
+     GLfloat Foco_aq = 0.0f;
+     GLfloat Foco_Expon = 2.0;
+-    glLightfv(GL_LIGHT1, GL_POSITION, Pos1);
+-    glLightfv(GL_LIGHT1, GL_DIFFUSE, Foco1_cor);
+-    glLightf(GL_LIGHT1, GL_CONSTANT_ATTENUATION, Foco_ak);
+-    glLightf(GL_LIGHT1, GL_LINEAR_ATTENUATION, Foco_al);
+     glLightf(GL_LIGHT1, GL_QUADRATIC_ATTENUATION, Foco_aq);
+     glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, anguloFoco);
+     glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, Foco_direccao);

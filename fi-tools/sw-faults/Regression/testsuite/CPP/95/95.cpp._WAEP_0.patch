@@ -1,0 +1,11 @@
+--- 95.cpp
++++ 95.cpp._WAEP_0	2016-03-30 02:03:09.557047700 +0100
+@@ -39,7 +39,7 @@
+         }
+         bipartite = false;
+         for (i = 0;i < n;i++){
+-            memset(mark, false, sizeof (bool) * 500);
++            memset(mark, false, sizeof (bool));
+             memset(color, 0, sizeof (int) * 500);
+             if (dfs(i, 1) == true) 
+                 bipartite = true;

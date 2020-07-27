@@ -1,0 +1,24 @@
+--- 6.cpp
++++ 6.cpp._MIEB_3	2016-03-30 01:12:55.884413500 +0100
+@@ -90,10 +90,7 @@
+     if (n > target) 
+         return;
+ 
+-    if (n == 0) {
+-        matrix[0] = '0';
+-        rec3(n + 1, target);
+-    }else{
++    {
+         int halfSquare = quickPow[n - 1];
+         int i;
+         memcpy(tmp, matrix, halfSquare * halfSquare);
+@@ -108,8 +105,7 @@
+             memcpy(matrix + (halfSquare * 2 * halfSquare) + (i * 2 * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }
+         rec3(n + 1, target);
+-    }
+-}
++    }}
+ 
+ int main()
+ {

@@ -1,0 +1,10 @@
+--- 54.cpp
++++ 54.cpp._WAEP_3	2016-03-30 01:40:28.911523700 +0100
+@@ -33,6 +33,6 @@
+             master = i;
+         }
+     }
+-    printf("%d\n", n - maximo);
++    printf("%d\n", maximo);
+     return 0;
+ }

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_172	2016-03-30 02:16:01.106774900 +0100
+@@ -588,7 +588,7 @@
+     glVertex2f(-10.0f, -10.0f);
+     glEnd();
+     glPopMatrix();
+-    glDisable(GL_TEXTURE_2D);
++    ;
+ }
+ 
+ void func_opcoes()

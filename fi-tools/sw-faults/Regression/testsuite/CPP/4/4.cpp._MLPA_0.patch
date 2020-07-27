@@ -1,0 +1,11 @@
+--- 4.cpp
++++ 4.cpp._MLPA_0	2016-03-30 01:11:43.667235200 +0100
+@@ -55,8 +55,6 @@
+         int squared = pow(2, n);
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+-            memcpy(tmp, matrix + (i * squared), squared);
+-            tmp[squared] = '\0';
+             printf("%s\n", tmp);
+         }
+     }

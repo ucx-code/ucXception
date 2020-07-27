@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._WAEP_0	2016-03-30 01:24:58.682187600 +0100
+@@ -14,7 +14,7 @@
+     int i;
+     printf("(");
+     for (i = 0;i < (int)x.size();i++)
+-        printf("%d ", x[i]);
++        printf("%d ", x);
+     printf(")\n");
+ }
+ 

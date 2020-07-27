@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_36	2016-12-08 00:50:11.599084277 +0000
+@@ -261,7 +261,7 @@
+ expr_type1 = expr_recursive(prog, method_name, expr->child->next);
+ if ((strcmp(expr_type, "int[]") != 0 && strcmp(expr_type, "boolean[]") != 0) || strcmp(expr_type1, "int") != 0) {
+     printf("Operator [ cannot be applied to types %s, %s\n", expr_type, expr_type1);
+-    exit(0);
++    ;
+ }
+ if (strcmp(expr_type, "int[]") == 0) 
+ expr_type = "int";

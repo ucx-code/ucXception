@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._MFC_20	2016-03-30 00:33:33.017742100 +0100
+@@ -133,7 +133,7 @@
+     int j;
+     if (li < ls) {
+         j = rearranjaCol(v, li, ls);
+-        QsortCol(v, li, j - 1);
++        ;
+         QsortCol(v, j + 1, ls);
+     }
+ }

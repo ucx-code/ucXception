@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MFC_8	2016-03-30 01:09:10.605866200 +0100
+@@ -78,7 +78,7 @@
+         for (i = 0;i < matrixSize;i++){
+             buffer[i] = getchar();
+         }
+-        memset(hitCount, 0, matrixSize);
++        ;
+         bool encontrou = false;
+         for (i = 0;i < width;i++){
+             if (converter(buffer[i]) == '!') {

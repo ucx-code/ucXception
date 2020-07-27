@@ -1,0 +1,13 @@
+--- ./11.c
++++ ./11.c._MIFS_0	2016-12-08 00:49:36.939084897 +0000
+@@ -11,10 +11,6 @@
+             return;
+         }
+     }
+-    if (col + 1 == n) {
+-        counter++;
+-        return;
+-    }
+     for (i = 0;i < n;i++){
+         queens[col + 1] = i;
+         putQueen(col + 1);

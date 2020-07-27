@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._WPFV_1	2016-03-30 00:30:05.437173700 +0100
+@@ -16,7 +16,7 @@
+         recebido = recebido + (moedasRec[i] * valores[i]);
+     }
+     if (recebido < despesa) {
+-        printf("Troco: %.2f", despesa);
++        printf("Troco: %.2f", recebido);
+         for (i = 0;i < 8;i++){
+             printf(" %d", moedas[i]);
+         }

@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MFC_18	2016-03-30 00:35:19.846191600 +0100
+@@ -99,7 +99,7 @@
+         case IfElse:
+             expr = gen_expression(method_name, node->child, prog);
+             if_else_c = 0;
+-            printf("%%if_%d = icmp eq i1 1 , %s\n", if_else_c, expr);
++            ;
+             printf("br i1 %%if_%d, label %%then_%d, label %%else_%d \n", if_else_c, if_else_c, if_else_c);
+             break;
+         case Print:

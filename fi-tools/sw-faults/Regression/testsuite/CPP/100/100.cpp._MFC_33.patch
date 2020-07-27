@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_33	2016-03-30 03:16:47.957557500 +0100
+@@ -142,7 +142,7 @@
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+-    writeLong(0, outfile);
++    ;
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+     unsigned char* cPtr = ImagePtr;

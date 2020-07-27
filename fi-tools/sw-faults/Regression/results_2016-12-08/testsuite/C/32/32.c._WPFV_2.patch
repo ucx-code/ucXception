@@ -1,0 +1,11 @@
+--- ./32.c
++++ ./32.c._WPFV_2	2016-12-08 00:50:45.047083678 +0000
+@@ -9,7 +9,7 @@
+     if (lvl == 0) {
+         matrix[0][0] = '0';
+     }else{
+-        gerarMatrix(lvl - 1, rot);
++        gerarMatrix(lvl - 1, aux1);
+         aux1 = pow(2, lvl);
+         aux2 = pow(2, (lvl - 1));
+         if (rot == 0) {

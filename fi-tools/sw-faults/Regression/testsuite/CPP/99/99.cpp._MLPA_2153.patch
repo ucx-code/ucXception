@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2153	2016-03-30 02:51:17.478921500 +0100
+@@ -1244,9 +1244,6 @@
+                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, redPlasticCoef);
+             }
+ 
+-    glPushMatrix();
+-    glTranslatef(3.5, -3.0, -1.5);
+-    glRotatef(angB, 1.0, 0.0, 0.0);
+     glTranslatef(0.0, 0.0, -2.0);
+     glScalef(1.0, 1.0, 3.0);
+     glutSolidCube(1.5);

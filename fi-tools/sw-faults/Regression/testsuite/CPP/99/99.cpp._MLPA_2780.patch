@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2780	2016-03-30 03:00:29.625750900 +0100
+@@ -1837,8 +1837,6 @@
+ 
+                                     aVisao = (aVisao - 0.175);
+                                     checkLimit();
+-                                    obsPini[0] = robotX + incVisao * cos(aVisao);
+-                                    obsPini[2] = robotZ + incVisao * sin(aVisao);
+                                 }else
+                                     if (tecla == 'e') {
+                                         angR -= 10;

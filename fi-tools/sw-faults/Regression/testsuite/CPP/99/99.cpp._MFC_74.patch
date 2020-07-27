@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_74	2016-03-30 02:10:45.458148900 +0100
+@@ -416,7 +416,7 @@
+ {
+     int i;
+     for (i = 0;i < 6;i++){
+-        glGenTextures(1, &skybox[i]);
++        ;
+         glBindTexture(GL_TEXTURE_2D, skybox[i]);
+         if (cenario == 1) {
+             if (i == 0) 

@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MLPA_0	2016-03-30 00:34:16.236463000 +0100
+@@ -15,8 +15,6 @@
+     is_node* aux2;
+     char* method_name;
+     char* return_type;
+-    printf("\ndeclare i32 @printf(i8*, ...)\n");
+-    printf("declare i32 @atoi(i8*) nounwind readonly\n");
+     printf("@str = private unnamed_addr constant [4 x i8] c\"%%d\\0A\\00\"\n");
+     printf("@.str2 = private unnamed_addr constant [4 x i8] c\"%%s\\0A\\00\"\n");
+     printf("@.str = private unnamed_addr constant [5 x i8] c\"true\\00\"\n");

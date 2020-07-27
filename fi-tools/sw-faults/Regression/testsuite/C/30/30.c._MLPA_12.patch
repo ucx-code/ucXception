@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MLPA_12	2016-03-30 00:58:21.978991000 +0100
+@@ -81,8 +81,6 @@
+                                 return 1;
+                             }
+                             if (checkPath(line + 1, col, '|', count + 1, line, col) == 1) {
+-                                path[count][0] = line + 1;
+-                                path[count][1] = col + 1;
+                                 return 1;
+                             }
+                             if (checkPath(line + 1, col + 1, '\\', count + 1, line, col) == 1) {

@@ -1,0 +1,12 @@
+--- 71.cpp
++++ 71.cpp._MIA_25	2016-03-30 01:45:52.605040800 +0100
+@@ -97,9 +97,7 @@
+     if (bufferPos == '/') {
+         if ((bufferPosWidth == '|') || (bufferPosWidth == '/')) {
+             if (recurse(pos - width, max, width) == 1) {
+-                if (recurseSize != 0) 
+                     printf(",");
+-
+                 printf("(%d,%d)", getY(pos, width), getX(pos, width));
+                 return 1;
+             }

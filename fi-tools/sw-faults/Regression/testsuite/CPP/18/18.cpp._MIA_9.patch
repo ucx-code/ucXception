@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MIA_9	2016-03-30 01:19:45.991210100 +0100
+@@ -55,7 +55,7 @@
+             }
+         }
+     }
+-    if ((bufferPos == '\\')) {
++    {
+         if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {
+             if (recurse(pos + width + 2, max, width) == 1) {
+                 answer.push(pos);

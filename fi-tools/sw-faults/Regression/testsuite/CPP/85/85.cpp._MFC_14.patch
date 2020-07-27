@@ -1,0 +1,9 @@
+--- 85.cpp
++++ 85.cpp._MFC_14	2016-03-30 01:59:31.378691500 +0100
+@@ -150,5 +150,5 @@
+     qsort(c2, n, sizeof (unsigned char), compare);
+     precalc(n);
+     rec(c, 0, n);
+-    printf("%d\n", best);
++    ;
+ }

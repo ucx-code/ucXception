@@ -1,0 +1,14 @@
+--- ./30.c
++++ ./30.c._MIFS_9	2016-12-08 00:50:40.127083766 +0000
+@@ -80,11 +80,6 @@
+                                 path[count][1] = col + 1;
+                                 return 1;
+                             }
+-                            if (checkPath(line + 1, col, '|', count + 1, line, col) == 1) {
+-                                path[count][0] = line + 1;
+-                                path[count][1] = col + 1;
+-                                return 1;
+-                            }
+                             if (checkPath(line + 1, col + 1, '\\', count + 1, line, col) == 1) {
+                                 path[count][0] = line + 1;
+                                 path[count][1] = col + 1;

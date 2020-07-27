@@ -1,0 +1,10 @@
+--- 48.cpp
++++ 48.cpp._MLPA_16	2016-03-30 01:39:41.387921300 +0100
+@@ -189,7 +189,5 @@
+         if (!encontrou) 
+             strcat2((char*)"No Path!\n", 9);
+     }
+-    outputBuffer[counter] = '\0';
+-    fwrite(outputBuffer, 1, counter, stdout);
+     return 0;
+ }

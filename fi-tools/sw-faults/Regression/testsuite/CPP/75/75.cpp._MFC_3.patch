@@ -1,0 +1,11 @@
+--- 75.cpp
++++ 75.cpp._MFC_3	2016-03-30 01:50:03.056216000 +0100
+@@ -113,7 +113,7 @@
+         return;
+     }
+     if (forced[begin] != 3) {
+-        rec(c, begin + 1, end);
++        ;
+         return;
+     }
+     int actual = calcB(c, begin, end);

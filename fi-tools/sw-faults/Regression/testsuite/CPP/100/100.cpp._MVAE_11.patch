@@ -1,0 +1,10 @@
+--- 100.cpp
++++ 100.cpp._MVAE_11	2016-03-30 03:17:03.065977400 +0100
+@@ -227,7 +227,6 @@
+         if (!ImagePtr) {
+             fprintf(stderr, "Unable to allocate memory for %ld x %ld buffer.\n", NumRows, NumCols);
+             Reset();
+-            ErrorCode = MemoryError;
+             return false;
+         }
+     }

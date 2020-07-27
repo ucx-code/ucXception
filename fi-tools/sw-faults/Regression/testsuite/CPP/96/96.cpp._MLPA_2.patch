@@ -1,0 +1,12 @@
+--- 96.cpp
++++ 96.cpp._MLPA_2	2016-03-30 02:03:19.785034900 +0100
+@@ -12,9 +12,6 @@
+ {
+     int i, u, v;
+     queue<int> Q;
+-    Q.push(start);
+-    partition[start] = 1;
+-    visited[start] = 1;
+     while (!Q.empty()){
+         u = Q.front();
+         Q.pop();

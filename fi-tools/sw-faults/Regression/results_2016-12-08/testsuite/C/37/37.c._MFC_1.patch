@@ -1,0 +1,11 @@
+--- ./37.c
++++ ./37.c._MFC_1	2016-12-08 00:50:54.387083510 +0000
+@@ -16,7 +16,7 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &ini[i], &fim[i]);
+     }
+-    qsort(ini, n, sizeof (int), compare);
++    ;
+     qsort(fim, n, sizeof (int), compare);
+     for (i = 1;i < n;i++){
+         if (fim[j] > ini[i]) {

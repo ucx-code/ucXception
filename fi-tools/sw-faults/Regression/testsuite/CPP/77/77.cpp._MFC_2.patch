@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MFC_2	2016-03-30 01:50:59.576899200 +0100
+@@ -23,7 +23,7 @@
+     for (i = 0;i < nAmigos;i++){
+         scanf("%d", &valor_amizades[i]);
+         while (true){
+-            scanf("%d", &taste);
++            ;
+             if (taste == 0) {
+                 break;
+             }

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_25	2016-03-30 02:30:33.419671700 +0100
+@@ -665,7 +665,7 @@
+ void menu()
+ {
+     glEnable (GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, texture[2]);
++    glBindTexture(GL_TEXTURE_2D, 2);
+     glPushMatrix();
+     glBegin (GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);

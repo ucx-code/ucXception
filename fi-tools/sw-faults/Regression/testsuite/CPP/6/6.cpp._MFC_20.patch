@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._MFC_20	2016-03-30 01:13:02.126707000 +0100
+@@ -100,7 +100,7 @@
+         for (i = 0;i < halfSquare * halfSquare;i++)
+             tmpInv[i] = 97 - tmp[i];
+         for (i = 0;i < halfSquare;i++){
+-            memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
++            ;
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+         memcpy(matrix + (halfSquare * 2 * halfSquare), matrix, halfSquare * 2 * halfSquare);

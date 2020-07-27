@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_720	2016-03-30 02:54:30.620558000 +0100
+@@ -1497,7 +1497,7 @@
+         cha_dir = cha_dir * -1.0;
+     }
+     glutPostRedisplay();
+-    glutTimerFunc(delay_cha, TimerCha, 1);
++    ;
+ }
+ 
+ void idle(void)

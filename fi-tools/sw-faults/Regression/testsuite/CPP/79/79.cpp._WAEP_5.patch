@@ -1,0 +1,11 @@
+--- 79.cpp
++++ 79.cpp._WAEP_5	2016-03-30 01:52:07.593955900 +0100
+@@ -47,7 +47,7 @@
+ {
+     int i, a;
+     unsigned char estado[2000];
+-    memset(estado, 0, sizeof (unsigned char) * m);
++    memset(estado, 0, m);
+     for (i = 0;i < begin;i++){
+         if (c[i] == 0) 
+             for (a = 0;a < listaC[i][0];a++){

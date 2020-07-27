@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_798	2016-03-30 03:03:38.764049600 +0100
+@@ -1955,7 +1955,7 @@
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, greenPlasticSpec);
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, greenPlasticCoef);
+                             }else{
+-                                glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, blackPlasticAmb);
++                                ;
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, blackPlasticDif);
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);

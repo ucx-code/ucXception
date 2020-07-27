@@ -1,0 +1,12 @@
+--- 48.cpp
++++ 48.cpp._MIA_2	2016-03-30 01:39:03.999168300 +0100
+@@ -45,9 +45,7 @@
+ 
+ int recurse(int pos, int max, int width)
+ {
+-    if ((buffer[pos] & 0x80) == 0x80) 
+         return -1;
+-
+     buffer[pos] |= 0x80;
+     if (pos <= width) {
+         sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));

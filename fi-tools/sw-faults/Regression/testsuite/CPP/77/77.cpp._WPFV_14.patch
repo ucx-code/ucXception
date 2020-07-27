@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._WPFV_14	2016-03-30 01:51:06.619294900 +0100
+@@ -55,7 +55,7 @@
+     }
+     for (z = x + 1;z < nIngredienteS;z++){
+         marca(z);
+-        select_ingredients(z);
++        select_ingredients(combinacoes);
+         desmarca(z);
+     }
+ }

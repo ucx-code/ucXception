@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_605	2016-03-30 02:52:59.116283100 +0100
+@@ -1256,7 +1256,7 @@
+     glRotatef(angB, 1.0, 0.0, 0.0);
+     glTranslatef(0.0, 0.0, -2.0);
+     glScalef(1.0, 1.0, 3.0);
+-    glutSolidCube(1.5);
++    ;
+     glPopMatrix();
+     if (op_robot == 1) {
+         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, chromeAmb);

@@ -1,0 +1,12 @@
+--- 78.cpp
++++ 78.cpp._MIEB_3	2016-03-30 01:51:54.895088700 +0100
+@@ -181,9 +181,6 @@
+                 break;
+ 
+             int tmp = choices[i][a];
+-            if (tmp < 0) 
+-                lista[abs(tmp) - 1][0][listaC[abs(tmp) - 1][0]++] = i;
+-            else
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+         }
+     }

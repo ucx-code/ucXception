@@ -1,0 +1,11 @@
+--- ./5.c
++++ ./5.c._MFC_2	2016-12-08 00:51:01.659083380 +0000
+@@ -16,7 +16,7 @@
+         recebido = recebido + (moedasRec[i] * valores[i]);
+     }
+     if (recebido < despesa) {
+-        printf("Troco: %.2f", despesa);
++        ;
+         for (i = 0;i < 8;i++){
+             printf(" %d", moedas[i]);
+         }

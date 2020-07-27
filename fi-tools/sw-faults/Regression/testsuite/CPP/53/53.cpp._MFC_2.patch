@@ -1,0 +1,10 @@
+--- 53.cpp
++++ 53.cpp._MFC_2	2016-03-30 01:40:22.096104200 +0100
+@@ -54,6 +54,6 @@
+         }else
+             break;
+     } while (maximo != 0);
+-    printf("%d\n", linhas);
++    ;
+     return 0;
+ }

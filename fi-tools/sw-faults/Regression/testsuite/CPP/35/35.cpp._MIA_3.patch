@@ -1,0 +1,11 @@
+--- 35.cpp
++++ 35.cpp._MIA_3	2016-03-30 01:31:19.079851900 +0100
+@@ -35,7 +35,7 @@
+     }
+     bool todosTemAcesso = true;
+     for (i = 0;i < n;i++){
+-        if (estadosP[estadoCounter][i] == 0) {
++        {
+             todosTemAcesso = false;
+             memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
+             rec(i, n, count, estadoCounter + 1);

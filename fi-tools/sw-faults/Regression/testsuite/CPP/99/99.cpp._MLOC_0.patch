@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLOC_0	2016-03-30 02:44:06.393177400 +0100
+@@ -989,7 +989,7 @@
+     GLfloat colx = (robotX) - avancoMira * sin(angR * PI / 180);
+     GLfloat colz = (robotZ) - avancoMira * cos(angR * PI / 180);
+     GLfloat coly = (robotY + 1.5);
+-    if (colx < -50.0 || colx > 50.0 || colz < -50.0 || colz > 50.0) 
++    if (colx > 50.0 || colz < -50.0 || colz > 50.0) 
+         avancoMira--;
+     else
+         if (avancoMira < 30.0) {

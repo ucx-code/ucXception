@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIA_64	2016-03-30 03:02:09.654967500 +0100
+@@ -1913,9 +1913,7 @@
+                             if (cenario == 2) 
+                                 desenhaChuva();
+ 
+-                            if (cenario != 3) 
+                                 glDisable (GL_FOG);
+-
+                             if (health <= 0) {
+                                 FILE* fp1;
+                                 char new_point[20];

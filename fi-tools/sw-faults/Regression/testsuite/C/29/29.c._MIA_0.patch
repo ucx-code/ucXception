@@ -1,0 +1,12 @@
+--- 29.c
++++ 29.c._MIA_0	2016-03-30 00:57:40.230561700 +0100
+@@ -17,9 +17,7 @@
+ int pontoInt(int pt, int v1, int v2, int v3)
+ {
+     int b1 = 0, b2 = 0, b3 = 0;
+-    if (sign(pt, v1, v2) < 0) 
+         b1 = 1;
+-
+     if (sign(pt, v2, v3) < 0) 
+         b2 = 1;
+ 

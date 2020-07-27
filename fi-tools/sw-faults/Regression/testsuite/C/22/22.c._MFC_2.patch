@@ -1,0 +1,11 @@
+--- 22.c
++++ 22.c._MFC_2	2016-03-30 00:49:58.279789500 +0100
+@@ -16,7 +16,7 @@
+         glob_table = glob_table->next;
+     }
+     while (methods_list != NULL){
+-        printf("\n===== Method %s Symbol Table =====\n", methods_list->name);
++        ;
+         table_element* method_element = methods_list->locals;
+         while (method_element != NULL){
+             if (method_element->param == 1) 

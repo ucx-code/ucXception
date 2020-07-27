@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_10	2016-03-30 02:07:46.250952100 +0100
+@@ -248,7 +248,7 @@
+             glBegin (GL_LINES);
+             glVertex3f(x, y, z);
+             glVertex3f(x, y + 0.5, z);
+-            glEnd();
++            ;
+             par_sys[loop].ypos += par_sys[loop].vel / (slowdown * 1000);
+             par_sys[loop].vel += par_sys[loop].gravity;
+             par_sys[loop].life -= par_sys[loop].fade;

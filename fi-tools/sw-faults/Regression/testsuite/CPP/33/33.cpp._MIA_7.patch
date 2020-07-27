@@ -1,0 +1,10 @@
+--- 33.cpp
++++ 33.cpp._MIA_7	2016-03-30 01:30:35.386798000 +0100
+@@ -67,7 +67,6 @@
+             for (a = 0;a < 35;a++)
+                 memset(estadosP[a], 0, sizeof (int) * 35);
+             rec(i, n, 0, 0, z);
+-            if (melhor == z) 
+                 goto fim;
+         }
+     fim:

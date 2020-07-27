@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1657	2016-03-30 02:43:27.517723200 +0100
+@@ -947,11 +947,6 @@
+                 glColor3fv(particles[i].color);
+                 glVertex3fv(particles[i].position);
+             }
+-            glEnd();
+-            glPopMatrix();
+-            glEnable(GL_LIGHTING);
+-            glEnable(GL_DEPTH_TEST);
+-            glNormal3f(0.0, 0.0, 1.0);
+             for (i = 0;i < NUM_DEBRIS;i++){
+                 glColor3fv(debris[i].color);
+                 glPushMatrix();

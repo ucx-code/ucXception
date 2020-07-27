@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_528	2016-03-30 02:50:41.031501400 +0100
+@@ -1164,7 +1164,7 @@
+             glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, whiteRubberDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whiteRubberSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, whiteRubberCoef);
+-            glPushMatrix();
++            ;
+             glTranslatef(enemysList[i].position[0], enemysList[i].position[1], enemysList[i].position[2] + 2.9);
+             glutSolidCone(0.75, 1, 32, 32);
+             glPopMatrix();

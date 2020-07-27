@@ -1,0 +1,13 @@
+--- 89.cpp
++++ 89.cpp._MIEB_0	2016-03-30 02:01:46.353026700 +0100
+@@ -8,9 +8,7 @@
+ bool dfs(int node, int c)
+ {
+     if ((color[node] == c) || (color[node] == -c)) {
+-        if (color[node] == c) {
+-            return true;
+-        }else{
++        {
+             return false;
+         }
+     }

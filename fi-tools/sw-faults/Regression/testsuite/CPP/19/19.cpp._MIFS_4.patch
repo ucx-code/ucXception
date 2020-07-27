@@ -1,0 +1,15 @@
+--- 19.cpp
++++ 19.cpp._MIFS_4	2016-03-30 01:21:42.988438300 +0100
+@@ -37,12 +37,6 @@
+     if (len >= best) 
+         return;
+ 
+-    if (verifica() == 0) {
+-        if (len < best) 
+-            best = len;
+-
+-        return;
+-    }
+     int i;
+     for (i = begin + 1;i < n;i++){
+         if (visit[i] == 0) {

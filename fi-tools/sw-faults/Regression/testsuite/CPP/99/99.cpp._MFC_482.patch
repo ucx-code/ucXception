@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_482	2016-03-30 02:45:33.863325600 +0100
+@@ -1103,7 +1103,7 @@
+     glColor3f(1, 1, 1);
+     glRasterPos2f(-7.5, 3.7);
+     while (*string)
+-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *string++);
++        ;
+     glDisable(GL_COLOR_MATERIAL);
+ }
+ 

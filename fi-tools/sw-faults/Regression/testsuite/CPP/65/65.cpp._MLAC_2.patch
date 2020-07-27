@@ -1,0 +1,11 @@
+--- 65.cpp
++++ 65.cpp._MLAC_2	2016-03-30 01:43:21.026776500 +0100
+@@ -29,7 +29,7 @@
+                 if (L < R) 
+                     arr[L++] = arr[R];
+ 
+-                while (arr[L] <= piv && L < R)
++                while (L < R)
+                     L++;
+                 if (L < R) 
+                     arr[R--] = arr[L];

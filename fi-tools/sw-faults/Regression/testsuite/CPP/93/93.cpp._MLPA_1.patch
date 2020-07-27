@@ -1,0 +1,11 @@
+--- 93.cpp
++++ 93.cpp._MLPA_1	2016-03-30 02:02:35.390148800 +0100
+@@ -35,8 +35,6 @@
+             vizinhos[b][vizinhosC[b]++] = a;
+         }
+         is = true;
+-        memset(marked, 0, sizeof (bool) * n);
+-        memset(color, 0, sizeof (bool) * n);
+         for (i = 0;i < n;i++){
+             if (!marked[i]) 
+                 dfs(i);

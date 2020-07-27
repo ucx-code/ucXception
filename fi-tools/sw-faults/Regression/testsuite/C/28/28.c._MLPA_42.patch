@@ -1,0 +1,13 @@
+--- 28.c
++++ 28.c._MLPA_42	2016-03-30 00:57:27.799758700 +0100
+@@ -54,10 +54,6 @@
+             fila[k][0] = begin[j][1];
+             fila[k][1] = begin[j][3];
+             while (fila[++k][0] != 0){
+-                aux3 = fila[k][0];
+-                aux4 = fila[k][1];
+-                fila[k][0] = aux1;
+-                fila[k][1] = aux2;
+                 aux1 = aux3;
+                 aux2 = aux4;
+             }

@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._WAEP_2	2016-03-30 01:39:02.282450200 +0100
+@@ -21,7 +21,7 @@
+ 
+ void strcat2(char* text, int size)
+ {
+-    memcpy(outputBuffer + counter, text, size);
++    memcpy(outputBuffer, text, size);
+     counter += size;
+     if (counter >= 7000) {
+         fwrite(outputBuffer, 1, counter, stdout);

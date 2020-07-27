@@ -1,0 +1,12 @@
+--- 2.c
++++ 2.c._MIA_0	2016-03-30 00:28:53.440420800 +0100
+@@ -8,9 +8,7 @@
+ 
+ void rec(int n, int target, int r)
+ {
+-    if (n > target) 
+         return;
+-
+     if (n == 0) {
+         matrix[0] = '0';
+         rec(n + 1, target, r);

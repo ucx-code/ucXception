@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_54	2016-03-30 02:43:32.250824500 +0100
+@@ -939,7 +939,7 @@
+     for (j = 0;j < enemysList.size();j++){
+         if (enemysList[j].fuel > 0 && enemysList[j].show == 1) {
+             glPushMatrix();
+-            glTranslatef(enemysList[j].position[0], enemysList[j].position[1], enemysList[j].position[2]);
++            glTranslatef(enemysList[j].position[0], enemysList[j].position[1], enemysList[j].position);
+             glDisable (GL_LIGHTING);
+             glDisable (GL_DEPTH_TEST);
+             glBegin (GL_POINTS);

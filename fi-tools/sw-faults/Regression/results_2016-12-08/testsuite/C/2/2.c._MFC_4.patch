@@ -1,0 +1,11 @@
+--- ./2.c
++++ ./2.c._MFC_4	2016-12-08 00:50:06.083084375 +0000
+@@ -27,7 +27,7 @@
+                 memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+ 
+             if (r == 1) 
+-                memcpy(matrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);
++                ;
+             else
+                 memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }

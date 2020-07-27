@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MIFS_7	2016-03-30 02:41:56.812195800 +0100
+@@ -892,11 +892,6 @@
+     y = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+     z = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+     len = sqrt(x * x + y * y + z * z);
+-    if (len) {
+-        x = x / len;
+-        y = y / len;
+-        z = z / len;
+-    }
+     dest[0] = x;
+     dest[1] = y;
+     dest[2] = z;

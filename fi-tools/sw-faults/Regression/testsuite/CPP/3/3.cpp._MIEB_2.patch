@@ -1,0 +1,12 @@
+--- 3.cpp
++++ 3.cpp._MIEB_2	2016-03-30 01:10:50.577729900 +0100
+@@ -26,9 +26,6 @@
+             else
+                 memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+ 
+-            if (r == 1) 
+-                memcpy(matrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);
+-            else
+                 memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+         for (i = 0;i < halfSquare;i++){

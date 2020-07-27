@@ -1,0 +1,11 @@
+--- ./8.c
++++ ./8.c._MLPA_14	2016-12-08 00:51:08.139083264 +0000
+@@ -29,8 +29,6 @@
+         }
+     }
+     for (i = 0;i < nString;i++){
+-        strcpy(actWord, pWord[i]);
+-        actWord = maxSubString(actWord);
+         if (tam < strlen(actWord)) {
+             strcpy(finalWord, actWord);
+             tam = strlen(finalWord);

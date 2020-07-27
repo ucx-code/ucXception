@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2979	2016-03-30 03:06:45.057246500 +0100
+@@ -2035,10 +2035,7 @@
+     glutKeyboardFunc(teclado);
+     glutKeyboardUpFunc(teclasUp);
+     glutPassiveMotionFunc(passivemotion);
+-    glutIdleFunc(idle);
+     srand (time(NULL));
+-    alutInit(NULL, 0);
+-    alGetError();
+     if (LoadALData() == AL_FALSE) {
+         printf("Error loading data.");
+         return 0;

@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MLPA_103	2016-03-30 00:36:32.072614200 +0100
+@@ -215,8 +215,6 @@
+     break;
+ case ParseArgs:
+     counter++;
+-    printf("\t%%%d = getelementptr inbounds i8** %%.argv, i64 %d\n", counter, atoi(expr->child->next->id) + 1);
+-    printf("\t%%%d = load i8** %%%d\n", counter + 1, counter);
+     counter += 2;
+     printf("\t%%%d = call i32 @atoi(i8* %%%d)\n", counter, counter - 1);
+     c = (char*)malloc(sizeof (char*));

@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._MVIV_1	2016-03-30 01:35:04.510597400 +0100
+@@ -42,7 +42,7 @@
+     }
+     if (faltam != 0) {
+         int a, z;
+-        bool aindaDaMais = false;
++        bool aindaDaMais = aindaDaMais;
+         for (i = 0;i < osQueFaltam.size();i++){
+             for (a = i + 1;a < osQueFaltam.size();a++){
+                 if (isNeig(i, a) == 1) {

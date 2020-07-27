@@ -1,0 +1,11 @@
+--- ./8.c
++++ ./8.c._MLPA_12	2016-12-08 00:51:07.979083267 +0000
+@@ -40,8 +40,6 @@
+     for (i = 0;i < nString;i++)
+         free(pWord[i]);
+     free(actWord);
+-    free(pWord);
+-    free(finalWord);
+     return 0;
+ }
+ 

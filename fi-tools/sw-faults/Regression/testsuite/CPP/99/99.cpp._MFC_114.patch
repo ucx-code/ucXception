@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_114	2016-03-30 02:12:56.496610300 +0100
+@@ -507,7 +507,7 @@
+     }
+     if (um) {
+         glEnable (GL_TEXTURE_2D);
+-        glBindTexture(GL_TEXTURE_2D, texture[13]);
++        ;
+         glPushMatrix();
+         glBegin (GL_QUADS);
+         glNormal3f(0.0f, 0.0f, 1.0f);

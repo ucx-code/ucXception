@@ -1,0 +1,11 @@
+--- 87.cpp
++++ 87.cpp._WPFV_2	2016-03-30 02:01:25.699401500 +0100
+@@ -122,7 +122,7 @@
+             return 1;
+ 
+         matrixSize = (width + 1) * height;
+-        fread(buffer, 1, matrixSize, stdin);
++        fread(buffer, 1, width, stdin);
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+             if ((buffer[i] == '|') || (buffer[i] == '\\') || (buffer[i] == '/')) {
+                 recurseSize = 0;

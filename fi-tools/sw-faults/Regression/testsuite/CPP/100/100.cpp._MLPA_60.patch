@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_60	2016-03-30 03:15:19.070738400 +0100
+@@ -105,9 +105,6 @@
+     long ret = byte3;
+     ret <<= 8;
+     ret |= byte2;
+-    ret <<= 8;
+-    ret |= byte1;
+-    ret <<= 8;
+     ret |= byte0;
+     return ret;
+ }

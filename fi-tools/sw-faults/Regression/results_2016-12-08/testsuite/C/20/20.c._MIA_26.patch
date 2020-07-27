@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_26	2016-12-08 00:50:12.543084260 +0000
+@@ -389,7 +389,7 @@
+ environment_list* aux;
+ aux = prog->methods;
+ while (aux != NULL){
+-if (strcmp(aux->name, method_name) == 0) {
++{
+     table_element* local = aux->locals;
+     return local->type;
+ }

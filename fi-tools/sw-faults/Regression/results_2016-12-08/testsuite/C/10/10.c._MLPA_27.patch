@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MLPA_27	2016-12-08 00:49:29.811085025 +0000
+@@ -43,8 +43,6 @@
+         }else
+             if (aux->type == MethodDecl) {
+                 counter = 0;
+-                method_name = aux->child->next->id;
+-                return_type = gen_type[aux->child->type];
+                 if (strcmp(method_name, "main") == 0 && aux->child->next->next->child != NULL) 
+                     printf("\ndefine i32 @main(i32 %%.argc, i8** %%.argv)\n{\n");
+                 else{

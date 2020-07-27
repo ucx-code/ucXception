@@ -1,0 +1,12 @@
+--- 36.cpp
++++ 36.cpp._MIA_6	2016-03-30 01:32:10.690065500 +0100
+@@ -65,8 +65,7 @@
+         qsort(translator[estadoCounter], maxi, sizeof (int), desempate);
+     }
+     bool todosTemAcesso = true;
+-    for (i = 0;i < n;i++)
+-        if (estadosP[estadoCounter][i] == 0) {
++    for (i = 0;i < n;i++){
+             todosTemAcesso = false;
+             break;
+         }

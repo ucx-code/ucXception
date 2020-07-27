@@ -1,0 +1,14 @@
+--- 100.cpp
++++ 100.cpp._MIFS_0	2016-03-30 03:13:10.256883000 +0100
+@@ -6,11 +6,6 @@
+     NumRows = numRows;
+     NumCols = numCols;
+     ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+-    if (!ImagePtr) {
+-        fprintf(stderr, "Unable to allocate memory for %ld x %ld bitmap.\n", NumRows, NumCols);
+-        Reset();
+-        ErrorCode = MemoryError;
+-    }
+     unsigned char* c = ImagePtr;
+     int rowLen = GetNumBytesPerRow();
+     for (int i = 0;i < NumRows;i++){

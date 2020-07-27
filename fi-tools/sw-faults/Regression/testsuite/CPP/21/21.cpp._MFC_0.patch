@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._MFC_0	2016-03-30 01:22:36.579627200 +0100
+@@ -12,7 +12,7 @@
+ int criaEstados(unsigned char* estado)
+ {
+     unsigned char novoEstado[35];
+-    memcpy(novoEstado, estado, 35 * sizeof (char));
++    ;
+     int i;
+     for (i = 0;i < n;i++){
+         if (estado[i] == 0) {

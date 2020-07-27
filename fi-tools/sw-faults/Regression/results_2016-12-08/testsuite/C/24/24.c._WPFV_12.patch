@@ -1,0 +1,25 @@
+--- ./24.c
++++ ./24.c._WPFV_12	2016-12-08 00:50:20.331084120 +0000
+@@ -52,7 +52,7 @@
+     int n, r;
+     int i;
+     while (scanf("%d %d", &n, &r) != EOF){
+-        rec(0, n, r % 4);
++        rec(0, r, r % 4);
+         for (i = 0;i < pow(2, n);i++){
+             memcpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
+             tmp[(int)pow(2, n)] = '\0';
+@@ -60,3 +60,13 @@
+         }
+     }
+ }
++, pow(2,n));
++			tmp[(int)pow(2,n)] = '\0';			
++			//matrix[(int)(i*(pow(2,n)+1))] = '\n';
++				printf("%s\n", tmp);
++			//fputs(tmp, stdout);
++			//fwrite(matrix+(int)(i*pow(2,n)), 1, pow(2,n)+1, stdout);
++		}
++	}
++//	fwrite(matrix, 1, 40, stdout);
++}

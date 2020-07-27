@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1635	2016-03-30 02:42:22.452453900 +0100
+@@ -924,10 +924,6 @@
+         debris[i].color[0] = 0.7;
+         debris[i].color[1] = 0.7;
+         debris[i].color[2] = 0.7;
+-        debris[i].scale[0] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+-        debris[i].scale[1] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+-        debris[i].scale[2] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+-        newSpeed(debris[i].speed);
+         newSpeed(debris[i].orientationSpeed);
+     }
+ }

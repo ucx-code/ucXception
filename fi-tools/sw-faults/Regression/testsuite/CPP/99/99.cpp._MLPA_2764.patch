@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2764	2016-03-30 03:00:23.173740100 +0100
+@@ -1817,9 +1817,6 @@
+                         obsPini[2] = robotZ + incVisao * sin(aVisao);
+                     }else
+                         if (tecla == 'd') {
+-                            robotZ -= 1 * cos((90 - angR) * PI / 180);
+-                            robotX += 1 * sin((90 - angR) * PI / 180);
+-                            checkLimit();
+                             obsPini[0] = robotX + incVisao * cos(aVisao);
+                             obsPini[2] = robotZ + incVisao * sin(aVisao);
+                         }else

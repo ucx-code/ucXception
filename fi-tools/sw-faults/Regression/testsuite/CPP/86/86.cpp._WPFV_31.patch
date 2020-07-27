@@ -1,0 +1,11 @@
+--- 86.cpp
++++ 86.cpp._WPFV_31	2016-03-30 02:00:28.248041400 +0100
+@@ -129,7 +129,7 @@
+     }
+     if (actual < best) {
+         c[begin] = 0;
+-        marca(c, begin);
++        marca(c, choices);
+         rec(c, begin + 1, end);
+         desmarca(c, begin);
+     }

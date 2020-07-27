@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_9	2016-03-30 02:12:14.351601500 +0100
+@@ -505,7 +505,7 @@
+         glPopMatrix();
+         glDisable(GL_TEXTURE_2D);
+     }
+-    if (um) {
++    {
+         glEnable (GL_TEXTURE_2D);
+         glBindTexture(GL_TEXTURE_2D, texture[13]);
+         glPushMatrix();

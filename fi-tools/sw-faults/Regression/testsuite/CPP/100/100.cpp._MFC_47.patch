@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_47	2016-03-30 03:16:59.929079200 +0100
+@@ -193,7 +193,7 @@
+ 
+ void RgbImage::SetRgbPixelc(long  row, long  col, unsigned char red, unsigned char green, unsigned char blue)
+ {
+-    assert(row < NumRows && col < NumCols);
++    ;
+     unsigned char* thePixel = GetRgbPixel(row, col);
+     *(thePixel++) = red;
+     *(thePixel++) = green;

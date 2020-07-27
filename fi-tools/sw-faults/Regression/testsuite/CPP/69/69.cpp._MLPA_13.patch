@@ -1,0 +1,12 @@
+--- 69.cpp
++++ 69.cpp._MLPA_13	2016-03-30 01:45:02.661193800 +0100
+@@ -115,9 +115,6 @@
+                 lista[abs(tmp) - 1][0][listaC[abs(tmp) - 1][0]++] = i;
+             else
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+-
+-            choices[i][a++] = tmp;
+-            scanf("%d", &tmp);
+         }
+     }
+     precalc(n);

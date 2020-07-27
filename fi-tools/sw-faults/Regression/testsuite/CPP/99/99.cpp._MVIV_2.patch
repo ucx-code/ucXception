@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MVIV_2	2016-03-30 02:55:57.808328700 +0100
+@@ -1568,7 +1568,7 @@
+     GLfloat Foco_direccao[] = {0, 0, 1};
+     GLfloat Foco1_cor[] = {0, 1, 0, 1};
+     GLfloat Foco2_cor[] = {1, 0, 0, 1};
+-    GLfloat Foco_ak = 1.0;
++    GLfloat Foco_ak = Foco_ak;
+     GLfloat Foco_al = 0.05f;
+     GLfloat Foco_aq = 0.0f;
+     GLfloat Foco_Expon = 2.0;

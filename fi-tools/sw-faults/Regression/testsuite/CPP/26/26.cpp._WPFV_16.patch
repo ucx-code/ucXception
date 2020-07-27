@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._WPFV_16	2016-03-30 01:25:26.094171600 +0100
+@@ -86,7 +86,7 @@
+ {
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", vizinhos);
+         return 0;
+     }
+     int tmpA, tmpB;

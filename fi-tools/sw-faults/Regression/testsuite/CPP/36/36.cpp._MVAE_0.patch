@@ -1,0 +1,10 @@
+--- 36.cpp
++++ 36.cpp._MVAE_0	2016-03-30 01:32:08.009724700 +0100
+@@ -54,7 +54,6 @@
+     }
+     estadoCounterT = estadoCounter;
+     qsort(translator[estadoCounter], n, sizeof (int), compare);
+-    estadoCounterT = estadoCounter;
+     int maxi = 1;
+     for (i = 1;i < n;i++){
+         if (countVizinhos(translator[estadoCounter][0], 0) - countVizinhos(translator[estadoCounter][i], 0) == 0) 

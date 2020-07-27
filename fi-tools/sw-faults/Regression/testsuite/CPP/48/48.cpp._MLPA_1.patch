@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MLPA_1	2016-03-30 01:38:59.056040900 +0100
+@@ -13,8 +13,6 @@
+     memcpy(outputBuffer + counter, text, x);
+     counter += x;
+     if (counter >= 7000) {
+-        fwrite(outputBuffer, 1, counter, stdout);
+-        outputBuffer[0] = '\0';
+         counter = 0;
+     }
+ }

@@ -1,0 +1,11 @@
+--- 31.c
++++ 31.c._WAEP_19	2016-03-30 00:59:27.636347100 +0100
+@@ -54,7 +54,7 @@
+                 if (R == 3) {
+                     for (i = 0;i < comp;i++){
+                         memcpy(&tab[i][comp], &tab[i][0], comp * sizeof (char));
+-                        memcpy(&tab[i + comp][comp], &tab[i][0], comp * sizeof (char));
++                        memcpy(&tab[i + comp][comp], &tab[i][0], sizeof (char));
+                     }
+                     invert(comp, 0, comp);
+                 }

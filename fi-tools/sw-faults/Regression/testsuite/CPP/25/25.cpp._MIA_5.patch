@@ -1,0 +1,15 @@
+--- 25.cpp
++++ 25.cpp._MIA_5	2016-03-30 01:24:41.038445300 +0100
+@@ -38,10 +38,9 @@
+     if (count < end) 
+         return -1;
+ 
+-    if ((tmpBest < best) && (tmpBest != 0)) {
++    {
+         best = tmpBest;
+-    }
+-}
++    }}
+ 
+ void shortPath(int begin, int end, int len)
+ {

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_2	2016-03-30 02:06:16.865758200 +0100
+@@ -213,7 +213,7 @@
+ {
+     int x, z;
+     glEnable (GL_FOG);
+-    glClearColor(0.0, 0.0, 0.0, 0.0);
++    ;
+     glClearDepth(1.0);
+     glEnable (GL_DEPTH_TEST);
+     for (z = 0;z < 21;z++){

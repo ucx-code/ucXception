@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MIA_7	2016-03-30 01:51:09.911212900 +0100
+@@ -82,7 +82,7 @@
+     int i;
+     combinacoes[x] = 0;
+     for (i = 0;i < nAmigos;i++){
+-        if (opinions[i][x] == -1) {
++        {
+             moods[i]++;
+         }
+         if (opinions[i][x] == 1) {

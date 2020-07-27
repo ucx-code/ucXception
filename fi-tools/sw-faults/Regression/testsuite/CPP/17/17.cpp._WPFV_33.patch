@@ -1,0 +1,11 @@
+--- 17.cpp
++++ 17.cpp._WPFV_33	2016-03-30 01:18:50.878789800 +0100
+@@ -59,7 +59,7 @@
+     }
+     int i;
+     for (i = 0;i < n;i++){
+-        rec(i, n, 0);
++        rec(i, counter, 0);
+     }
+     printf("%d\n", melhor);
+     return 0;

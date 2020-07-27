@@ -1,0 +1,11 @@
+--- 94.cpp
++++ 94.cpp._MLPA_5	2016-03-30 02:02:50.746100200 +0100
+@@ -30,8 +30,6 @@
+         for (i = 0;i < m;i++){
+             int a2, b2;
+             scanf("%d %d", &a2, &b2);
+-            a[a2][b2] = 1;
+-            a[b2][a2] = 1;
+         }
+         bipartite = true;
+         memset(mark, false, sizeof (bool) * n);

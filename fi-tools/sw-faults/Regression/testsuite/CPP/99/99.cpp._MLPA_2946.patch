@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2946	2016-03-30 03:05:40.117783200 +0100
+@@ -2013,10 +2013,7 @@
+ {
+     glClearColor(1.0, 1.0, 1.0, 0.0);
+     glShadeModel (GL_SMOOTH);
+-    defineLuzes();
+     glEnable (GL_DEPTH_TEST);
+-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+-    iniciarTexturas();
+     iniciarSkyBox();
+ }
+ 

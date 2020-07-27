@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_46	2016-12-08 00:49:34.643084938 +0000
+@@ -353,7 +353,7 @@
+                                                                                                                             if (strcmp(AST_type, "String[]") == 0) 
+                                                                                                                                 return "args";
+ 
+-printf("\n\n>>>> ERRO <<<< method gen_code_type()\n\n");
++;
+ return "erro";
+ }
+ 

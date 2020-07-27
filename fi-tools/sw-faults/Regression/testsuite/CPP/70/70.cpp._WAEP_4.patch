@@ -1,0 +1,11 @@
+--- 70.cpp
++++ 70.cpp._WAEP_4	2016-03-30 01:45:24.195430500 +0100
+@@ -51,7 +51,7 @@
+     combinacao[ingrediente] = 1;
+     recursivo(ingrediente + 1);
+     combinacao[ingrediente] = 0;
+-    recursivo(ingrediente + 1);
++    recursivo(ingrediente);
+ }
+ int main()
+ {

@@ -1,0 +1,11 @@
+--- 13.c
++++ 13.c._MLAC_3	2016-03-30 00:38:42.099482500 +0100
+@@ -17,7 +17,7 @@
+         aux[0][i] = m + 1;
+         m = 0;
+         for (k = nSeq - 1;k > i;k--){
+-            if (vec[k] < vec[nSeq - i - 1] && aux[1][k] > m) 
++            if (vec[k] < vec[nSeq - i - 1]) 
+                 m = aux[1][k];
+         }
+         aux[1][nSeq - i - 1] = m + 1;

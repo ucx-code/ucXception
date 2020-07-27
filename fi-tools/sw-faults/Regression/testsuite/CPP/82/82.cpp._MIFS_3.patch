@@ -1,0 +1,12 @@
+--- 82.cpp
++++ 82.cpp._MIFS_3	2016-03-30 01:54:07.916770100 +0100
+@@ -36,9 +36,6 @@
+                 break;
+             }
+         }
+-        if (favoravel == false) {
+-            soma += friendship[i];
+-        }
+     }
+     return soma;
+ }

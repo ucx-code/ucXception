@@ -1,0 +1,14 @@
+--- 28.cpp
++++ 28.cpp._MIFS_1	2016-03-30 01:26:09.544294500 +0100
+@@ -34,9 +34,8 @@
+             }
+         }
+     }
+-    for (i = n;i > 0;i--)
+-        if (marca[i] == 0) 
+-            return 0;
++    for (i = n;i > 0;i--);
++
+     return 1;
+ }
+ void mis(int v, int size)

@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MIA_6	2016-03-30 03:14:25.644419900 +0100
+@@ -73,7 +73,7 @@
+             *(cPtr++) = 0;
+         }
+     }
+-    if (feof(infile)) {
++    {
+         fprintf(stderr, "Premature end of file: %s.\n", filename);
+         Reset();
+         ErrorCode = ReadError;

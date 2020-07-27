@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._MLAC_6	2016-03-30 00:30:11.963190900 +0100
+@@ -56,7 +56,7 @@
+             moedas[2] = moedas[2] - moedasTroco[2];
+             troco = troco - (moedasTroco[2] * 0.5);
+         }
+-        if (troco / 0.2 >= 1 && moedas[3] > 0) {
++        if (moedas[3] > 0) {
+             x = troco / 0.2;
+             if (x > moedas[3]) {
+                 moedasTroco[3] = moedas[3];

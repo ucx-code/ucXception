@@ -1,0 +1,11 @@
+--- 5.cpp
++++ 5.cpp._MFC_9	2016-03-30 01:11:59.661767600 +0100
+@@ -53,7 +53,7 @@
+     int i;
+     while (scanf("%d %d", &n, &r) != EOF){
+         int squared = pow(2, n);
+-        rec(0, n, r % 4);
++        ;
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';

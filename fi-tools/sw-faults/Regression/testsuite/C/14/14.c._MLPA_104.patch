@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_104	2016-03-30 00:40:59.004494500 +0100
+@@ -229,8 +229,6 @@
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = expr1;
+-    expr1->next = expr2;
+-    node->id = NULL;
+     if (strcmp(oper, "||") == 0) 
+         node->type = Or;
+     else

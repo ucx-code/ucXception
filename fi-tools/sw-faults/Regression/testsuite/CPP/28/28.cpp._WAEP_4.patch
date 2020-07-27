@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._WAEP_4	2016-03-30 01:26:08.619677000 +0100
+@@ -29,7 +29,7 @@
+     for (i = 1;i <= n;i++){
+         if (state[i] == 2) {
+             for (a = 0;a < counter[i];a++){
+-                printf("Marquei o %d\n", vizinhos[i][a]);
++                printf("Marquei o %d\n", vizinhos[i]);
+                 marca[vizinhos[i][a]] = 1;
+             }
+         }

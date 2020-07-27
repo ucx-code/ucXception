@@ -1,0 +1,14 @@
+--- 58.cpp
++++ 58.cpp._MIEB_0	2016-03-30 01:41:20.795347400 +0100
+@@ -26,10 +26,7 @@
+     int d = 1;
+     room.push(slot[0].end);
+     for (i = 1;i < n;i++){
+-        if (room.top() < slot[i].begin) {
+-            room.pop();
+-            room.push(slot[i].end);
+-        }else{
++        {
+             room.push(slot[i].end);
+             ++d;
+         }

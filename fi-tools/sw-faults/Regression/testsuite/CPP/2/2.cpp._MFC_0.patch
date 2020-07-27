@@ -1,0 +1,11 @@
+--- 2.cpp
++++ 2.cpp._MFC_0	2016-03-30 01:09:37.888833600 +0100
+@@ -18,7 +18,7 @@
+ int recurse(int pos)
+ {
+     if (pos <= width) {
+-        printf("(%d,%d)", getY(pos), getX(pos));
++        ;
+         return 1;
+     }
+     ++recurseSize;

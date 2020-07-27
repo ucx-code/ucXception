@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_240	2016-03-30 02:09:01.897680100 +0100
+@@ -314,9 +314,6 @@
+ 
+             alSourcei(SourceEx, AL_BUFFER, BufferEx);
+             alSourcef(SourceEx, AL_PITCH, 1.0);
+-            alSourcef(SourceEx, AL_GAIN, 1.0);
+-            alSourcefv(SourceEx, AL_POSITION, SourcePosEx);
+-            alSourcefv(SourceEx, AL_VELOCITY, SourceVelEx);
+             alSourcei(SourceEx, AL_LOOPING, loop);
+         }
+         if (alGetError() == AL_NO_ERROR) 

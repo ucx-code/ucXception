@@ -1,0 +1,11 @@
+--- 29.cpp
++++ 29.cpp._MFC_4	2016-03-30 01:27:19.764262700 +0100
+@@ -91,7 +91,7 @@
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+         vizinhos[tmpA][tmpB] = 1;
+     }
+-    mis(0, 0);
++    ;
+     printf("%d\n", best);
+     return 0;
+ }

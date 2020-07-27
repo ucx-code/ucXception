@@ -1,0 +1,12 @@
+--- 80.cpp
++++ 80.cpp._MIFS_2	2016-03-30 01:52:36.696654500 +0100
+@@ -64,9 +64,6 @@
+         if (possuiIngredienteParcial == 1) {
+             int satisfeito = 0;
+             for (a = 0;a < 3;a++){
+-                if (choices[i][a] == 0) 
+-                    break;
+-
+                 int absChoice = abs(choices[i][a]) - 1;
+                 if (absChoice <= begin) {
+                     if ((choices[i][a] < 0) && (c[absChoice] == 0)) {

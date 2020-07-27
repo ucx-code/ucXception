@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_17	2016-03-30 03:14:42.025001600 +0100
+@@ -80,7 +80,7 @@
+         fclose(infile);
+         return false;
+     }
+-    fclose(infile);
++    ;
+     return true;
+ }
+ 

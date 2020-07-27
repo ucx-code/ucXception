@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_47	2016-03-30 02:09:53.033485800 +0100
+@@ -339,7 +339,7 @@
+ {
+     alDeleteBuffers(1, &Buffer);
+     alDeleteSources(1, &Source);
+-    alDeleteBuffers(1, &BufferEx);
++    ;
+     alDeleteSources(1, &SourceEx);
+     alutExit();
+ }

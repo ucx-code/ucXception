@@ -1,0 +1,11 @@
+--- ./22.c
++++ ./22.c._MFC_11	2016-12-08 00:50:15.931084199 +0000
+@@ -50,7 +50,7 @@
+                         strcpy(new_symbol->type, "boolean[]");
+                     else
+                         if (strcmp(ele_type, "StringArray") == 0) 
+-                            strcpy(new_symbol->type, "String[]");
++                            ;
+                         else{
+                             strcpy(new_symbol->type, ele_type);
+                         }

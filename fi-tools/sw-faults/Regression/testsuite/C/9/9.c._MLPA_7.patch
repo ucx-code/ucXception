@@ -1,0 +1,12 @@
+--- 9.c
++++ 9.c._MLPA_7	2016-03-30 00:31:22.095171300 +0100
+@@ -26,9 +26,6 @@
+                 j--;
+         }
+     }
+-    tableColumns = orderByColumns(table, lines, columns);
+-    tableLines = orderByLines(table, lines, columns);
+-    printTable(table, lines, columns);
+     printf("\n");
+     printTable(tableLines, lines, columns);
+     printf("\n");

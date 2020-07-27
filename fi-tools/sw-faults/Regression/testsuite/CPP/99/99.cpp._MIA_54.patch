@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_54	2016-03-30 03:00:13.424701800 +0100
+@@ -1791,7 +1791,7 @@
+ 
+ void teclado(unsigned char tecla, int x, int y)
+ {
+-    if (pausegame == 1) {
++    {
+         if (tecla == '1') {
+             angB += 10;
+             if (angB >= 45) 

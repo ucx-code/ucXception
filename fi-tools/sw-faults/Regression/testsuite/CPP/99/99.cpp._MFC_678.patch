@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_678	2016-03-30 02:53:48.571145800 +0100
+@@ -1360,7 +1360,7 @@
+             glRotatef(180.0, 1.0, 0.0, 0.0);
+             GLUquadricObj* tiroesq;
+             tiroesq = gluNewQuadric();
+-            gluCylinder(tiroesq, 0.1, 0.1, 5.0 * i, 32, 32);
++            ;
+             glPopMatrix();
+             if (colisoes(0.75, 1.5, 1.5 + 5.0 * i, -2.2, 0.75, -2.2) == 1 || colisoes(-0.75, 1.5, 1.5 + 5.0 * i, -2.2, -0.75, -2.2) == 1) {
+                 if (som == 1) 

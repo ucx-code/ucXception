@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_197	2016-03-30 02:07:58.669030000 +0100
+@@ -268,8 +268,6 @@
+     glFogi(GL_FOG_MODE, GL_EXP);
+     glFogf(GL_FOG_START, 0);
+     glFogf(GL_FOG_END, 50);
+-    glHint(GL_FOG_HINT, GL_NICEST);
+-    glFogf(GL_FOG_DENSITY, 0.016);
+     glEnable (GL_FOG);
+ }
+ 

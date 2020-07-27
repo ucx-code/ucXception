@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._MIA_1	2016-03-30 01:22:47.490013700 +0100
+@@ -33,7 +33,7 @@
+     for (i = 0;i < stateCounter;i++){
+         bool tudoPreenchido = true;
+         for (a = 0;a < n;a++){
+-            if (state[i][a] == 0) {
++            {
+                 tudoPreenchido = false;
+                 break;
+             }

@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._WAEP_1	2016-03-30 00:31:02.634745200 +0100
+@@ -23,7 +23,7 @@
+     for (i = 0;i < nString;i++){
+         scanf("%s", actWord);
+         if (checkWord(actWord) == 0) {
+-            strcpy(pWord[i], actWord);
++            strcpy(i, actWord);
+         }else{
+             i--;
+         }

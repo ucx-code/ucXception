@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MFC_15	2016-03-30 00:35:10.578457700 +0100
+@@ -67,7 +67,7 @@
+                 aux2 = aux->child;
+                 while (aux2 != NULL){
+                     if (aux2->type == MethodBody) 
+-                        gen_statements(method_name, aux2->child, mySemantic);
++                        ;
+ 
+                     aux2 = aux2->next;
+                 }

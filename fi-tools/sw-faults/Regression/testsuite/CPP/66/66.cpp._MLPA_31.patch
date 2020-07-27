@@ -1,0 +1,12 @@
+--- 66.cpp
++++ 66.cpp._MLPA_31	2016-03-30 01:44:01.209883600 +0100
+@@ -119,9 +119,6 @@
+     unsigned int i;
+     fstat(STDIN_FILENO, &statbuf);
+     src = (char*)mmap(0, statbuf.st_size, PROT_READ, MAP_PRIVATE, 0, 0);
+-    madvise(src, statbuf.st_size, MADV_WILLNEED | MADV_SEQUENTIAL);
+-    readM();
+-    madvise(src, statbuf.st_size, MADV_DONTNEED);
+     quick_sort(&slot[0], n);
+     slot[1] = slot[1 + 150010];
+     for (i = 2;i <= n;i++){

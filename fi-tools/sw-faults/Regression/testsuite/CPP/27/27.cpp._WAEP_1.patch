@@ -1,0 +1,11 @@
+--- 27.cpp
++++ 27.cpp._WAEP_1	2016-03-30 01:25:39.651394700 +0100
+@@ -20,7 +20,7 @@
+ {
+     int i, a;
+     int marca[36];
+-    memset(marca, 0, sizeof (int) * 36);
++    memset(marca, 0, 36);
+     for (i = 1;i <= n;i++){
+         if (visit[i] == 1) {
+             marca[i] = 1;

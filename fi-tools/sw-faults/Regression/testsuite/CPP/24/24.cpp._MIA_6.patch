@@ -1,0 +1,15 @@
+--- 24.cpp
++++ 24.cpp._MIA_6	2016-03-30 01:24:13.713972500 +0100
+@@ -42,10 +42,9 @@
+     if (len > best) 
+         return;
+ 
+-    if (verifica(end) == 0) {
++    {
+         return;
+-    }
+-    int i;
++    }int i;
+     for (i = begin;i < end;i++){
+         if (visit[i] == 0) {
+             visit[i] = 1;

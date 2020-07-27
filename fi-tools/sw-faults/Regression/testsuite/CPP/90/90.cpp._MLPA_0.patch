@@ -1,0 +1,11 @@
+--- 90.cpp
++++ 90.cpp._MLPA_0	2016-03-30 02:02:00.443316900 +0100
+@@ -28,8 +28,6 @@
+     if (tmp == EOF) 
+         return -1;
+ 
+-    *a = (tmp - 48);
+-    tmp = getchar_unlocked();
+     while (tmp != ' '){
+         *a = *a * 10 + (tmp - 48);
+         tmp = getchar_unlocked();

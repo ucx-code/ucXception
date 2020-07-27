@@ -1,0 +1,11 @@
+--- 70.cpp
++++ 70.cpp._MFC_4	2016-03-30 01:45:26.858268900 +0100
+@@ -58,7 +58,7 @@
+     scanf("%d %d", &n, &m);
+     int i;
+     for (i = 0;i < m;i++){
+-        scanf("%d", &amizade[i]);
++        ;
+         int conta;
+         for (conta = 0;conta < 4;conta++){
+             scanf("%d", &escolhas[i][conta]);

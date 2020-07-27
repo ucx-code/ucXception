@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLAC_133	2016-03-30 02:58:12.598565300 +0100
+@@ -1701,7 +1701,7 @@
+             iniciarSkyBox();
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }else
+-            if ((x > 208) && (x < 320) && (y > 159) && (y < 175)) {
++            if ((x > 208) && (y > 159) && (y < 175)) {
+                 cenario = 2;
+                 pos_seta_y = 3.4;
+                 iniciarSkyBox();

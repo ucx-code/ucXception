@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_26	2016-03-30 02:30:47.640479200 +0100
+@@ -681,7 +681,7 @@
+     glPopMatrix();
+     glDisable(GL_TEXTURE_2D);
+     glEnable(GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, texture[3]);
++    glBindTexture(GL_TEXTURE_2D, texture);
+     glPushMatrix();
+     glBegin(GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);

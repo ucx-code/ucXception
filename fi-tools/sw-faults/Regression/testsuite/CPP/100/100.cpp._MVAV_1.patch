@@ -1,0 +1,10 @@
+--- 100.cpp
++++ 100.cpp._MVAV_1	2016-03-30 03:15:48.095427000 +0100
+@@ -103,7 +103,6 @@
+     byte2 = fgetc(infile);
+     byte3 = fgetc(infile);
+     long ret = byte3;
+-    ret <<= 8;
+     ret |= byte2;
+     ret <<= 8;
+     ret |= byte1;

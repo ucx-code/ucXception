@@ -1,0 +1,20 @@
+--- ./1.c
++++ ./1.c._WPFV_1	2016-12-08 00:49:26.571085083 +0000
+@@ -25,7 +25,7 @@
+             memset(matrix + (halfSquare * 2 * halfSquare) + (i * 2 * halfSquare), '2', halfSquare);
+             memset(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), '3', halfSquare);
+         }
+-        rec(n + 1, target);
++        rec(n + 1, n);
+     }
+ }
+ 
+@@ -42,3 +42,8 @@
+         printf("%s\n", tmp);
+     }
+ }
++, tmp);
++	
++	}
++//	fwrite(matrix, 1, 40, stdout);
++}

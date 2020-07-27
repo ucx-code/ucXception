@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_173	2016-03-30 03:17:01.008216500 +0100
+@@ -237,8 +237,6 @@
+         glGetIntegerv(GL_UNPACK_ROW_LENGTH, &oldGlRowLen);
+         glPixelStorei(GL_UNPACK_ROW_LENGTH, NumCols);
+     }
+-    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+-    glReadPixels(0, 0, NumCols, NumRows, GL_RGB, GL_UNSIGNED_BYTE, ImagePtr);
+     if (vWidth >= NumCols) {
+         glPixelStorei(GL_UNPACK_ROW_LENGTH, oldGlRowLen);
+     }

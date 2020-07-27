@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._WAEP_14	2016-03-30 02:04:30.947579300 +0100
+@@ -73,7 +73,7 @@
+                 queue.push(pos - width);
+             }
+             if (bufferPosWidth1 == '\\') {
+-                queue.push(pos - width - 1);
++                queue.push(pos - width);
+             }
+             if ((bufferPos1 == '\\') && (bufferPos2 == '/')) {
+                 queue.push(pos + 2);

@@ -1,0 +1,11 @@
+--- 31.c
++++ 31.c._WPFV_2	2016-03-30 00:59:02.360123400 +0100
+@@ -34,7 +34,7 @@
+             memcpy(&tab[i][comp], &tab[i][0], comp * sizeof (char));
+             memcpy(&tab[i + comp][0], &tab[i][0], comp * sizeof (char));
+         }
+-        invert(comp, comp, comp);
++        invert(i, comp, comp);
+     }else
+         if (R == 1) {
+             for (i = 0;i < comp;i++){

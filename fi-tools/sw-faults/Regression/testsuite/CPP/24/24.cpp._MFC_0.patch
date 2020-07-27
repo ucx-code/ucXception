@@ -1,0 +1,11 @@
+--- 24.cpp
++++ 24.cpp._MFC_0	2016-03-30 01:24:07.267153400 +0100
+@@ -13,7 +13,7 @@
+     int tmpBest = 0;
+     int i, a;
+     int tmp[36];
+-    memset(tmp, 0, sizeof (int) * 36);
++    ;
+     for (i = 0;i < end && count < end;i++){
+         if (visit[i] == 1) {
+             ++tmpBest;

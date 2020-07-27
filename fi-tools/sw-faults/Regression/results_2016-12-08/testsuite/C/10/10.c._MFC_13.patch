@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_13	2016-12-08 00:49:30.051085021 +0000
+@@ -57,7 +57,7 @@
+                             if (paramDecl->next != NULL) 
+                                 printf("%s %%%s, ", gen_code_type(gen_type[paramDecl->child->type]), paramDecl->child->next->id);
+                             else
+-                                printf("%s %%%s", gen_code_type(gen_type[paramDecl->child->type]), paramDecl->child->next->id);
++                                ;
+ 
+                             paramDecl = paramDecl->next;
+                         }

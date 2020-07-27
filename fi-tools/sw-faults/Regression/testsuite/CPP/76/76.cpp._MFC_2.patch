@@ -1,0 +1,11 @@
+--- 76.cpp
++++ 76.cpp._MFC_2	2016-03-30 01:50:52.412488400 +0100
+@@ -15,7 +15,7 @@
+     for (i = 0;i < m;i++){
+         printf("%d", rand() % 99 + 1);
+         int max = rand() % 2 + 1;
+-        memset(lista, 0, sizeof (int) * 3);
++        ;
+         for (a = 0;a < max;a++){
+             bool no = true;
+             while (no == true){

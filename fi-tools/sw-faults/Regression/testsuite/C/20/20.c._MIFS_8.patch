@@ -1,0 +1,13 @@
+--- 20.c
++++ 20.c._MIFS_8	2016-03-30 00:48:12.483198600 +0100
+@@ -221,10 +221,6 @@
+         printf("Operator [ cannot be applied to types %s, %s\n", expr_type, expr_type2);
+         exit(0);
+ }
+-if (strcmp(expr_type2, "int") != 0) {
+-    printf("Operator [ cannot be applied to types %s, %s\n", expr_type, expr_type2);
+-    exit(0);
+-}
+ if (strcmp(expr_type, "boolean[]") == 0) 
+     expr_type = "boolean";
+ else

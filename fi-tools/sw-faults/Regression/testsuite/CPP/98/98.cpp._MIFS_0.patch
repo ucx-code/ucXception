@@ -1,0 +1,12 @@
+--- 98.cpp
++++ 98.cpp._MIFS_0	2016-03-30 02:04:21.714905700 +0100
+@@ -34,9 +34,6 @@
+             printf("\n");
+             return 1;
+         }
+-        if ((buffer[pos] & 0x80) == 0x80) 
+-            continue;
+-
+         buffer[pos] |= 0x80;
+         int bufferPos = (buffer[pos] & 0x7F);
+         int bufferPosWidth = (buffer[pos - width] & 0x7F);

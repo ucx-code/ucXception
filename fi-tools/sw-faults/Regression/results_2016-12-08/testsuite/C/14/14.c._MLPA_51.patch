@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_51	2016-12-08 00:49:46.843084720 +0000
+@@ -93,8 +93,6 @@
+ 
+     MethodParamsnode->child = node;
+     MethodParamsnode->next = NULL;
+-    MethodParamsnode->id = NULL;
+-    MethodParamsnode->type = MethodParams;
+     return MethodParamsnode;
+ }
+ 

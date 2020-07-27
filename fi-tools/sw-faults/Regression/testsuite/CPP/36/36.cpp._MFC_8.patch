@@ -1,0 +1,10 @@
+--- 36.cpp
++++ 36.cpp._MFC_8	2016-03-30 01:33:34.268802200 +0100
+@@ -113,6 +113,6 @@
+             memset(estadosP[a], 0, sizeof (int) * 35);
+         rec(i, n, 0, 1, 0);
+     }
+-    printf("%d\n", melhor);
++    ;
+     return 0;
+ }

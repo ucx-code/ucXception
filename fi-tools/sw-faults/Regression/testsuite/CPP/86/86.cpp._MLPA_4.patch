@@ -1,0 +1,12 @@
+--- 86.cpp
++++ 86.cpp._MLPA_4	2016-03-30 02:00:00.407380100 +0100
+@@ -123,9 +123,6 @@
+     actual = calcB(c, begin + 1, &actual2);
+     if (actual2 < best) {
+         c[begin] = 1;
+-        marca(c, begin);
+-        rec(c, begin + 1, end);
+-        desmarca(c, begin);
+     }
+     if (actual < best) {
+         c[begin] = 0;

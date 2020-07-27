@@ -1,0 +1,10 @@
+--- 26.cpp
++++ 26.cpp._MVAE_0	2016-03-30 01:25:06.558689300 +0100
+@@ -39,7 +39,6 @@
+     for (i = 0;i < (int)S.size();i++){
+         if (sizeSet[S[i]] > maior) {
+             maior = sizeSet[S[i]];
+-            maiorID = i;
+         }
+     }
+     printf("Set of maximum cardinality is %d\n", maiorID);

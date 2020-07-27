@@ -1,0 +1,12 @@
+--- 28.c
++++ 28.c._MIFS_0	2016-03-30 00:57:16.552329700 +0100
+@@ -40,9 +40,6 @@
+ 
+             k++;
+         }
+-        if (alta < alt) 
+-            per += (2 * (alt - alta));
+-
+         area = area + ((begin[j][0] - begin[j - 1][0]) * (alt));
+         per += 2 * (begin[j][0] - begin[j - 1][0]);
+         if (begin[j][0] < begin[j][2]) {

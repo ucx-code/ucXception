@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_50	2016-03-30 03:17:02.916958600 +0100
+@@ -226,7 +226,7 @@
+         ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+         if (!ImagePtr) {
+             fprintf(stderr, "Unable to allocate memory for %ld x %ld buffer.\n", NumRows, NumCols);
+-            Reset();
++            ;
+             ErrorCode = MemoryError;
+             return false;
+         }

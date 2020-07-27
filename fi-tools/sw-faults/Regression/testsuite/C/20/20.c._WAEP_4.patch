@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._WAEP_4	2016-03-30 00:47:17.197191600 +0100
+@@ -89,7 +89,7 @@
+ void check_methodParams(prog_env* prog, char* name, is_node* node)
+ {
+ while (node != NULL){
+-insert_method_elements(prog, name, sem_type[node->child->type], node->child->next->id, 1);
++insert_method_elements(prog, name, sem_type, node->child->next->id, 1);
+ node = node->next;
+ }
+ }

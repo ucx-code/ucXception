@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._MFC_6	2016-03-30 02:04:33.202626800 +0100
+@@ -91,7 +91,7 @@
+             return 0;
+ 
+         int matrixSize = (width + 1) * height;
+-        fread(buffer, 1, matrixSize, stdin);
++        ;
+         bool encontrou = false;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+             if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {

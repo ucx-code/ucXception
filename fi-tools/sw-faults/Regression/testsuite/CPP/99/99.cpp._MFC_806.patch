@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_806	2016-03-30 03:04:04.679843400 +0100
+@@ -1965,7 +1965,7 @@
+                             glPopMatrix();
+                             glPushMatrix();
+                             if (glIsEnabled (GL_LIGHT2)) {
+-                                glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, redPlasticAmb);
++                                ;
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, redPlasticDif);
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, redPlasticSpec);
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, redPlasticCoef);

@@ -1,0 +1,12 @@
+--- 90.cpp
++++ 90.cpp._MIFS_2	2016-03-30 02:02:04.216296600 +0100
+@@ -50,9 +50,6 @@
+     int i;
+     int it = 0;
+     while (true){
+-        if (readLine(&n, &m) == -1) 
+-            break;
+-
+         for (i = 0;i < m;i++){
+             int a, b;
+             readLine(&a, &b);

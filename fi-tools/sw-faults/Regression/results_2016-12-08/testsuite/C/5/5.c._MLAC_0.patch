@@ -1,0 +1,11 @@
+--- ./5.c
++++ ./5.c._MLAC_0	2016-12-08 00:51:01.823083377 +0000
+@@ -26,7 +26,7 @@
+         for (i = 0;i < 8;i++){
+             moedas[i] = moedas[i] + moedasRec[i];
+         }
+-        if (troco / 2 >= 1 && moedas[0] > 0) {
++        if (moedas[0] > 0) {
+             x = troco / 2;
+             if (x > moedas[0]) {
+                 moedasTroco[0] = moedas[0];

@@ -1,0 +1,14 @@
+--- 73.cpp
++++ 73.cpp._MIFS_2	2016-03-30 01:47:11.250312700 +0100
+@@ -161,11 +161,6 @@
+ 
+         return;
+     }
+-    if (forced[begin] != 3) {
+-        c[begin] = forced[begin];
+-        rec(c, begin + 1, end);
+-        return;
+-    }
+     int actual = 0;
+     int actual2 = 0;
+     c[begin] = 0;

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_808	2016-03-30 03:04:06.940129600 +0100
+@@ -1967,7 +1967,7 @@
+                             if (glIsEnabled (GL_LIGHT2)) {
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, redPlasticAmb);
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, redPlasticDif);
+-                                glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, redPlasticSpec);
++                                ;
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, redPlasticCoef);
+                             }else{
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, blackPlasticAmb);

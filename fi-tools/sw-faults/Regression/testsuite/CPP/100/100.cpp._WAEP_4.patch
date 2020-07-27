@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WAEP_4	2016-03-30 03:16:46.091820100 +0100
+@@ -130,7 +130,7 @@
+     fputc('B', outfile);
+     fputc('M', outfile);
+     int rowLen = GetNumBytesPerRow();
+-    writeLong(40 + 14 + NumRows * rowLen, outfile);
++    writeLong(40 + 14, outfile);
+     writeShort(0, outfile);
+     writeShort(0, outfile);
+     writeLong(40 + 14, outfile);

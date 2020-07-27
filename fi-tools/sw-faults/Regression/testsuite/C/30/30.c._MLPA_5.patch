@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MLPA_5	2016-03-30 00:58:05.674795500 +0100
+@@ -38,8 +38,6 @@
+ 
+                     if ((line != x) || (col - 1 != y)) {
+                         if (checkPath(line, col - 1, '/', count + 1, line, col) == 1) {
+-                            path[count][0] = line + 1;
+-                            path[count][1] = col + 1;
+                             return 1;
+                         }
+                     }

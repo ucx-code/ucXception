@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1863	2016-03-30 02:46:23.970188300 +0100
+@@ -1137,10 +1137,6 @@
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whiteRubberAmb);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, whiteRubberDif);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whiteRubberSpec);
+-    glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, whiteRubberCoef);
+-    glPushMatrix();
+-    glTranslatef(0, 0, -avancoMira);
+-    glutSolidTorus(0.2, 2, 32, 32);
+     glPopMatrix();
+ }
+ void desenhaBombas()

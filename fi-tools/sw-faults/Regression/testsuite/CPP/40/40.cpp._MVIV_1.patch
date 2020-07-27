@@ -1,0 +1,11 @@
+--- 40.cpp
++++ 40.cpp._MVIV_1	2016-03-30 01:36:59.099035900 +0100
+@@ -11,7 +11,7 @@
+ {
+     int j, i, a;
+     int maximoFinal = 0;
+-    int anterior = 0;
++    int anterior = anterior;
+     int agora = 1;
+     for (i = 1;i <= n;i++){
+         for (a = 1;a <= nCoursesDept[i];a++)

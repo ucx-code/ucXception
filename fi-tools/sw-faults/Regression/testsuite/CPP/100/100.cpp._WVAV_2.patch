@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WVAV_2	2016-03-30 03:15:58.126701800 +0100
+@@ -105,7 +105,7 @@
+     long ret = byte3;
+     ret <<= 8;
+     ret |= byte2;
+-    ret <<= 8;
++    ret <<= 0 ^ 0xff;
+     ret |= byte1;
+     ret <<= 8;
+     ret |= byte0;

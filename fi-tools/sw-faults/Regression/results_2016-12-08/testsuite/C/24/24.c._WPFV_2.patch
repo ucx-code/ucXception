@@ -1,0 +1,25 @@
+--- ./24.c
++++ ./24.c._WPFV_2	2016-12-08 00:50:19.687084132 +0000
+@@ -13,7 +13,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target, r);
++        rec(n + 1, target, n);
+     }else{
+         int halfSquare = pow(2, n) / 2;
+         int i;
+@@ -60,3 +60,13 @@
+         }
+     }
+ }
++, pow(2,n));
++			tmp[(int)pow(2,n)] = '\0';			
++			//matrix[(int)(i*(pow(2,n)+1))] = '\n';
++				printf("%s\n", tmp);
++			//fputs(tmp, stdout);
++			//fwrite(matrix+(int)(i*pow(2,n)), 1, pow(2,n)+1, stdout);
++		}
++	}
++//	fwrite(matrix, 1, 40, stdout);
++}

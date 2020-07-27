@@ -1,0 +1,11 @@
+--- 2.cpp
++++ 2.cpp._MIA_13	2016-03-30 01:09:57.906378200 +0100
+@@ -54,7 +54,7 @@
+     }
+     if ((buffer[pos] == ('\\' | 0x80))) {
+         if ((buffer[pos - width - 2] == '|') || (buffer[pos - width - 2] == '\\')) {
+-            if (recurse(pos - width - 2) == 1) {
++            {
+                 if (recurseSize != 0) 
+                     printf(",");
+ 

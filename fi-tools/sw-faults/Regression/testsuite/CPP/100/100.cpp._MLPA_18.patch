@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_18	2016-03-30 03:14:02.891072900 +0100
+@@ -46,8 +46,6 @@
+     if (!fileFormatOK) {
+         Reset();
+         ErrorCode = FileFormatError;
+-        fprintf(stderr, "Not a valid 24-bit bitmap file: %s.\n", filename);
+-        fclose(infile);
+         return false;
+     }
+     ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];

@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WVAV_1	2016-03-30 01:52:38.854928600 +0100
+@@ -70,7 +70,7 @@
+                 int absChoice = abs(choices[i][a]) - 1;
+                 if (absChoice <= begin) {
+                     if ((choices[i][a] < 0) && (c[absChoice] == 0)) {
+-                        satisfeito = 1;
++                        satisfeito = 0 ^ 0xff;
+                         break;
+                     }else
+                         if ((choices[i][a] > 0) && (c[absChoice] == 1)) {

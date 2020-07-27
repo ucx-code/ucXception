@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_41	2016-03-30 03:14:47.267167200 +0100
+@@ -90,8 +90,6 @@
+     lowByte = fgetc(infile);
+     hiByte = fgetc(infile);
+     short ret = hiByte;
+-    ret <<= 8;
+-    ret |= lowByte;
+     return ret;
+ }
+ 

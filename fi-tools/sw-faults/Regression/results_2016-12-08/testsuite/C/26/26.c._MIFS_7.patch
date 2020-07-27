@@ -1,0 +1,12 @@
+--- ./26.c
++++ ./26.c._MIFS_7	2016-12-08 00:50:26.095084017 +0000
+@@ -84,9 +84,6 @@
+                     verifica(l + 1, c - 1, '/', aux);
+ 
+                 if (encont == 0) 
+-                    verifica(l + 1, c, '|', aux);
+-
+-                if (encont == 0) 
+                     verifica(l + 1, c + 1, '\\', aux);
+             }else
+                 if (tab[l][c] == '/') {

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2471	2016-03-30 02:54:17.171083400 +0100
+@@ -1431,8 +1431,6 @@
+                 newe.show = 0;
+                 newe.position[0] = pastX;
+                 newe.position[1] = 50.0;
+-                newe.position[2] = pastZ;
+-                newe.fuel = 150;
+                 enemysList.push_back(newe);
+             }
+         }else{

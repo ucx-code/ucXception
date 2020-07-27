@@ -1,0 +1,11 @@
+--- 11.cpp
++++ 11.cpp._WPFV_25	2016-03-30 01:15:55.186354700 +0100
+@@ -54,7 +54,7 @@
+         squared = quickPow[n];
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+-            fwrite(matrix + (squared * i), 1, squared, stdout);
++            fwrite(matrix + (squared * i), 1, n, stdout);
+             putchar('\n');
+         }
+     }

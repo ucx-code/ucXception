@@ -1,0 +1,11 @@
+--- 54.cpp
++++ 54.cpp._WAEP_0	2016-03-30 01:40:23.924336900 +0100
+@@ -20,7 +20,7 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+     }
+-    std::sort(slot, slot + n);
++    std::sort(slot, slot);
+     int a;
+     int maximo = 0;
+     int begin = 1;

@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIFS_21	2016-03-30 02:54:34.158605400 +0100
+@@ -1516,9 +1516,6 @@
+                         particles[i].color[0] = 0.0;
+                     }
+                     particles[i].color[1] -= 1.0 / 100.0;
+-                    if (particles[i].color[1] < 0.0) {
+-                        particles[i].color[1] = 0.0;
+-                    }
+                     particles[i].color[2] -= 1.0 / 50.0;
+                     if (particles[i].color[2] < 0.0) {
+                         particles[i].color[2] = 0.0;

@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_23	2016-03-30 03:16:46.614388000 +0100
+@@ -132,7 +132,7 @@
+     int rowLen = GetNumBytesPerRow();
+     writeLong(40 + 14 + NumRows * rowLen, outfile);
+     writeShort(0, outfile);
+-    writeShort(0, outfile);
++    ;
+     writeLong(40 + 14, outfile);
+     writeLong(40, outfile);
+     writeLong(NumCols, outfile);

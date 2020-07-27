@@ -1,0 +1,11 @@
+--- 14.cpp
++++ 14.cpp._MLPA_6	2016-03-30 01:16:54.796036300 +0100
+@@ -55,8 +55,6 @@
+     unsigned int n, r;
+     unsigned int squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+-        squared = quickPow[n];
+-        rec(0, n, r % 4);
+         for (ia = 0;ia < squared;ia++){
+             fwrite(matrix + (squared * ia), 1, squared, stdout);
+             putchar('\n');

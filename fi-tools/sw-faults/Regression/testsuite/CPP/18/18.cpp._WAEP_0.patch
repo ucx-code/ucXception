@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._WAEP_0	2016-03-30 01:20:19.183713400 +0100
+@@ -70,7 +70,7 @@
+         }
+         if ((bufferPos1 == '/') && (bufferPos2 == '\\')) {
+             if (recurse(pos + 2, max, width) == 1) {
+-                answer.push(pos + 1);
++                answer.push(pos);
+                 answer.push(pos);
+                 return 1;
+             }

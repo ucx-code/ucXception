@@ -1,0 +1,11 @@
+--- 94.cpp
++++ 94.cpp._MIFS_2	2016-03-30 02:02:45.185893100 +0100
+@@ -17,8 +17,6 @@
+                 bipartite = false;
+                 return;
+             }
+-            if (mark[i] == false) 
+-                dfs(i, cur == 1 ? 2 : 1);
+         }
+ }
+ 

@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._WPFV_34	2016-03-30 01:25:32.637003100 +0100
+@@ -102,7 +102,7 @@
+     int i;
+     for (i = 0;i < n;i++){
+         Universo.push_back(i);
+-        S.push_back(i);
++        S.push_back(melhor);
+     }
+     std::vector<int> res = MSC(Universo, Universo, 0);
+     printf("->%d %d\n", res.size(), melhor);

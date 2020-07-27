@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_12	2016-03-30 03:14:21.430884300 +0100
+@@ -55,7 +55,7 @@
+         fprintf(stderr, "Unable to allocate memory for %ld x %ld bitmap: %s.\n", NumRows, NumCols, filename);
+         Reset();
+         ErrorCode = MemoryError;
+-        fclose(infile);
++        ;
+         return false;
+     }
+     unsigned char* cPtr = ImagePtr;

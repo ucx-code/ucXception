@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_9	2016-03-30 03:13:43.248575900 +0100
+@@ -36,9 +36,7 @@
+         skipChars(infile, 4 + 2 + 2 + 4 + 4);
+         NumCols = readLong(infile);
+         NumRows = readLong(infile);
+-        skipChars(infile, 2);
+         int bitsPerPixel = readShort(infile);
+-        skipChars(infile, 4 + 4 + 4 + 4 + 4 + 4);
+         if (NumCols > 0 && NumCols <= 100000 && NumRows > 0 && NumRows <= 100000 && bitsPerPixel == 24 && !feof(infile)) {
+             fileFormatOK = true;
+         }

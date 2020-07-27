@@ -1,0 +1,10 @@
+--- 38.cpp
++++ 38.cpp._MIA_9	2016-03-30 01:36:04.277068000 +0100
+@@ -67,7 +67,6 @@
+                 rec(i, n, count, estadoCounter + 1);
+             }
+         }
+-        if ((todosTemAcesso)&&(count < melhor)) 
+             melhor = count;
+     }
+     return 1;

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_791	2016-03-30 03:03:08.999145200 +0100
+@@ -1946,7 +1946,7 @@
+                             desenhaLagrima();
+                             desenhaBombas();
+                             desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+-                            colisoesInimigos();
++                            ;
+                             pufpuf();
+                             glPushMatrix();
+                             if (glIsEnabled (GL_LIGHT1)) {

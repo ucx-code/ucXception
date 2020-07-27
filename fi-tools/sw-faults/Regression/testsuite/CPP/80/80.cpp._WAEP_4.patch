@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WAEP_4	2016-03-30 01:52:34.860421400 +0100
+@@ -48,7 +48,7 @@
+ {
+     int i, a;
+     unsigned char estado[2000];
+-    memset(estado, -1, sizeof (unsigned char) * m);
++    memset(estado, -1, sizeof (unsigned char));
+     for (i = 0;i < m;i++){
+         int possuiIngredienteParcial = 0;
+         for (a = 0;a < 3;a++){

@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._WAEP_51	2016-03-30 00:55:30.934604800 +0100
+@@ -110,7 +110,7 @@
+                             verifica(l + 1, c, '/', aux);
+ 
+                         if (encont == 0) 
+-                            verifica(l + 1, c + 1, '\\', aux);
++                            verifica(l + 1, 1, '\\', aux);
+ 
+                         if (encont == 0) 
+                             verifica(l + 1, c + 1, '|', aux);

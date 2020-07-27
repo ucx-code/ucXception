@@ -1,0 +1,12 @@
+--- 19.cpp
++++ 19.cpp._MIA_2	2016-03-30 01:21:39.854540000 +0100
+@@ -19,8 +19,7 @@
+ 
+         if (visit[i] == 1) {
+             ++count;
+-            for (a = 0;a < counter[i];a++)
+-                if (tmp[vizinhos[i][a]] == 0) {
++            for (a = 0;a < counter[i];a++){
+                     tmp[vizinhos[i][a]] = 1;
+                     ++count;
+                 }

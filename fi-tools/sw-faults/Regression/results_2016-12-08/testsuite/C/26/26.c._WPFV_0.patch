@@ -1,0 +1,11 @@
+--- ./26.c
++++ ./26.c._WPFV_0	2016-12-08 00:50:24.843084039 +0000
+@@ -22,7 +22,7 @@
+             ant[1] = i;
+             if (nLinhas == 1 && (tab[0][i] == '|' || tab[0][i] == '/' || tab[0][i] == '\\')) {
+                 encont = 1;
+-                addCoord(0, i);
++                addCoord(0, coord);
+                 break;
+             }
+             if (nLinhas > 1) {

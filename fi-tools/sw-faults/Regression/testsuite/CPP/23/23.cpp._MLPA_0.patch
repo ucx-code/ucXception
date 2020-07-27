@@ -1,0 +1,11 @@
+--- 23.cpp
++++ 23.cpp._MLPA_0	2016-03-30 01:23:52.361758000 +0100
+@@ -65,8 +65,6 @@
+     for (i = 1;i <= n;i++){
+         if (saoVizinhos(v, i) == 1) 
+             if (visit[i] == 0) {
+-                visit[i] = 1;
+-                shortPath(i, len + 1);
+                 visit[i] = 0;
+             }
+     }

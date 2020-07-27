@@ -1,0 +1,10 @@
+--- 95.cpp
++++ 95.cpp._MIA_3	2016-03-30 02:03:12.020860700 +0100
+@@ -41,7 +41,6 @@
+         for (i = 0;i < n;i++){
+             memset(mark, false, sizeof (bool) * 500);
+             memset(color, 0, sizeof (int) * 500);
+-            if (dfs(i, 1) == true) 
+                 bipartite = true;
+         }
+         for (i = 0;i <= n;i++)

@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2133	2016-03-30 02:49:15.786821900 +0100
+@@ -1208,11 +1208,6 @@
+             glRotatef(-135, 1, 0, 0);
+             glutSolidCone(0.75, 1, 32, 32);
+             glPopMatrix();
+-            glPushMatrix();
+-            glTranslatef(enemysList[i].position[0], enemysList[i].position[1] - 2, enemysList[i].position[2] - 2);
+-            glRotatef(135, 1, 0, 0);
+-            glutSolidCone(0.75, 1, 32, 32);
+-            glPopMatrix();
+             glPopMatrix();
+         }
+     }

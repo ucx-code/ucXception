@@ -1,0 +1,12 @@
+--- 32.cpp
++++ 32.cpp._MIFS_0	2016-03-30 01:28:46.257877800 +0100
+@@ -9,9 +9,6 @@
+ int rec(int pos, int n, int count, int estadoCounter)
+ {
+     ++count;
+-    if (count > n / 2) 
+-        return -1;
+-
+     if (count >= melhor) 
+         return -1;
+ 

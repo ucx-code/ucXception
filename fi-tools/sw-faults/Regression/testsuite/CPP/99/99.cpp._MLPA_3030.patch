@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_3030	2016-03-30 03:08:09.645445200 +0100
+@@ -2044,11 +2044,6 @@
+         return 0;
+     }
+     SetListenerValues();
+-    atexit(KillALData);
+-    glutTimerFunc(enemyCreateDelay, dropEnemy, 1);
+-    glutTimerFunc(enemyDelay, Enemy, 1);
+-    glutTimerFunc(msecDelay, Timer, 1);
+-    glutTimerFunc(msecDelayRobot, TimerRobot, 1);
+     glutTimerFunc(delay_cube, TimerCube, 1);
+     glutTimerFunc(delay_cha, TimerCha, 1);
+     glutMouseFunc(cliqueRato);

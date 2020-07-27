@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MFC_11	2016-03-30 00:47:18.075802900 +0100
+@@ -102,7 +102,7 @@
+ prog->global = insert_element(id, type, 0);
+ else{
+     while (temp->next != NULL){
+-        check_defined(temp->next->name, id);
++        ;
+         temp = temp->next;
+     }
+     temp->next = insert_element(id, type, 0);

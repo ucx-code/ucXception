@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_671	2016-03-30 02:53:39.174951300 +0100
+@@ -1349,7 +1349,7 @@
+ 
+         for (int i = 1;i <= 25;i++){
+             glPushMatrix();
+-            glTranslatef(0.75, 1.5, -2.2);
++            ;
+             glRotatef(180.0, 1.0, 0.0, 0.0);
+             GLUquadricObj* tirodir;
+             tirodir = gluNewQuadric();

@@ -1,0 +1,12 @@
+--- 35.cpp
++++ 35.cpp._MIA_2	2016-03-30 01:31:18.264248300 +0100
+@@ -25,9 +25,7 @@
+     if (count > n / 2) 
+         return -1;
+ 
+-    if (count >= melhor) 
+         return -1;
+-
+     estadosP[estadoCounter][pos] = 2;
+     int i;
+     for (i = 0;i < counter[pos];i++){

@@ -1,0 +1,20 @@
+--- 99.cpp
++++ 99.cpp._MIFS_30	2016-03-30 03:00:01.376153200 +0100
+@@ -1769,17 +1769,6 @@
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }
+     }
+-    if ((iniciarjogo != 1) && (opcoes != 1) && (pontos != 1) && (instrucoes != 1) && (acerca == 1)) {
+-        if ((x > 395) && (x < 475) && (y > 445) && (y < 490)) {
+-            inicio = 1;
+-            opcoes = 0;
+-            pontos = 0;
+-            instrucoes = 0;
+-            acerca = 0;
+-            iniciarjogo = 0;
+-            glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+-        }
+-    }
+     glutPostRedisplay();
+ }
+ 

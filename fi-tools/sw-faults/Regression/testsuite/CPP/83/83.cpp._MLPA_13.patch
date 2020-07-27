@@ -1,0 +1,12 @@
+--- 83.cpp
++++ 83.cpp._MLPA_13	2016-03-30 01:56:09.971463500 +0100
+@@ -106,9 +106,7 @@
+         scanf("%d", &tmp);
+         int a = 0;
+         while (tmp != 0){
+-            choices[i][a++] = tmp;
+             int val = abs(tmp) - 1;
+-            afectacoes[val][afectacoesCounter[val]++] = i;
+             scanf("%d", &tmp);
+         }
+     }

@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_17	2016-12-08 00:50:10.423084298 +0000
+@@ -180,7 +180,7 @@
+                 printf("Incompatible type in if statement (got %s, required boolean)\n", expr_type);
+                 exit(0);
+         }
+-        semantic_statements(prog, name, node->child->next);
++        ;
+         break;
+     case Print:
+         expr_type = expr_recursive(prog, name, node->child);

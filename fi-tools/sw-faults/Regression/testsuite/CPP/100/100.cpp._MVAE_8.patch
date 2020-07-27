@@ -1,0 +1,10 @@
+--- 100.cpp
++++ 100.cpp._MVAE_8	2016-03-30 03:16:44.643136200 +0100
+@@ -124,7 +124,6 @@
+     FILE* outfile = fopen(filename, "wb");
+     if (!outfile) {
+         fprintf(stderr, "Unable to open file: %s\n", filename);
+-        ErrorCode = OpenError;
+         return false;
+     }
+     fputc('B', outfile);

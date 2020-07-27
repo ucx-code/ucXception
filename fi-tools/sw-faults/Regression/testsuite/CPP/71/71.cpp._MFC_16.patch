@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MFC_16	2016-03-30 01:45:55.333888000 +0100
+@@ -107,7 +107,7 @@
+         if (bufferPosWidth1 == '\\') {
+             if (recurse(pos - width - 1, max, width) == 1) {
+                 if (recurseSize != 0) 
+-                    printf(",");
++                    ;
+ 
+                 printf("(%d,%d)", getY(pos, width), getX(pos, width));
+                 return 1;

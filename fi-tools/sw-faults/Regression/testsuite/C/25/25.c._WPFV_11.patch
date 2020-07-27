@@ -1,0 +1,11 @@
+--- 25.c
++++ 25.c._WPFV_11	2016-03-30 00:52:49.128766800 +0100
+@@ -41,7 +41,7 @@
+                         if (r == 3) 
+                             memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }
+-        rec(n + 1, target, r);
++        rec(n + 1, halfMatrix, r);
+     }
+ }
+ 

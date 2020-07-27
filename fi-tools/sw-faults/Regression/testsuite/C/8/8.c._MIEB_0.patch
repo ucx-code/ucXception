@@ -1,0 +1,13 @@
+--- 8.c
++++ 8.c._MIEB_0	2016-03-30 00:31:01.989162900 +0100
+@@ -22,9 +22,7 @@
+         pWord[i] = (char*)malloc(51 * sizeof (char));
+     for (i = 0;i < nString;i++){
+         scanf("%s", actWord);
+-        if (checkWord(actWord) == 0) {
+-            strcpy(pWord[i], actWord);
+-        }else{
++        {
+             i--;
+         }
+     }

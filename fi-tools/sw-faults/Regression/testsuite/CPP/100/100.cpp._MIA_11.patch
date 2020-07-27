@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MIA_11	2016-03-30 03:17:05.036228000 +0100
+@@ -239,7 +239,7 @@
+     }
+     glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+     glReadPixels(0, 0, NumCols, NumRows, GL_RGB, GL_UNSIGNED_BYTE, ImagePtr);
+-    if (vWidth >= NumCols) {
++    {
+         glPixelStorei(GL_UNPACK_ROW_LENGTH, oldGlRowLen);
+     }
+     return true;

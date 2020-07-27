@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_155	2016-03-30 02:14:48.275508300 +0100
+@@ -562,7 +562,7 @@
+     glVertex2f(-10.0f, -10.0f);
+     glEnd();
+     glPopMatrix();
+-    glDisable(GL_TEXTURE_2D);
++    ;
+ }
+ 
+ void func_pontos()

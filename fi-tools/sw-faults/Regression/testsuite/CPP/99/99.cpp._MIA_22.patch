@@ -1,0 +1,21 @@
+--- 99.cpp
++++ 99.cpp._MIA_22	2016-03-30 02:44:58.301306400 +0100
+@@ -1075,7 +1075,7 @@
+ 
+                 robotZ = lastRobotZ;
+                 robotX = lastRobotX;
+-                if (health == 0 && dead == 0) {
++                {
+                     puts("morrest");
+                     dead = 1;
+                     enemy hero;
+@@ -1086,8 +1086,7 @@
+                     hero.show = 1;
+                     enemysList.push_back(hero);
+                     newExplosion();
+-                }
+-                break;
++                }break;
+             }
+         }
+         if (aux == 0) {

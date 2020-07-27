@@ -1,0 +1,12 @@
+--- 17.cpp
++++ 17.cpp._MIA_1	2016-03-30 01:18:23.824850900 +0100
+@@ -18,9 +18,7 @@
+ int rec(int pos, int n, int count)
+ {
+     ++count;
+-    if (count > (n / 3) + 1) 
+         return -1;
+-
+     if (count >= melhor) 
+         return -1;
+ 

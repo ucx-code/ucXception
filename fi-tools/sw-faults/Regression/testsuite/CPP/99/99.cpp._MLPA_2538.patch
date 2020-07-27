@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2538	2016-03-30 02:55:02.895627600 +0100
+@@ -1555,9 +1555,6 @@
+     glLightfv(GL_LIGHT3, GL_DIFFUSE, localCor);
+     glLightfv(GL_LIGHT3, GL_SPECULAR, localCorDif);
+     GLfloat posicao4[4] = {50, 50, 0, 1.0};
+-    glLightfv(GL_LIGHT4, GL_POSITION, posicao4);
+-    glLightfv(GL_LIGHT4, GL_DIFFUSE, localCor);
+-    glLightfv(GL_LIGHT4, GL_SPECULAR, localCorDif);
+     GLfloat posicao5[4] = {-50, -50, 0, 1.0};
+     glLightfv(GL_LIGHT5, GL_POSITION, posicao5);
+     glLightfv(GL_LIGHT5, GL_DIFFUSE, localCor);

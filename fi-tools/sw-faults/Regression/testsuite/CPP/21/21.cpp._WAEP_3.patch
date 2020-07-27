@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._WAEP_3	2016-03-30 01:22:41.275723900 +0100
+@@ -20,7 +20,7 @@
+             int z;
+             for (z = 0;z < counter[i];z++)
+                 novoEstado[vizinhos[i][z]] = 1;
+-            memcpy(state[stateCounter++], novoEstado, sizeof (char) * 35);
++            memcpy(stateCounter++, novoEstado, sizeof (char) * 35);
+             memcpy(novoEstado, estado, 35 * sizeof (char));
+         }
+     }

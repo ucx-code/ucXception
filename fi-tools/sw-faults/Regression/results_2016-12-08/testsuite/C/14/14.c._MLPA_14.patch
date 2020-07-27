@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_14	2016-12-08 00:49:44.699084758 +0000
+@@ -61,8 +61,6 @@
+             methodBody->child = stats;
+     }
+     node->next = NULL;
+-    node->type = MethodDecl;
+-    node->id = NULL;
+     return node;
+ }
+ is_node* insertFormalParams1(is_node* type, is_node* id)

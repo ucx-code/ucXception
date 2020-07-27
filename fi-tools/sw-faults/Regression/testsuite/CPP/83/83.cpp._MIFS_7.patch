@@ -1,0 +1,12 @@
+--- 83.cpp
++++ 83.cpp._MIFS_7	2016-03-30 01:55:29.657339300 +0100
+@@ -82,9 +82,6 @@
+         showC(c, end);
+         printf("%d\n", soma);
+     }
+-    if (soma < best) {
+-        best = soma;
+-    }
+     int i;
+     for (i = begin + 1;i < end;i++){
+         c[i] = 1;

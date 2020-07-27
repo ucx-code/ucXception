@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MLPA_8	2016-03-30 01:25:28.699002700 +0100
+@@ -93,8 +93,6 @@
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+         vizinhos[tmpA - 1][counter[tmpA - 1]] = tmpB - 1;
+         vizinhos[tmpB - 1][counter[tmpB - 1]] = tmpA - 1;
+-        counter[tmpA - 1]++;
+-        counter[tmpB - 1]++;
+     }
+     createAllSets();
+     std::vector<int> Universo;

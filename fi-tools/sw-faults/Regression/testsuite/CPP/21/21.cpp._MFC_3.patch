@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._MFC_3	2016-03-30 01:22:46.997451300 +0100
+@@ -29,7 +29,7 @@
+ void dfs(int nivel)
+ {
+     int i, a;
+-    printf("STATECOUNTER %d\n", stateCounter);
++    ;
+     for (i = 0;i < stateCounter;i++){
+         bool tudoPreenchido = true;
+         for (a = 0;a < n;a++){

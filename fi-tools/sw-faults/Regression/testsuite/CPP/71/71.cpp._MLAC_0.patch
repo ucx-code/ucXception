@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MLAC_0	2016-03-30 01:45:48.523022700 +0100
+@@ -83,7 +83,7 @@
+                 return 1;
+             }
+         }
+-        if ((bufferPosN1 == '/') && (bufferPosN2 == '\\')) {
++        if ((bufferPosN2 == '\\')) {
+             if (recurse(pos - 2, max, width) == 1) {
+                 if (recurseSize != 0) 
+                     printf(",");

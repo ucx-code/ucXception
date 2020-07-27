@@ -1,0 +1,12 @@
+--- 94.cpp
++++ 94.cpp._MIEB_0	2016-03-30 02:02:57.722044100 +0100
+@@ -41,9 +41,6 @@
+                 dfs(i, 1);
+         for (i = 0;i <= n;i++)
+             memset(a[i], 0, sizeof (int) * n);
+-        if (bipartite == true) 
+-            printf("NOT SURE\n");
+-        else
+             printf("NO\n");
+     }
+     return 0;

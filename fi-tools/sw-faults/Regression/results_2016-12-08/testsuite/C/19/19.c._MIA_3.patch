@@ -1,0 +1,12 @@
+--- ./19.c
++++ ./19.c._MIA_3	2016-12-08 00:50:02.887084433 +0000
+@@ -31,9 +31,7 @@
+                 return;
+         }
+     }
+-    if ((aux + (bound - distancias[v][18]) / 2) >= best) 
+         return;
+-
+     if (isSolution() && aux < best) {
+         best = aux;
+         return;

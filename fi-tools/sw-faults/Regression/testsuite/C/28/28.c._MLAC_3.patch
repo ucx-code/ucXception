@@ -1,0 +1,11 @@
+--- 28.c
++++ 28.c._MLAC_3	2016-03-30 00:57:23.229178300 +0100
+@@ -47,7 +47,7 @@
+         per += 2 * (begin[j][0] - begin[j - 1][0]);
+         if (begin[j][0] < begin[j][2]) {
+             k = 0;
+-            while (fila[k][0] != 0 && fila[k][0] < begin[j][1])
++            while (fila[k][0] != 0)
+                 k++;
+             aux1 = fila[k][0];
+             aux2 = fila[k][1];

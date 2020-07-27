@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MIA_17	2016-03-30 00:48:57.151686600 +0100
+@@ -305,7 +305,7 @@
+ }
+ }else{
+ while (aux != NULL){
+-    if (strcmp(aux->name, node->id) == 0) {
++    {
+         found = 1;
+     }
+     aux = aux->next;

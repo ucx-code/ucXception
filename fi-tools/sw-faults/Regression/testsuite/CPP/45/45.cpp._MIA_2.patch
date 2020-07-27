@@ -1,0 +1,10 @@
+--- 45.cpp
++++ 45.cpp._MIA_2	2016-03-30 01:38:31.158995600 +0100
+@@ -19,7 +19,6 @@
+                         melhorValor = K[i - 1][j];
+ 
+                     int novoValor = K[i - 1][j - w[i][a]] + v[i][a];
+-                    if (novoValor > melhorValor) 
+                         melhorValor = novoValor;
+                 }
+             }

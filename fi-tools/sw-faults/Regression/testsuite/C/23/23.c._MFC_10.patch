@@ -1,0 +1,10 @@
+--- 23.c
++++ 23.c._MFC_10	2016-03-30 00:51:06.248558900 +0100
+@@ -39,6 +39,6 @@
+         char tmp[1000];
+         strncpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
+         tmp[(int)pow(2, n)] = '\0';
+-        printf("%s\n", tmp);
++        ;
+     }
+ }

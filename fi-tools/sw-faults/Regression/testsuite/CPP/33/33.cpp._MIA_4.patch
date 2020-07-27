@@ -1,0 +1,10 @@
+--- 33.cpp
++++ 33.cpp._MIA_4	2016-03-30 01:29:55.927783300 +0100
+@@ -28,7 +28,6 @@
+         if (estadosP[estadoCounter][i] == 0) {
+             todosTemAcesso = false;
+             memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
+-            if (rec(i, n, count, estadoCounter + 1, limit) == 1) 
+                 return 1;
+         }
+     }

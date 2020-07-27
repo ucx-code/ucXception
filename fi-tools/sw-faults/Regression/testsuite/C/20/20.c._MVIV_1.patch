@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MVIV_1	2016-03-30 00:49:00.214123800 +0100
+@@ -323,7 +323,7 @@
+ char* tipo;
+ char* tipo2;
+ call = call->next;
+-int n_argument = 0;
++int n_argument = n_argument;
+ while (call != NULL){
+ tipo = expr_recursive(prog, method_name, call);
+ tipo2 = getArgumentType(prog, method_called, n_argument);

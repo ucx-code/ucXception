@@ -1,0 +1,11 @@
+--- 19.c
++++ 19.c._WPFV_47	2016-03-30 00:46:46.032204900 +0100
+@@ -97,7 +97,7 @@
+         bound += distancias[i][18];
+     }
+     solution[0] = 1;
+-    shortestPath(0, 0, maxCap, bound);
++    shortestPath(0, 0, n, bound);
+     printf("%d\n", best);
+     return 0;
+ }

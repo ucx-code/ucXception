@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_43	2016-03-30 02:05:19.103372600 +0100
+@@ -182,9 +182,6 @@
+     torusoutDir = 1;
+     rVisao = 1500;
+     aVisao = 0.5f * PI;
+-    incVisao = 20.0f;
+-    angB = -45;
+-    pastX = 0.0;
+     pastZ = 0.0;
+     lastRobotX = 0.0;
+     lastRobotZ = 0.0;

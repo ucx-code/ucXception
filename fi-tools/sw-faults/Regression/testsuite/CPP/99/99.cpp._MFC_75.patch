@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_75	2016-03-30 02:10:45.923708800 +0100
+@@ -417,7 +417,7 @@
+     int i;
+     for (i = 0;i < 6;i++){
+         glGenTextures(1, &skybox[i]);
+-        glBindTexture(GL_TEXTURE_2D, skybox[i]);
++        ;
+         if (cenario == 1) {
+             if (i == 0) 
+                 imagS.LoadBmpFile("tex/jf_nuke/nuke_dn.bmp");

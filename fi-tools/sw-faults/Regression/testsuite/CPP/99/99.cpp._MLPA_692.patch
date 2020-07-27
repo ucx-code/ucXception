@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_692	2016-03-30 02:17:45.522911700 +0100
+@@ -616,10 +616,6 @@
+     glTranslatef(-6.3, pos_seta_som_y, 0);
+     glBegin(GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);
+-    glTexCoord2f(0.0f, 1.0f);
+-    glVertex2f(-0.5f, 0.5f);
+-    glTexCoord2f(1.0f, 1.0f);
+-    glVertex2f(0.5f, 0.5f);
+     glTexCoord2f(1.0f, 0.0f);
+     glVertex2f(0.5f, -0.5f);
+     glTexCoord2f(0.0f, 0.0f);

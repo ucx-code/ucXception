@@ -1,0 +1,10 @@
+--- 40.cpp
++++ 40.cpp._MIA_2	2016-03-30 01:37:03.509096000 +0100
+@@ -30,7 +30,6 @@
+                     int maximo = 0;
+                     int k;
+                     for (k = 1;k <= nCoursesDept[i - 1];k++)
+-                        if (K[anterior][k][j] > maximo) 
+                             maximo = K[anterior][k][j];
+                     int maximo2 = std::max(maximo, v[i][a]);
+                     for (k = 1;k <= nCoursesDept[i - 1];k++)

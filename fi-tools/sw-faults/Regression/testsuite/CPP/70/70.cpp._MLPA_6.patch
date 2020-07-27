@@ -1,0 +1,10 @@
+--- 70.cpp
++++ 70.cpp._MLPA_6	2016-03-30 01:45:26.210186700 +0100
+@@ -67,7 +67,5 @@
+         }
+         counterEscolhas[i] = conta;
+     }
+-    recursivo(0);
+-    printf("%d\n", best);
+     return 0;
+ }

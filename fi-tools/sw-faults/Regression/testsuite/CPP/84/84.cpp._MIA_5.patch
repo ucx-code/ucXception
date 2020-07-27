@@ -1,0 +1,11 @@
+--- 84.cpp
++++ 84.cpp._MIA_5	2016-03-30 01:57:00.074331900 +0100
+@@ -100,7 +100,7 @@
+         c[begin] = 1;
+         rec(c, begin + 1, end);
+     }
+-    if (actual < best) {
++    {
+         c[begin] = 0;
+         rec(c, begin + 1, end);
+     }

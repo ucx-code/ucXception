@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_74	2016-12-08 00:49:48.307084694 +0000
+@@ -179,9 +179,6 @@
+ is_node* insertST_print_expr_sem(is_node* expr)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = expr;
+-    node->type = Print;
+-    node->id = NULL;
+     return node;
+ }
+ is_node* insertST_id_expr_assign_expr(is_node* id, is_node* expr1, is_node* expr2)

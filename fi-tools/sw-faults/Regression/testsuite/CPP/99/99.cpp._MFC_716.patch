@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_716	2016-03-30 02:54:25.817896100 +0100
+@@ -1480,7 +1480,7 @@
+                 robotYDir = robotYDir * (-1);
+     }
+     glutPostRedisplay();
+-    glutTimerFunc(msecDelayRobot, TimerRobot, 1);
++    ;
+ }
+ 
+ void TimerCube(int value)

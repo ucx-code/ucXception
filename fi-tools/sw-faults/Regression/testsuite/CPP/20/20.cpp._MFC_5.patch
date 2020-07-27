@@ -1,0 +1,10 @@
+--- 20.cpp
++++ 20.cpp._MFC_5	2016-03-30 01:22:30.929909500 +0100
+@@ -55,6 +55,6 @@
+         vizinhos[tmpB - 1][counter[tmpB - 1]++] = tmpA - 1;
+     }
+     rec(-1, 0);
+-    printf("%d\n", best);
++    ;
+     return 0;
+ }

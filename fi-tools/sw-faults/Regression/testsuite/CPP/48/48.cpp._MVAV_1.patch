@@ -1,0 +1,10 @@
+--- 48.cpp
++++ 48.cpp._MVAV_1	2016-03-30 01:39:03.480603200 +0100
+@@ -26,7 +26,6 @@
+     if (counter >= 7000) {
+         fwrite(outputBuffer, 1, counter, stdout);
+         outputBuffer[0] = '\0';
+-        counter = 0;
+     }
+ }
+ 

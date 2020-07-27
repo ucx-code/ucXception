@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MFC_5	2016-03-30 01:08:51.538443100 +0100
+@@ -50,7 +50,7 @@
+         if ((buffer[pos + 1] == '/') && (buffer[pos + 2] == '\\')) {
+             if (recurse(pos + 2, max, width) == 1) {
+                 answer.push(pos + 1);
+-                answer.push(pos);
++                ;
+                 return 1;
+             }
+         }

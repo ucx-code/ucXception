@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2796	2016-03-30 03:00:43.616225300 +0100
+@@ -1873,10 +1873,7 @@
+ {
+     largura = lar;
+     altura = alt;
+-    glViewport(0, 0, largura, altura);
+     glMatrixMode (GL_PROJECTION);
+-    glLoadIdentity();
+-    glutPostRedisplay();
+ }
+ 
+ void ecra()

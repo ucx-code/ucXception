@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._MFC_7	2016-03-30 01:12:31.167772400 +0100
+@@ -44,7 +44,7 @@
+     }else{
+         int halfSquare = quickPow[n - 1];
+         int i;
+-        memcpy(tmp, matrix, halfSquare * halfSquare);
++        ;
+         for (i = 0;i < halfSquare * halfSquare;i++)
+             tmpInv[i] = 97 - tmp[i];
+         for (i = 0;i < halfSquare;i++){

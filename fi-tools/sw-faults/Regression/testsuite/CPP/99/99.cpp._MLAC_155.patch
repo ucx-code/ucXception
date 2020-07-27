@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLAC_155	2016-03-30 02:59:03.614061800 +0100
+@@ -1734,7 +1734,7 @@
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+             }
+ 
+-        if ((x > 100) && (x < 150) && (y > 350) && (y < 362)) {
++        if ((x > 100) && (x < 150) && (y > 350)) {
+             op_robot = 1;
+             pos_seta_robot_y = -4.1;
+         }else

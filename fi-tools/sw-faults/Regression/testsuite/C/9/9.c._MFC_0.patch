@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._MFC_0	2016-03-30 00:31:25.505105000 +0100
+@@ -16,7 +16,7 @@
+     int lines, columns;
+     int i, j;
+     int **table, **tableLines, **tableColumns;
+-    scanf("%d %d", &lines, &columns);
++    ;
+     table = (int**)malloc(lines * sizeof (int*));
+     for (i = 0;i < lines;i++){
+         table[i] = (int*)malloc(columns * sizeof (int));

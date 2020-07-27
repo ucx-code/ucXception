@@ -1,0 +1,11 @@
+--- 24.c
++++ 24.c._MFC_8	2016-03-30 00:51:54.401611300 +0100
+@@ -43,7 +43,7 @@
+                 memcpy(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+             }
+         }
+-        rec(n + 1, target, r);
++        ;
+     }
+ }
+ 

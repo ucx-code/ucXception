@@ -1,0 +1,16 @@
+--- 70.cpp
++++ 70.cpp._MIFS_1	2016-03-30 01:45:15.428816400 +0100
+@@ -38,13 +38,6 @@
+ 
+ void recursivo(int ingrediente)
+ {
+-    if (ingrediente == n) {
+-        int t = total(0, n);
+-        if (t < best) 
+-            best = t;
+-
+-        return;
+-    }
+     if ((ingrediente > 2) && (total(0, ingrediente - 1) > best)) 
+         return;
+ 

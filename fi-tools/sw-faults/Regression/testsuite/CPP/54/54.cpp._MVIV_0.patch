@@ -1,0 +1,11 @@
+--- 54.cpp
++++ 54.cpp._MVIV_0	2016-03-30 01:40:24.208373300 +0100
+@@ -22,7 +22,7 @@
+     }
+     std::sort(slot, slot + n);
+     int a;
+-    int maximo = 0;
++    int maximo = maximo;
+     int begin = 1;
+     int linhas = n;
+     maximo = 0;

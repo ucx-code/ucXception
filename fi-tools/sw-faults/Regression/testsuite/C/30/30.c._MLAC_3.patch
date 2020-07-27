@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MLAC_3	2016-03-30 00:57:55.843046200 +0100
+@@ -6,7 +6,7 @@
+ 
+ short checkPath(short  line, short  col, char car, short  count, short  x, short  y)
+ {
+-    if (col >= 0 && col < ncols && line >= 0 && line < nlines) {
++    if (col >= 0 && col < ncols && line >= 0) {
+         if (map[line][col] == car) {
+             if (line == (nlines - 1)) {
+                 path[count][0] = line + 1;

@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_49	2016-12-08 00:49:46.799084721 +0000
+@@ -91,8 +91,6 @@
+     if (moreNodes != NULL) 
+         node->next = moreNodes;
+ 
+-    MethodParamsnode->child = node;
+-    MethodParamsnode->next = NULL;
+     MethodParamsnode->id = NULL;
+     MethodParamsnode->type = MethodParams;
+     return MethodParamsnode;

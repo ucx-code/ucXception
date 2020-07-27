@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._MFC_3	2016-03-30 00:30:07.553443700 +0100
+@@ -20,7 +20,7 @@
+         for (i = 0;i < 8;i++){
+             printf(" %d", moedas[i]);
+         }
+-        printf(" Valor insuficiente!");
++        ;
+     }else{
+         troco = recebido - despesa;
+         for (i = 0;i < 8;i++){

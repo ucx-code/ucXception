@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WAEP_4	2016-03-30 00:32:08.710084000 +0100
+@@ -36,7 +36,7 @@
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+         free(tableLines[i]);
+-        free(tableColumns[i]);
++        free(tableColumns);
+     }
+     free(table);
+     free(tableLines);

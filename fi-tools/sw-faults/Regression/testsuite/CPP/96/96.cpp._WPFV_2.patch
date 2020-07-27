@@ -1,0 +1,11 @@
+--- 96.cpp
++++ 96.cpp._WPFV_2	2016-03-30 02:03:22.366362600 +0100
+@@ -12,7 +12,7 @@
+ {
+     int i, u, v;
+     queue<int> Q;
+-    Q.push(start);
++    Q.push(partition);
+     partition[start] = 1;
+     visited[start] = 1;
+     while (!Q.empty()){

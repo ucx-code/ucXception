@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1722	2016-03-30 02:44:19.817396000 +0100
+@@ -1033,9 +1033,6 @@
+             box.position[1] = 0;
+             box.position[2] = 20;
+             box.fuel = 50;
+-            box.show = 1;
+-            enemysList.push_back(box);
+-            newExplosion();
+             return 2;
+         }
+ 

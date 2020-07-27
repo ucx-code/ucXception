@@ -1,0 +1,10 @@
+--- 35.cpp
++++ 35.cpp._MIA_6	2016-03-30 01:31:48.636108400 +0100
+@@ -72,7 +72,6 @@
+     qsort(translator[0], n, sizeof (int), compare);
+     int maxi = 1;
+     for (i = 1;i < n;i++)
+-        if (countVizinhos(translator[0][i], n, 0) == countVizinhos(translator[0][0], n, 0)) 
+             ++maxi;
+     for (i = 0;i < maxi;i++){
+         int a;

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2699	2016-03-30 02:58:55.738060600 +0100
+@@ -1729,8 +1729,6 @@
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }else
+             if ((x > 104) && (x < 142) && (y > 279) && (y < 288)) {
+-                pos_seta_som_y = -1.2;
+-                som = 0;
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+             }
+ 

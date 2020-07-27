@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2961	2016-03-30 03:06:13.723053100 +0100
+@@ -2032,8 +2032,6 @@
+     init();
+     glutDisplayFunc(ecra);
+     glutReshapeFunc(redimensionarJanela);
+-    glutKeyboardFunc(teclado);
+-    glutKeyboardUpFunc(teclasUp);
+     glutPassiveMotionFunc(passivemotion);
+     glutIdleFunc(idle);
+     srand (time(NULL));

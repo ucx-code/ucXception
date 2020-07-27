@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_47	2016-03-30 02:05:20.117101600 +0100
+@@ -186,9 +186,6 @@
+     angB = -45;
+     pastX = 0.0;
+     pastZ = 0.0;
+-    lastRobotX = 0.0;
+-    lastRobotZ = 0.0;
+-    robotYDir = 1;
+     disparo = 0;
+     CAMERA = -1;
+     iniciarPrograma();

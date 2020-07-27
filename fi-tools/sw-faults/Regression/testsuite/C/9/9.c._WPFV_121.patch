@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WPFV_121	2016-03-30 00:32:00.272010800 +0100
+@@ -32,7 +32,7 @@
+     printf("\n");
+     printTable(tableLines, lines, columns);
+     printf("\n");
+-    printTable(tableColumns, lines, columns);
++    printTable(tableColumns, lines, rearranjaCol);
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+         free(tableLines[i]);

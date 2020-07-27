@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._MVIV_3	2016-03-30 01:32:59.964882700 +0100
+@@ -103,7 +103,7 @@
+             translator[a][i] = i;
+     estadoCounterT = 0;
+     qsort(translator[0], n, sizeof (int), compare);
+-    int maxi = 1;
++    int maxi = maxi;
+     for (i = 1;i < n;i++)
+         if (countVizinhos(translator[0][i], 0) == countVizinhos(translator[0][0], 0)) 
+             ++maxi;

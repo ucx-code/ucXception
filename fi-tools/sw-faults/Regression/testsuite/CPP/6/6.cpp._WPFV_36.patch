@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._WPFV_36	2016-03-30 01:13:13.714683600 +0100
+@@ -128,7 +128,7 @@
+                 rec2(0, n);
+                 break;
+             case 3:
+-                rec3(0, n);
++                rec3(0, quickPow);
+                 break;
+         }
+         for (i = 0;i < squared;i++){

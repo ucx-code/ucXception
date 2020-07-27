@@ -1,0 +1,18 @@
+--- 78.cpp
++++ 78.cpp._MIFS_4	2016-03-30 01:51:20.264528800 +0100
+@@ -123,15 +123,6 @@
+ 
+ void rec(unsigned char* c, int begin, int end)
+ {
+-    if (begin != end) {
+-        if (forced[begin] == 1) {
+-            rec(c, begin + 1, end);
+-            return;
+-        }
+-        int actual = calcB(c, begin, end);
+-        if (actual > best) 
+-            return;
+-    }
+     if (begin == end) {
+         int soma = calc(c, end);
+         if (soma == 407) 

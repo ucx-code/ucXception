@@ -1,0 +1,11 @@
+--- ./19.c
++++ ./19.c._MLPA_1	2016-12-08 00:50:03.547084421 +0000
+@@ -45,8 +45,6 @@
+         if (solution[i] == 0) {
+             if (cap >= distancias[i][17]) {
+                 solution[i] = 1;
+-                shortestPath(i, len + distancias[v][i], cap, bound - distancias[i][18]);
+-                solution[i] = 0;
+             }
+         }
+     }

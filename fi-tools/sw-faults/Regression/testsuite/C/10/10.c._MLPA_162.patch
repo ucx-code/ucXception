@@ -1,0 +1,12 @@
+--- 10.c
++++ 10.c._MLPA_162	2016-03-30 00:37:33.291423000 +0100
+@@ -360,9 +360,7 @@
+ int verifyGlobal(char* var_name, prog_env* prog, char* method_name)
+ {
+ table_element* temp;
+-temp = prog->global;
+ environment_list* aux;
+-aux = prog->methods;
+ while (aux != NULL){
+     if (strcmp(aux->name, method_name) == 0) {
+         table_element* local = aux->locals;

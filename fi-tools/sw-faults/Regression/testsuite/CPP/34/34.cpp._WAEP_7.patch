@@ -1,0 +1,11 @@
+--- 34.cpp
++++ 34.cpp._WAEP_7	2016-03-30 01:30:57.027548900 +0100
+@@ -42,7 +42,7 @@
+ {
+     int a;
+     for (a = 0;a < 35;a++)
+-        memset(estadosP[a], 0, sizeof (int) * 35);
++        memset(a, 0, sizeof (int) * 35);
+ }
+ 
+ int main()

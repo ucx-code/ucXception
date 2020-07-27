@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_41	2016-12-08 00:50:12.219084265 +0000
+@@ -336,7 +336,7 @@
+ }
+ tipo2 = getArgumentType(prog, method_called, n_argument);
+ if (strcmp(tipo2, "void") != 0) {
+-printf("Incompatible type of argument %d in call to method %s (got void, required %s)\n", n_argument, method_called, tipo2);
++;
+ exit(0);
+ }
+ }

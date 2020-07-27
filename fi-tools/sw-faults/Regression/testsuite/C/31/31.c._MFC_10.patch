@@ -1,0 +1,11 @@
+--- 31.c
++++ 31.c._MFC_10	2016-03-30 00:59:15.165750700 +0100
+@@ -45,7 +45,7 @@
+         }else
+             if (R == 2) {
+                 for (i = 0;i < comp;i++){
+-                    memcpy(&tab[i][comp], &tab[i][0], comp * sizeof (char));
++                    ;
+                     memcpy(&tab[i + comp][0], &tab[i][0], comp * sizeof (char));
+                     memcpy(&tab[i + comp][comp], &tab[i][0], comp * sizeof (char));
+                 }

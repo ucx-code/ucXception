@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MFC_8	2016-03-30 01:39:09.124319900 +0100
+@@ -70,7 +70,7 @@
+                     strcat2((char*)",", 1);
+ 
+                 sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
++                ;
+                 return 1;
+             }
+         }

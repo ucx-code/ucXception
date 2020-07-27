@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WPFV_8	2016-03-30 01:47:13.623114900 +0100
+@@ -163,7 +163,7 @@
+     }
+     if (forced[begin] != 3) {
+         c[begin] = forced[begin];
+-        rec(c, begin + 1, end);
++        rec(c, begin + 1, best);
+         return;
+     }
+     int actual = 0;

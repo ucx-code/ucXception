@@ -1,0 +1,12 @@
+--- 29.cpp
++++ 29.cpp._MIEB_0	2016-03-30 01:26:32.398199400 +0100
+@@ -9,9 +9,6 @@
+ 
+ int saoVizinhos(int i, int j)
+ {
+-    if (j > i) 
+-        return vizinhos[j][i];
+-    else
+         return vizinhos[i][j];
+ }
+ 

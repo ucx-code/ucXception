@@ -1,0 +1,17 @@
+--- ./5.c
++++ ./5.c._WPFV_2	2016-12-08 00:51:01.703083379 +0000
+@@ -1,5 +1,3 @@
+-#include <stdio.h>
+-#include <stdlib.h>
+ int main()
+ {
+     int moedas[8], moedasRec[8];
+@@ -16,7 +14,7 @@
+         recebido = recebido + (moedasRec[i] * valores[i]);
+     }
+     if (recebido < despesa) {
+-        printf("Troco: %.2f", despesa);
++        printf("Troco: %.2f", troco);
+         for (i = 0;i < 8;i++){
+             printf(" %d", moedas[i]);
+         }

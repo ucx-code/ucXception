@@ -1,0 +1,11 @@
+--- 7.cpp
++++ 7.cpp._WAEP_31	2016-03-30 01:13:38.737752600 +0100
+@@ -59,7 +59,7 @@
+     int i, squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+         squared = quickPow[n];
+-        rec(0, n, r % 4);
++        rec(0, n, 4);
+         for (i = 0;i < squared;i++){
+             if (n % 2 == 0) {
+                 memcpy(tmp2, matrix2 + (i * squared), squared);

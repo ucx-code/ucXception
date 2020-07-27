@@ -1,0 +1,11 @@
+--- 88.cpp
++++ 88.cpp._WPFV_1	2016-03-30 02:01:40.022721900 +0100
+@@ -11,7 +11,7 @@
+     for (i = 0;i < times;i++){
+         n = 500;
+         m = 64000;
+-        printf("%d %d\n", n, m);
++        printf("%d %d\n", times, m);
+         int a;
+         for (a = 0;a < m;a++){
+             int k = rand() % n + 1;

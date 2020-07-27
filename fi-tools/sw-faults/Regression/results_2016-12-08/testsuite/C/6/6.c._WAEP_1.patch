@@ -1,0 +1,11 @@
+--- ./6.c
++++ ./6.c._WAEP_1	2016-12-08 00:51:04.431083330 +0000
+@@ -19,7 +19,7 @@
+         float soma = soma_golos(j);
+         float media = (soma / 5);
+         float eq = equilibrio(j, media);
+-        printf("%d\n", jogadores[j][0]);
++        printf("%d\n", 0);
+         printf("Media: %g\n", media);
+         printf("Equilibrio: %g\n", eq);
+         if (media > eq) {

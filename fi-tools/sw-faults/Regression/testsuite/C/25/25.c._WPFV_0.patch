@@ -1,0 +1,11 @@
+--- 25.c
++++ 25.c._WPFV_0	2016-03-30 00:52:17.192616600 +0100
+@@ -14,7 +14,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target, r);
++        rec(n + 1, quickPow, r);
+     }else{
+         int halfSquare = quickPow[n - 1];
+         int halfSquare2 = halfSquare * halfSquare;

@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._MIA_4	2016-03-30 00:30:13.954292600 +0100
+@@ -66,7 +66,7 @@
+             moedas[3] = moedas[3] - moedasTroco[3];
+             troco = troco - (moedasTroco[3] * 0.2);
+         }
+-        if (troco / 0.1 >= 1 && moedas[4] > 0) {
++        {
+             x = troco / 0.1;
+             if (x > moedas[4]) {
+                 moedasTroco[4] = moedas[4];

@@ -1,0 +1,11 @@
+--- ./24.c
++++ ./24.c._WAEP_36	2016-12-08 00:50:20.299084121 +0000
+@@ -43,7 +43,7 @@
+                 memcpy(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+             }
+         }
+-        rec(n + 1, target, r);
++        rec(n, target, r);
+     }
+ }
+ 

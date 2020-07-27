@@ -1,0 +1,11 @@
+--- 25.cpp
++++ 25.cpp._WPFV_9	2016-03-30 01:24:46.669660900 +0100
+@@ -55,7 +55,7 @@
+     for (i = begin;i < end;i++){
+         if (visit[i] == 0) {
+             visit[i] = 1;
+-            shortPath(i, end, len + 1);
++            shortPath(i, counter, len + 1);
+             visit[i] = 0;
+         }
+     }

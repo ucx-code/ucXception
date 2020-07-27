@@ -1,0 +1,11 @@
+--- ./5.c
++++ ./5.c._MLPA_1	2016-12-08 00:51:01.951083375 +0000
+@@ -43,8 +43,6 @@
+             }else{
+                 moedasTroco[1] = x;
+             }
+-            moedas[1] = moedas[1] - moedasTroco[1];
+-            troco = troco - moedasTroco[1];
+         }
+         if (troco / 0.5 >= 1 && moedas[2] > 0) {
+             x = troco / 0.5;

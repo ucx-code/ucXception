@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WPFV_31	2016-03-30 01:47:18.390934500 +0100
+@@ -171,7 +171,7 @@
+     c[begin] = 0;
+     actual = calcB(c, begin + 1, end);
+     c[begin] = 1;
+-    actual2 = calcB(c, begin + 1, end);
++    actual2 = calcB(c, begin + 1, m);
+     int i;
+     int p1 = 0;
+     int n1 = 0;

@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_43	2016-12-08 00:49:34.547084940 +0000
+@@ -241,7 +241,7 @@
+     glob = verifyGlobal(expr->id, prog, method_name);
+     expr_type = get_type(expr->id, prog, method_name);
+     counter++;
+-    sprintf(c, "%%%d", counter);
++    ;
+     if (!glob) 
+         printf("\t%%%d = load %s* %%%s\n", counter, expr_type, expr->id);
+     else

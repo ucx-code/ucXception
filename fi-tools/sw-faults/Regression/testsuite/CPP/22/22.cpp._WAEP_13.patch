@@ -1,0 +1,11 @@
+--- 22.cpp
++++ 22.cpp._WAEP_13	2016-03-30 01:23:33.919415400 +0100
+@@ -49,7 +49,7 @@
+         if (criaEstados(stateOld[i], nivel) == 1) 
+             return;
+     }
+-    dfs(nivel + 1);
++    dfs(1);
+ }
+ 
+ int main()

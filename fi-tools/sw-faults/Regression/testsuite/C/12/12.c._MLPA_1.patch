@@ -1,0 +1,11 @@
+--- 12.c
++++ 12.c._MLPA_1	2016-03-30 00:38:23.823890100 +0100
+@@ -24,8 +24,6 @@
+             if (procrastination(exam + 1) == 1) {
+                 return 1;
+             }
+-            nSlots--;
+-            vec[exam] = 0;
+         }
+     }
+     return 0;

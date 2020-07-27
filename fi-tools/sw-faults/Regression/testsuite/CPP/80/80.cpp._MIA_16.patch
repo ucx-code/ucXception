@@ -1,0 +1,10 @@
+--- 80.cpp
++++ 80.cpp._MIA_16	2016-03-30 01:53:01.315161800 +0100
+@@ -194,7 +194,6 @@
+             c[i] = rand() % 2;
+         }
+         int tmp = calc(c, n);
+-        if (tmp < best) 
+             best = tmp;
+     }
+     memset(c, 0, sizeof (unsigned char) * n);

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_718	2016-03-30 02:54:27.635857600 +0100
+@@ -1487,7 +1487,7 @@
+ {
+     anguloCube += 10;
+     glutPostRedisplay();
+-    glutTimerFunc(delay_cube, TimerCube, 1);
++    ;
+ }
+ 
+ void TimerCha(int value)

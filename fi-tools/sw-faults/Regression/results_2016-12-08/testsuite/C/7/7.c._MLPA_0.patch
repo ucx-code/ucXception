@@ -1,0 +1,11 @@
+--- ./7.c
++++ ./7.c._MLPA_0	2016-12-08 00:51:06.071083301 +0000
+@@ -9,8 +9,6 @@
+     char word[MAX];
+     int errpos, i, length;
+     while (scanf("%s", word) != EOF){
+-        length = strlen(word);
+-        errpos = perfect(word);
+         while (errpos < length){
+             for (i = errpos;i < length;i++){
+                 word[i] = word[i + 1];

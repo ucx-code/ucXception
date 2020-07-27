@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_164	2016-03-30 03:16:58.337376600 +0100
+@@ -180,9 +180,6 @@
+ void RgbImage::writeShort(short  data, FILE* outfile)
+ {
+     unsigned char byte0, byte1;
+-    byte0 = data & 0x000000ff;
+-    byte1 = (data >> 8) & 0x000000ff;
+-    fputc(byte0, outfile);
+     fputc(byte1, outfile);
+ }
+ 

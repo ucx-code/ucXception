@@ -1,0 +1,11 @@
+--- ./26.c
++++ ./26.c._WAEP_3	2016-12-08 00:50:25.035084036 +0000
+@@ -27,7 +27,7 @@
+             }
+             if (nLinhas > 1) {
+                 if (tab[0][i] == '|') {
+-                    verifica(1, i - 1, '/', ant);
++                    verifica(1, 1, '/', ant);
+                     verifica(1, i, '|', ant);
+                     verifica(1, i + 1, '\\', ant);
+                 }else

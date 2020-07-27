@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2951	2016-03-30 03:05:52.283829100 +0100
+@@ -2022,8 +2022,6 @@
+ 
+ int main(int argc, char** argv)
+ {
+-    textoPontos = (char*)malloc(sizeof (char*));
+-    glutInit(&argc, argv);
+     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_STENCIL);
+     glutInitWindowSize(largura, altura);
+     glutInitWindowPosition(340, 100);

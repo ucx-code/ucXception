@@ -1,0 +1,11 @@
+--- 23.c
++++ 23.c._WPFV_5	2016-03-30 00:51:01.029516200 +0100
+@@ -34,7 +34,7 @@
+     int n, r;
+     int i;
+     scanf("%d %d", &n, &r);
+-    rec(0, n);
++    rec(0, i);
+     for (i = 0;i < pow(2, n);i++){
+         char tmp[1000];
+         strncpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));

@@ -1,0 +1,13 @@
+--- 73.cpp
++++ 73.cpp._MIFS_4	2016-03-30 01:47:21.380314400 +0100
+@@ -183,10 +183,6 @@
+     if ((gp1 >= best) && (gn1 >= best)) 
+         return;
+ 
+-    if (gp1 >= best) {
+-        c[begin] = 1;
+-        rec(c, begin + 1, end);
+-    }
+     if (gn1 >= best) {
+         c[begin] = 0;
+         rec(c, begin + 1, end);

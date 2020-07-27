@@ -1,0 +1,10 @@
+--- 42.cpp
++++ 42.cpp._MIA_0	2016-03-30 01:37:22.936182800 +0100
+@@ -19,7 +19,6 @@
+         for (a = 1;a <= numberOfCourses;a++){
+             for (j = 1;j <= m;j++)
+                 for (k = 1;k <= numberOfCoursesM1;k++)
+-                    if (K[anterior][k][j] > maximo[j]) 
+                         maximo[j] = K[anterior][k][j];
+             for (j = 1;j <= m;j++){
+                 if (w[i][a] > j) {

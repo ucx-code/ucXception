@@ -1,0 +1,11 @@
+--- 67.cpp
++++ 67.cpp._MLPA_0	2016-03-30 01:44:09.428927500 +0100
+@@ -30,8 +30,6 @@
+         *l++ = *r;
+         *r-- = t;
+     }
+-    quick_sort(a, r - a + 1);
+-    quick_sort(l, a + n - l);
+ }
+ 
+ struct stat statbuf;

@@ -1,0 +1,16 @@
+--- ./33.c
++++ ./33.c._MVIV_0	2016-12-08 00:50:47.583083632 +0000
+@@ -1,4 +1,3 @@
+-#include <stdio.h>
+ int tab[35][35];
+ int n, best;
+ void addPrint(int pos, int nPrint, int* print);
+@@ -24,7 +23,7 @@
+ void addPrint(int pos, int nPrint, int* print)
+ {
+     int i;
+-    int sum = 0;
++    int sum = sum;
+     if (nPrint >= best) 
+         return;
+ 

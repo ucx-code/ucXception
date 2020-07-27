@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MFC_2	2016-03-30 01:25:04.510428400 +0100
+@@ -29,7 +29,7 @@
+             return empty;
+         }else{
+             std::vector<int> bad;
+-            bad.push_back(-1);
++            ;
+             return bad;
+         }
+     }

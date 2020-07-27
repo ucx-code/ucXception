@@ -1,0 +1,11 @@
+--- 32.c
++++ 32.c._WAEP_22	2016-03-30 01:00:32.900641800 +0100
+@@ -80,7 +80,7 @@
+         gerarMatrix(lvl, rot);
+         for (i = 0;i < size;i++){
+             matrix[i][size] = '\0';
+-            printf("%s\n", matrix[i]);
++            printf("%s\n", matrix);
+         }
+     }
+     return 0;

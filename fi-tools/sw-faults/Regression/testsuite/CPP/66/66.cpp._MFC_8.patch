@@ -1,0 +1,11 @@
+--- 66.cpp
++++ 66.cpp._MFC_8	2016-03-30 01:44:04.494300500 +0100
+@@ -122,7 +122,7 @@
+     madvise(src, statbuf.st_size, MADV_WILLNEED | MADV_SEQUENTIAL);
+     readM();
+     madvise(src, statbuf.st_size, MADV_DONTNEED);
+-    quick_sort(&slot[0], n);
++    ;
+     slot[1] = slot[1 + 150010];
+     for (i = 2;i <= n;i++){
+         if (slot[1] <= slot[i + 150010]) {

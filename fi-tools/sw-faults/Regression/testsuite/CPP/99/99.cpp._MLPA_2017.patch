@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2017	2016-03-30 02:48:16.495275500 +0100
+@@ -1154,10 +1154,6 @@
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackRubberSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackRubberCoef);
+             glTranslatef(enemysList[i].position[0], enemysList[i].position[1], enemysList[i].position[2]);
+-            glRotatef(anguloCube, 1, 0, 0);
+-            glTranslatef(-enemysList[i].position[0], -enemysList[i].position[1], -enemysList[i].position[2]);
+-            glPushMatrix();
+-            glTranslatef(enemysList[i].position[0], enemysList[i].position[1], enemysList[i].position[2]);
+             glutSolidSphere(3, 32, 32);
+             glPopMatrix();
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whiteRubberAmb);

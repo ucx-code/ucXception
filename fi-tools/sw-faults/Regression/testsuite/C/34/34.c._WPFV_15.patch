@@ -1,0 +1,10 @@
+--- 34.c
++++ 34.c._WPFV_15	2016-03-30 01:01:35.597296500 +0100
+@@ -50,6 +50,6 @@
+     }
+     for (i = 0;i < n;i++)
+         findPoint(i, 1, vector);
+-    printf("%hd\n", best);
++    printf("%hd\n", x);
+     return 0;
+ }

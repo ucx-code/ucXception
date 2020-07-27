@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2507	2016-03-30 02:54:47.167993200 +0100
+@@ -1545,8 +1545,6 @@
+ void defineLuzes()
+ {
+     glEnable (GL_LIGHTING);
+-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, luzGlobalCor);
+-    glLightfv(GL_LIGHT0, GL_AMBIENT, luzGlobalCor);
+     glEnable (GL_LIGHT0);
+     GLfloat localCor[4] = {0.4, 0.4, 0.4, 1.0};
+     GLfloat localCorDif[4] = {1, 1, 1, 1.0};

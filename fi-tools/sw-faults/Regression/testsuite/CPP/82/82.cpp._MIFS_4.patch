@@ -1,0 +1,13 @@
+--- 82.cpp
++++ 82.cpp._MIFS_4	2016-03-30 01:54:08.578854000 +0100
+@@ -45,10 +45,6 @@
+ void rec(int* c, int begin, int end)
+ {
+     int soma = calc(c);
+-    if (soma < best) {
+-        last = best;
+-        best = soma;
+-    }
+     int i;
+     for (i = begin + 1;i < end;i++){
+         c[i] = 1;

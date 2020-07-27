@@ -1,0 +1,11 @@
+--- 18.c
++++ 18.c._MLPA_7	2016-03-30 00:45:22.676822400 +0100
+@@ -84,8 +84,6 @@
+                     }
+             }
+         }
+-        distancias[i][14] = x + y;
+-        bound += distancias[i][14];
+     }
+     solution[0] = 1;
+     shortestPath(0, 0, maxCap, bound);

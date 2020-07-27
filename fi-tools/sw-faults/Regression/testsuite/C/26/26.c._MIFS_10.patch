@@ -1,0 +1,12 @@
+--- 26.c
++++ 26.c._MIFS_10	2016-03-30 00:55:02.128443400 +0100
+@@ -94,9 +94,6 @@
+                         verifica(l + 1, c, '\\', aux);
+ 
+                     if (encont == 0) 
+-                        verifica(l + 1, c - 1, '/', aux);
+-
+-                    if (encont == 0) 
+                         verifica(l + 1, c - 1, '|', aux);
+ 
+                     if (ant[1] != c + 1 && encont == 0) 

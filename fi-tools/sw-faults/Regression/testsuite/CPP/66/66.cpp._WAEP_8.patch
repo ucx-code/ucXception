@@ -1,0 +1,11 @@
+--- 66.cpp
++++ 66.cpp._WAEP_8	2016-03-30 01:44:06.152011200 +0100
+@@ -128,7 +128,7 @@
+         if (slot[1] <= slot[i + 150010]) {
+             replace(slot[i + 150010]);
+         }else{
+-            insert(slot[i + 150010]);
++            insert(slot);
+         }
+     }
+     printf("%d\n", N);

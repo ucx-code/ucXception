@@ -1,0 +1,11 @@
+--- 27.cpp
++++ 27.cpp._WAEP_2	2016-03-30 01:25:52.054471100 +0100
+@@ -51,7 +51,7 @@
+         }
+         if (feasible == true) {
+             visit[i] = 1;
+-            mis(i, size + 1);
++            mis(i, size);
+             visit[i] = 0;
+         }
+     }

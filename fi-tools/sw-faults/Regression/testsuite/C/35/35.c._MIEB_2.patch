@@ -1,0 +1,12 @@
+--- 35.c
++++ 35.c._MIEB_2	2016-03-30 01:01:53.029513000 +0100
+@@ -17,9 +17,6 @@
+                     if (custo > j) 
+                         v[dept][j] = v[dept - 1][j];
+                     else{
+-                        if (v[dept - 1][j] > valor + v[dept - 1][j - custo]) 
+-                            v[dept][j] = v[dept - 1][j];
+-                        else
+                             v[dept][j] = valor + v[dept - 1][j - custo];
+                     }
+                 }else{

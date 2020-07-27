@@ -1,0 +1,11 @@
+--- ./18.c
++++ ./18.c._MIA_5	2016-12-08 00:50:00.571084474 +0000
+@@ -36,7 +36,7 @@
+ 
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {
+-            if (cap >= distancias[i][13]) {
++            {
+                 solution[i] = 1;
+                 shortestPath(i, len + distancias[v][i], cap, bound - distancias[i][14]);
+                 solution[i] = 0;

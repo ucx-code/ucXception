@@ -1,0 +1,12 @@
+--- 80.cpp
++++ 80.cpp._MLPA_7	2016-03-30 01:52:58.232531100 +0100
+@@ -164,9 +164,7 @@
+     int i;
+     scanf("%d %d", &n, &m);
+     for (i = 0;i < m;i++){
+-        scanf("%d", &friendship[i]);
+         int tmp;
+-        scanf("%d", &tmp);
+         int a = 0;
+         int k;
+         while (tmp != 0){

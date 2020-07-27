@@ -1,0 +1,11 @@
+--- 29.cpp
++++ 29.cpp._WPFV_0	2016-03-30 01:26:59.826780200 +0100
+@@ -69,7 +69,7 @@
+     for (i = v + 1;i <= n;i++){
+         if (neighbor[i] == 0) {
+             state[i] = 2;
+-            mis(i, size + 1);
++            mis(vizinhos, size + 1);
+             state[i] = 0;
+         }
+     }

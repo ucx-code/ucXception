@@ -1,0 +1,20 @@
+--- 100.cpp
++++ 100.cpp._MIFS_7	2016-03-30 03:17:01.375763000 +0100
+@@ -220,17 +220,6 @@
+     glGetIntegerv(GL_VIEWPORT, viewportData);
+     int& vWidth = viewportData[2];
+     int& vHeight = viewportData[3];
+-    if (ImagePtr == 0) {
+-        NumRows = vHeight;
+-        NumCols = vWidth;
+-        ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+-        if (!ImagePtr) {
+-            fprintf(stderr, "Unable to allocate memory for %ld x %ld buffer.\n", NumRows, NumCols);
+-            Reset();
+-            ErrorCode = MemoryError;
+-            return false;
+-        }
+-    }
+     assert(vWidth >= NumCols && vHeight >= NumRows);
+     int oldGlRowLen;
+     if (vWidth >= NumCols) {

@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MLPA_35	2016-03-30 00:35:15.427574400 +0100
+@@ -134,8 +134,6 @@
+     case Return:
+         break;
+     case Store:
+-        glob = verifyGlobal(node->child->id, prog, method_name);
+-        type = get_type(node->child->id, prog, method_name);
+         expr = gen_expression(method_name, node->child->next, prog);
+         if (!glob) 
+             printf("\tstore %s %s, %s* %%%s\n", type, expr, type, node->child->id);

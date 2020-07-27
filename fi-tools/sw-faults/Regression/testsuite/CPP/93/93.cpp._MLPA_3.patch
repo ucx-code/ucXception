@@ -1,0 +1,11 @@
+--- 93.cpp
++++ 93.cpp._MLPA_3	2016-03-30 02:02:35.905714000 +0100
+@@ -30,8 +30,6 @@
+     while (scanf("%d %d", &n, &m) != EOF){
+         for (i = 0;i < m;i++){
+             int a, b;
+-            scanf("%d %d", &a, &b);
+-            vizinhos[a][vizinhosC[a]++] = b;
+             vizinhos[b][vizinhosC[b]++] = a;
+         }
+         is = true;

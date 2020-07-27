@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_93	2016-03-30 03:16:27.308433100 +0100
+@@ -130,9 +130,6 @@
+     fputc('B', outfile);
+     fputc('M', outfile);
+     int rowLen = GetNumBytesPerRow();
+-    writeLong(40 + 14 + NumRows * rowLen, outfile);
+-    writeShort(0, outfile);
+-    writeShort(0, outfile);
+     writeLong(40 + 14, outfile);
+     writeLong(40, outfile);
+     writeLong(NumCols, outfile);

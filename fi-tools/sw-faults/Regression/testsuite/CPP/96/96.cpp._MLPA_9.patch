@@ -1,0 +1,11 @@
+--- 96.cpp
++++ 96.cpp._MLPA_9	2016-03-30 02:03:30.793434300 +0100
+@@ -38,8 +38,6 @@
+     int i, u, v;
+     while (scanf("%d %d", &n, &e) != EOF){
+         for (i = 0;i < e;i++){
+-            scanf("%d %d", &u, &v);
+-            G[u].push_back(v);
+             G[v].push_back(u);
+         }
+         for (i = 1;i <= n;i++)

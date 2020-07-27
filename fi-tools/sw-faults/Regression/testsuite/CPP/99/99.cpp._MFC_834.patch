@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_834	2016-03-30 03:05:20.756321600 +0100
+@@ -1999,7 +1999,7 @@
+                             desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+                             pufpuf();
+                             glPopMatrix();
+-                            glDisable(GL_STENCIL_TEST);
++                            ;
+                             glEnable (GL_BLEND);
+                             glColor4f(1, 1, 1, 0.7);
+                             desenhaSkyBox();

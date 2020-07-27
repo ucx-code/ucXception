@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_651	2016-03-30 02:53:18.357050600 +0100
+@@ -1318,7 +1318,7 @@
+     glPushMatrix();
+     glTranslatef(-0.75, 1.5, -2.2);
+     glutSolidSphere(0.3, 32, 32);
+-    glPopMatrix();
++    ;
+     glPushMatrix();
+     glTranslatef(0, 1.5, 0);
+     desenhaMira();

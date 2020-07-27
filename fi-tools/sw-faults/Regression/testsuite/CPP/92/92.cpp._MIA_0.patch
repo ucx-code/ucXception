@@ -1,0 +1,12 @@
+--- 92.cpp
++++ 92.cpp._MIA_0	2016-03-30 02:02:22.970569600 +0100
+@@ -20,8 +20,7 @@
+         }
+ 
+     color[node] = c;
+-    for (int i = 0;i < vizinhosC[node];i++)
+-        if (dfs(vizinhos[node][i], -c) == false) {
++    for (int i = 0;i < vizinhosC[node];i++){
+             return false;
+         }
+     return true;

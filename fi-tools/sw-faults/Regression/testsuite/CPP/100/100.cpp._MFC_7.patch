@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_7	2016-03-30 03:14:08.449234400 +0100
+@@ -44,7 +44,7 @@
+         }
+     }
+     if (!fileFormatOK) {
+-        Reset();
++        ;
+         ErrorCode = FileFormatError;
+         fprintf(stderr, "Not a valid 24-bit bitmap file: %s.\n", filename);
+         fclose(infile);

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_497	2016-03-30 02:46:50.501418700 +0100
+@@ -1127,7 +1127,7 @@
+     glPushMatrix();
+     glBegin (GL_LINES);
+     glVertex3f(0, -1.5, -avancoMira);
+-    glVertex3f(0, 1.5, -avancoMira);
++    ;
+     glEnd();
+     glBegin(GL_LINES);
+     glVertex3f(1.5, 0, -avancoMira);

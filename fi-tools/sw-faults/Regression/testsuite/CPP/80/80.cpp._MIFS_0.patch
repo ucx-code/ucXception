@@ -1,0 +1,12 @@
+--- 80.cpp
++++ 80.cpp._MIFS_0	2016-03-30 01:52:35.449996200 +0100
+@@ -52,9 +52,6 @@
+     for (i = 0;i < m;i++){
+         int possuiIngredienteParcial = 0;
+         for (a = 0;a < 3;a++){
+-            if (choices[i][a] == 0) 
+-                break;
+-
+             int absChoice = abs(choices[i][a]) - 1;
+             if (absChoice <= begin) {
+                 possuiIngredienteParcial = 1;

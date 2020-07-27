@@ -1,0 +1,11 @@
+--- 78.cpp
++++ 78.cpp._WPFV_54	2016-03-30 01:51:56.443785400 +0100
+@@ -199,7 +199,7 @@
+             forced[i] = 1;
+         }
+     }
+-    showC(forced, n);
++    showC(forced, unitClause);
+     rec(c, 0, n);
+     printf("%d\n", best);
+ }

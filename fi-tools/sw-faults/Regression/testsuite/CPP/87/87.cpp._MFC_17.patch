@@ -1,0 +1,11 @@
+--- 87.cpp
++++ 87.cpp._MFC_17	2016-03-30 02:01:22.075940700 +0100
+@@ -104,7 +104,7 @@
+         if ((buffer[pos + 1] == '\\') && (buffer[pos + 2] == '/')) {
+             if (recurse(pos + 2, max, width) == 1) {
+                 if (recurseSize != 0) 
+-                    printf(",");
++                    ;
+ 
+                 printf("(%d,%d),(%d,%d)", getY(pos + 1, width), getX(pos + 1, width), getY(pos, width), getX(pos, width));
+                 return 1;

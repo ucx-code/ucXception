@@ -1,0 +1,11 @@
+--- 12.cpp
++++ 12.cpp._WPFV_0	2016-03-30 01:16:04.858583700 +0100
+@@ -84,7 +84,7 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+     }
+-    radix_sort(n);
++    radix_sort(box);
+     a[1] = slot[0].end;
+     for (i = 1;i < n;i++){
+         if (a[1] <= slot[i].begin) {

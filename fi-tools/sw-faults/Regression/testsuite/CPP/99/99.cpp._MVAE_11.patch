@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAE_11	2016-03-30 02:54:21.473409200 +0100
+@@ -1437,7 +1437,6 @@
+             }
+         }else{
+             pastX = robotX;
+-            pastZ = robotZ;
+         }
+     }
+     glutPostRedisplay();

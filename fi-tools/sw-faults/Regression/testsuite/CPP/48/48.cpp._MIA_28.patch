@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MIA_28	2016-03-30 01:39:33.718945800 +0100
+@@ -138,7 +138,7 @@
+                 return 1;
+             }
+         }
+-        if (bufferPosWidth1 == '\\') {
++        {
+             if (recurse(pos - width - 1, max, width) == 1) {
+                 if (recurseSize != 0) 
+                     strcat2((char*)",", 1);

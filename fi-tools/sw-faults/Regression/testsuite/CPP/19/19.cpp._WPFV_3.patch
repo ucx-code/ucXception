@@ -1,0 +1,11 @@
+--- 19.cpp
++++ 19.cpp._WPFV_3	2016-03-30 01:21:49.738296400 +0100
+@@ -47,7 +47,7 @@
+     for (i = begin + 1;i < n;i++){
+         if (visit[i] == 0) {
+             visit[i] = 1;
+-            rec(i, len + 1);
++            rec(best, len + 1);
+             visit[i] = 0;
+         }
+     }

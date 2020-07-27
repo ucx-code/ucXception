@@ -1,0 +1,12 @@
+--- 26.c
++++ 26.c._MIA_11	2016-03-30 00:55:04.200706500 +0100
+@@ -96,9 +96,7 @@
+                     if (encont == 0) 
+                         verifica(l + 1, c - 1, '/', aux);
+ 
+-                    if (encont == 0) 
+                         verifica(l + 1, c - 1, '|', aux);
+-
+                     if (ant[1] != c + 1 && encont == 0) 
+                         verifica(l, c + 1, '\\', aux);
+ 

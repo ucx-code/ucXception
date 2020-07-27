@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_8	2016-03-30 02:11:14.991556900 +0100
+@@ -487,7 +487,7 @@
+ 
+ void desenhaEletricidade(int um, int dois)
+ {
+-    if (dois) {
++    {
+         glEnable (GL_TEXTURE_2D);
+         glBindTexture(GL_TEXTURE_2D, texture[13]);
+         glPushMatrix();

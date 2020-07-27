@@ -1,0 +1,16 @@
+--- ./33.c
++++ ./33.c._WPFV_10	2016-12-08 00:50:47.567083632 +0000
+@@ -1,4 +1,3 @@
+-#include <stdio.h>
+ int tab[35][35];
+ int n, best;
+ void addPrint(int pos, int nPrint, int* print);
+@@ -17,7 +16,7 @@
+     for (i = 0;i < n;i++){
+         addPrint(i, 1, print);
+     }
+-    printf("%d\n", best);
++    printf("%d\n", i);
+     return 0;
+ }
+ 

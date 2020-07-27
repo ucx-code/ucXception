@@ -1,0 +1,12 @@
+--- 55.cpp
++++ 55.cpp._MIFS_0	2016-03-30 01:40:34.828786400 +0100
+@@ -26,9 +26,6 @@
+ {
+     struct _slotLL* tmp = p->next;
+     n->next = tmp;
+-    if (p->next != NULL) 
+-        p->next->parent = n;
+-
+     p->next = n;
+ }
+ 

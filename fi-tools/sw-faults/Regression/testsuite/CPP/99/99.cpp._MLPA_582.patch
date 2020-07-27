@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_582	2016-03-30 02:16:27.944686400 +0100
+@@ -633,8 +633,6 @@
+     glTranslatef(-6.7, pos_seta_robot_y, 0);
+     glBegin(GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);
+-    glTexCoord2f(0.0f, 1.0f);
+-    glVertex2f(-0.5f, 0.5f);
+     glTexCoord2f(1.0f, 1.0f);
+     glVertex2f(0.5f, 0.5f);
+     glTexCoord2f(1.0f, 0.0f);

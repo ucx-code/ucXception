@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_18	2016-12-08 00:50:11.979084270 +0000
+@@ -311,7 +311,7 @@
+     aux = aux->next;
+ }
+ }
+-if (found == 0) {
++{
+ printf("Cannot find symbol %s\n", node->id);
+ exit(0);
+ }

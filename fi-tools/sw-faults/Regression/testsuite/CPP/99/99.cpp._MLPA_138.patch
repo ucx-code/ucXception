@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_138	2016-03-30 02:06:19.729622200 +0100
+@@ -223,8 +223,6 @@
+             ground_points[x][z][2] = z - 10.0;
+             ground_colors[z][x][0] = r;
+             ground_colors[z][x][1] = g;
+-            ground_colors[z][x][2] = b;
+-            ground_colors[z][x][3] = 0.0;
+         }
+     }
+     for (loop = 0;loop < NUM_PARTICLES_CHUVA;loop++){

@@ -1,0 +1,11 @@
+--- 96.cpp
++++ 96.cpp._WPFV_21	2016-03-30 02:03:38.294886900 +0100
+@@ -40,7 +40,7 @@
+         for (i = 0;i < e;i++){
+             scanf("%d %d", &u, &v);
+             G[u].push_back(v);
+-            G[v].push_back(u);
++            G[v].push_back(e);
+         }
+         for (i = 1;i <= n;i++)
+             if (!is_bipartite(i)) {

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2467	2016-03-30 02:54:08.108899100 +0100
+@@ -1440,8 +1440,6 @@
+             pastZ = robotZ;
+         }
+     }
+-    glutPostRedisplay();
+-    glutTimerFunc(enemyDelay, Enemy, 1);
+ }
+ 
+ void Timer(int value)

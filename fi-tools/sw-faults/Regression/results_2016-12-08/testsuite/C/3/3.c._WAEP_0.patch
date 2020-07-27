@@ -1,0 +1,11 @@
+--- ./3.c
++++ ./3.c._WAEP_0	2016-12-08 00:50:36.623083828 +0000
+@@ -14,7 +14,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target, r);
++        rec(n, target, r);
+     }else{
+         int halfSquare = quickPow[n - 1];
+         int halfSquare2 = halfSquare * halfSquare;

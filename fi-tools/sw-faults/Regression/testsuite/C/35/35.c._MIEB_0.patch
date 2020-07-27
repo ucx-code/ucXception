@@ -1,0 +1,20 @@
+--- 35.c
++++ 35.c._MIEB_0	2016-03-30 01:01:50.008628600 +0100
+@@ -13,16 +13,7 @@
+         for (i = 0;i < c;i++){
+             scanf("%d %d", &custo, &valor);
+             for (j = 1;j <= m;j++){
+-                if (i == 0) {
+-                    if (custo > j) 
+-                        v[dept][j] = v[dept - 1][j];
+-                    else{
+-                        if (v[dept - 1][j] > valor + v[dept - 1][j - custo]) 
+-                            v[dept][j] = v[dept - 1][j];
+-                        else
+-                            v[dept][j] = valor + v[dept - 1][j - custo];
+-                    }
+-                }else{
++                {
+                     if (v[dept][j] < valor + v[dept - 1][j - custo] && custo < j) 
+                         v[dept][j] = valor + v[dept - 1][j - custo];
+                 }

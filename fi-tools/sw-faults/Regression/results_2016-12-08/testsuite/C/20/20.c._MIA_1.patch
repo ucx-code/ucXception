@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_1	2016-12-08 00:50:09.703084310 +0000
+@@ -126,7 +126,7 @@
+ {
+ environment_list* methods = prog->methods;
+ while (methods != NULL){
+-    if (strcmp(methods->name, method_name) == 0) {
++    {
+         table_element* method_element = methods->locals;
+         table_element* prev = methods->locals;
+         if (methods->locals == NULL) 

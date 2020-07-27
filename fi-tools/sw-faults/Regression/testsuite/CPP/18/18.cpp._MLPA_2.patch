@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MLPA_2	2016-03-30 01:21:15.082317200 +0100
+@@ -126,8 +126,6 @@
+                         printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));
+                         answer.pop();
+                     }
+-                    printf("\n");
+-                    encontrou = true;
+                     break;
+                 }
+             }

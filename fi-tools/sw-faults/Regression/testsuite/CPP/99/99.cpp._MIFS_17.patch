@@ -1,0 +1,24 @@
+--- 99.cpp
++++ 99.cpp._MIFS_17	2016-03-30 02:54:22.620554700 +0100
+@@ -1446,21 +1446,6 @@
+ 
+ void Timer(int value)
+ {
+-    if (pausegame == 1) {
+-        torusin += 0.06 * torusinDir;
+-        if (torusin <= -12.0) 
+-            torusinDir = torusinDir * (-1);
+-        else
+-            if (torusin >= -10.0) 
+-                torusinDir = torusinDir * (-1);
+-
+-        torusout += 0.06 * torusoutDir;
+-        if (torusout >= -10.0) 
+-            torusoutDir = torusoutDir * (-1);
+-        else
+-            if (torusout <= -12.0) 
+-                torusoutDir = torusoutDir * (-1);
+-    }
+     glutPostRedisplay();
+     glutTimerFunc(msecDelay, Timer, 1);
+ }

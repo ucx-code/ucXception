@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_584	2016-03-30 02:52:52.431003400 +0100
+@@ -1229,7 +1229,7 @@
+         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, silverAmb);
+         glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, silverDif);
+         glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, silverSpec);
+-        glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, silverCoef);
++        ;
+     }else
+         if (op_robot == 2) {
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, bronzeAmb);

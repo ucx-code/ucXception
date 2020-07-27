@@ -1,0 +1,11 @@
+--- ./28.c
++++ ./28.c._MLAC_5	2016-12-08 00:50:33.135083891 +0000
+@@ -65,7 +65,7 @@
+             fila[k][1] = aux2;
+         }else{
+             k = 0;
+-            while ((fila[k][1] != begin[j][1] && fila[k][0] != begin[j][3]) && fila[k][0] != 0)
++            while ((fila[k][1] != begin[j][1]) && fila[k][0] != 0)
+                 k++;
+             while (fila[k][0] != 0){
+                 fila[k][0] = fila[k + 1][0];

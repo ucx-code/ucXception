@@ -1,0 +1,12 @@
+--- ./19.c
++++ ./19.c._MIFS_3	2016-12-08 00:50:03.983084413 +0000
+@@ -80,9 +80,6 @@
+         for (j = 1;j <= n;j++){
+             if (i != j) {
+                 if (x > distancias[i][j]) {
+-                    if (x < y) 
+-                        y = x;
+-
+                     x = distancias[i][j];
+                 }else
+                     if (y > distancias[i][j]) {

@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MFC_35	2016-03-30 01:39:46.037511700 +0100
+@@ -187,7 +187,7 @@
+                 break;
+         }
+         if (!encontrou) 
+-            strcat2((char*)"No Path!\n", 9);
++            ;
+     }
+     outputBuffer[counter] = '\0';
+     fwrite(outputBuffer, 1, counter, stdout);

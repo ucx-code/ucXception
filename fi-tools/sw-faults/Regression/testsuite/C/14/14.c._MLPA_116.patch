@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_116	2016-03-30 00:41:07.349726600 +0100
+@@ -311,8 +311,6 @@
+ is_node* insert_new_exp(node_type type, is_node* expr)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = expr;
+-    node->type = type;
+     node->id = NULL;
+     return node;
+ }
