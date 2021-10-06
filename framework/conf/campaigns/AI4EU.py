@@ -88,7 +88,7 @@ class AI4EU(Base_Campaign):
         """
         Call the Base Campaign initializer
         """
-        super(AI4EU, self).__init__()
+        super(AI4EU, self).__init__(input)
 
     def run(self):
         super(AI4EU, self).run()

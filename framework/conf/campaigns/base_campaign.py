@@ -27,11 +27,8 @@ class Base_Campaign(object):
 	def __init__(self, input):
 		self.row = {}
 		self.gen_files = {}
-		self.fi_enabled = input[0]
-
-	def __init__(self):
-		self.row = {}
-		self.gen_files = {}
+		if input is not None:
+			self.fi_enabled = input[0]
 
 	def _eval_lambda_funcs(self, input, locals):
 		"""Evaluates lambda functions in user-defined parameters.
