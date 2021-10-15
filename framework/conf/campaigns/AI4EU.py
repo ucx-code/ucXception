@@ -52,13 +52,13 @@ class AI4EU(Base_Campaign):
 
     # Probes launched before the workload (i.e., do not depend on a specific PID)
     pre_probes = (
-        (Probe_Sar(), "localhost", ("/tmp/sar_out", "1")),
+        #(Probe_Sar(), "localhost", ("/tmp/sar_out", "1")),
         # (Probe_Perf(), "localhost", ("/home/baskan/intelpcm/pcm", "0.1", "/tmp/",)),
     )
 
     # Probes that can only be launched after the workload has started
     post_probes = (
-        (Probe_Pidstat(), "localhost", (lambda locals: locals.p.pid, "1", False)),
+        #(Probe_Pidstat(), "localhost", (lambda locals: locals.p.pid, "1", False)),
     )
 
     # Define the fault injector. None disables it
@@ -79,9 +79,9 @@ class AI4EU(Base_Campaign):
 
     # Transforms raw data into processed data, usually will be kept in "results" folder and not in "table.csv"
     transformers = (
-        (Sar_to_CSV(),     ("localhost", lambda p: p.gen_files[Probe_Sar().__class__])),
+        #(Sar_to_CSV(),     ("localhost", lambda p: p.gen_files[Probe_Sar().__class__])),
         (Save_Output(),    ("localhost", lambda p: p.current_folder, lambda p: p.app_output)),
-        (Pidstat_to_CSV(), ("localhost", lambda p: p.gen_files[Probe_Pidstat().__class__])),
+        #(Pidstat_to_CSV(), ("localhost", lambda p: p.gen_files[Probe_Pidstat().__class__])),
     )
 
     def __init__(self, input):
@@ -90,8 +90,8 @@ class AI4EU(Base_Campaign):
         """
         super(AI4EU, self).__init__(input)
 
-    def run(self):
-        super(AI4EU, self).run()
+    def run(self, run_id):
+        super(AI4EU, self).run(run_id)
         self.create_run_folder()
         self.pre_launch()
         self.launch()
@@ -115,7 +115,7 @@ class AI4EU(Base_Campaign):
 
     def launch(self):
         self._start_clock()
-        # self.p = utils.run_anywhere("localhost", "self.app_path", "10000", None, None, True)
+        #self.p = utils.run_anywhere("localhost", self.app_path, self.app_input, None, None, True)
         self.p = utils.proc_launch_locally("python", [self.app_path, self.app_input], subprocess.PIPE, subprocess.PIPE,
                                            False)
         self._stop_clock("launch")
@@ -131,7 +131,7 @@ class AI4EU(Base_Campaign):
             (fi_f, fi_target, fi_path) = self.fi
             # selector = local_hw_fi.find_threads_by_pid
             # self.fi_ret = fi_f.launch_fi(self.remote_hosts[fi_target], fi_path, (selector, self.p.pid), (1, 3))
-            self.fi_ret = fi_f.launch_fi("localhost", fi_path, self.p.pid, (3000, 9000))
+            self.fi_ret = fi_f.launch_fi("localhost", fi_path, self.p.pid, (500, 1500), regs = (9, 9))
 
         self._stop_clock("launchfi")
 

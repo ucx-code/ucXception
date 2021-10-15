@@ -144,7 +144,7 @@ class Base_Campaign(object):
 		self.row[name + "_dur"] = now - self.time_start
 		self.time_start = None
 
-	def run(self):
+	def run(self, run_id):
 		# Add support for easily disabling FI and flagging it in the CSV
 		if self.fi_enabled is False:
 			self.fi = None

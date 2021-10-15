@@ -34,8 +34,8 @@ class Local_Exec(Base_Campaign):
 	p = None # Holds the process of the workload
 	fi_ret = None # Holds the return value from the FI
 
-	def __init__(self):
-		super(Local_Exec, self).__init__()
+	def __init__(self, input):
+		super(Local_Exec, self).__init__(input)
 		
 	def pre_launch(self):
 		self._start_clock()
@@ -92,7 +92,7 @@ class Local_Exec(Base_Campaign):
 		self._run_transformers()
 		self._stop_clock("transform")
 
-	def run(self):
+	def run(self, run_id):
 		self.create_run_folder()
 		self.pre_launch()
 		self.launch()

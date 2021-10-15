@@ -27,7 +27,7 @@ def proc_launch_locally(program, args, _stdout=None, _stderr=None, _shell=False)
 		cmd_arg = [program, ] + args
 	else:
 		cmd_arg = [program, ] + args.split(" ")
-	#print cmd_arg
+
 	p = subprocess.Popen(cmd_arg, stdin=None, stdout=_stdout, stderr=_stderr, shell=_shell)
 	return p
 
@@ -54,7 +54,6 @@ def proc_launch_ssh(ssh_config, program, args, stdin=None, stdout=None, stderr=N
 		if (p.returncode == 255) and (err == 'Timeout, server %s not responding.\r\n' % ssh_config.ip):
 			logger.error("proc_launch_ssh: Remote server timedout...")
 
-		#print (out, err)
 		return (out, err)
 	else:
 		now = time.time()
@@ -70,7 +69,6 @@ def proc_launch_ssh(ssh_config, program, args, stdin=None, stdout=None, stderr=N
 		p = subprocess.Popen(["/usr/bin/ssh", "-o ServerAliveInterval=5", "-o ServerAliveCountMax=6", login_info, ssh_arg],
 							 stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
 		out = p.communicate()
-		#print out
 		assert(p.returncode != 255) # Make sure SSH didnt fail
 
 		# Convert the output from ssh into a Remote_Proc for future easy use
@@ -84,9 +82,9 @@ def remote_get(ssh_config, in_path, out_path, keep=False):
 		cmd = ["/usr/bin/rsync", "-avz", remote_args, out_path]
 	else:
 		cmd = ["/usr/bin/rsync", "-avz", "--remove-source-files", remote_args, out_path]
+
 	p = subprocess.Popen(cmd, stdin=None, stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=False)
 	(stdout, stderr) = p.communicate()
-	#print p.communicate()
 	if p.returncode != 0:
 		logger.error("Remote_Get failed with returncode %d" % p.returncode)
 		return False
@@ -174,8 +172,36 @@ def stop_anywhere(target, proc, hasOutput=True):
 	else:
 		stop_remote(target, proc, hasOutput)
 
+def mkdir_anywhere(target, path):
+	if is_local(target):
+		return local_mkdir(path)
+	else:
+		return remote_mkdir(target, path)
+
+def move_anywhere(target, origin, destination):
+	if is_local(target):
+		return local_move(origin, destination)
+	else:
+		return remote_move(target, origin, destination)
+
+def delete_anywhere(target, path):
+	if is_local(target):
+		return local_delete(path)
+	else:
+		return remote_delete(target, path)
+
+def listdir_anywhere(target, path):
+	if is_local(target):
+		return local_listdir(path)
+	else:
+		return remote_listdir(target, path)
+
 def local_delete(path):
 	os.remove(path) # will throw exception if doesnt exist
+
+def remote_delete(ssh_config, path):
+	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/rm", "-f " + path, stdin=None, stdout=True, stderr=True, background=False)
+	return True
 
 def local_mkdir(path):
 	# Always try to create base folder
@@ -184,3 +210,30 @@ def local_mkdir(path):
 	except Exception as e:
 		# logger.debug
 		pass
+
+def remote_mkdir(ssh_config, path):
+	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/mkdir", path, stdin=None, stdout=True, stderr=True, background=False)
+	return True
+
+def local_move(origin, destination):
+	shutil.move(origin, destination)
+
+def remote_move(ssh_config, origin, destination):
+	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/mv", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
+	return True
+
+def local_listdir(path):
+	return os.listdir(path)
+
+def remote_listdir(ssh_config, path):
+	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/ls", "-1 " + path, stdin=None, stdout=True, stderr=True, background=False)
+	return stdout.split("\n")
+
+def copy_anywhere(target, origin, destination):
+	if is_local(target):
+		local_get(origin, destination, keep=True)
+	else:
+		remote_copy(target, origin, destination)
+
+def remote_copy(ssh_config, origin, destination):
+	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/cp", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)

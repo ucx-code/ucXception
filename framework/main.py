@@ -12,14 +12,14 @@ import sys
 import os
 
 def signal_handler(signal, frame):
-	print "Saving table to CSV"
+	#print "Saving table to CSV"
 	io.save_csv(main_csv_path, table)
 
 	# Telling the REST service that we are terminating
 	# if (rest_enabled): req = requests.delete(endpoint)
 	sys.exit(0)
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 # ====== main() ============
@@ -34,7 +34,10 @@ table = io.read_or_create_table(main_csv_path, predefined_cols, False)
 signal.signal(signal.SIGINT, signal_handler)
 
 for plan in plans:
-	for campaign in plan.campaigns:
+
+	plan_obj = plan(None)
+	for campaign in plan_obj.campaigns:
+		#print campaign
 		(campaign_name, n_runs, input) = campaign
 
 		for run in xrange(1, n_runs+1):
@@ -43,7 +46,7 @@ for plan in plans:
 			start_time = time.time() # In version >= 3.3 there are better options for high performance counters
 			logger.debug("start_time: %f" % start_time)
 
-			row = plan(input).run() # Execute the steps of this campaign
+			row = plan_obj.run(run) # Execute the steps of this campaign
 
 			end_time = time.time() # In version >= 3.3 there are better options for high performance counters
 			
@@ -53,6 +56,7 @@ for plan in plans:
 			else:
 				logger.warning("main: we didnt include this run because something failed before...")
 			logger.debug("end_time: %f" % start_time)
+	del plan_obj
 
 	io.save_csv(main_csv_path, table) # Save between campaigns at least, just in case something fails badly
 io.save_csv(main_csv_path, table)
