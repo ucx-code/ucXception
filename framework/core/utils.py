@@ -237,3 +237,17 @@ def copy_anywhere(target, origin, destination):
 
 def remote_copy(ssh_config, origin, destination):
 	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/cp", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
+
+def wait_for_remote_host(ssh_config, timeout=120):
+	login_info = ssh_config.username + "@" + ssh_config.ip 
+	logger.debug("Entering wait_for_remote_host for %s" % ssh_config.ip)
+	success = False
+	start_time = time.time()
+	while not success and time.time() < (start_time + timeout):
+		p = subprocess.Popen(["/usr/bin/ssh", login_info, "echo 1"], stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+		(out, err) = p.communicate()
+		logger.debug("Received stdout=%s stderr=%s" % (out, err))
+		if p.returncode == 0:
+			success = True
+
+	return success
