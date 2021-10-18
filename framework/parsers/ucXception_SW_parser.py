@@ -10,7 +10,7 @@ class ucXception_SW_Parser:
 
 		patch_count = {}
 		for patch in patch_files:
-			operator = patch.split("_")[1]
+			operator = os.path.basename(patch).split("_")[-2]
 			if operator in patch_count:
 				patch_count[operator] = patch_count[operator] + 1
 			else:
