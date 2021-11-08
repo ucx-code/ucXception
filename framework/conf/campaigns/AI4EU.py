@@ -41,8 +41,12 @@ class AI4EU(Base_Campaign):
     app_input = "1300000"  # Input to be passed to the python script
     watchdog_dur = 30000  # time (in ms) that the watchdog will wait before killing the program
 
-    #remote_hosts = {
-    #}
+    remote_hosts = {
+        "dolma-xen"    : ssh("dolma-xen", "root"),
+    }
+
+    #target = remote_hosts["dolma-xen"]
+    target = "localhost"
 
     # Amount of runs to be performed
     campaigns = (
@@ -62,7 +66,7 @@ class AI4EU(Base_Campaign):
     )
 
     # Define the fault injector. None disables it
-    fi = (local_hw_fi, "localhost", "/home/ai4eu/HW_Injectors_ucXception/newest_injector/pinject_intel")
+    fi = (local_hw_fi, target, "/root/HW_Injectors_ucXception/newest_injector/pinject_intel")
 
     # Parsers that use the available information and put it into table.csv
     parsers = (
@@ -80,7 +84,7 @@ class AI4EU(Base_Campaign):
     # Transforms raw data into processed data, usually will be kept in "results" folder and not in "table.csv"
     transformers = (
         #(Sar_to_CSV(),     ("localhost", lambda p: p.gen_files[Probe_Sar().__class__])),
-        (Save_Output(),    ("localhost", lambda p: p.current_folder, lambda p: p.app_output)),
+        #(Save_Output(),    ("localhost", lambda p: p.current_folder, lambda p: p.app_output)),
         #(Pidstat_to_CSV(), ("localhost", lambda p: p.gen_files[Probe_Pidstat().__class__])),
     )
 
@@ -115,9 +119,7 @@ class AI4EU(Base_Campaign):
 
     def launch(self):
         self._start_clock()
-        #self.p = utils.run_anywhere("localhost", self.app_path, self.app_input, None, None, True)
-        self.p = utils.proc_launch_locally("python", [self.app_path, self.app_input], subprocess.PIPE, subprocess.PIPE,
-                                           False)
+        self.p = utils.run_anywhere(self.target, "python", self.app_path + " " + self.app_input, True, True, True)
         self._stop_clock("launch")
 
     def post_launch(self):
@@ -129,16 +131,19 @@ class AI4EU(Base_Campaign):
         self._start_clock()
         if self.fi is not None:
             (fi_f, fi_target, fi_path) = self.fi
-            # selector = local_hw_fi.find_threads_by_pid
-            # self.fi_ret = fi_f.launch_fi(self.remote_hosts[fi_target], fi_path, (selector, self.p.pid), (1, 3))
-            self.fi_ret = fi_f.launch_fi("localhost", fi_path, self.p.pid, (500, 1500), regs = (9, 9))
+            if fi_target == "localhost":
+                selector = local_hw_fi.find_local_threads_by_pid
+            else:
+                selector = local_hw_fi.find_remote_threads_by_pid
+
+            self.fi_ret = fi_f.launch_fi(fi_target, fi_path, (selector, fi_target, self.p.pid), (500, 1500))
 
         self._stop_clock("launchfi")
 
     def peak_loop(self):
         self._start_clock()
-        watchdog.launch_watchdog(self.watchdog_dur, self.p, [])  # watchdog of 30 seconds
-        (self.app_output, self.app_returncode) = utils.proc_communicate(self.p)
+        watchdog.launch_watchdog(self.target, self.watchdog_dur, self.p, [])
+        (self.app_output, self.app_error, self.app_returncode) = utils.communicate_anywhere(self.target, self.p)
         watchdog.stop_watchdog()
         self._stop_clock("peak")
 

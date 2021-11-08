@@ -32,10 +32,11 @@ def proc_launch_locally(program, args, _stdout=None, _stderr=None, _shell=False)
 	return p
 
 def proc_wait(proc):
-	return proc.wait(), proc.returncode
+	return (None, None, proc.wait())
 
 def proc_communicate(proc):
-	return proc.communicate(), proc.returncode,
+	(out, err) = proc.communicate()
+	return (out, err, proc.returncode)
 
 def proc_launch_ssh(ssh_config, program, args, stdin=None, stdout=None, stderr=None, background=True):
 
@@ -54,15 +55,15 @@ def proc_launch_ssh(ssh_config, program, args, stdin=None, stdout=None, stderr=N
 		if (p.returncode == 255) and (err == 'Timeout, server %s not responding.\r\n' % ssh_config.ip):
 			logger.error("proc_launch_ssh: Remote server timedout...")
 
-		return (out, err)
+		return (out, err, p.returncode)
 	else:
 		now = time.time()
 		stdout_file = stderr_file = stdin_file =  "/dev/null"
 		if stdin is not None:
 			stdin_file = stdin
-		if stdout is not None and type(stdout) == type(bool):
+		if stdout is not None and type(stdout) == bool:
 			stdout_file = "/tmp/ucxception_out_" + str(now)
-		if stderr is not None and type(stderr) == type(bool):
+		if stderr is not None and type(stderr) == bool:
 			stderr_file = "/tmp/ucxception_err_" + str(now)
 
 		ssh_arg = "/usr/bin/nohup %s > %s 2> %s < %s & echo $!" % (cmd_arg, stdout_file, stderr_file, stdin_file)
@@ -159,9 +160,9 @@ def run_anywhere(target, program, args, stdout, stderr, background):
 			return local_handle
 		else:
 			if (stdout != DEVNULL) or (stderr != DEVNULL):
-				return proc_communicate(local_handle)[0] # lets discard the return code
+				return proc_communicate(local_handle)
 			else:
-				return proc_wait(local_handle)[0] # lets discard the return code
+				return proc_wait(local_handle)
 	else:
 		# remote
 		return proc_launch_ssh(target, program, args, None, stdout, stderr, background)
@@ -176,7 +177,8 @@ def mkdir_anywhere(target, path):
 	if is_local(target):
 		return local_mkdir(path)
 	else:
-		return remote_mkdir(target, path)
+		(_, _, rcode) = remote_mkdir(target, path)
+		return (rcode == 0)
 
 def move_anywhere(target, origin, destination):
 	if is_local(target):
@@ -188,7 +190,8 @@ def delete_anywhere(target, path):
 	if is_local(target):
 		return local_delete(path)
 	else:
-		return remote_delete(target, path)
+		(_, _, rcode) = remote_delete(target, path)
+		return (rcode == 0)
 
 def listdir_anywhere(target, path):
 	if is_local(target):
@@ -196,12 +199,29 @@ def listdir_anywhere(target, path):
 	else:
 		return remote_listdir(target, path)
 
+def copy_anywhere(target, origin, destination):
+	if is_local(target):
+		return local_get(origin, destination, keep=True)
+	else:
+		(_, _, rcode) = remote_copy(target, origin, destination)
+		return rcode == 0
+
 def local_delete(path):
-	os.remove(path) # will throw exception if doesnt exist
+	try:
+		os.remove(path) # will throw exception if doesnt exist
+	except OSError as e:
+		logger.debug("Exception during local_delete: " + e)
+		return False
+	return True
+
+def communicate_anywhere(target, proc):
+	if is_local(target):
+		return proc_communicate(proc)
+	else:
+		return remote_proc_communicate(proc)
 
 def remote_delete(ssh_config, path):
-	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/rm", "-f " + path, stdin=None, stdout=True, stderr=True, background=False)
-	return True
+	return proc_launch_ssh(ssh_config, "/usr/bin/rm", "-f " + path, stdin=None, stdout=True, stderr=True, background=False)
 
 def local_mkdir(path):
 	# Always try to create base folder
@@ -212,31 +232,24 @@ def local_mkdir(path):
 		pass
 
 def remote_mkdir(ssh_config, path):
-	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/mkdir", path, stdin=None, stdout=True, stderr=True, background=False)
-	return True
+	return proc_launch_ssh(ssh_config, "/usr/bin/mkdir", path, stdin=None, stdout=True, stderr=True, background=False)
 
 def local_move(origin, destination):
 	shutil.move(origin, destination)
-
-def remote_move(ssh_config, origin, destination):
-	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/mv", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
 	return True
 
+def remote_move(ssh_config, origin, destination):
+	return proc_launch_ssh(ssh_config, "/usr/bin/mv", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
+
 def local_listdir(path):
-	return os.listdir(path)
+	return (os.listdir(path), None, 0)
 
 def remote_listdir(ssh_config, path):
-	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/ls", "-1 " + path, stdin=None, stdout=True, stderr=True, background=False)
-	return stdout.split("\n")
-
-def copy_anywhere(target, origin, destination):
-	if is_local(target):
-		local_get(origin, destination, keep=True)
-	else:
-		remote_copy(target, origin, destination)
+	(stdout, stderr, rcode) = proc_launch_ssh(ssh_config, "/usr/bin/ls", "-1 " + path, stdin=None, stdout=True, stderr=True, background=False)
+	return (stdout.split("\n"), stderr, rcode)
 
 def remote_copy(ssh_config, origin, destination):
-	(stdout, stderr) = proc_launch_ssh(ssh_config, "/usr/bin/cp", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
+	return proc_launch_ssh(ssh_config, "/usr/bin/cp", origin + " " + destination, stdin=None, stdout=True, stderr=True, background=False)
 
 def wait_for_remote_host(ssh_config, timeout=120):
 	login_info = ssh_config.username + "@" + ssh_config.ip 
@@ -251,3 +264,43 @@ def wait_for_remote_host(ssh_config, timeout=120):
 			success = True
 
 	return success
+
+def remote_check_for_pid(ssh_config, pid):
+	(_, _, rcode) = proc_launch_ssh(ssh_config, "/usr/bin/ps", "-p " + str(pid),  stdin=None, stdout=False, stderr=False, background=False)
+	if rcode == 0:
+		return True
+	else:
+		return False
+
+def remote_proc_communicate(remote_proc):
+	while remote_check_for_pid(remote_proc.target, remote_proc.pid):
+		time.sleep(1)
+
+	# Get return code TODO
+	#print proc_launch_ssh(remote_proc.target, "wait", str(remote_proc.pid), stdin=None, stdout=False, stderr=False, background=False)
+
+	local_stdout = "/tmp/out_" + str(time.time())
+	local_stderr = "/tmp/err_" + str(time.time())
+
+	# Get stdout and stderr
+	remote_get(remote_proc.target, remote_proc.remote_stdout, local_stdout, False)
+	remote_get(remote_proc.target, remote_proc.remote_stderr, local_stderr, False)
+
+	with open(local_stdout, "r") as f:
+		stdout = f.readlines()
+
+	with open(local_stderr, "r") as f:
+		stderr = f.readlines()
+
+	if stdout:
+		stdout = stdout[0]
+	else:
+		stdout = ""
+
+	if stderr:
+		stderr = stderr[0]
+	else:
+		stderr = ""
+
+
+	return (stdout, stderr, 0)
