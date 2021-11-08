@@ -9,7 +9,7 @@ from probes.probe_pidstat import Probe_Pidstat
 
 from validator.ensure_injection import Ensure_Injection
 
-from fi import local_hw_fi
+from fi import hw_fi
 
 from transformers.sar_to_csv import Sar_to_CSV
 from transformers.save_output import Save_Output
@@ -66,7 +66,7 @@ class AI4EU(Base_Campaign):
     )
 
     # Define the fault injector. None disables it
-    fi = (local_hw_fi, target, "/root/HW_Injectors_ucXception/newest_injector/pinject_intel")
+    fi = (hw_fi, target, "/root/HW_Injectors_ucXception/newest_injector/pinject_intel")
 
     # Parsers that use the available information and put it into table.csv
     parsers = (
@@ -132,9 +132,9 @@ class AI4EU(Base_Campaign):
         if self.fi is not None:
             (fi_f, fi_target, fi_path) = self.fi
             if fi_target == "localhost":
-                selector = local_hw_fi.find_local_threads_by_pid
+                selector = hw_fi.find_local_threads_by_pid
             else:
-                selector = local_hw_fi.find_remote_threads_by_pid
+                selector = hw_fi.find_remote_threads_by_pid
 
             self.fi_ret = fi_f.launch_fi(fi_target, fi_path, (selector, fi_target, self.p.pid), (500, 1500))
 

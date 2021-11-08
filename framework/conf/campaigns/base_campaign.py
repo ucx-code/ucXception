@@ -6,7 +6,6 @@ from core.ssh_config import *
 from probes import probe_sar
 from probes import probe_pidstat
 
-from fi import local_hw_fi
 from parsers.ucXception_fi_parser import *
 
 import time
@@ -77,7 +76,6 @@ class Base_Campaign(object):
 		for parser in self.parsers:
 			(parser_name, parser_in) = parser
 			parser_in = [eval(x.eval_str) if x.__class__ == Eval_It else x for x in  self._eval_lambda_funcs(parser_in, self) ]
-			#print parser_in
 			try:
 				self.row.update(apply(parser_name().parse, *parser_in))
 			except TypeError as te:
