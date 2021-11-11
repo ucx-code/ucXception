@@ -24,9 +24,14 @@ class Ensure_Injection():
 
         passed = True
         for reg in self.register_cols:
-            old = fi_row["%sold_%s" % (prefix, reg)]
-            new = fi_row["%snew_%s" % (prefix, reg)]
+            old_key = "%sold_%s" % (prefix, reg)
+            new_key = "%snew_%s" % (prefix, reg)
 
+            if (old_key not in fi_row) or (new_key not in fi_row):
+                return False
+
+            old = fi_row[old_key]
+            new = fi_row[new_key]
             if (old != new) and (fi_row["reg"] != reg):
                 passed = False
                 logger.warning("ensure_injection: Register %s changed from %s to %s when injection took place "

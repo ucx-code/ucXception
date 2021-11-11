@@ -73,6 +73,7 @@ class Base_Campaign(object):
 	def _exec_parsers(self):
 		"""Exec all the parsers to extract the information that will be saved to the CSV
 		"""
+		self.row = {}
 		for parser in self.parsers:
 			(parser_name, parser_in) = parser
 			parser_in = [eval(x.eval_str) if x.__class__ == Eval_It else x for x in  self._eval_lambda_funcs(parser_in, self) ]

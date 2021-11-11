@@ -35,10 +35,10 @@ signal.signal(signal.SIGINT, signal_handler)
 
 for plan in plans:
 
-	plan_obj = plan(None)
-	for campaign in plan_obj.campaigns:
+	for campaign in plan.campaigns:
 		#print campaign
 		(campaign_name, n_runs, input) = campaign
+		plan_obj = plan(input)
 
 		for run in xrange(1, n_runs+1):
 			logger.info("Doing run %d out of %d wrt. cmp. %s of plan %s" % (run, n_runs, campaign_name, plan))
