@@ -44,7 +44,7 @@ def launch_fi(target, fi_path, pid_selector_f, times, regs=None, bits=None):
 	# Choose random bit to inject
 	bit = random.randint(min_bit, max_bit)
 
-	time.sleep(inj_time/1000.0)
+	#time.sleep(inj_time/1000.0)
 
 	if type(pid_selector_f) == int:
 		chosen_thread = pid_selector_f
