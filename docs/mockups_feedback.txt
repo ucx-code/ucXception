@@ -1,0 +1,13 @@
+- usually, a Campaign is a set of Experiments (in some figures, Experience seems to mean Campagign)
+- it should be "Experiment" rather than "Experience"
+- presenting basic statistics + ability to download raw data is a very good approach (!)
+- there should be a way to see the details of a single fault injection experiment
+- unclear if the tool should go so far as to provide different graphic types -- basic plots + ability to download raw data is usually enough
+- is the engine plugin-based? or is it a monolithic architecture? if we use plugins, mockups would be needed for that part
+- fault injection types will be fixed, embedded into the fault injector?
+- what if we have a distributed target workload? can we consider that scenario?
+- some aspects, such as deploying and launching a workload, even synchronization among components, are easily handled through scripts -- perhaps the fault injector could simple accept scripts for doing that, and provide basic templates for the simple cases (that could be improved upon)
+- there appears to be no way to select and configure the parameters of the target workload
+- collecting runtime data (output) of the target workload is essential -- are these the probes?
+- it is unclear how the output of the workload will be compared to the golden run, for classification (classifying a single experiment against the golden run is the issue)
+- the final slide has a full list: campaign / pre-probes / post-probes / ... --> this is very nice, and all the previous mockups should have the full list (some only show a partial list)
