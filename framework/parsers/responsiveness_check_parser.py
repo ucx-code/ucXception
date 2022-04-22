@@ -5,7 +5,7 @@ import utils
 logger = logging.getLogger(__name__)
 
 class responsiveness_check_parser:
-	def parse(self, ssh_config):
+	def parse(self, current_folder, ssh_config):
 
 		if utils.is_local(ssh_config):
 			logger.warn("Responsiveness_Check_Parser does not support checking in localhost")

@@ -31,7 +31,7 @@ import c.pcap_tcp_c_parser as c_pcap_tcp_c_parser
 import numpy as np
 
 class pcap_tcp_parser():
-    def parse(self, csv_path):
+    def parse(self, current_folder, csv_path):
         row = {}
         c_pcap_tcp_c_parser.parse(csv_path[0]) # Uses a C-based app to parse the CSV (through SWIG)
 

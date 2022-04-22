@@ -77,13 +77,13 @@ class Base_Campaign(object):
 		for parser in self.parsers:
 			(parser_name, parser_in) = parser
 
-			parser_in_exec = []
+			parser_in_exec = [self.current_folder, ]
 			for x in self._eval_lambda_funcs(parser_in, self):
-				parser_in_exec.append(eval(x))
+				parser_in_exec.extend(eval(x))
 				
-
+			print("!!!!! " + str(parser_in_exec))
 			try:
-				parser_in_exec = parser_in_exec[0]
+				parser_in_exec = parser_in_exec
 				print("======= " + str(parser_name) + " - " + str(parser_in_exec)  )
 				self.row.update(parser_name().parse(*parser_in_exec))
 			except TypeError as te:

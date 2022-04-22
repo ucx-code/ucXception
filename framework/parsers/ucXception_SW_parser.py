@@ -2,7 +2,7 @@ import os
 
 class ucXception_SW_Parser:
 	
-	def parse(self, patch_files, patch_file):
+	def parse(self, current_folder, patch_files, patch_file):
 		splitted = patch_file.split("_")
 		row = {}
 

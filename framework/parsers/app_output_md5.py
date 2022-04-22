@@ -2,7 +2,7 @@ import hashlib
 import numpy as np
 
 class App_Output_Md5:
-	def parse(self, app_output, expected_len, expected_md5):
+	def parse(self, current_folder, app_output, expected_len, expected_md5):
 		row = {}
 		(stdout, stderr) = app_output
 

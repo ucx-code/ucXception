@@ -10,7 +10,7 @@ def map_reg_to_text(reg_code):
 
 class ucXception_fi_parser:
 	
-	def parse(self, inj_time, reg, bit, chosen_thread, stdout, stderr):
+	def parse(self, current_folder, inj_time, reg, bit, chosen_thread, stdout, stderr):
 		row = {}
 
 		row["inj_time"] = inj_time
