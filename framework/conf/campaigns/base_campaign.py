@@ -52,7 +52,7 @@ class Base_Campaign(object):
 		for probe_info in self.pre_probes:
 			(probe_module, probe_target, probe_in) = probe_info
 			#probe_in = self._eval_lambda_funcs(probe_in, locals) # No need for this yet
-			apply(probe_module.run_probe, self._eval_targets(probe_target, self.current_folder, probe_in))
+			probe_module.run_probe(*self._eval_targets(probe_target, self.current_folder, probe_in))
 
 	def _post_launch_probes(self, locals):
 		"""Spawns the probes that must run after the workload is launched.
@@ -61,7 +61,7 @@ class Base_Campaign(object):
 		for probe_info in self.post_probes:
 			(probe_module, probe_target, probe_in) = probe_info
 			probe_in = self._eval_lambda_funcs(probe_in, locals)
-			apply(probe_module.run_probe, self._eval_targets(probe_target, self.current_folder, probe_in))
+			probe_module.run_probe(*self._eval_targets(probe_target, self.current_folder, probe_in))
 
 	def _stop_probes(self):
 		"""Stop all the probes
@@ -76,9 +76,16 @@ class Base_Campaign(object):
 		self.row = {}
 		for parser in self.parsers:
 			(parser_name, parser_in) = parser
-			parser_in = [eval(x.eval_str) if x.__class__ == Eval_It else x for x in  self._eval_lambda_funcs(parser_in, self) ]
+
+			parser_in_exec = [self.current_folder, ]
+			for x in self._eval_lambda_funcs(parser_in, self):
+				parser_in_exec.extend(eval(x))
+				
+			print("!!!!! " + str(parser_in_exec))
 			try:
-				self.row.update(apply(parser_name().parse, *parser_in))
+				parser_in_exec = parser_in_exec
+				print("======= " + str(parser_name) + " - " + str(parser_in_exec)  )
+				self.row.update(parser_name().parse(*parser_in_exec))
 			except TypeError as te:
 				if self.fi_enabled is False:
 					pass # Ignore it
@@ -123,7 +130,7 @@ class Base_Campaign(object):
 		folder_name = "run_%s" % time.strftime("%y_%m_%d_%T", time.localtime(now))
 
 		# There is a chance that the folder already exists (2 runs in the same second), so we append an id
-		for i in xrange(1, 100):
+		for i in range(1, 100):
 			new_name = folder_name  + "_%d" % i
 			if not os.path.isdir(new_name):
 				break

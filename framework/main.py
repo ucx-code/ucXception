@@ -51,7 +51,7 @@ for plan in plans:
 			end_time = time.time() # In version >= 3.3 there are better options for high performance counters
 			
 			if row is not None:
-				row.update(info_parser().parse(campaign_name, run, start_time, end_time))
+				row.update(info_parser().parse(None, campaign_name, run, start_time, end_time))
 				table = io.add_row(table, row)
 			else:
 				logger.warning("main: we didnt include this run because something failed before...")
