@@ -42,7 +42,7 @@ class Base_Campaign(object):
 		return tuple(output)
 
 	def _eval_targets(self, target, dir, input):
-		if (utils.is_local(target) == False):
+                if (not isinstance(target, SSH_Config) and utils.is_local(target) == False):
 			return (self.remote_hosts[target], dir,) + input
 		return (target, dir,) + input
 
@@ -73,7 +73,6 @@ class Base_Campaign(object):
 	def _exec_parsers(self):
 		"""Exec all the parsers to extract the information that will be saved to the CSV
 		"""
-		self.row = {}
 		for parser in self.parsers:
 			(parser_name, parser_in) = parser
 
