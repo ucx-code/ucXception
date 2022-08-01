@@ -1,0 +1,11 @@
+--- 58.cpp
++++ 58.cpp._MFC_4	2016-03-30 01:41:21.474434000 +0100
+@@ -28,7 +28,7 @@
+     for (i = 1;i < n;i++){
+         if (room.top() < slot[i].begin) {
+             room.pop();
+-            room.push(slot[i].end);
++            ;
+         }else{
+             room.push(slot[i].end);
+             ++d;

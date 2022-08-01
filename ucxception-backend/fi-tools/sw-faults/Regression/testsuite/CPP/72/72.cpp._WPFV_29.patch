@@ -1,0 +1,11 @@
+--- 72.cpp
++++ 72.cpp._WPFV_29	2016-03-30 01:46:37.070334800 +0100
+@@ -127,7 +127,7 @@
+             scanf("%d", &tmp);
+         }
+     }
+-    precalc(n);
++    precalc(best);
+     rec(c, 0, n);
+     printf("%d\n", best);
+ }

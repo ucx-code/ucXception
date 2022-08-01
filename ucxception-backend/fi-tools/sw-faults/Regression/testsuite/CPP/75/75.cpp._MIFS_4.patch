@@ -1,0 +1,16 @@
+--- 75.cpp
++++ 75.cpp._MIFS_4	2016-03-30 01:50:39.625363500 +0100
+@@ -148,13 +148,6 @@
+             k = tmp;
+             scanf("%d", &tmp);
+         }
+-        if (a == 1) {
+-            if (k < 0) {
+-                unitClause[abs(k) - 1][0][unitClauseC[abs(k) - 1][0]++] = i;
+-            }else{
+-                unitClause[abs(k) - 1][1][unitClauseC[abs(k) - 1][1]++] = i;
+-            }
+-        }
+     }
+     precalc(n);
+     memset(forced, 3, sizeof (unsigned char) * n);

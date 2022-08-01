@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._WPFV_78	2016-03-30 01:20:48.293413100 +0100
+@@ -85,7 +85,7 @@
+         }
+         if (bufferPosWidth1 == '\\') {
+             if (recurse(pos + width + 1, max, width) == 1) {
+-                answer.push(pos);
++                answer.push(bufferPos1);
+                 return 1;
+             }
+         }

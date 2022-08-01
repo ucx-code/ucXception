@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_95	2016-12-08 00:49:48.775084685 +0000
+@@ -209,9 +209,6 @@
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = expr;
+-    node->next = NULL;
+-    node->type = Return;
+-    node->id = NULL;
+     return node;
+ }
+ 

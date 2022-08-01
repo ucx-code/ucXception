@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_824	2016-03-30 03:04:49.992911600 +0100
+@@ -1987,7 +1987,7 @@
+                             glColorMask(1, 1, 1, 1);
+                             glEnable(GL_DEPTH_TEST);
+                             glStencilFunc(GL_EQUAL, 1, 1);
+-                            glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
++                            ;
+                             glPushMatrix();
+                             glScalef(1, -1, 1);
+                             glTranslatef(0.0, 27.0, 0);

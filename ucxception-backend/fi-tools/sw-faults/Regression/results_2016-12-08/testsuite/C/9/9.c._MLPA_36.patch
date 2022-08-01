@@ -1,0 +1,12 @@
+--- ./9.c
++++ ./9.c._MLPA_36	2016-12-08 00:51:14.487083150 +0000
+@@ -141,9 +141,6 @@
+ int rearranjaCol(int vect[], int li, int ls)
+ {
+     int a, down, up, temp;
+-    a = vect[li];
+-    down = li;
+-    up = ls;
+     while (down < up){
+         while (vect[down] >= a && down < ls)
+             down++;

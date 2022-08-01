@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_579	2016-03-30 02:52:49.849744200 +0100
+@@ -1223,7 +1223,7 @@
+     glEnable (GL_LIGHTING);
+     glDisable (GL_COLOR_MATERIAL);
+     glPushMatrix();
+-    glTranslatef(robotX, robotY, robotZ);
++    ;
+     glRotatef(angR, 0.0, 1.0, 0.0);
+     if (op_robot == 1) {
+         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, silverAmb);

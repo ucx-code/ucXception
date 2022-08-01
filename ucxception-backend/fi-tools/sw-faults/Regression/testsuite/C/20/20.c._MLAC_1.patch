@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MLAC_1	2016-03-30 00:47:48.762893900 +0100
+@@ -184,7 +184,7 @@
+         break;
+     case Print:
+         expr_type = expr_recursive(prog, name, node->child);
+-        if (strcmp(expr_type, "boolean") != 0 && strcmp(expr_type, "int") != 0) {
++        if (strcmp(expr_type, "boolean") != 0) {
+             printf("Incompatible type in System.out.println statement (got %s, required boolean or int)\n", expr_type);
+             exit(0);
+     }

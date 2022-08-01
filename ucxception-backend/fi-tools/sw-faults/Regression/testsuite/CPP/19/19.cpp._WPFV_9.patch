@@ -1,0 +1,11 @@
+--- 19.cpp
++++ 19.cpp._WPFV_9	2016-03-30 01:22:01.895341500 +0100
+@@ -56,7 +56,7 @@
+ {
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", visit);
+         return 0;
+     }
+     int tmpA, tmpB;

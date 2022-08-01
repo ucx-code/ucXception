@@ -1,0 +1,11 @@
+--- 87.cpp
++++ 87.cpp._MIA_3	2016-03-30 02:00:58.052887900 +0100
+@@ -26,7 +26,7 @@
+     buffer[pos] |= 0x80;
+     if (buffer[pos] == ('|' | 0x80)) {
+         if (buffer[pos - width] == '/') {
+-            if (recurse(pos - width, max, width) == 1) {
++            {
+                 if (recurseSize != 0) 
+                     printf(",");
+ 

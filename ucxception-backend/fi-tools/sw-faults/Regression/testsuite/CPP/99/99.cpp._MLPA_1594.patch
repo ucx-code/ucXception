@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1594	2016-03-30 02:42:01.844334400 +0100
+@@ -906,10 +906,6 @@
+ {
+     int i;
+     for (i = 0;i < NUM_PARTICLES;i++){
+-        particles[i].position[0] = 0.0;
+-        particles[i].position[1] = 0.0;
+-        particles[i].position[2] = 0.0;
+-        particles[i].color[0] = 1.0;
+         particles[i].color[1] = 1.0;
+         particles[i].color[2] = 0.5;
+         newSpeed(particles[i].speed);

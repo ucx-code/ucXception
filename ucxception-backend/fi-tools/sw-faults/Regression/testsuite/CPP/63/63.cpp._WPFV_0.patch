@@ -1,0 +1,11 @@
+--- 63.cpp
++++ 63.cpp._WPFV_0	2016-03-30 01:42:38.089319500 +0100
+@@ -96,7 +96,7 @@
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+         naa[i] = slot[i].begin;
+     }
+-    radix_sort_unsigned(naa, n);
++    radix_sort_unsigned(naa, N);
+     return 0;
+     a[1] = slot[0].end;
+     for (i = 1;i < n;i++){

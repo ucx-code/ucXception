@@ -1,0 +1,12 @@
+--- ./12.c
++++ ./12.c._MIFS_3	2016-12-08 00:49:38.947084861 +0000
+@@ -21,9 +21,6 @@
+         if (z == n) {
+             vec[exam] = i;
+             nSlots++;
+-            if (procrastination(exam + 1) == 1) {
+-                return 1;
+-            }
+             nSlots--;
+             vec[exam] = 0;
+         }

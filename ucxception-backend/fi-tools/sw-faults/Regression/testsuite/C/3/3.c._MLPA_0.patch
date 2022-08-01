@@ -1,0 +1,11 @@
+--- 3.c
++++ 3.c._MLPA_0	2016-03-30 00:29:42.417997400 +0100
+@@ -50,8 +50,6 @@
+     int n, r;
+     int i, squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+-        squared = quickPow[n];
+-        rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';

@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_5	2016-03-30 03:13:23.872613000 +0100
+@@ -25,8 +25,6 @@
+     Reset();
+     FILE* infile = fopen(filename, "rb");
+     if (!infile) {
+-        fprintf(stderr, "Unable to open file: %s\n", filename);
+-        ErrorCode = OpenError;
+         return false;
+     }
+     bool fileFormatOK = false;

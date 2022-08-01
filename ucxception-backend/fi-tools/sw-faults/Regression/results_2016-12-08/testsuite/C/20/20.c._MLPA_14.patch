@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MLPA_14	2016-12-08 00:50:10.211084301 +0000
+@@ -206,8 +206,6 @@
+ }
+ break;
+ case Store:
+-    expr_type = expr_recursive(prog, name, node->child);
+-    expr_type2 = expr_recursive(prog, name, node->child->next);
+     if (strcmp(expr_type, expr_type2) != 0) {
+         printf("Incompatible type in assignment to %s (got %s, required %s)\n", node->child->id, expr_type2, expr_type);
+         exit(0);

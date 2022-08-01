@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._WAEP_12	2016-03-30 00:54:12.199368800 +0100
+@@ -39,7 +39,7 @@
+                         if (tab[0][i] == '\\') {
+                             verifica(1, i, '/', ant);
+                             verifica(1, i + 1, '\\', ant);
+-                            verifica(1, i + 1, '|', ant);
++                            verifica(1, i, '|', ant);
+                         }
+ 
+                 if (encont == 1) {

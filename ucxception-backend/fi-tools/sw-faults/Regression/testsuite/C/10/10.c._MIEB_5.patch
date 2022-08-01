@@ -1,0 +1,14 @@
+--- 10.c
++++ 10.c._MIEB_5	2016-03-30 00:37:27.509487900 +0100
+@@ -231,11 +231,7 @@
+     return c;
+     break;
+ case BoolLit:
+-    if (strcmp(expr->id, "true") == 0) 
+-        return "1";
+-    else
+         return "0";
+-
+     break;
+ case Id:
+     glob = verifyGlobal(expr->id, prog, method_name);

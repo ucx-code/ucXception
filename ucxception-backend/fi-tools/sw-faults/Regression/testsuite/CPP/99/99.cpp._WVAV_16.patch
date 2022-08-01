@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WVAV_16	2016-03-30 02:57:02.449039900 +0100
+@@ -1663,7 +1663,7 @@
+                 pontos = 0;
+                 instrucoes = 0;
+                 acerca = 0;
+-                iniciarjogo = 0;
++                iniciarjogo = 0 ^ 0xff;
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+             }else
+                 if ((pontos == 0) && (x > 150) && (x < 350) && (y > 280) && (y < 320) && (iniciarjogo != 1)) {

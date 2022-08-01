@@ -1,0 +1,12 @@
+--- 24.cpp
++++ 24.cpp._MIFS_4	2016-03-30 01:24:13.608459600 +0100
+@@ -42,9 +42,6 @@
+     if (len > best) 
+         return;
+ 
+-    if (verifica(end) == 0) {
+-        return;
+-    }
+     int i;
+     for (i = begin;i < end;i++){
+         if (visit[i] == 0) {

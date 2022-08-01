@@ -1,0 +1,12 @@
+--- 70.cpp
++++ 70.cpp._MIA_5	2016-03-30 01:45:17.922633300 +0100
+@@ -45,9 +45,7 @@
+ 
+         return;
+     }
+-    if ((ingrediente > 2) && (total(0, ingrediente - 1) > best)) 
+         return;
+-
+     combinacao[ingrediente] = 1;
+     recursivo(ingrediente + 1);
+     combinacao[ingrediente] = 0;

@@ -1,0 +1,11 @@
+--- 95.cpp
++++ 95.cpp._MIA_2	2016-03-30 02:03:04.995468200 +0100
+@@ -19,7 +19,7 @@
+     color[node] = c;
+     for (int i = 1;i <= n;i++)
+         if (gr[node][i] == 1) {
+-            if (!dfs(i, -c)) {
++            {
+                 return false;
+             }
+         }

@@ -1,0 +1,12 @@
+--- 95.cpp
++++ 95.cpp._MLPA_2	2016-03-30 02:03:08.016351700 +0100
+@@ -33,9 +33,6 @@
+     while (scanf("%d %d", &n, &m) != EOF){
+         for (i = 0;i < m;i++){
+             int a2, b2;
+-            scanf("%d %d", &a2, &b2);
+-            gr[a2][b2] = 1;
+-            gr[b2][a2] = 1;
+         }
+         bipartite = false;
+         for (i = 0;i < n;i++){

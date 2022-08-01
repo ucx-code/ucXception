@@ -1,0 +1,11 @@
+--- 7.cpp
++++ 7.cpp._MFC_8	2016-03-30 01:13:29.411293300 +0100
+@@ -49,7 +49,7 @@
+                         if (r == 3) 
+                             memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }
+-        rec(n + 1, target, r);
++        ;
+     }
+ }
+ 

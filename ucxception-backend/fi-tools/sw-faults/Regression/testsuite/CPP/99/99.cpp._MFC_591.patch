@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_591	2016-03-30 02:52:56.160450800 +0100
+@@ -1240,7 +1240,7 @@
+             if (op_robot == 3) {
+                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, redPlasticAmb);
+                 glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, redPlasticDif);
+-                glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, redPlasticSpec);
++                ;
+                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, redPlasticCoef);
+             }
+ 

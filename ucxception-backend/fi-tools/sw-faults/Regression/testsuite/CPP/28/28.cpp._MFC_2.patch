@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._MFC_2	2016-03-30 01:26:06.759941000 +0100
+@@ -25,7 +25,7 @@
+     printf("Novo verifica com ");
+     for (i = 0;i <= n;i++)
+         printf("%d", state[i]);
+-    printf("\n");
++    ;
+     for (i = 1;i <= n;i++){
+         if (state[i] == 2) {
+             for (a = 0;a < counter[i];a++){

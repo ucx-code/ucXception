@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_30	2016-03-30 02:54:09.740606200 +0100
+@@ -1417,7 +1417,7 @@
+ void Enemy(int value)
+ {
+     int i, aux = 0;
+-    if (iniciarjogo == 1 && pausegame == 1) {
++    {
+         if (pastX == robotX && pastZ == robotZ) {
+             printf("MESMO SITIO\n");
+             for (i = 0;i < enemysList.size();i++){

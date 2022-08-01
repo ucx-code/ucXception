@@ -1,0 +1,13 @@
+--- 20.c
++++ 20.c._MLPA_1	2016-03-30 00:46:59.447356600 +0100
+@@ -25,10 +25,8 @@
+     while (node != NULL){
+         switch (node->type){
+             case Id:
+-                insert_global_table(prog, node->id, "");
+                 break;
+             case VarDecl:
+-                aux_type = sem_type[node->child->type];
+                 aux = node->child->next;
+                 while (aux != NULL){
+                     insert_global_table(prog, aux->id, aux_type);

@@ -1,0 +1,13 @@
+--- 14.c
++++ 14.c._MLPA_143	2016-03-30 00:41:29.423800600 +0100
+@@ -360,10 +360,6 @@
+ is_node* insert_BOOLLIT(char* str)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = NULL;
+-    node->next = NULL;
+-    node->type = BoolLit;
+-    node->id = str;
+     return node;
+ }
+ 

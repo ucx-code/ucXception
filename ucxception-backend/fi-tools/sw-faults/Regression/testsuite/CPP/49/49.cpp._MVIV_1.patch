@@ -1,0 +1,11 @@
+--- 49.cpp
++++ 49.cpp._MVIV_1	2016-03-30 01:39:55.263694000 +0100
+@@ -18,7 +18,7 @@
+         for (a = begin;a <= end;a++)
+             time[a]++;
+     }
+-    int maior = 0;
++    int maior = maior;
+     for (i = 0;i <= maximoEnd;i++)
+         if (time[i] > maior) 
+             maior = time[i];

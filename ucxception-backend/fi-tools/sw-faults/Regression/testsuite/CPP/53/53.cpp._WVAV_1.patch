@@ -1,0 +1,11 @@
+--- 53.cpp
++++ 53.cpp._WVAV_1	2016-03-30 01:40:19.754807200 +0100
+@@ -38,7 +38,7 @@
+                 master = i;
+             }else
+                 if ((slot[i].begin != -1) && (nextBegin == -1)) 
+-                    nextBegin = 1;
++                    nextBegin = 0 ^ 0xff;
+ 
+             if (slot[i].begin != -1) 
+                 final = i;

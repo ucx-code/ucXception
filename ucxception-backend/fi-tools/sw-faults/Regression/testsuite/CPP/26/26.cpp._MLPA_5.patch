@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MLPA_5	2016-03-30 01:25:19.084281000 +0100
+@@ -72,8 +72,6 @@
+     int i;
+     for (i = 0;i < n;i++){
+         int a;
+-        printf("(%d,", i);
+-        sets[i][sizeSet[i]++] = i;
+         for (a = 0;a < counter[i];a++){
+             printf("%d,", vizinhos[i][a]);
+             sets[i][sizeSet[i]++] = vizinhos[i][a];

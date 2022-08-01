@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MLPA_2	2016-03-30 01:46:08.300179100 +0100
+@@ -142,8 +142,6 @@
+                 recurseSize = 0;
+                 int result = recurse(i, matrixSize, width);
+                 if (result == 1) {
+-                    printf("\n");
+-                    encontrou = true;
+                     break;
+                 }
+             }

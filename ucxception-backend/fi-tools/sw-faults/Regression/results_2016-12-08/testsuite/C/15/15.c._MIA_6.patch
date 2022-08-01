@@ -1,0 +1,11 @@
+--- ./15.c
++++ ./15.c._MIA_6	2016-12-08 00:49:53.451084602 +0000
+@@ -44,7 +44,7 @@
+ int calc(int n, int nr, int b)
+ {
+     int i;
+-    if (b > best) {
++    {
+         return 0;
+     }
+     if (checkAll(nr) == 0) {

@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MLAC_2	2016-12-08 00:50:11.067084286 +0000
+@@ -217,7 +217,7 @@
+     expr_type = expr_recursive(prog, name, node->child);
+     expr_type2 = expr_recursive(prog, name, node->child->next);
+     expr_type3 = expr_recursive(prog, name, node->child->next->next);
+-    if (strcmp(expr_type, "int[]") != 0 && strcmp(expr_type, "boolean[]") != 0) {
++    if (strcmp(expr_type, "boolean[]") != 0) {
+         printf("Operator [ cannot be applied to types %s, %s\n", expr_type, expr_type2);
+         exit(0);
+ }

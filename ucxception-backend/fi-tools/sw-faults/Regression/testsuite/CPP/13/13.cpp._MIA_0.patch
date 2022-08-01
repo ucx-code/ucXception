@@ -1,0 +1,12 @@
+--- 13.cpp
++++ 13.cpp._MIA_0	2016-03-30 01:16:08.354528000 +0100
+@@ -7,9 +7,7 @@
+ 
+ void rec(int n, int target, int r)
+ {
+-    if (n > target) 
+         return;
+-
+     if (n == 0) {
+         matrix[0] = '0';
+         rec(n + 1, target, r);

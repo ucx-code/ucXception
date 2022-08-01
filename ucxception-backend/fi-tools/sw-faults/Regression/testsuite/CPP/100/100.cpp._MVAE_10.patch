@@ -1,0 +1,10 @@
+--- 100.cpp
++++ 100.cpp._MVAE_10	2016-03-30 03:17:02.107356400 +0100
+@@ -222,7 +222,6 @@
+     int& vHeight = viewportData[3];
+     if (ImagePtr == 0) {
+         NumRows = vHeight;
+-        NumCols = vWidth;
+         ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+         if (!ImagePtr) {
+             fprintf(stderr, "Unable to allocate memory for %ld x %ld buffer.\n", NumRows, NumCols);

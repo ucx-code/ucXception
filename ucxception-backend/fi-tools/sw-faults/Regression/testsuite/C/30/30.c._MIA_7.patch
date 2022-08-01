@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MIA_7	2016-03-30 00:58:05.348754400 +0100
+@@ -37,7 +37,7 @@
+                         }
+ 
+                     if ((line != x) || (col - 1 != y)) {
+-                        if (checkPath(line, col - 1, '/', count + 1, line, col) == 1) {
++                        {
+                             path[count][0] = line + 1;
+                             path[count][1] = col + 1;
+                             return 1;

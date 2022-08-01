@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MFC_21	2016-03-30 01:46:04.625711200 +0100
+@@ -135,7 +135,7 @@
+             return 0;
+ 
+         int matrixSize = (width + 1) * height;
+-        fread(buffer, 1, matrixSize, stdin);
++        ;
+         bool encontrou = false;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+             if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {

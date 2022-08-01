@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_638	2016-03-30 02:53:16.478060000 +0100
+@@ -1305,7 +1305,7 @@
+ 
+     glPushMatrix();
+     glTranslatef(0.0, 1.0, 0.0);
+-    glutSolidSphere(2.5, 32, 32);
++    ;
+     glPopMatrix();
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, rubyAmb);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, rubyDif);

@@ -1,0 +1,11 @@
+--- 1.c
++++ 1.c._MFC_4	2016-03-30 00:28:44.268255200 +0100
+@@ -22,7 +22,7 @@
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+         for (i = 0;i < halfSquare;i++){
+-            memset(matrix + (halfSquare * 2 * halfSquare) + (i * 2 * halfSquare), '2', halfSquare);
++            ;
+             memset(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), '3', halfSquare);
+         }
+         rec(n + 1, target);

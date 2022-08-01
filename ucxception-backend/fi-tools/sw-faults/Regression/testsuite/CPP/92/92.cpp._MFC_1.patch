@@ -1,0 +1,11 @@
+--- 92.cpp
++++ 92.cpp._MFC_1	2016-03-30 02:02:27.238112200 +0100
+@@ -65,7 +65,7 @@
+         if (*src == EOF) 
+             break;
+ 
+-        readLine(&n, &m);
++        ;
+         for (i = 0;i < m;i++){
+             int a, b;
+             readLine(&a, &b);

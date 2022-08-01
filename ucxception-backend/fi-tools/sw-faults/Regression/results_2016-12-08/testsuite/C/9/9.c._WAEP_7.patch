@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._WAEP_7	2016-12-08 00:51:12.679083183 +0000
+@@ -59,7 +59,7 @@
+     for (i = 0;i < lines;i++){
+         for (j = 0;j < columns;j++){
+             if (j != (columns - 1)) 
+-                printf("%d-", table[i][j]);
++                printf("%d-", j);
+             else
+                 printf("%d", table[i][j]);
+         }

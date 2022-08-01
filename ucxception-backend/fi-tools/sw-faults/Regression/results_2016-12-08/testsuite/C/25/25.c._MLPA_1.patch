@@ -1,0 +1,11 @@
+--- ./25.c
++++ ./25.c._MLPA_1	2016-12-08 00:50:22.815084076 +0000
+@@ -53,8 +53,6 @@
+         squared = quickPow[n];
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+-            memcpy(tmp, matrix + (i * squared), squared);
+-            tmp[squared] = '\0';
+             printf("%s\n", tmp);
+         }
+     }

@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1680	2016-03-30 02:43:42.299102000 +0100
+@@ -964,9 +964,6 @@
+                 glBegin (GL_TRIANGLES);
+                 glVertex3f(0.0, 0.5, 0.0);
+                 glVertex3f(-0.25, 0.0, 0.0);
+-                glVertex3f(0.25, 0.0, 0.0);
+-                glEnd();
+-                glPopMatrix();
+             }
+         }
+     }

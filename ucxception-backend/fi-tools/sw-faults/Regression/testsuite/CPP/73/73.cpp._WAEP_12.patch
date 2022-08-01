@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WAEP_12	2016-03-30 01:47:14.324704000 +0100
+@@ -163,7 +163,7 @@
+     }
+     if (forced[begin] != 3) {
+         c[begin] = forced[begin];
+-        rec(c, begin + 1, end);
++        rec(c, begin, end);
+         return;
+     }
+     int actual = 0;

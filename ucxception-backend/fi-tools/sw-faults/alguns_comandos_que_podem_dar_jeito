@@ -1,0 +1,40 @@
+======== Wrong file encoding errors ================
+
+If, when compiling, we see errors like this:
+
+error: unmappable character for encoding UTF8
+
+It is because the enconding of the files does not match the encoding used by Java.
+Solution:  Re-encode the files with the following command
+find -name '*.java' -exec recode Latin-1..UTF-8 {} \;
+(Note: the recode package must be installed, e.g., apt-get install recode)
+
+
+======== Java Version =============
+You need to compile this code with Java 8. In Linux, it has to be the "official" Oracle Java 8 version not the "open-source" JDK.
+Otherwise you will see errors like:
+
+Which can be fixed by using the Oracle JDK (or changing the code).
+
+======== Compiling a jar =====
+Run this (it worked for me):
+
+mkdir ./build # Creates a folder that will keep the .class files
+javac -d ./build -cp lib/\* src/*/*.java
+
+# Criar o nosso proprio manifest
+nano manifest
+
+cd build
+jar cvfm MyFaultInjector.jar ../manifest *
+
+=========== Solving CR/LF (line endings) mismatches when trying to apply a patch =======
+Sometimes a patch command may fail due to erroneous line endings (when using/creating in Windows, Mac, Linux, ...)
+Usually the error is something like:
+
+Hunk #1 FAILED at 11 (different line endings).
+
+To solve this the following command can be applied to the patch file(s):
+find . -type f -exec dos2unix {} \;
+
+Attention that you need to have the "dos2unix" programm installed.

@@ -1,0 +1,12 @@
+--- 48.cpp
++++ 48.cpp._MIFS_13	2016-03-30 01:39:20.297740900 +0100
+@@ -98,9 +98,6 @@
+     if ((bufferPos == '\\')) {
+         if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {
+             if (recurse(pos - width - 2, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    strcat2((char*)",", 1);
+-
+                 sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+                 strcat2(tmp);
+                 return 1;

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_39	2016-03-30 02:54:34.281624300 +0100
+@@ -1516,7 +1516,7 @@
+                         particles[i].color[0] = 0.0;
+                     }
+                     particles[i].color[1] -= 1.0 / 100.0;
+-                    if (particles[i].color[1] < 0.0) {
++                    {
+                         particles[i].color[1] = 0.0;
+                     }
+                     particles[i].color[2] -= 1.0 / 50.0;

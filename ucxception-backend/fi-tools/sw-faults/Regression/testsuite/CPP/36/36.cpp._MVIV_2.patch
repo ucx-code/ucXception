@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._MVIV_2	2016-03-30 01:32:10.397027900 +0100
+@@ -64,7 +64,7 @@
+         estadoCounterT = estadoCounter - 1;
+         qsort(translator[estadoCounter], maxi, sizeof (int), desempate);
+     }
+-    bool todosTemAcesso = true;
++    bool todosTemAcesso = todosTemAcesso;
+     for (i = 0;i < n;i++)
+         if (estadosP[estadoCounter][i] == 0) {
+             todosTemAcesso = false;

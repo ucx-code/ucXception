@@ -1,0 +1,7 @@
+{
+	"component_name": "ucXception SW Parser",
+	"component_file_name": "ucXception_SW_parser.py",
+	"component_class_name": "ucXception_SW_Parser",
+	"constructor" : "[self.patch_files, self.patch_file]",
+	"information_help": "Stores information relative to the injection performed by ucXception's SW fault injection tool, such as the applied operator or in which line the fault was injected."	
+}

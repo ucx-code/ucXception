@@ -1,0 +1,10 @@
+--- 26.cpp
++++ 26.cpp._MFC_19	2016-03-30 01:25:33.058057300 +0100
+@@ -105,6 +105,6 @@
+         S.push_back(i);
+     }
+     std::vector<int> res = MSC(Universo, Universo, 0);
+-    printf("->%d %d\n", res.size(), melhor);
++    ;
+     return 0;
+ }

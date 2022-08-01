@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._WAEP_1	2016-03-30 00:30:06.206772300 +0100
+@@ -18,7 +18,7 @@
+     if (recebido < despesa) {
+         printf("Troco: %.2f", despesa);
+         for (i = 0;i < 8;i++){
+-            printf(" %d", moedas[i]);
++            printf(" %d", i);
+         }
+         printf(" Valor insuficiente!");
+     }else{

@@ -1,0 +1,11 @@
+--- 30.cpp
++++ 30.cpp._MFC_0	2016-03-30 01:27:29.814540400 +0100
+@@ -21,7 +21,7 @@
+ {
+     int marca[36];
+     int i, a;
+-    memcpy(marca, state, sizeof (int) * 36);
++    ;
+     for (i = 1;i <= n;i++){
+         if (state[i] == 2) {
+             for (a = 0;a < counter[i];a++){

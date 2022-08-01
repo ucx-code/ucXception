@@ -1,0 +1,11 @@
+--- 64.cpp
++++ 64.cpp._WAEP_0	2016-03-30 01:42:47.256984300 +0100
+@@ -27,7 +27,7 @@
+     static const int gaps[] = {1, 4, 10, 23, 57, 132, 301, 701};
+     register int sizeIndex;
+     for (sizeIndex = sizeof (gaps) / sizeof (gaps[0]) - 1;sizeIndex >= 0;--sizeIndex)
+-        shellSortPhase(a, length, gaps[sizeIndex]);
++        shellSortPhase(a, length, gaps);
+ }
+ 
+ int N = 1;

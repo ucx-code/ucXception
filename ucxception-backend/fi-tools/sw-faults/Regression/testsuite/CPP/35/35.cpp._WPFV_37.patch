@@ -1,0 +1,11 @@
+--- 35.cpp
++++ 35.cpp._WPFV_37	2016-03-30 01:31:46.251805100 +0100
+@@ -69,7 +69,7 @@
+     for (a = 0;a < n;a++)
+         for (i = 0;i < n;i++)
+             translator[a][i] = i;
+-    qsort(translator[0], n, sizeof (int), compare);
++    qsort(translator[0], estadosP, sizeof (int), compare);
+     int maxi = 1;
+     for (i = 1;i < n;i++)
+         if (countVizinhos(translator[0][i], n, 0) == countVizinhos(translator[0][0], n, 0)) 

@@ -1,0 +1,10 @@
+--- 68.cpp
++++ 68.cpp._MVAE_0	2016-03-30 01:44:26.623613800 +0100
+@@ -45,7 +45,6 @@
+             break;
+ 
+         slot[k].begin = slot[j].begin;
+-        k = j;
+     }
+     slot[k].begin = v;
+ }

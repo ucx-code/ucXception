@@ -1,0 +1,11 @@
+--- 11.cpp
++++ 11.cpp._MFC_4	2016-03-30 01:15:40.573841400 +0100
+@@ -24,7 +24,7 @@
+             memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+-        memcpy(matrix + halfMatrix, matrix, halfMatrix);
++        ;
+         for (i = 0;i < halfSquare2;i += 8){
+             unsigned long *lel = (unsigned long *)(tmp + i);
+             *lel = *lel ^ 0x0101010101010101;

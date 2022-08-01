@@ -1,0 +1,11 @@
+--- 91.cpp
++++ 91.cpp._MLPA_5	2016-03-30 02:02:16.957078100 +0100
+@@ -52,8 +52,6 @@
+ 
+ int main()
+ {
+-    fstat(STDIN_FILENO, &statbuf);
+-    src = (char*)mmap(0, statbuf.st_size, PROT_READ, MAP_PRIVATE, 0, 0);
+     char* begin = src;
+     int n, m;
+     register int i;

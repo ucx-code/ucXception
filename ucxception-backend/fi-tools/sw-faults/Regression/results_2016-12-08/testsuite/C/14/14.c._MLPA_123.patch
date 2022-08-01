@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_123	2016-12-08 00:49:50.143084661 +0000
+@@ -320,9 +320,6 @@
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     node->child = id;
+-    id->next = expr;
+-    node->type = ParseArgs;
+-    node->id = NULL;
+     return node;
+ }
+ 

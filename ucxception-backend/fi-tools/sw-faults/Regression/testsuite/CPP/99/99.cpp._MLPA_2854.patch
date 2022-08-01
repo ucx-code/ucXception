@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2854	2016-03-30 03:01:12.378232400 +0100
+@@ -1975,9 +1975,6 @@
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+                             }
+-                            glTranslatef(Pos1[0], Pos1[1], Pos1[2]);
+-                            glutSolidSphere(1.0, 100, 100);
+-                            glPopMatrix();
+                             glEnable (GL_STENCIL_TEST);
+                             glColorMask(0, 0, 0, 0);
+                             glDisable (GL_DEPTH_TEST);

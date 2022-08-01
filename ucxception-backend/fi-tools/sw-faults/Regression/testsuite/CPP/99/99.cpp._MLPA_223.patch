@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_223	2016-03-30 02:08:27.322760600 +0100
+@@ -295,10 +295,6 @@
+                 return AL_FALSE;
+ 
+             alSourcei(Source, AL_BUFFER, Buffer);
+-            alSourcef(Source, AL_PITCH, 1.0);
+-            alSourcef(Source, AL_GAIN, 1.0);
+-            alSourcefv(Source, AL_POSITION, SourcePos);
+-            alSourcefv(Source, AL_VELOCITY, SourceVel);
+             alSourcei(Source, AL_LOOPING, loop);
+         }else{
+             alGenBuffers(1, &BufferEx);

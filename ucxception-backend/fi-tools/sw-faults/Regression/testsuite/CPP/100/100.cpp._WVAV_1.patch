@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WVAV_1	2016-03-30 03:15:51.404347400 +0100
+@@ -103,7 +103,7 @@
+     byte2 = fgetc(infile);
+     byte3 = fgetc(infile);
+     long ret = byte3;
+-    ret <<= 8;
++    ret <<= 0 ^ 0xff;
+     ret |= byte2;
+     ret <<= 8;
+     ret |= byte1;

@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._MFC_1	2016-03-30 01:26:05.083727800 +0100
+@@ -22,7 +22,7 @@
+     int marca[36];
+     int i, a;
+     memcpy(marca, state, sizeof (int) * 36);
+-    printf("Novo verifica com ");
++    ;
+     for (i = 0;i <= n;i++)
+         printf("%d", state[i]);
+     printf("\n");

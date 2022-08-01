@@ -1,0 +1,12 @@
+--- ./18.c
++++ ./18.c._MIFS_0	2016-12-08 00:50:00.091084483 +0000
+@@ -24,9 +24,6 @@
+     int i;
+     int aux = len + distancias[v][0];
+     cap -= distancias[v][13];
+-    if ((aux + (bound - distancias[v][14]) / 2) >= best) 
+-        return;
+-
+     if (isSolution() && aux < best) {
+         best = aux;
+         return;

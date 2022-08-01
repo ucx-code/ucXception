@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MFC_43	2016-03-30 00:49:19.180193300 +0100
+@@ -344,7 +344,7 @@
+ void check_literal(char* lit)
+ {
+ if (strlen(lit) > 1 && lit[0] == '0' && lit[1] != 'x') {
+-printf("Invalid literal %s\n", lit);
++;
+ exit(0);
+ }
+ }

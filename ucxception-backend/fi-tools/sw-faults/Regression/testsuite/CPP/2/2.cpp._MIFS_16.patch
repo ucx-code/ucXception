@@ -1,0 +1,18 @@
+--- 2.cpp
++++ 2.cpp._MIFS_16	2016-03-30 01:10:12.735763000 +0100
+@@ -82,15 +82,6 @@
+         }
+     }
+     if (buffer[pos] == ('/' | 0x80)) {
+-        if ((buffer[pos - width] == '|') || (buffer[pos - width] == '/')) {
+-            if (recurse(pos - width) == 1) {
+-                if (recurseSize != 0) 
+-                    printf(",");
+-
+-                printf("(%d,%d)", getY(pos), getX(pos));
+-                return 1;
+-            }
+-        }
+         if (buffer[pos - width - 1] == '\\') {
+             if (recurse(pos - width - 1) == 1) {
+                 if (recurseSize != 0) 

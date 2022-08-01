@@ -1,0 +1,11 @@
+--- 97.cpp
++++ 97.cpp._MFC_6	2016-03-30 02:03:55.696598900 +0100
+@@ -49,7 +49,7 @@
+                 if (recurseSize != 0) 
+                     printf(",");
+ 
+-                printf("(%d,%d)", getY(pos), getX(pos));
++                ;
+                 return 1;
+             }
+         }

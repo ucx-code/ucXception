@@ -1,0 +1,11 @@
+--- 70.cpp
++++ 70.cpp._WAEP_0	2016-03-30 01:45:11.984878100 +0100
+@@ -14,7 +14,7 @@
+ {
+     register int a, i;
+     unsigned char estado[2000];
+-    memset(estado, 0, sizeof (unsigned char) * m);
++    memset(estado, 0, sizeof (unsigned char));
+     for (a = 0;a < m;a++){
+         for (i = 0;i < counterEscolhas[a];i++){
+             if (abs(escolhas[a][i]) - 1 > fim) 

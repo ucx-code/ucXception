@@ -1,0 +1,11 @@
+--- ./25.c
++++ ./25.c._MFC_10	2016-12-08 00:50:22.739084077 +0000
+@@ -51,7 +51,7 @@
+     int i, squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+         squared = quickPow[n];
+-        rec(0, n, r % 4);
++        ;
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';

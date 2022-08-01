@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_173	2016-03-30 02:20:35.456318900 +0100
+@@ -594,7 +594,7 @@
+ void func_opcoes()
+ {
+     glEnable (GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, texture[8]);
++    ;
+     glPushMatrix();
+     glTranslatef(-2.3, pos_seta_y, 0);
+     glBegin (GL_QUADS);

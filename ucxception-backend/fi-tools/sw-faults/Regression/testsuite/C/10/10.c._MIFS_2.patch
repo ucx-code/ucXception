@@ -1,0 +1,12 @@
+--- 10.c
++++ 10.c._MIFS_2	2016-03-30 00:37:37.166915300 +0100
+@@ -376,9 +376,6 @@
+     aux = aux->next;
+ }
+ while (temp != NULL){
+-    if (strcmp(temp->name, var_name) == 0 && strcmp(temp->type, "method") != 0) 
+-        return 1;
+-
+     temp = temp->next;
+ }
+ return 0;

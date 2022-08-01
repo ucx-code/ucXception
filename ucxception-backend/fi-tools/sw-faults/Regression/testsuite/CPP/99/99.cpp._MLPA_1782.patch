@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1782	2016-03-30 02:45:11.669505300 +0100
+@@ -1083,9 +1083,6 @@
+                     hero.position[1] = robotY;
+                     hero.position[2] = robotZ;
+                     hero.fuel = 50;
+-                    hero.show = 1;
+-                    enemysList.push_back(hero);
+-                    newExplosion();
+                 }
+                 break;
+             }

@@ -1,0 +1,14 @@
+--- 83.cpp
++++ 83.cpp._MIFS_1	2016-03-30 01:55:03.632852000 +0100
+@@ -27,11 +27,6 @@
+             int absoluto = abs(choices[i][a]) - 1;
+             if (choices[i][a] == 0) 
+                 break;
+-
+-            if ((choices[i][a] < 0) && (c[absoluto] == 0)) {
+-                favoravel = true;
+-                break;
+-            }
+         }
+         if (favoravel == false) {
+             jk[i] = friendship[i];

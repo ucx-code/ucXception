@@ -1,0 +1,11 @@
+--- 83.cpp
++++ 83.cpp._WPFV_61	2016-03-30 01:56:03.133094200 +0100
+@@ -89,7 +89,7 @@
+     for (i = begin + 1;i < end;i++){
+         c[i] = 1;
+         upJK(c, i, end);
+-        rec(c, i, end);
++        rec(c, i, i);
+         c[i] = 0;
+         upJK(c, i, end);
+     }

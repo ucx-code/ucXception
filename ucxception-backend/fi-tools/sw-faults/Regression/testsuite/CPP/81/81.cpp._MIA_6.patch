@@ -1,0 +1,11 @@
+--- 81.cpp
++++ 81.cpp._MIA_6	2016-03-30 01:53:52.005923700 +0100
+@@ -132,7 +132,7 @@
+             k = tmp;
+             scanf("%d", &tmp);
+         }
+-        if (a == 1) {
++        {
+             if (k < 0) {
+                 unitClause[abs(k) - 1][0][unitClauseC[abs(k) - 1][0]++] = i;
+             }else{

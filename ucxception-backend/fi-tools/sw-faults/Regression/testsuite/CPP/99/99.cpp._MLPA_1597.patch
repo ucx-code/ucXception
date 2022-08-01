@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1597	2016-03-30 02:42:03.211509300 +0100
+@@ -909,10 +909,6 @@
+         particles[i].position[0] = 0.0;
+         particles[i].position[1] = 0.0;
+         particles[i].position[2] = 0.0;
+-        particles[i].color[0] = 1.0;
+-        particles[i].color[1] = 1.0;
+-        particles[i].color[2] = 0.5;
+-        newSpeed(particles[i].speed);
+     }
+     for (i = 0;i < NUM_DEBRIS;i++){
+         debris[i].position[0] = 0.0;

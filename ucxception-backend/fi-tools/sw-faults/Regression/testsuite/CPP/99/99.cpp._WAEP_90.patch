@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_90	2016-03-30 02:50:38.238100100 +0100
+@@ -1157,7 +1157,7 @@
+             glRotatef(anguloCube, 1, 0, 0);
+             glTranslatef(-enemysList[i].position[0], -enemysList[i].position[1], -enemysList[i].position[2]);
+             glPushMatrix();
+-            glTranslatef(enemysList[i].position[0], enemysList[i].position[1], enemysList[i].position[2]);
++            glTranslatef(enemysList[i].position[0], enemysList[i].position, enemysList[i].position[2]);
+             glutSolidSphere(3, 32, 32);
+             glPopMatrix();
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whiteRubberAmb);

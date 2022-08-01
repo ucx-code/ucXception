@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MIFS_14	2016-03-30 02:45:27.932572200 +0100
+@@ -1090,10 +1090,6 @@
+                 break;
+             }
+         }
+-        if (aux == 0) {
+-            lastRobotZ = robotZ;
+-            lastRobotX = robotX;
+-        }
+     }
+ }
+ 

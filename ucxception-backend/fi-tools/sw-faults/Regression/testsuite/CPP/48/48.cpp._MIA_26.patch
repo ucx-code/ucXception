@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MIA_26	2016-03-30 01:39:30.685060600 +0100
+@@ -129,7 +129,7 @@
+     }
+     if (bufferPos == '/') {
+         if ((bufferPosWidth == '|') || (bufferPosWidth == '/')) {
+-            if (recurse(pos - width, max, width) == 1) {
++            {
+                 if (recurseSize != 0) 
+                     strcat2((char*)",", 1);
+ 

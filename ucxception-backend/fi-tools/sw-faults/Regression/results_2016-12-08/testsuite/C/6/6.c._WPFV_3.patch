@@ -1,0 +1,18 @@
+--- ./6.c
++++ ./6.c._WPFV_3	2016-12-08 00:51:04.351083332 +0000
+@@ -1,6 +1,3 @@
+-#include <stdio.h>
+-#include <stdlib.h>
+-#define MAX_JOGADORES 300
+ void ad_jogador(int numero, int pos);
+ int soma_golos(int jogador);
+ float equilibrio(int jogador, float media);
+@@ -11,7 +8,7 @@
+     int n, i = 0, j;
+     scanf("%d", &n);
+     while (n != (-1)){
+-        ad_jogador(n, i);
++        ad_jogador(j, i);
+         i++;
+         scanf("%d", &n);
+     }

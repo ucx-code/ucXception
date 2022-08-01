@@ -1,0 +1,11 @@
+--- 84.cpp
++++ 84.cpp._MFC_3	2016-03-30 01:56:47.131186000 +0100
+@@ -98,7 +98,7 @@
+     actual2 = calcB(c, begin + 1, end);
+     if (actual2 < best) {
+         c[begin] = 1;
+-        rec(c, begin + 1, end);
++        ;
+     }
+     if (actual < best) {
+         c[begin] = 0;

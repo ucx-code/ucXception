@@ -1,0 +1,10 @@
+--- ./30.c
++++ ./30.c._MIA_12	2016-12-08 00:50:39.963083769 +0000
+@@ -67,7 +67,6 @@
+                                 return 1;
+                             }
+ 
+-                        if ((line != x) || (col - 1 != y)) 
+                             if (checkPath(line, col - 1, '\\', count + 1, line, col) == 1) {
+                                 path[count][0] = line + 1;
+                                 path[count][1] = col + 1;

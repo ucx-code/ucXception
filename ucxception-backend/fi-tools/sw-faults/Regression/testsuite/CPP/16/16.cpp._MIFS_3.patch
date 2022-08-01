@@ -1,0 +1,13 @@
+--- 16.cpp
++++ 16.cpp._MIFS_3	2016-03-30 01:17:49.158945400 +0100
+@@ -42,10 +42,6 @@
+ {
+     int n;
+     scanf("%d", &n);
+-    if (n <= 1) {
+-        printf("%d\n", n);
+-        return 0;
+-    }
+     int tmpA, tmpB;
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+         vizinhos[tmpA - 1][counter[tmpA - 1]] = tmpB - 1;

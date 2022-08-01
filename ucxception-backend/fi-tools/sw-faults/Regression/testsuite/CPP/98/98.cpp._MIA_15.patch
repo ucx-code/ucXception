@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._MIA_15	2016-03-30 02:04:33.682187600 +0100
+@@ -94,7 +94,7 @@
+         fread(buffer, 1, matrixSize, stdin);
+         bool encontrou = false;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+-            if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {
++            {
+                 int result = bfs(i, matrixSize, width);
+                 if (result == 1) {
+                     encontrou = true;

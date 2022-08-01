@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2281	2016-03-30 02:52:19.742129400 +0100
+@@ -1380,8 +1380,6 @@
+     glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+     glPushMatrix();
+     glTranslatef(0.0, torusin, 0.0);
+-    glRotatef(-90.0, 1.0, 0.0, 0.0);
+-    glutSolidTorus(0.05, 1.5, 32, 32);
+     glPopMatrix();
+     glPushMatrix();
+     glTranslatef(0.0, torusout, 0.0);

@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._MIA_10	2016-03-30 02:04:30.036963800 +0100
+@@ -68,7 +68,7 @@
+                 queue.push(pos - 2);
+             }
+         }
+-        if (bufferPos == '/') {
++        {
+             if ((bufferPosWidth == '|') || (bufferPosWidth == '/')) {
+                 queue.push(pos - width);
+             }

@@ -1,0 +1,15 @@
+--- 29.cpp
++++ 29.cpp._MIA_5	2016-03-30 01:26:50.768629400 +0100
+@@ -46,10 +46,9 @@
+     if (count < n) 
+         return 0;
+ 
+-    if ((nPrinters != 0) && (nPrinters < best)) {
++    {
+         best = nPrinters;
+-    }
+-    return 1;
++    }return 1;
+ }
+ void mis(int v, int size)
+ {

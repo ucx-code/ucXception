@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WAEP_10	2016-03-30 03:17:03.878581100 +0100
+@@ -231,7 +231,7 @@
+             return false;
+         }
+     }
+-    assert(vWidth >= NumCols && vHeight >= NumRows);
++    assert(vWidth >= NumCols);
+     int oldGlRowLen;
+     if (vWidth >= NumCols) {
+         glGetIntegerv(GL_UNPACK_ROW_LENGTH, &oldGlRowLen);

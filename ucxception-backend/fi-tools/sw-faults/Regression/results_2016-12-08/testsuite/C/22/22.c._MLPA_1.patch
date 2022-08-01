@@ -1,0 +1,11 @@
+--- ./22.c
++++ ./22.c._MLPA_1	2016-12-08 00:50:15.839084201 +0000
+@@ -55,8 +55,6 @@
+                             strcpy(new_symbol->type, ele_type);
+                         }
+ 
+-    new_symbol->param = ele_par;
+-    new_symbol->next = NULL;
+     return new_symbol;
+ }
+ 

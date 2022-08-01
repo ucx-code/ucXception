@@ -1,0 +1,11 @@
+--- 39.cpp
++++ 39.cpp._MIFS_26	2016-03-30 01:36:54.616965700 +0100
+@@ -150,8 +150,6 @@
+                     break;
+                 }
+             }
+-            if (encontrou) 
+-                break;
+         }
+         if (!encontrou) 
+             printf("No Path!\n");

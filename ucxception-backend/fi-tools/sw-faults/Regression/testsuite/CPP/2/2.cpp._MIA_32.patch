@@ -1,0 +1,11 @@
+--- 2.cpp
++++ 2.cpp._MIA_32	2016-03-30 01:10:35.592325200 +0100
+@@ -123,7 +123,7 @@
+         matrixSize = (width + 1) * height;
+         fread(buffer, 1, matrixSize, stdin);
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+-            if ((buffer[i] == '|') || (buffer[i] == '\\') || (buffer[i] == '/')) {
++            {
+                 recurseSize = 0;
+                 if (recurse(i) == 1) 
+                     goto terminei_matrix_sucesso;

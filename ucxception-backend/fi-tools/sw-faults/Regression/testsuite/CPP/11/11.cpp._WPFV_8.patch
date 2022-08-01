@@ -1,0 +1,11 @@
+--- 11.cpp
++++ 11.cpp._WPFV_8	2016-03-30 01:15:46.881298100 +0100
+@@ -42,7 +42,7 @@
+                         if (r == 3) 
+                             memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+-        rec(n + 1, target, r);
++        rec(n + 1, r, r);
+     }
+ }
+ 

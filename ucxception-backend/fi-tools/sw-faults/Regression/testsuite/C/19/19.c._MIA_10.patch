@@ -1,0 +1,12 @@
+--- 19.c
++++ 19.c._MIA_10	2016-03-30 00:46:42.616644300 +0100
+@@ -86,9 +86,7 @@
+                     x = distancias[i][j];
+                 }else
+                     if (y > distancias[i][j]) {
+-                        if (y < x) 
+                             x = y;
+-
+                         y = distancias[i][j];
+                     }
+             }

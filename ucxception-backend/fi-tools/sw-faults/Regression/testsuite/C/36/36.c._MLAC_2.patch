@@ -1,0 +1,11 @@
+--- 36.c
++++ 36.c._MLAC_2	2016-03-30 01:02:11.141875300 +0100
+@@ -15,7 +15,7 @@
+                     if (aux1 == (k + 1) && sack[i - 1][k] < aux2) {
+                         sack[i][k] = aux2;
+                     }else
+-                        if (aux1 < (k + 1) && sack[i - 1][k] < (aux = (aux2 + sack[i - 1][k - aux1]))) {
++                        if (sack[i - 1][k] < (aux = (aux2 + sack[i - 1][k - aux1]))) {
+                             sack[i][k] = aux;
+                         }else{
+                             sack[i][k] = sack[i - 1][k];

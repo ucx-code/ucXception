@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MFC_14	2016-03-30 01:21:21.101081900 +0100
+@@ -124,7 +124,7 @@
+ 
+                         int posTmp = answer.top();
+                         printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));
+-                        answer.pop();
++                        ;
+                     }
+                     printf("\n");
+                     encontrou = true;

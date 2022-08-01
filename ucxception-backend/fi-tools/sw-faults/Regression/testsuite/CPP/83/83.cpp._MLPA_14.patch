@@ -1,0 +1,11 @@
+--- 83.cpp
++++ 83.cpp._MLPA_14	2016-03-30 01:56:10.069975800 +0100
+@@ -108,8 +108,6 @@
+         while (tmp != 0){
+             choices[i][a++] = tmp;
+             int val = abs(tmp) - 1;
+-            afectacoes[val][afectacoesCounter[val]++] = i;
+-            scanf("%d", &tmp);
+         }
+     }
+     preJK(c);

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1244	2016-03-30 02:33:51.311748200 +0100
+@@ -824,8 +824,6 @@
+     glTexCoord2f(0.0f, 1.0f);
+     glVertex3f(50.0, 30.0, 50);
+     glTexCoord2f(1.0f, 1.0f);
+-    glVertex3f(-50.1, 30.0, 50);
+-    glTexCoord2f(1.0f, 0.0f);
+     glVertex3f(-50.1, -15.0, 50);
+     glTexCoord2f(0.0f, 0.0f);
+     glVertex3f(50.0, -15.0, 50);

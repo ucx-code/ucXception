@@ -1,0 +1,11 @@
+--- 85.cpp
++++ 85.cpp._MFC_8	2016-03-30 01:58:53.562269800 +0100
+@@ -128,7 +128,7 @@
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+ 
+             choices[i][a++] = tmp;
+-            scanf("%d", &tmp);
++            ;
+         }
+     }
+     unsigned char tmpEstado[2000];

@@ -1,0 +1,13 @@
+--- 83.cpp
++++ 83.cpp._MIFS_5	2016-03-30 01:55:11.560039100 +0100
+@@ -54,10 +54,6 @@
+                 favoravel = true;
+                 break;
+             }
+-            if ((choices[i][a] < 0) && (c[absoluto] == 0)) {
+-                favoravel = true;
+-                break;
+-            }
+         }
+         if (favoravel == false) {
+             jk[i] = friendship[i];

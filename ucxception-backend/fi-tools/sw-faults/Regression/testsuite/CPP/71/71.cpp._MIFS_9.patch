@@ -1,0 +1,39 @@
+--- 71.cpp
++++ 71.cpp._MIFS_9	2016-03-30 01:45:42.875804900 +0100
+@@ -64,36 +64,6 @@
+             }
+         }
+     }
+-    if ((bufferPos == '\\')) {
+-        if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {
+-            if (recurse(pos - width - 2, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    printf(",");
+-
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
+-                return 1;
+-            }
+-        }
+-        if (bufferPosWidth1 == '/') {
+-            if (recurse(pos - width - 1, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    printf(",");
+-
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
+-                return 1;
+-            }
+-        }
+-        if ((bufferPosN1 == '/') && (bufferPosN2 == '\\')) {
+-            if (recurse(pos - 2, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    printf(",");
+-
+-                printf("(%d,%d),", getY(pos - 1, width), getX(pos - 1, width));
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
+-                return 1;
+-            }
+-        }
+-    }
+     if (bufferPos == '/') {
+         if ((bufferPosWidth == '|') || (bufferPosWidth == '/')) {
+             if (recurse(pos - width, max, width) == 1) {

@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MFC_0	2016-03-30 01:45:36.454988600 +0100
+@@ -23,7 +23,7 @@
+ 
+     buffer[pos] |= 0x80;
+     if (pos <= width) {
+-        printf("(%d,%d)", getY(pos, width), getX(pos, width));
++        ;
+         return 1;
+     }
+     ++recurseSize;

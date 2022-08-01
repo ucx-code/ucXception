@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_46	2016-03-30 02:09:52.683941800 +0100
+@@ -338,7 +338,7 @@
+ void KillALData()
+ {
+     alDeleteBuffers(1, &Buffer);
+-    alDeleteSources(1, &Source);
++    ;
+     alDeleteBuffers(1, &BufferEx);
+     alDeleteSources(1, &SourceEx);
+     alutExit();

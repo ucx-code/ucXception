@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2830	2016-03-30 03:01:04.447873700 +0100
+@@ -1943,10 +1943,6 @@
+                             if (health > 0) 
+                                 desenhaRobot();
+ 
+-                            desenhaLagrima();
+-                            desenhaBombas();
+-                            desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+-                            colisoesInimigos();
+                             pufpuf();
+                             glPushMatrix();
+                             if (glIsEnabled (GL_LIGHT1)) {

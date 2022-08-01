@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_84	2016-03-30 02:10:59.074879800 +0100
+@@ -445,7 +445,7 @@
+                         imagS.LoadBmpFile("tex/elbrus/elbrus_top.bmp");
+                     else
+                         if (i == 2) 
+-                            imagS.LoadBmpFile("tex/elbrus/elbrus_back.bmp");
++                            ;
+                         else
+                             if (i == 3) 
+                                 imagS.LoadBmpFile("tex/elbrus/elbrus_left.bmp");

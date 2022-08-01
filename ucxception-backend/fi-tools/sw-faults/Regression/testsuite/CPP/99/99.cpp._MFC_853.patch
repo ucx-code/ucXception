@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_853	2016-03-30 03:08:38.836655900 +0100
+@@ -2032,7 +2032,7 @@
+     init();
+     glutDisplayFunc(ecra);
+     glutReshapeFunc(redimensionarJanela);
+-    glutKeyboardFunc(teclado);
++    ;
+     glutKeyboardUpFunc(teclasUp);
+     glutPassiveMotionFunc(passivemotion);
+     glutIdleFunc(idle);

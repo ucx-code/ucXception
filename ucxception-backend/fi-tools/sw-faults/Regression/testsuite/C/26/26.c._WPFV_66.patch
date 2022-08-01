@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._WPFV_66	2016-03-30 00:55:18.280495800 +0100
+@@ -103,7 +103,7 @@
+                         verifica(l, c + 1, '\\', aux);
+ 
+                     if (ant[1] != c - 1 && encont == 0) 
+-                        verifica(l, c - 1, '\\', aux);
++                        verifica(aux, c - 1, '\\', aux);
+                 }else
+                     if (tab[l][c] == '\\') {
+                         if (encont == 0) 

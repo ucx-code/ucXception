@@ -1,0 +1,25 @@
+--- 14.c
++++ 14.c._MIEB_2	2016-03-30 00:39:39.723606700 +0100
+@@ -47,20 +47,10 @@
+     else
+         methodParams->next = methodBody;
+ 
+-    if (varDecl != NULL) {
+-        is_node *aux, *aux2;
+-        methodBody->child = varDecl;
+-        if (stats != NULL) {
+-            aux = varDecl;
+-            while (aux->next != NULL)
+-                aux = aux->next;
+-            aux->next = stats;
+-        }
+-    }else{
++    {
+         if (stats != NULL) 
+             methodBody->child = stats;
+-    }
+-    node->next = NULL;
++    }node->next = NULL;
+     node->type = MethodDecl;
+     node->id = NULL;
+     return node;

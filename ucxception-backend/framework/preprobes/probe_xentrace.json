@@ -1,0 +1,25 @@
+{
+	"component_name": "Probe Xentrace",
+	"component_file_name": "probe_xentrace.py",
+	"component_class_name": "Probe_Xentrace",
+	"constructor" : ["local_dir", "file"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"local_dir": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"file": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		}
+	},
+	"information_help": "Xentrace is an utility that monitors the events that occur in a Xen virtualized system. The results are stored in (usually large) binary files."
+}

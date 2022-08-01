@@ -1,0 +1,132 @@
+--- ./10.c
++++ ./10.c._WPFV_11	2016-12-08 00:49:32.075084984 +0000
+@@ -100,7 +100,7 @@
+             expr = gen_expression(method_name, node->child, prog);
+             if_else_c = 0;
+             printf("%%if_%d = icmp eq i1 1 , %s\n", if_else_c, expr);
+-            printf("br i1 %%if_%d, label %%then_%d, label %%else_%d \n", if_else_c, if_else_c, if_else_c);
++            printf("br i1 %%if_%d, label %%then_%d, label %%else_%d \n", if_else_c, if_else_c, glob);
+             break;
+         case Print:
+             if (node->child->type == Id) 
+@@ -409,4 +409,120 @@
+ }
+ return NULL;
+ }
++, "Mul") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "Div") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "Mod") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "Or") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "And") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Eq") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Neq") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Lt") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Gt") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Leq") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Geq") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Not") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "Minus") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "Plus") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "Length") == 0)
++        return "i32";
++    
++    else if(strcmp(AST_type, "int") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "boolean") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "void") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "int[]") == 0)
++        return "i32";
++    else if(strcmp(AST_type, "boolean[]") == 0)
++        return "i1";
++    else if(strcmp(AST_type, "String[]") == 0)
++        return "args";
++    
++    printf("\n\n>>>> ERRO <<<< method gen_code_type()\n\n");
++    return "erro";
++}
++
++int verifyGlobal(char* var_name, prog_env* prog, char* method_name)
++{
++    table_element* temp;
++	temp = prog->global;
++    
++	environment_list* aux;
++	aux = prog->methods;
++    
++    // verifica variaveis locais do metodo em questao
++	while(aux != NULL)
++    {
++		if(strcmp(aux->name, method_name) == 0)
++        {
++			table_element* local = aux->locals;
++			while(local != NULL)
++            {
++				if(strcmp(local->name, var_name) == 0)
++					return 0;
++                local = local->next;
++			}
++		}
++		aux = aux->next;
++	}
++    
++	// verifica variaveis globais
++	while(temp != NULL)
++    {
++		if(strcmp(temp->name, var_name) == 0 && strcmp(temp->type, "method") != 0)
++			return 1;
++		temp = temp->next;
++	}
++    return 0;
++}
++
++char* get_type(char* var_name, prog_env* prog, char* method_name)
++{
++	table_element* temp;
++	temp = prog->global;
++    
++	environment_list* aux;
++	aux = prog->methods;
++    
++    // verifica variaveis locais do metodo em questao
++	while(aux != NULL)
++    {
++		if(strcmp(aux->name, method_name) == 0)
++        {
++			table_element* local = aux->locals;
++			while(local != NULL)
++            {
++				if(strcmp(local->name, var_name) == 0)
++					return gen_code_type(local->type);
++                local = local->next;
++			}
++		}
++		aux = aux->next;
++	}
++    
++	// verifica variaveis globais
++	while(temp != NULL)
++    {
++		if(strcmp(temp->name, var_name) == 0 && strcmp(temp->type, "method") != 0)
++			return gen_code_type(temp->type);
++		temp = temp->next;
++	}
++    
++	return NULL;
++}
+ 

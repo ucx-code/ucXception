@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1124	2016-03-30 02:26:25.787193100 +0100
+@@ -720,11 +720,6 @@
+     glTexCoord2f(0.0f, 1.0f);
+     glVertex2f(-5.0f, -4.0f);
+     glTexCoord2f(1.0f, 1.0f);
+-    glVertex2f(5.0f, -4.0f);
+-    glTexCoord2f(1.0f, 0.0f);
+-    glVertex2f(5.0f, -6.0f);
+-    glTexCoord2f(0.0f, 0.0f);
+-    glVertex2f(-5.0f, -6.0f);
+     glEnd();
+     glPopMatrix();
+     glDisable(GL_TEXTURE_2D);

@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._MVIV_3	2016-03-30 01:52:44.495645400 +0100
+@@ -124,7 +124,7 @@
+ int calcB2(unsigned char* c, int begin, int max)
+ {
+     int i, a;
+-    int soma = 0;
++    int soma = soma;
+     for (i = begin;i < max;i++){
+         int set1 = 0;
+         int set2 = 0;

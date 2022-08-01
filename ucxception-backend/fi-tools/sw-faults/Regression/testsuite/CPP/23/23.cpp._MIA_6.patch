@@ -1,0 +1,10 @@
+--- 23.cpp
++++ 23.cpp._MIA_6	2016-03-30 01:23:52.064220800 +0100
+@@ -63,7 +63,6 @@
+     }
+     int i;
+     for (i = 1;i <= n;i++){
+-        if (saoVizinhos(v, i) == 1) 
+             if (visit[i] == 0) {
+                 visit[i] = 1;
+                 shortPath(i, len + 1);

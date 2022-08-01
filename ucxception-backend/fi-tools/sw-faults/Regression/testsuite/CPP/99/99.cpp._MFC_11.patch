@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_11	2016-03-30 02:08:06.612039800 +0100
+@@ -264,7 +264,7 @@
+ 
+ void initNevoeiro(void)
+ {
+-    glFogfv(GL_FOG_COLOR, fogColor);
++    ;
+     glFogi(GL_FOG_MODE, GL_EXP);
+     glFogf(GL_FOG_START, 0);
+     glFogf(GL_FOG_END, 50);

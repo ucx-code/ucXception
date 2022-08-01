@@ -1,0 +1,11 @@
+--- 67.cpp
++++ 67.cpp._MVIV_0	2016-03-30 01:44:13.281917700 +0100
+@@ -41,7 +41,7 @@
+ void readM()
+ {
+     register char* in = src;
+-    register int i = 0;
++    register int i = i;
+     register unsigned int* out = &n;
+     while (*in > 47){
+         *out = *out * 10 + *in - 48;

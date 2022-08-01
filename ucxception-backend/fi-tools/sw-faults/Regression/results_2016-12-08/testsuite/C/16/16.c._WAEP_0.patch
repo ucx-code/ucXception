@@ -1,0 +1,11 @@
+--- ./16.c
++++ ./16.c._WAEP_0	2016-12-08 00:49:55.903084558 +0000
+@@ -40,7 +40,7 @@
+     if (l < r) {
+         int m = l + (r - l) / 2;
+         mergeSort(arr, l, m);
+-        mergeSort(arr, m + 1, r);
++        mergeSort(arr, m, r);
+         merge(arr, l, m, r);
+     }
+ }

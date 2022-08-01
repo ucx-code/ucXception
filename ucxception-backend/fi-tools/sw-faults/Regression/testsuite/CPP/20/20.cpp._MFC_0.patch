@@ -1,0 +1,11 @@
+--- 20.cpp
++++ 20.cpp._MFC_0	2016-03-30 01:22:09.750339700 +0100
+@@ -11,7 +11,7 @@
+ {
+     int i, a;
+     int tmp[36];
+-    memcpy(tmp, visit, sizeof (int) * 36);
++    ;
+     for (i = 0;i < n;i++){
+         if (visit[i] == 1) {
+             for (a = 0;a < counter[i];a++)

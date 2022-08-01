@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._WPFV_9	2016-03-30 01:23:06.416419800 +0100
+@@ -60,7 +60,7 @@
+ {
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", stateCounter);
+         return 0;
+     }
+     int tmpA, tmpB;

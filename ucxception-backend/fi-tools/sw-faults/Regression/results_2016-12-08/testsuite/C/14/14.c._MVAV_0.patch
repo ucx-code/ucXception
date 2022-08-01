@@ -1,0 +1,10 @@
+--- ./14.c
++++ ./14.c._MVAV_0	2016-12-08 00:49:44.927084754 +0000
+@@ -30,7 +30,6 @@
+     type->next = id;
+     if (params != NULL) {
+         id->next = params;
+-        changes = 1;
+     }else{
+         methodParams->type = MethodParams;
+         methodParams->id = NULL;

@@ -1,0 +1,19 @@
+--- 5.c
++++ 5.c._MIFS_7	2016-03-30 00:30:17.640928900 +0100
+@@ -96,16 +96,6 @@
+             moedas[6] = moedas[6] - moedasTroco[6];
+             troco = troco - (moedasTroco[6] * 0.02);
+         }
+-        if (troco / 0.01 >= 1 && moedas[7] > 0) {
+-            x = troco / 0.01;
+-            if (x > moedas[7]) {
+-                moedasTroco[7] = moedas[7];
+-            }else{
+-                moedasTroco[7] = x;
+-            }
+-            moedas[7] = moedas[7] - moedasTroco[7];
+-            troco = troco - (moedasTroco[7] * 0.01);
+-        }
+         if ((int)(troco * 100) > 0) {
+             printf("Troco: %.2f", recebido);
+             for (i = 0;i < 8;i++){

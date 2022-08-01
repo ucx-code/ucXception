@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WVAV_18	2016-03-30 02:57:17.545881000 +0100
+@@ -1668,7 +1668,7 @@
+             }else
+                 if ((pontos == 0) && (x > 150) && (x < 350) && (y > 280) && (y < 320) && (iniciarjogo != 1)) {
+                     inicio = 0;
+-                    opcoes = 0;
++                    opcoes = 0 ^ 0xff;
+                     pontos = 1;
+                     instrucoes = 0;
+                     acerca = 0;

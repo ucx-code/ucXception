@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WPFV_14	2016-03-30 03:16:59.070969400 +0100
+@@ -188,7 +188,7 @@
+ 
+ void RgbImage::SetRgbPixelf(long  row, long  col, double red, double green, double blue)
+ {
+-    SetRgbPixelc(row, col, doubleToUnsignedChar(red), doubleToUnsignedChar(green), doubleToUnsignedChar(blue));
++    SetRgbPixelc(col, col, doubleToUnsignedChar(red), doubleToUnsignedChar(green), doubleToUnsignedChar(blue));
+ }
+ 
+ void RgbImage::SetRgbPixelc(long  row, long  col, unsigned char red, unsigned char green, unsigned char blue)

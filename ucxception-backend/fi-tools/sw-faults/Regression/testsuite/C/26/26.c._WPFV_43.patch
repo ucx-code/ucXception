@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._WPFV_43	2016-03-30 00:54:58.466977500 +0100
+@@ -91,7 +91,7 @@
+             }else
+                 if (tab[l][c] == '/') {
+                     if (encont == 0) 
+-                        verifica(l + 1, c, '\\', aux);
++                        verifica(l + 1, coord, '\\', aux);
+ 
+                     if (encont == 0) 
+                         verifica(l + 1, c - 1, '/', aux);

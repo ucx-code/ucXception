@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_500	2016-03-30 02:46:51.987608000 +0100
+@@ -1130,7 +1130,7 @@
+     glVertex3f(0, 1.5, -avancoMira);
+     glEnd();
+     glBegin(GL_LINES);
+-    glVertex3f(1.5, 0, -avancoMira);
++    ;
+     glVertex3f(-1.5, 0, -avancoMira);
+     glEnd();
+     glPopMatrix();

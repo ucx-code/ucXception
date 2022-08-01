@@ -1,0 +1,10 @@
+--- 23.cpp
++++ 23.cpp._MIA_2	2016-03-30 01:23:49.525898200 +0100
+@@ -39,7 +39,6 @@
+     int i;
+     int count = 0;
+     for (i = 1;i <= n;i++)
+-        if (visit[i] == 1) 
+             ++count;
+     return count;
+ }

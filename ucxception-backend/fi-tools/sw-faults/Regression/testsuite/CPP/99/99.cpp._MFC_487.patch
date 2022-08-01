@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_487	2016-03-30 02:45:46.918539800 +0100
+@@ -1112,7 +1112,7 @@
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, rubyAmb);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, rubyDif);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, rubySpec);
+-    glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, rubyCoef);
++    ;
+     glRasterPos2f(2, 9);
+     while (*string)
+         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *string++);

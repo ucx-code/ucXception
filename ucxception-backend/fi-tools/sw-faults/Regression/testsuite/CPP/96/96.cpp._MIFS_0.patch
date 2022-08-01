@@ -1,0 +1,12 @@
+--- 96.cpp
++++ 96.cpp._MIFS_0	2016-03-30 02:03:25.798799900 +0100
+@@ -20,9 +20,6 @@
+         Q.pop();
+         for (i = 0;i < G[u].size();i++){
+             v = G[u][i];
+-            if (partition[u] == partition[v]) 
+-                return false;
+-
+             if (visited[v] == 0) {
+                 visited[v] = 1;
+                 partition[v] = 3 - partition[u];

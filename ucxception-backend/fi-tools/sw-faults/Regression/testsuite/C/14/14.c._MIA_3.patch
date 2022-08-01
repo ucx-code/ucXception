@@ -1,0 +1,12 @@
+--- 14.c
++++ 14.c._MIA_3	2016-03-30 00:40:11.182099000 +0100
+@@ -88,9 +88,7 @@
+     type->next = id;
+     node->type = ParamDeclaration;
+     node->id = NULL;
+-    if (moreNodes != NULL) 
+         node->next = moreNodes;
+-
+     MethodParamsnode->child = node;
+     MethodParamsnode->next = NULL;
+     MethodParamsnode->id = NULL;

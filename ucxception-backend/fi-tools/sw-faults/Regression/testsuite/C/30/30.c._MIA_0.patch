@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MIA_0	2016-03-30 00:57:53.756281400 +0100
+@@ -6,7 +6,7 @@
+ 
+ short checkPath(short  line, short  col, char car, short  count, short  x, short  y)
+ {
+-    if (col >= 0 && col < ncols && line >= 0 && line < nlines) {
++    {
+         if (map[line][col] == car) {
+             if (line == (nlines - 1)) {
+                 path[count][0] = line + 1;

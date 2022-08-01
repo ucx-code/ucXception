@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_30	2016-12-08 00:50:11.275084282 +0000
+@@ -232,7 +232,7 @@
+         expr_type = "int";
+ 
+ if (strcmp(expr_type, expr_type3) != 0) {
+-    printf("Incompatible type in assignment to %s[] (got %s, required %s)\n", node->child->id, expr_type3, expr_type);
++    ;
+     exit(0);
+ }
+ break;

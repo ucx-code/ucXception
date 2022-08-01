@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_760	2016-03-30 03:00:40.890380000 +0100
+@@ -1864,7 +1864,7 @@
+         pausegame *= -1;
+     }
+     if (tecla == 8) {
+-        puts("reboot game");
++        ;
+         clear();
+     }
+     atualizarVisao();

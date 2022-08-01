@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MFC_2	2016-12-08 00:51:11.495083204 +0000
+@@ -28,7 +28,7 @@
+     }
+     tableColumns = orderByColumns(table, lines, columns);
+     tableLines = orderByLines(table, lines, columns);
+-    printTable(table, lines, columns);
++    ;
+     printf("\n");
+     printTable(tableLines, lines, columns);
+     printf("\n");

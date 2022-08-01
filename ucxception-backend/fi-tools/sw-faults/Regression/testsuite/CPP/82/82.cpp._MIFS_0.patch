@@ -1,0 +1,12 @@
+--- 82.cpp
++++ 82.cpp._MIFS_0	2016-03-30 01:54:03.588219900 +0100
+@@ -24,9 +24,6 @@
+         bool favoravel = false;
+         for (a = 0;a < 3;a++){
+             int absoluto = abs(choices[i][a]) - 1;
+-            if (choices[i][a] == 0) 
+-                break;
+-
+             if ((choices[i][a] > 0) && (c[absoluto] == 1)) {
+                 favoravel = true;
+                 break;

@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_135	2016-12-08 00:49:50.507084654 +0000
+@@ -350,9 +350,6 @@
+ is_node* insert_INTLIT(char* str)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = NULL;
+-    node->next = NULL;
+-    node->type = IntLit;
+     node->id = str;
+     return node;
+ }

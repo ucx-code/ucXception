@@ -1,0 +1,14 @@
+--- 100.cpp
++++ 100.cpp._MLPA_14	2016-03-30 03:13:45.241329300 +0100
+@@ -34,11 +34,7 @@
+     int mChar = fgetc(infile);
+     if (bChar == 'B' && mChar == 'M') {
+         skipChars(infile, 4 + 2 + 2 + 4 + 4);
+-        NumCols = readLong(infile);
+-        NumRows = readLong(infile);
+-        skipChars(infile, 2);
+         int bitsPerPixel = readShort(infile);
+-        skipChars(infile, 4 + 4 + 4 + 4 + 4 + 4);
+         if (NumCols > 0 && NumCols <= 100000 && NumRows > 0 && NumRows <= 100000 && bitsPerPixel == 24 && !feof(infile)) {
+             fileFormatOK = true;
+         }

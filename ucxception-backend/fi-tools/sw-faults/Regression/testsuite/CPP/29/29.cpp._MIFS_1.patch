@@ -1,0 +1,12 @@
+--- 29.cpp
++++ 29.cpp._MIFS_1	2016-03-30 01:26:48.504747200 +0100
+@@ -43,9 +43,6 @@
+             }
+         }
+     }
+-    if (count < n) 
+-        return 0;
+-
+     if ((nPrinters != 0) && (nPrinters < best)) {
+         best = nPrinters;
+     }

@@ -1,0 +1,10 @@
+--- 69.cpp
++++ 69.cpp._MIA_0	2016-03-30 01:44:41.559511500 +0100
+@@ -49,7 +49,6 @@
+ {
+     int i, soma = 0;
+     for (i = 0;i < m;i++){
+-        if (estadoLast[i] == 0) 
+             soma += friendship[i];
+     }
+     return soma;

@@ -1,0 +1,11 @@
+--- 4.cpp
++++ 4.cpp._WAEP_40	2016-03-30 01:11:44.005278200 +0100
+@@ -55,7 +55,7 @@
+         int squared = pow(2, n);
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+-            memcpy(tmp, matrix + (i * squared), squared);
++            memcpy(tmp, matrix, squared);
+             tmp[squared] = '\0';
+             printf("%s\n", tmp);
+         }

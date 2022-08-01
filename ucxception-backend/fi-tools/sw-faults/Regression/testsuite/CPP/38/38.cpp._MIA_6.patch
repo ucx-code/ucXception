@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._MIA_6	2016-03-30 01:35:06.955407800 +0100
+@@ -52,7 +52,7 @@
+             }
+         }
+         salta:
+-        if (aindaDaMais == false) {
++        {
+             int final = count + faltam;
+             if (count < melhor) 
+                 melhor = count;

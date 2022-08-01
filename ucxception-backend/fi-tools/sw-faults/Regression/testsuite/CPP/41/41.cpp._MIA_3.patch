@@ -1,0 +1,10 @@
+--- 41.cpp
++++ 41.cpp._MIA_3	2016-03-30 01:37:16.377849000 +0100
+@@ -34,7 +34,6 @@
+                             maximo = K[anterior][k][j];
+                     int maximo2 = std::max(maximo, v[i][a]);
+                     for (k = 1;k <= nCoursesDept[i - 1];k++)
+-                        if ((K[anterior][k][j - w[i][a]] + v[i][a]) > maximo2) 
+                             maximo2 = (K[anterior][k][j - w[i][a]] + v[i][a]);
+                     K[agora][a][j] = maximo2;
+                     if (maximo2 > maximoFinal) 

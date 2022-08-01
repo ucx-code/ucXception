@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2938	2016-03-30 03:04:11.780745600 +0100
+@@ -1972,8 +1972,6 @@
+                             }else{
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, blackPlasticAmb);
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, blackPlasticDif);
+-                                glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+-                                glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+                             }
+                             glTranslatef(Pos1[0], Pos1[1], Pos1[2]);
+                             glutSolidSphere(1.0, 100, 100);

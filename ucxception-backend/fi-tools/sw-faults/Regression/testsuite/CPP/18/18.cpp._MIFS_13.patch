@@ -1,0 +1,16 @@
+--- 18.cpp
++++ 18.cpp._MIFS_13	2016-03-30 01:20:53.985136200 +0100
+@@ -89,13 +89,6 @@
+                 return 1;
+             }
+         }
+-        if ((bufferPosN1 == '\\') && (bufferPosN2 == '/')) {
+-            if (recurse(pos - 2, max, width) == 1) {
+-                answer.push(pos - 1);
+-                answer.push(pos);
+-                return 1;
+-            }
+-        }
+     }
+     return -1;
+ }

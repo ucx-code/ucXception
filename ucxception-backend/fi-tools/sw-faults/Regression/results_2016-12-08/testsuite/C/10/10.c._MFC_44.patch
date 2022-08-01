@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_44	2016-12-08 00:49:34.567084940 +0000
+@@ -243,7 +243,7 @@
+     counter++;
+     sprintf(c, "%%%d", counter);
+     if (!glob) 
+-        printf("\t%%%d = load %s* %%%s\n", counter, expr_type, expr->id);
++        ;
+     else
+         printf("\t%%%d = load %s* @%s\n", counter, expr_type, expr->id);
+ 

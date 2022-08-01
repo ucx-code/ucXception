@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._WAEP_4	2016-03-30 00:31:05.494608100 +0100
+@@ -38,7 +38,7 @@
+     }
+     printf("%s\n", finalWord);
+     for (i = 0;i < nString;i++)
+-        free(pWord[i]);
++        free(pWord);
+     free(actWord);
+     free(pWord);
+     free(finalWord);

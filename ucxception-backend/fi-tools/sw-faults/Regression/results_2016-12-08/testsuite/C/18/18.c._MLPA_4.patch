@@ -1,0 +1,10 @@
+--- ./18.c
++++ ./18.c._MLPA_4	2016-12-08 00:50:00.883084468 +0000
+@@ -88,7 +88,5 @@
+         bound += distancias[i][14];
+     }
+     solution[0] = 1;
+-    shortestPath(0, 0, maxCap, bound);
+-    printf("%d\n", best);
+     return 0;
+ }

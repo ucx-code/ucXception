@@ -1,0 +1,11 @@
+--- ./11.c
++++ ./11.c._MLOC_0	2016-12-08 00:49:36.891084898 +0000
+@@ -7,7 +7,7 @@
+ {
+     int i;
+     for (i = col - 1;i >= 0;i--){
+-        if (queens[col] == queens[i] || queens[i] + (col - i) == queens[col] || queens[i] - (col - i) == queens[col]) {
++        if (queens[i] + (col - i) == queens[col] || queens[i] - (col - i) == queens[col]) {
+             return;
+         }
+     }

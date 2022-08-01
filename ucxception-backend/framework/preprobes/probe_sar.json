@@ -1,0 +1,24 @@
+{
+	"component_name": "Probe Sar",
+	"component_file_name": "probe_sar.py",
+	"component_class_name": "Probe_Sar",
+	"constructor" : ["BINARY_FILE", "interval_str"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"interval_str": {
+			"type": "string",
+			"default": "1",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		},
+		"BINARY_FILE": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 20},
+			"require": true
+		}
+	},
+	"information_help": "Probe SAR is an utility that uses the various interfaces provided by the Linux kernel in order to monitor system-wide activity information, such as CPU, memory, network, disk or power metrics."}

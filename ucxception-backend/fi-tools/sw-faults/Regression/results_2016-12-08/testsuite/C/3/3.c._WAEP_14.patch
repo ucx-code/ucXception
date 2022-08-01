@@ -1,0 +1,11 @@
+--- ./3.c
++++ ./3.c._WAEP_14	2016-12-08 00:50:36.871083824 +0000
+@@ -30,7 +30,7 @@
+         memcpy(matrix + halfMatrix, matrix, halfMatrix);
+         for (i = 0;i < halfSquare;i++){
+             if (r == 0) 
+-                memcpy(matrix + halfMatrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);
++                memcpy(matrix + halfMatrix + ((i * 2 + 1) * halfSquare), tmpInv, halfSquare);
+             else
+                 if (r == 1) 
+                     memcpy(matrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);

@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_88	2016-03-30 02:05:35.211968900 +0100
+@@ -178,11 +178,6 @@
+     avancoMira = 30.0;
+     torusin = -10.0;
+     torusinDir = -1;
+-    torusout = -12.0;
+-    torusoutDir = 1;
+-    rVisao = 1500;
+-    aVisao = 0.5f * PI;
+-    incVisao = 20.0f;
+     angB = -45;
+     pastX = 0.0;
+     pastZ = 0.0;

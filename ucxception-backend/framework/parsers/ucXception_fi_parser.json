@@ -1,0 +1,7 @@
+{
+	"component_name": "ucXception fi parser",
+	"component_file_name": "ucXception_fi_parser.py",
+	"component_class_name": "ucXception_fi_parser",
+	"constructor" : "self.fi_ret",
+	"information_help": "Reads the output produced by ucXception's Linux-based HW fault injection tool, which emulates transient hardware faults, and stores the register, the bit, the injection time, the PID of the process that was affected by the injection and the pre- and post- injection values of every register."	
+}

@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2869	2016-03-30 03:01:22.068969600 +0100
+@@ -1979,11 +1979,7 @@
+                             glutSolidSphere(1.0, 100, 100);
+                             glPopMatrix();
+                             glEnable (GL_STENCIL_TEST);
+-                            glColorMask(0, 0, 0, 0);
+                             glDisable (GL_DEPTH_TEST);
+-                            glStencilFunc(GL_ALWAYS, 1, 1);
+-                            glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+-                            desenhaSkyBox();
+                             glColorMask(1, 1, 1, 1);
+                             glEnable(GL_DEPTH_TEST);
+                             glStencilFunc(GL_EQUAL, 1, 1);

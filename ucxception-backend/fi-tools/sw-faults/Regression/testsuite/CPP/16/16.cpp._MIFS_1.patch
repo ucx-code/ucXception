@@ -1,0 +1,12 @@
+--- 16.cpp
++++ 16.cpp._MIFS_1	2016-03-30 01:17:31.129653400 +0100
+@@ -12,9 +12,6 @@
+     if (count > (n / 3) + 1) 
+         return -1;
+ 
+-    if (count >= melhor) 
+-        return -1;
+-
+     estadosP[estadoCounter][pos] = 2;
+     int i;
+     for (i = 0;i < counter[pos];i++){

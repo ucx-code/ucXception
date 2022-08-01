@@ -1,0 +1,11 @@
+--- 32.cpp
++++ 32.cpp._WAEP_9	2016-03-30 01:29:30.704578200 +0100
+@@ -57,7 +57,7 @@
+     for (i = 0;i < n;i++){
+         int a;
+         for (a = 0;a < 35;a++)
+-            memset(estadosP[a], 0, sizeof (int) * 35);
++            memset(a, 0, sizeof (int) * 35);
+         rec(i, n, 0, 0);
+     }
+     printf("%d\n", melhor);

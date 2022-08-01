@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2273	2016-03-30 02:52:12.503035900 +0100
+@@ -1319,11 +1319,6 @@
+     glTranslatef(-0.75, 1.5, -2.2);
+     glutSolidSphere(0.3, 32, 32);
+     glPopMatrix();
+-    glPushMatrix();
+-    glTranslatef(0, 1.5, 0);
+-    desenhaMira();
+-    glPopMatrix();
+-    checkLimit();
+     if (disparo == 1) {
+         if (op_robot == 1) {
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, yellowRubberAmb);

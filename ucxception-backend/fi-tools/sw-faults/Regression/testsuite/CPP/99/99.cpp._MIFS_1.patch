@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIFS_1	2016-03-30 02:07:48.097186900 +0100
+@@ -255,9 +255,6 @@
+             if (par_sys[loop].ypos <= -10) {
+                 par_sys[loop].life = -1.0;
+             }
+-            if (par_sys[loop].life < 0.0) {
+-                iniciaParticulasChuva(loop);
+-            }
+         }
+     }
+ }

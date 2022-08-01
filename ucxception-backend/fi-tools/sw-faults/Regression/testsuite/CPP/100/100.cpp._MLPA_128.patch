@@ -1,0 +1,14 @@
+--- 100.cpp
++++ 100.cpp._MLPA_128	2016-03-30 03:16:43.290964700 +0100
+@@ -136,11 +136,6 @@
+     writeLong(40 + 14, outfile);
+     writeLong(40, outfile);
+     writeLong(NumCols, outfile);
+-    writeLong(NumRows, outfile);
+-    writeShort(1, outfile);
+-    writeShort(24, outfile);
+-    writeLong(0, outfile);
+-    writeLong(0, outfile);
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+     writeLong(0, outfile);

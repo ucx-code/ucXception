@@ -1,0 +1,11 @@
+--- 8.cpp
++++ 8.cpp._MFC_12	2016-03-30 01:14:32.552648600 +0100
+@@ -55,7 +55,7 @@
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';
+-            printf("%s\n", tmp);
++            ;
+         }
+     }
+ }

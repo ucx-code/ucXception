@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1572	2016-03-30 02:41:52.449140400 +0100
+@@ -888,8 +888,6 @@
+     float y;
+     float z;
+     float len;
+-    x = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+-    y = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+     z = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+     len = sqrt(x * x + y * y + z * z);
+     if (len) {

@@ -1,0 +1,11 @@
+--- 84.cpp
++++ 84.cpp._WPFV_45	2016-03-30 01:57:26.441697300 +0100
+@@ -127,7 +127,7 @@
+             scanf("%d", &tmp);
+         }
+     }
+-    precalc(n);
++    precalc(choices);
+     rec(c, 0, n);
+     printf("%d\n", best);
+ }

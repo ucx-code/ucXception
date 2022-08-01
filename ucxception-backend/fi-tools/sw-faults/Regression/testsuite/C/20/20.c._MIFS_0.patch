@@ -1,0 +1,12 @@
+--- 20.c
++++ 20.c._MIFS_0	2016-03-30 00:46:55.890904700 +0100
+@@ -12,9 +12,6 @@
+     prog_env* prog = (prog_env*)malloc(sizeof (prog_env));
+     prog->global = NULL;
+     prog->methods = NULL;
+-    if (node->type == Program) 
+-        check_class(node->child, prog);
+-
+     return prog;
+ }
+ 

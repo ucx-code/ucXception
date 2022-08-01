@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WPFV_41	2016-03-30 01:47:23.443077000 +0100
+@@ -185,7 +185,7 @@
+ 
+     if (gp1 >= best) {
+         c[begin] = 1;
+-        rec(c, begin + 1, end);
++        rec(c, begin + 1, unitClause);
+     }
+     if (gn1 >= best) {
+         c[begin] = 0;

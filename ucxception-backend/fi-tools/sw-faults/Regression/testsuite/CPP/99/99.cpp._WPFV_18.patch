@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WPFV_18	2016-03-30 02:06:33.393996400 +0100
+@@ -228,7 +228,7 @@
+         }
+     }
+     for (loop = 0;loop < NUM_PARTICLES_CHUVA;loop++){
+-        iniciaParticulasChuva(loop);
++        iniciaParticulasChuva(fall);
+     }
+ }
+ 

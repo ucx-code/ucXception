@@ -1,0 +1,30 @@
+{
+	"component_name": "Probe Perf",
+	"component_file_name": "probe_perf.py",
+	"component_class_name": "Probe_Perf",
+	"constructor" : ["pcm_path", "interval", "outdir"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"pcm_path": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"interval": {
+			"type": "string",
+			"default": "1",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		},
+		"outdir": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		}
+	},
+	"information_help": ""}

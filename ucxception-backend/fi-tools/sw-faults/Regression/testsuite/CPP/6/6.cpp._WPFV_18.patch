@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._WPFV_18	2016-03-30 01:12:57.187579300 +0100
+@@ -92,7 +92,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec3(n + 1, target);
++        rec3(n + 1, quickPow);
+     }else{
+         int halfSquare = quickPow[n - 1];
+         int i;

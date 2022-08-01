@@ -1,0 +1,11 @@
+--- ./4.c
++++ ./4.c._MFC_4	2016-12-08 00:50:59.955083411 +0000
+@@ -68,7 +68,7 @@
+         connections[i - 1][j - 1] = '1';
+     }
+     memset(printers, '#', nr * sizeof (char));
+-    calc(0, nr, 1);
++    ;
+     printf("%d\n", best);
+     return 0;
+ }

@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_94	2016-03-30 02:05:38.030327100 +0100
+@@ -184,11 +184,6 @@
+     aVisao = 0.5f * PI;
+     incVisao = 20.0f;
+     angB = -45;
+-    pastX = 0.0;
+-    pastZ = 0.0;
+-    lastRobotX = 0.0;
+-    lastRobotZ = 0.0;
+-    robotYDir = 1;
+     disparo = 0;
+     CAMERA = -1;
+     iniciarPrograma();

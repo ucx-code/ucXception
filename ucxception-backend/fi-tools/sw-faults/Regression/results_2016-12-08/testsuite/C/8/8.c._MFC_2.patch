@@ -1,0 +1,11 @@
+--- ./8.c
++++ ./8.c._MFC_2	2016-12-08 00:51:08.079083265 +0000
+@@ -14,7 +14,7 @@
+     while (checkWord(numStrings) == 1)
+         scanf("%s", numStrings);
+     nString = atoi(numStrings);
+-    free(numStrings);
++    ;
+     pWord = (char**)malloc(nString * sizeof (char*));
+     finalWord = (char*)malloc(51 * sizeof (char));
+     actWord = (char*)malloc(51 * sizeof (char));

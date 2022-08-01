@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_658	2016-03-30 02:53:21.349013000 +0100
+@@ -1327,7 +1327,7 @@
+     if (disparo == 1) {
+         if (op_robot == 1) {
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, yellowRubberAmb);
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, yellowRubberDif);
++            ;
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, yellowRubberSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, yellowRubberCoef);
+         }else

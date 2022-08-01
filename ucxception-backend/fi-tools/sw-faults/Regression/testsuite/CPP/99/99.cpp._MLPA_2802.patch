@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2802	2016-03-30 03:00:47.640736900 +0100
+@@ -1884,8 +1884,6 @@
+     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+     glClearColor(PRETO, , , );
+     glMatrixMode (GL_PROJECTION);
+-    glLoadIdentity();
+-    glOrtho(-10.0, 10.0, -10.0, 10.0, 0.0, 150.0);
+     glMatrixMode (GL_MODELVIEW);
+     glLoadIdentity();
+     sprintf(textoPontos, "%d", score);

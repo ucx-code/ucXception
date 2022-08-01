@@ -1,0 +1,10 @@
+--- 15.c
++++ 15.c._MFC_5	2016-03-30 00:42:39.282169700 +0100
+@@ -69,6 +69,6 @@
+     }
+     memset(printers, '#', nr * sizeof (char));
+     calc(0, nr, 1);
+-    printf("%d\n", best);
++    ;
+     return 0;
+ }

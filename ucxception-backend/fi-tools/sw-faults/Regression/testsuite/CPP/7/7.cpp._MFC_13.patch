@@ -1,0 +1,11 @@
+--- 7.cpp
++++ 7.cpp._MFC_13	2016-03-30 01:13:54.910820700 +0100
+@@ -68,7 +68,7 @@
+             }else{
+                 memcpy(matrix2, tmp2 + (i * squared), squared);
+                 matrix2[squared] = '\0';
+-                printf("%s\n", matrix2);
++                ;
+             }
+         }
+     }

@@ -1,0 +1,11 @@
+--- 23.c
++++ 23.c._WAEP_0	2016-03-30 00:50:26.625615600 +0100
+@@ -11,7 +11,7 @@
+ 
+     if (n == 0) {
+         matrix[0] = '0';
+-        rec(n + 1, target);
++        rec(n, target);
+     }else{
+         int halfSquare = pow(2, n) / 2;
+         int i;

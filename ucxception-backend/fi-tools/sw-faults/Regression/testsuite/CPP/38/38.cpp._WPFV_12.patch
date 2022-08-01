@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._WPFV_12	2016-03-30 01:35:24.022809000 +0100
+@@ -64,7 +64,7 @@
+             if (estadosP[estadoCounter][i] == 0) {
+                 todosTemAcesso = false;
+                 memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
+-                rec(i, n, count, estadoCounter + 1);
++                rec(melhor, n, count, estadoCounter + 1);
+             }
+         }
+         if ((todosTemAcesso)&&(count < melhor)) 

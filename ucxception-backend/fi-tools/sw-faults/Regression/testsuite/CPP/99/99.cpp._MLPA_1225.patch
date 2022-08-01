@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1225	2016-03-30 02:33:32.342336900 +0100
+@@ -805,8 +805,6 @@
+     glPushMatrix();
+     glNormal3f(0.0f, -1.0f, 0.0f);
+     glBegin(GL_QUADS);
+-    glTexCoord2f(0.0f, 1.0f);
+-    glVertex3f(50.1, 29.9, -50.1);
+     glTexCoord2f(1.0f, 1.0f);
+     glVertex3f(50.1, 29.9, 50.1);
+     glTexCoord2f(1.0f, 0.0f);

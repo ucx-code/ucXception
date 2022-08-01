@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WVAV_71	2016-03-30 03:00:38.366831800 +0100
+@@ -1854,7 +1854,7 @@
+                                             CAMERA = CAMERA * -1;
+                                         else
+                                             if (tecla == 'p') 
+-                                                disparo = 1;
++                                                disparo = 0 ^ 0xff;
+     }
+     if (tecla == 27) {
+         exit(0);

@@ -1,0 +1,11 @@
+--- ./4.c
++++ ./4.c._WAEP_4	2016-12-08 00:50:59.927083411 +0000
+@@ -67,7 +67,7 @@
+     while (scanf("%d %d", &i, &j) == 2){
+         connections[i - 1][j - 1] = '1';
+     }
+-    memset(printers, '#', nr * sizeof (char));
++    memset(printers, '#', nr);
+     calc(0, nr, 1);
+     printf("%d\n", best);
+     return 0;

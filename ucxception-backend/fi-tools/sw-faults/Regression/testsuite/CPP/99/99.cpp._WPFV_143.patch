@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WPFV_143	2016-03-30 02:08:58.060192100 +0100
+@@ -299,7 +299,7 @@
+             alSourcef(Source, AL_GAIN, 1.0);
+             alSourcefv(Source, AL_POSITION, SourcePos);
+             alSourcefv(Source, AL_VELOCITY, SourceVel);
+-            alSourcei(Source, AL_LOOPING, loop);
++            alSourcei(Source, AL_LOOPING, fall);
+         }else{
+             alGenBuffers(1, &BufferEx);
+             if (alGetError() != AL_NO_ERROR) 

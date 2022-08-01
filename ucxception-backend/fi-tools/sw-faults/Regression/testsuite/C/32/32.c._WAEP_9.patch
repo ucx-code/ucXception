@@ -1,0 +1,11 @@
+--- 32.c
++++ 32.c._WAEP_9	2016-03-30 01:00:00.057967800 +0100
+@@ -35,7 +35,7 @@
+                         }
+                         matrix[i][aux1] = '\0';
+                     }else{
+-                        memcpy(&matrix[i][0], &matrix[i - aux2][0], sizeof (char) * aux2);
++                        memcpy(&matrix[i][0], &matrix[i - aux2][0], aux2);
+                         memcpy(&matrix[i][aux2], &matrix[i - aux2][0], sizeof (char) * aux2);
+                         matrix[i][aux1] = '\0';
+                     }

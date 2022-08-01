@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._WPFV_96	2016-03-30 01:33:33.853249800 +0100
+@@ -111,7 +111,7 @@
+         int a;
+         for (a = 0;a < 35;a++)
+             memset(estadosP[a], 0, sizeof (int) * 35);
+-        rec(i, n, 0, 1, 0);
++        rec(i, a, 0, 1, 0);
+     }
+     printf("%d\n", melhor);
+     return 0;

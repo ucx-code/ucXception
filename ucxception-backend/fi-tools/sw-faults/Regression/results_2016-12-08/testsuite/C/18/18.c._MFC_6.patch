@@ -1,0 +1,10 @@
+--- ./18.c
++++ ./18.c._MFC_6	2016-12-08 00:50:01.151084464 +0000
+@@ -89,6 +89,6 @@
+     }
+     solution[0] = 1;
+     shortestPath(0, 0, maxCap, bound);
+-    printf("%d\n", best);
++    ;
+     return 0;
+ }

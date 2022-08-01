@@ -1,0 +1,11 @@
+--- 21.cpp
++++ 21.cpp._WAEP_15	2016-03-30 01:23:01.987356400 +0100
+@@ -53,7 +53,7 @@
+     for (i = 0;i < (oldCounter / 2) + 1;i++){
+         criaEstados(stateOld[i]);
+     }
+-    dfs(nivel + 1);
++    dfs(1);
+ }
+ 
+ int main()

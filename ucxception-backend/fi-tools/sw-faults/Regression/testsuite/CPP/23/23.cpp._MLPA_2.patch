@@ -1,0 +1,10 @@
+--- 23.cpp
++++ 23.cpp._MLPA_2	2016-03-30 01:23:56.488282900 +0100
+@@ -85,7 +85,5 @@
+         counter[tmpA]++;
+         counter[tmpB]++;
+     }
+-    shortPath(1, 0);
+-    printf("%d\n", best);
+     return 0;
+ }

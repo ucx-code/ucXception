@@ -1,0 +1,12 @@
+--- 19.cpp
++++ 19.cpp._MIA_6	2016-03-30 01:21:43.733033000 +0100
+@@ -38,9 +38,7 @@
+         return;
+ 
+     if (verifica() == 0) {
+-        if (len < best) 
+             best = len;
+-
+         return;
+     }
+     int i;

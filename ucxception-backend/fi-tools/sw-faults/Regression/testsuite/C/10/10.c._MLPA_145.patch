@@ -1,0 +1,21 @@
+--- 10.c
++++ 10.c._MLPA_145	2016-03-30 00:37:06.167248800 +0100
+@@ -185,7 +185,6 @@
+     expr_type = gen_expression(method_name, expr->child, prog);
+     expr_type1 = gen_expression(method_name, expr->child->next, prog);
+     printf("\t%%%d = add i32 %s,%s\n", ++counter, expr_type, expr_type1);
+-    sprintf(c, "%%%d", counter);
+     return c;
+     break;
+ case Sub:
+@@ -201,10 +200,6 @@
+ case Minus:
+     break;
+ case Length:
+-    c = (char*)malloc(sizeof (char*));
+-    counter++;
+-    printf("\t%%%d = sub i32 %%.argc, 1\n", counter);
+-    sprintf(c, "%%%d", counter);
+     return c;
+     break;
+ case LoadArray:

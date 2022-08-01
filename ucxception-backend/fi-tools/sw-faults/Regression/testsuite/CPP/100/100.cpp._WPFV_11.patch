@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._WPFV_11	2016-03-30 03:16:57.001707000 +0100
+@@ -174,7 +174,7 @@
+     fputc(byte0, outfile);
+     fputc(byte1, outfile);
+     fputc(byte2, outfile);
+-    fputc(byte3, outfile);
++    fputc(byte2, outfile);
+ }
+ 
+ void RgbImage::writeShort(short  data, FILE* outfile)

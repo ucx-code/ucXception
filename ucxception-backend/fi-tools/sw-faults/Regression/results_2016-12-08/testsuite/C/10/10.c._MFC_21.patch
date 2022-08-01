@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_21	2016-12-08 00:49:32.883084970 +0000
+@@ -115,7 +115,7 @@
+         }else{
+             expr = gen_expression(method_name, node->child, prog);
+             if_c++;
+-            printf("\t%%ifcond_%d = icmp eq i1 1 , %s\n", if_c, expr);
++            ;
+             printf("\tbr i1 %%ifcond_%d, label %%then_%d, label %%else_%d\n", if_c, if_c, if_c);
+             printf("\tthen_%d:\n", if_c);
+             counter++;

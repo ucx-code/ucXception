@@ -1,0 +1,11 @@
+--- 32.c
++++ 32.c._MLPA_7	2016-03-30 01:00:21.151648500 +0100
+@@ -75,8 +75,6 @@
+ {
+     short rot, lvl, size, i;
+     while (scanf("%hd %hd", &lvl, &rot) != EOF){
+-        rot = rot % 4;
+-        size = pow(2, lvl);
+         gerarMatrix(lvl, rot);
+         for (i = 0;i < size;i++){
+             matrix[i][size] = '\0';

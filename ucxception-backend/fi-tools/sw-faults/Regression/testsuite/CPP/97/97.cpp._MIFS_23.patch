@@ -1,0 +1,11 @@
+--- 97.cpp
++++ 97.cpp._MIFS_23	2016-03-30 02:04:12.817775300 +0100
+@@ -127,8 +127,6 @@
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+             if ((buffer[i] == '|') || (buffer[i] == '\\') || (buffer[i] == '/')) {
+                 recurseSize = 0;
+-                if (recurse(i) == 1) 
+-                    goto terminei_matrix_sucesso;
+             }
+         }
+         printf("No Path!");

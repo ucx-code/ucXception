@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_25	2016-03-30 02:08:44.993110600 +0100
+@@ -297,7 +297,7 @@
+             alSourcei(Source, AL_BUFFER, Buffer);
+             alSourcef(Source, AL_PITCH, 1.0);
+             alSourcef(Source, AL_GAIN, 1.0);
+-            alSourcefv(Source, AL_POSITION, SourcePos);
++            ;
+             alSourcefv(Source, AL_VELOCITY, SourceVel);
+             alSourcei(Source, AL_LOOPING, loop);
+         }else{

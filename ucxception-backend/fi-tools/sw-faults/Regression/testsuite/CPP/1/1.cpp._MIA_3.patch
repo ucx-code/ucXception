@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MIA_3	2016-03-30 01:08:17.770151400 +0100
+@@ -29,7 +29,7 @@
+         return 1;
+     }
+     if (((buffer[pos] == '/') && (buffer[pos + width] == '|')) || ((buffer[pos] == '/') && (buffer[pos + width] == '/')) || ((buffer[pos] == '|') && (buffer[pos + width] == '/'))) {
+-        if (recurse(pos + width, max, width) == 1) {
++        {
+             answer.push(pos);
+             return 1;
+         }

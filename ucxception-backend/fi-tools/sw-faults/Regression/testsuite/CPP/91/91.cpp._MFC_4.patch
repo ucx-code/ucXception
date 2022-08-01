@@ -1,0 +1,11 @@
+--- 91.cpp
++++ 91.cpp._MFC_4	2016-03-30 02:02:19.542133500 +0100
+@@ -73,7 +73,7 @@
+         if (dfs(1, it) == true) 
+             printf("NOT SURE\n");
+         else
+-            printf("NO\n");
++            ;
+ 
+         memset(vizinhosC, 0, sizeof (int) * (n + 1));
+     }

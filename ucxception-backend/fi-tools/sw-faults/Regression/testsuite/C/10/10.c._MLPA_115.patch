@@ -1,0 +1,12 @@
+--- 10.c
++++ 10.c._MLPA_115	2016-03-30 00:36:43.077153500 +0100
+@@ -201,9 +201,6 @@
+ case Minus:
+     break;
+ case Length:
+-    c = (char*)malloc(sizeof (char*));
+-    counter++;
+-    printf("\t%%%d = sub i32 %%.argc, 1\n", counter);
+     sprintf(c, "%%%d", counter);
+     return c;
+     break;

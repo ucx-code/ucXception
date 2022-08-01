@@ -1,0 +1,12 @@
+--- 9.c
++++ 9.c._MLPA_21	2016-03-30 00:31:25.208567800 +0100
+@@ -38,9 +38,6 @@
+         free(tableLines[i]);
+         free(tableColumns[i]);
+     }
+-    free(table);
+-    free(tableLines);
+-    free(tableColumns);
+     return 0;
+ }
+ 

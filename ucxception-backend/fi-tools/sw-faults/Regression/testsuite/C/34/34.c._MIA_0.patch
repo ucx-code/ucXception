@@ -1,0 +1,12 @@
+--- 34.c
++++ 34.c._MIA_0	2016-03-30 01:01:10.517922600 +0100
+@@ -5,9 +5,7 @@
+ void findPoint(short  pc, short  printers, short  vector[35])
+ {
+     short sum = 0, i;
+-    if (printers >= best) 
+         return;
+-
+     for (i = 0;i < n;i++){
+         if (matrix[pc][i] == 1) 
+             vector[i]++;

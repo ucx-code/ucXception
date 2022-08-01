@@ -1,0 +1,11 @@
+--- 18.c
++++ 18.c._WAEP_2	2016-03-30 00:45:13.084603900 +0100
+@@ -38,7 +38,7 @@
+         if (solution[i] == 0) {
+             if (cap >= distancias[i][13]) {
+                 solution[i] = 1;
+-                shortestPath(i, len + distancias[v][i], cap, bound - distancias[i][14]);
++                shortestPath(i, len, cap, bound - distancias[i][14]);
+                 solution[i] = 0;
+             }
+         }

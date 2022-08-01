@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1847	2016-03-30 02:46:13.713556300 +0100
+@@ -1120,10 +1120,6 @@
+ void desenhaMira()
+ {
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, rubyAmb);
+-    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, rubyDif);
+-    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, rubySpec);
+-    glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, rubyCoef);
+-    glLineWidth(2);
+     glPushMatrix();
+     glBegin (GL_LINES);
+     glVertex3f(0, -1.5, -avancoMira);

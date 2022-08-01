@@ -1,0 +1,11 @@
+--- 86.cpp
++++ 86.cpp._WPFV_52	2016-03-30 02:00:37.615732600 +0100
+@@ -131,7 +131,7 @@
+         c[begin] = 0;
+         marca(c, begin);
+         rec(c, begin + 1, end);
+-        desmarca(c, begin);
++        desmarca(c, lista);
+     }
+ }
+ 

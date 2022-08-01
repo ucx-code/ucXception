@@ -1,0 +1,11 @@
+--- 35.c
++++ 35.c._MFC_1	2016-03-30 01:01:46.965242100 +0100
+@@ -9,7 +9,7 @@
+     int custo, valor, dept;
+     scanf("%d %d", &n, &m);
+     for (dept = 1;dept <= n;dept++){
+-        scanf("%d", &c);
++        ;
+         for (i = 0;i < c;i++){
+             scanf("%d %d", &custo, &valor);
+             for (j = 1;j <= m;j++){

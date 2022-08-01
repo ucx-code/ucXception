@@ -1,0 +1,12 @@
+--- 26.c
++++ 26.c._MIFS_14	2016-03-30 00:55:20.504778400 +0100
+@@ -107,9 +107,6 @@
+                 }else
+                     if (tab[l][c] == '\\') {
+                         if (encont == 0) 
+-                            verifica(l + 1, c, '/', aux);
+-
+-                        if (encont == 0) 
+                             verifica(l + 1, c + 1, '\\', aux);
+ 
+                         if (encont == 0) 

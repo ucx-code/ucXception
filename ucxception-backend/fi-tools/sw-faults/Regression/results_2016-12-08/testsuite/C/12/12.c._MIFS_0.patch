@@ -1,0 +1,12 @@
+--- ./12.c
++++ ./12.c._MIFS_0	2016-12-08 00:49:38.603084867 +0000
+@@ -6,9 +6,6 @@
+ int procrastination(int exam)
+ {
+     int z, i;
+-    if (nSlots == 0 && n > exam) 
+-        return 0;
+-
+     if (n == exam) {
+         return 1;
+     }

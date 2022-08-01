@@ -1,0 +1,11 @@
+--- 27.c
++++ 27.c._MLPA_9	2016-03-30 00:56:31.130953800 +0100
+@@ -53,8 +53,6 @@
+         mark = FALSE;
+         for (i = 0;i < m;i++){
+             scanf("%d %d", &x, &y);
+-            vector[x][++(vector[x][0])] = y;
+-            vector[y][++(vector[y][0])] = x;
+         }
+         for (i = 0;i < n;i++){
+             if (color[i] == WHITE) 

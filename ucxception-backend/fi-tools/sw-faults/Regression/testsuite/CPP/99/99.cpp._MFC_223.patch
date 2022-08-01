@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_223	2016-03-30 02:20:54.398892700 +0100
+@@ -645,7 +645,7 @@
+     glPopMatrix();
+     glDisable(GL_TEXTURE_2D);
+     glEnable(GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, texture[7]);
++    ;
+     glPushMatrix();
+     glBegin(GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);

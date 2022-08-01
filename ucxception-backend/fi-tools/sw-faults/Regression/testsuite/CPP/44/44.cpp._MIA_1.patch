@@ -1,0 +1,12 @@
+--- 44.cpp
++++ 44.cpp._MIA_1	2016-03-30 01:38:20.311474700 +0100
+@@ -21,9 +21,7 @@
+                         maximo = K[i - 1][j];
+ 
+                     int novoValor = K[i - 1][j - w[i][a]] + v[i][a];
+-                    if (novoValor > maximo) 
+                         maximo = novoValor;
+-
+                     K[i][j] = maximo;
+                 }
+             }

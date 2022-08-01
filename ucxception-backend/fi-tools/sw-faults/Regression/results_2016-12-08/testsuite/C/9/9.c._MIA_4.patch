@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MIA_4	2016-12-08 00:51:13.867083161 +0000
+@@ -131,7 +131,7 @@
+ void QsortCol(int v[], int li, int ls)
+ {
+     int j;
+-    if (li < ls) {
++    {
+         j = rearranjaCol(v, li, ls);
+         QsortCol(v, li, j - 1);
+         QsortCol(v, j + 1, ls);

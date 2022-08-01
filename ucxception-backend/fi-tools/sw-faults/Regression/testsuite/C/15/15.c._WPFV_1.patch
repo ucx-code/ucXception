@@ -1,0 +1,11 @@
+--- 15.c
++++ 15.c._WPFV_1	2016-03-30 00:42:05.683286500 +0100
+@@ -53,7 +53,7 @@
+     for (i = n;i < nr;i++){
+         if (printers[i] == '#') {
+             printers[i] = '1';
+-            calc(i, nr, b + 1);
++            calc(n, nr, b + 1);
+             printers[i] = '#';
+         }
+     }

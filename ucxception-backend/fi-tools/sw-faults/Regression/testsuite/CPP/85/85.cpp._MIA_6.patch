@@ -1,0 +1,10 @@
+--- 85.cpp
++++ 85.cpp._MIA_6	2016-03-30 01:58:56.497142700 +0100
+@@ -143,7 +143,6 @@
+         }
+         friendPerIngredient[i] = 0;
+         for (a = 0;a < m;a++)
+-            if (tmpEstado[a] == 0) 
+                 friendPerIngredient[i] += friendship[a];
+     }
+     memcpy(c2, c, sizeof (unsigned char) * n);

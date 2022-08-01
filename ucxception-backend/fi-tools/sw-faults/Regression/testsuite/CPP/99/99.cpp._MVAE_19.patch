@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAE_19	2016-03-30 03:00:28.287095600 +0100
+@@ -1825,7 +1825,6 @@
+                         }else
+                             if (tecla == 'a') {
+                                 robotZ += 1 * cos((90 - angR) * PI / 180);
+-                                robotX -= 1 * sin((90 - angR) * PI / 180);
+                                 checkLimit();
+                                 obsPini[0] = robotX + incVisao * cos(aVisao);
+                                 obsPini[2] = robotZ + incVisao * sin(aVisao);

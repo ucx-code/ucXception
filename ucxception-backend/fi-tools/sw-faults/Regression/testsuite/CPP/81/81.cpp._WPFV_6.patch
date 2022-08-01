@@ -1,0 +1,11 @@
+--- 81.cpp
++++ 81.cpp._WPFV_6	2016-03-30 01:53:41.977150400 +0100
+@@ -105,7 +105,7 @@
+         return;
+     }
+     c[begin] = 0;
+-    rec(c, begin + 1, end);
++    rec(c, begin + 1, n);
+     c[begin] = 1;
+     rec(c, begin + 1, end);
+ }

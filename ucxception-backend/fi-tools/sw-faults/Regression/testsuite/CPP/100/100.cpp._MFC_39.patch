@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_39	2016-03-30 03:16:50.216844500 +0100
+@@ -156,7 +156,7 @@
+         }
+         int k = 3 * NumCols;
+         for (;k < GetNumBytesPerRow();k++){
+-            fputc(0, outfile);
++            ;
+             cPtr++;
+         }
+     }

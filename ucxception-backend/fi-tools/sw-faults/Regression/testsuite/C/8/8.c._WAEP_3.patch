@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._WAEP_3	2016-03-30 00:31:03.403842500 +0100
+@@ -29,7 +29,7 @@
+         }
+     }
+     for (i = 0;i < nString;i++){
+-        strcpy(actWord, pWord[i]);
++        strcpy(actWord, i);
+         actWord = maxSubString(actWord);
+         if (tam < strlen(actWord)) {
+             strcpy(finalWord, actWord);

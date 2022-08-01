@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WVAV_61	2016-03-30 03:00:10.859872300 +0100
+@@ -1774,7 +1774,7 @@
+             inicio = 1;
+             opcoes = 0;
+             pontos = 0;
+-            instrucoes = 0;
++            instrucoes = 0 ^ 0xff;
+             acerca = 0;
+             iniciarjogo = 0;
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_90	2016-03-30 02:11:05.352225600 +0100
+@@ -464,7 +464,7 @@
+                             imagS.LoadBmpFile("tex/mp_nightwalk1/nightwalker-ftd_up.bmp");
+                         else
+                             if (i == 2) 
+-                                imagS.LoadBmpFile("tex/mp_nightwalk1/nightwalker-ftd_ft.bmp");
++                                ;
+                             else
+                                 if (i == 3) 
+                                     imagS.LoadBmpFile("tex/mp_nightwalk1/nightwalker-ftd_lf.bmp");

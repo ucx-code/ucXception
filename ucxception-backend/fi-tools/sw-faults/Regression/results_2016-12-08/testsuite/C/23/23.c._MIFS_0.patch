@@ -1,0 +1,12 @@
+--- ./23.c
++++ ./23.c._MIFS_0	2016-12-08 00:50:17.551084170 +0000
+@@ -6,9 +6,6 @@
+ 
+ void rec(int n, int target)
+ {
+-    if (n > target) 
+-        return;
+-
+     if (n == 0) {
+         matrix[0] = '0';
+         rec(n + 1, target);

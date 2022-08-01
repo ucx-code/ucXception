@@ -1,0 +1,11 @@
+--- 68.cpp
++++ 68.cpp._MFC_1	2016-03-30 01:44:27.217187700 +0100
+@@ -59,7 +59,7 @@
+ void replace(int v)
+ {
+     slot[0].begin = v;
+-    downheap(0);
++    ;
+ }
+ 
+ struct stat statbuf;

@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._MIA_4	2016-03-30 00:54:33.844119700 +0100
+@@ -72,7 +72,7 @@
+ int verifica(int l, int c, char prox, int* ant)
+ {
+     int aux[2];
+-    if (l >= 0 && l < nLinhas && c >= 0 && c < nColunas && encont == 0) {
++    {
+         if (prox == tab[l][c]) {
+             aux[0] = l;
+             aux[1] = c;

@@ -1,0 +1,11 @@
+--- 39.cpp
++++ 39.cpp._MIA_34	2016-03-30 01:36:53.886372700 +0100
+@@ -144,7 +144,7 @@
+             if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {
+                 recurseSize = 0;
+                 int result = recurse(i, matrixSize, width);
+-                if (result == 1) {
++                {
+                     printf("\n");
+                     encontrou = true;
+                     break;

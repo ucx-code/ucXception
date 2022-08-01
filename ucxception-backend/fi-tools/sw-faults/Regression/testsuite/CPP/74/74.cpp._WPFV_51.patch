@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._WPFV_51	2016-03-30 01:49:08.385499700 +0100
+@@ -109,7 +109,7 @@
+     }
+     if (actual < best) {
+         c[begin] = 0;
+-        rec(c, begin + 1, end);
++        rec(c, begin + 1, choices);
+     }
+ }
+ 

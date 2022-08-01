@@ -1,0 +1,12 @@
+--- 16.cpp
++++ 16.cpp._MIFS_2	2016-03-30 01:17:46.633124800 +0100
+@@ -28,9 +28,6 @@
+             rec(i, n, count, estadoCounter + 1);
+         }
+     }
+-    if ((todosTemAcesso)&&(count < melhor)) 
+-        melhor = count;
+-
+     return 1;
+ }
+ 

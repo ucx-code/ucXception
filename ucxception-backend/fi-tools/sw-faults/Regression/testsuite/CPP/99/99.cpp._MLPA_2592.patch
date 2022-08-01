@@ -1,0 +1,21 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2592	2016-03-30 02:55:22.552347500 +0100
+@@ -1561,7 +1561,6 @@
+     GLfloat posicao5[4] = {-50, -50, 0, 1.0};
+     glLightfv(GL_LIGHT5, GL_POSITION, posicao5);
+     glLightfv(GL_LIGHT5, GL_DIFFUSE, localCor);
+-    glLightfv(GL_LIGHT5, GL_SPECULAR, localCorDif);
+     glEnable (GL_LIGHT3);
+     glEnable (GL_LIGHT4);
+     glEnable (GL_LIGHT5);
+@@ -1572,10 +1571,6 @@
+     GLfloat Foco_al = 0.05f;
+     GLfloat Foco_aq = 0.0f;
+     GLfloat Foco_Expon = 2.0;
+-    glLightfv(GL_LIGHT1, GL_POSITION, Pos1);
+-    glLightfv(GL_LIGHT1, GL_DIFFUSE, Foco1_cor);
+-    glLightf(GL_LIGHT1, GL_CONSTANT_ATTENUATION, Foco_ak);
+-    glLightf(GL_LIGHT1, GL_LINEAR_ATTENUATION, Foco_al);
+     glLightf(GL_LIGHT1, GL_QUADRATIC_ATTENUATION, Foco_aq);
+     glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, anguloFoco);
+     glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, Foco_direccao);

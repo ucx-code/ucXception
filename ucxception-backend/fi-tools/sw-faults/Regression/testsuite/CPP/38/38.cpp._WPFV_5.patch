@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._WPFV_5	2016-03-30 01:34:58.838876900 +0100
+@@ -37,7 +37,7 @@
+     for (i = 0;i < n;i++){
+         if (estadosP[estadoCounter][i] == 0) {
+             ++faltam;
+-            osQueFaltam.push_back(i);
++            osQueFaltam.push_back(pos);
+         }
+     }
+     if (faltam != 0) {

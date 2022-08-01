@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._WAEP_4	2016-03-30 00:30:23.229524700 +0100
+@@ -115,7 +115,7 @@
+         }else{
+             printf("Troco: %.2f", (recebido - despesa));
+             for (i = 0;i < 8;i++){
+-                printf(" %d", moedasTroco[i]);
++                printf(" %d", moedasTroco);
+             }
+         }
+     }

@@ -1,0 +1,11 @@
+--- 24.c
++++ 24.c._WAEP_18	2016-03-30 00:51:38.423091400 +0100
+@@ -29,7 +29,7 @@
+             if (r == 1) 
+                 memcpy(matrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);
+             else
+-                memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
++                memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp, halfSquare);
+         }
+         for (i = 0;i < halfSquare;i++){
+             if (r == 3) 

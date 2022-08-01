@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._MIA_7	2016-03-30 01:32:10.935096400 +0100
+@@ -70,7 +70,7 @@
+             todosTemAcesso = false;
+             break;
+         }
+-    if ((todosTemAcesso)&&(count < melhor)) {
++    {
+         melhor = count;
+         maxRecurse = recurseLevel;
+     }

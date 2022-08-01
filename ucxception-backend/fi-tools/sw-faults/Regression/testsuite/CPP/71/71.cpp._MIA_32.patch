@@ -1,0 +1,12 @@
+--- 71.cpp
++++ 71.cpp._MIA_32	2016-03-30 01:46:04.133648900 +0100
+@@ -131,9 +131,7 @@
+ {
+     int i, width, height;
+     while (true){
+-        if (scanf("%d %d\n", &height, &width) != 2) 
+             return 0;
+-
+         int matrixSize = (width + 1) * height;
+         fread(buffer, 1, matrixSize, stdin);
+         bool encontrou = false;

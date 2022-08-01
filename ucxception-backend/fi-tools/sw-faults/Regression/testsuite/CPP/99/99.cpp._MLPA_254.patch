@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_254	2016-03-30 02:09:33.226937800 +0100
+@@ -329,9 +329,6 @@
+ {
+     alListenerfv(AL_POSITION, ListenerPos);
+     alListenerfv(AL_VELOCITY, ListenerVel);
+-    alListenerfv(AL_ORIENTATION, ListenerOri);
+-    alListenerfv(AL_POSITION, ListenerPosEx);
+-    alListenerfv(AL_VELOCITY, ListenerVelEx);
+     alListenerfv(AL_ORIENTATION, ListenerOriEx);
+ }
+ 

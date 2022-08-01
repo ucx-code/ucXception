@@ -1,0 +1,11 @@
+--- 12.c
++++ 12.c._MLAC_1	2016-03-30 00:38:15.222796800 +0100
+@@ -6,7 +6,7 @@
+ int procrastination(int exam)
+ {
+     int z, i;
+-    if (nSlots == 0 && n > exam) 
++    if (nSlots == 0) 
+         return 0;
+ 
+     if (n == exam) {

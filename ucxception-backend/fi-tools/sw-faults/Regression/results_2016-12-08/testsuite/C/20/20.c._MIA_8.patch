@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_8	2016-12-08 00:50:10.915084289 +0000
+@@ -208,7 +208,7 @@
+ case Store:
+     expr_type = expr_recursive(prog, name, node->child);
+     expr_type2 = expr_recursive(prog, name, node->child->next);
+-    if (strcmp(expr_type, expr_type2) != 0) {
++    {
+         printf("Incompatible type in assignment to %s (got %s, required %s)\n", node->child->id, expr_type2, expr_type);
+         exit(0);
+ }

@@ -1,0 +1,12 @@
+--- 33.c
++++ 33.c._MIA_0	2016-03-30 01:00:50.051821400 +0100
+@@ -25,9 +25,7 @@
+ {
+     int i;
+     int sum = 0;
+-    if (nPrint >= best) 
+         return;
+-
+     print[pos]++;
+     for (i = 0;i < n;i++){
+         if (tab[pos][i] == 1) 

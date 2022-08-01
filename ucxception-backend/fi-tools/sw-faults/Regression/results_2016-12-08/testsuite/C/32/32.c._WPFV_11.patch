@@ -1,0 +1,11 @@
+--- ./32.c
++++ ./32.c._WPFV_11	2016-12-08 00:50:45.691083666 +0000
+@@ -76,7 +76,7 @@
+     short rot, lvl, size, i;
+     while (scanf("%hd %hd", &lvl, &rot) != EOF){
+         rot = rot % 4;
+-        size = pow(2, lvl);
++        size = pow(2, size);
+         gerarMatrix(lvl, rot);
+         for (i = 0;i < size;i++){
+             matrix[i][size] = '\0';

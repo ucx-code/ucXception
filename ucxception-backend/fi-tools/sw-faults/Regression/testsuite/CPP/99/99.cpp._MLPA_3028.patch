@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_3028	2016-03-30 03:08:05.728947900 +0100
+@@ -2049,9 +2049,5 @@
+     glutTimerFunc(enemyDelay, Enemy, 1);
+     glutTimerFunc(msecDelay, Timer, 1);
+     glutTimerFunc(msecDelayRobot, TimerRobot, 1);
+-    glutTimerFunc(delay_cube, TimerCube, 1);
+-    glutTimerFunc(delay_cha, TimerCha, 1);
+-    glutMouseFunc(cliqueRato);
+-    glutMainLoop();
+     return 0;
+ }

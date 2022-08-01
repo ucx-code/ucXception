@@ -1,0 +1,11 @@
+--- 3.c
++++ 3.c._WPFV_20	2016-03-30 00:29:43.474131700 +0100
+@@ -51,7 +51,7 @@
+     int i, squared;
+     while (scanf("%d %d", &n, &r) != EOF){
+         squared = quickPow[n];
+-        rec(0, n, r % 4);
++        rec(0, quickPow, r % 4);
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';

@@ -1,0 +1,11 @@
+--- 28.c
++++ 28.c._MLPA_32	2016-03-30 00:57:21.201420900 +0100
+@@ -61,8 +61,6 @@
+                 aux1 = aux3;
+                 aux2 = aux4;
+             }
+-            fila[k][0] = aux1;
+-            fila[k][1] = aux2;
+         }else{
+             k = 0;
+             while ((fila[k][1] != begin[j][1] && fila[k][0] != begin[j][3]) && fila[k][0] != 0)

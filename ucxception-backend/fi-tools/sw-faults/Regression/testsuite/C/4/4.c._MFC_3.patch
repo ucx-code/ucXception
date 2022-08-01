@@ -1,0 +1,12 @@
+--- 4.c
++++ 4.c._MFC_3	2016-03-30 00:29:57.305718100 +0100
+@@ -67,7 +67,8 @@
+     while (scanf("%d %d", &i, &j) == 2){
+         connections[i - 1][j - 1] = '1';
+     }
+-    memset(printers, '#', nr * sizeof (char));
++    #', nr*sizeof(char));
++;
+     calc(0, nr, 1);
+     printf("%d\n", best);
+     return 0;

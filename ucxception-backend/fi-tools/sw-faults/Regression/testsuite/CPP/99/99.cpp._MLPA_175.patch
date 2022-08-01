@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_175	2016-03-30 02:06:44.177366800 +0100
+@@ -239,10 +239,6 @@
+     for (loop = 0;loop < NUM_PARTICLES_CHUVA;loop = loop + 2){
+         if (par_sys[loop].alive == true) {
+             x = par_sys[loop].xpos;
+-            y = par_sys[loop].ypos;
+-            z = par_sys[loop].zpos + zoom;
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, cyanPlasticAmb);
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, cyanPlasticDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, cyanPlasticSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, cyanPlasticCoef);
+             glBegin (GL_LINES);

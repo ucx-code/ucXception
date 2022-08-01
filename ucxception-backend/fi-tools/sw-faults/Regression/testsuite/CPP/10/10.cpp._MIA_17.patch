@@ -1,0 +1,12 @@
+--- 10.cpp
++++ 10.cpp._MIA_17	2016-03-30 01:15:24.064485400 +0100
+@@ -93,9 +93,7 @@
+                     int tamanhoCaminho = answer.size();
+                     int l;
+                     for (l = 0;l < tamanhoCaminho;l++){
+-                        if (l != 0) 
+                             printf(",");
+-
+                         int posTmp = answer.top();
+                         printf("(%d,%d)", getY(posTmp, width), getX(posTmp, width));
+                         answer.pop();

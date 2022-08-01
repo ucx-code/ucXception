@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_58	2016-03-30 02:43:56.060850900 +0100
+@@ -955,7 +955,7 @@
+             for (i = 0;i < NUM_DEBRIS;i++){
+                 glColor3fv(debris[i].color);
+                 glPushMatrix();
+-                glTranslatef(enemysList[j].position[0], enemysList[j].position[1], enemysList[j].position[2]);
++                glTranslatef(enemysList[j].position[0], enemysList[j].position, enemysList[j].position[2]);
+                 glTranslatef(debris[i].position[0], debris[i].position[1], debris[i].position[2]);
+                 glRotatef(debris[i].orientation[0], 1.0, 0.0, 0.0);
+                 glRotatef(debris[i].orientation[1], 0.0, 1.0, 0.0);

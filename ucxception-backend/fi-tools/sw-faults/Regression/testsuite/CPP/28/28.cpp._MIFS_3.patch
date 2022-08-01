@@ -1,0 +1,16 @@
+--- 28.cpp
++++ 28.cpp._MIFS_3	2016-03-30 01:26:11.277014900 +0100
+@@ -45,13 +45,6 @@
+         return;
+ 
+     int k = chegaPaTodos();
+-    if ((k == 1) && (size < best)) {
+-        best = size;
+-        if (best == 1) {
+-            printf("1\n");
+-            exit(0);
+-        }
+-    }
+     int i;
+     for (i = v + 1;i <= n;i++){
+         if (saoVizinhos(i, v) == 1) {

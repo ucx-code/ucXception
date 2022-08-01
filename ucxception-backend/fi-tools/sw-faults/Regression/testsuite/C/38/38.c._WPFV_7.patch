@@ -1,0 +1,11 @@
+--- 38.c
++++ 38.c._WPFV_7	2016-03-30 01:02:49.081211000 +0100
+@@ -15,7 +15,7 @@
+         scanf("%d %d", &begin[i], &endTime[i]);
+     }
+     qsort(begin, n, sizeof (int), sorting);
+-    qsort(endTime, n, sizeof (int), sorting);
++    qsort(endTime, k, sizeof (int), sorting);
+     for (i = 1;i < n;i++){
+         if (endTime[j] > begin[i]) {
+             k++;

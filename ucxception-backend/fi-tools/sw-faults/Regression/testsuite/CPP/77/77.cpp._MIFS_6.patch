@@ -1,0 +1,12 @@
+--- 77.cpp
++++ 77.cpp._MIFS_6	2016-03-30 01:51:09.610174900 +0100
+@@ -71,9 +71,6 @@
+         if (opinions[i][x] == 1) {
+             moods[i]++;
+         }
+-        if (moods[i] <= 0) {
+-            unhapiness += valor_amizades[i];
+-        }
+     }
+ }
+ 

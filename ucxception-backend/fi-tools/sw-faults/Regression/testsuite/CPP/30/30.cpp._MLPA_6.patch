@@ -1,0 +1,12 @@
+--- 30.cpp
++++ 30.cpp._MLPA_6	2016-03-30 01:28:18.591361600 +0100
+@@ -69,9 +69,6 @@
+     int tmpA, tmpB;
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+         if ((tmpA != tmpB) && (saoVizinhos(tmpA, tmpB) == 0)) {
+-            vizinhos[tmpA][counter[tmpA]] = tmpB;
+-            vizinhos[tmpB][counter[tmpB]] = tmpA;
+-            counter[tmpA]++;
+             counter[tmpB]++;
+         }
+     }

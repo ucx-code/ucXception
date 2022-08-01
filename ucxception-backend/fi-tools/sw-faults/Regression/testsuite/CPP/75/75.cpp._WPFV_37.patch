@@ -1,0 +1,11 @@
+--- 75.cpp
++++ 75.cpp._WPFV_37	2016-03-30 01:50:30.244672000 +0100
+@@ -123,7 +123,7 @@
+     c[begin] = 1;
+     rec(c, begin + 1, end);
+     c[begin] = 0;
+-    rec(c, begin + 1, end);
++    rec(c, begin + 1, listaC);
+ }
+ 
+ unsigned char c[200];

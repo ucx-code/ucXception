@@ -1,0 +1,11 @@
+--- 33.cpp
++++ 33.cpp._WAEP_6	2016-03-30 01:30:10.537640000 +0100
+@@ -65,7 +65,7 @@
+         for (i = 0;i < n;i++){
+             int a;
+             for (a = 0;a < 35;a++)
+-                memset(estadosP[a], 0, sizeof (int) * 35);
++                memset(estadosP, 0, sizeof (int) * 35);
+             rec(i, n, 0, 0, z);
+             if (melhor == z) 
+                 goto fim;

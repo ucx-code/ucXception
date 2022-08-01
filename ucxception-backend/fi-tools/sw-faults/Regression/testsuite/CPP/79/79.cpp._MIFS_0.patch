@@ -1,0 +1,14 @@
+--- 79.cpp
++++ 79.cpp._MIFS_0	2016-03-30 01:52:09.172656900 +0100
+@@ -92,11 +92,6 @@
+ 
+ void rec(unsigned char* c, int begin, int end)
+ {
+-    if (begin != end) {
+-        int actual = calcB(c, begin, end) * 0.9;
+-        if (actual + calcB2(c, begin, end) > best) 
+-            return;
+-    }
+     if (begin == end) {
+         int soma = calc(c, end);
+         if (soma < best) 

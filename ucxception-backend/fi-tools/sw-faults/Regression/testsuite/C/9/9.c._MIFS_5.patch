@@ -1,0 +1,14 @@
+--- 9.c
++++ 9.c._MIFS_5	2016-03-30 00:34:04.890040800 +0100
+@@ -149,11 +149,6 @@
+             down++;
+         while (vect[up] < a)
+             up--;
+-        if (down < up) {
+-            temp = vect[down];
+-            vect[down] = vect[up];
+-            vect[up] = temp;
+-        }
+     }
+     vect[li] = vect[up];
+     vect[up] = a;

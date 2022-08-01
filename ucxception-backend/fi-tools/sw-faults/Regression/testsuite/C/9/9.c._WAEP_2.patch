@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WAEP_2	2016-03-30 00:32:06.478299900 +0100
+@@ -35,7 +35,7 @@
+     printTable(tableColumns, lines, columns);
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+-        free(tableLines[i]);
++        free(tableLines);
+         free(tableColumns[i]);
+     }
+     free(table);

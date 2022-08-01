@@ -1,0 +1,11 @@
+--- ./26.c
++++ ./26.c._WPFV_24	2016-12-08 00:50:25.451084028 +0000
+@@ -37,7 +37,7 @@
+                         verifica(1, i - 1, '|', ant);
+                     }else
+                         if (tab[0][i] == '\\') {
+-                            verifica(1, i, '/', ant);
++                            verifica(1, encont, '/', ant);
+                             verifica(1, i + 1, '\\', ant);
+                             verifica(1, i + 1, '|', ant);
+                         }

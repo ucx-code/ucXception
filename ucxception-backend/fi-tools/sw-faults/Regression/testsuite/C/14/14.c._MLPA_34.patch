@@ -1,0 +1,13 @@
+--- 14.c
++++ 14.c._MLPA_34	2016-03-30 00:39:58.112929800 +0100
+@@ -69,10 +69,6 @@
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+     is_node* MethodParamsnode = (is_node*)malloc(sizeof (is_node));
+-    node->child = type;
+-    type->next = id;
+-    node->type = ParamDeclaration;
+-    node->id = NULL;
+     MethodParamsnode->child = node;
+     MethodParamsnode->next = NULL;
+     MethodParamsnode->id = NULL;

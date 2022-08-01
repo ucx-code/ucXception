@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_829	2016-03-30 03:05:10.777554000 +0100
+@@ -1994,7 +1994,7 @@
+                             if (health > 0) 
+                                 desenhaRobot();
+ 
+-                            desenhaLagrima();
++                            ;
+                             desenhaBombas();
+                             desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+                             pufpuf();

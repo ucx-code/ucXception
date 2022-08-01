@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1161	2016-03-30 02:32:07.890335000 +0100
+@@ -766,8 +766,6 @@
+ {
+     glEnable (GL_TEXTURE_2D);
+     glBindTexture(GL_TEXTURE_2D, texture[12]);
+-    glPushMatrix();
+-    glNormal3f(1.0f, 0.0f, 0.0f);
+     glBegin (GL_QUADS);
+     glTexCoord2f(0.0f, 1.0f);
+     glVertex3f(-49.0, 30.0, -15.0);

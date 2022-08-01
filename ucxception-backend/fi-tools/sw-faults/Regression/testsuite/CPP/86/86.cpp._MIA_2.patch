@@ -1,0 +1,10 @@
+--- 86.cpp
++++ 86.cpp._MIA_2	2016-03-30 01:59:52.306850300 +0100
+@@ -102,7 +102,6 @@
+         if (estado[i] == 0) 
+             soma += friendship[i];
+ 
+-        if (estado2[i] == 0) 
+             soma2 += friendship[i];
+     }
+     return soma;

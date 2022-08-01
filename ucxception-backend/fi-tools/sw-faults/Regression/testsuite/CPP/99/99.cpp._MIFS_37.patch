@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MIFS_37	2016-03-30 03:00:39.273617500 +0100
+@@ -1859,10 +1859,6 @@
+     if (tecla == 27) {
+         exit(0);
+     }
+-    if (tecla == 32) {
+-        puts("pause game");
+-        pausegame *= -1;
+-    }
+     if (tecla == 8) {
+         puts("reboot game");
+         clear();

@@ -1,0 +1,6 @@
+{
+	"component_name": "Ensure Injection",
+	"component_file_name": "ensure_injection.py",
+	"component_class_name": "Ensure_Injection",
+	"information_help": "Checks whether one and only one injection (of the ucXception's Linux-based HW fault injection tool) has occurred in a run by comparing the pre- and post-injection values of all registers and ensuring only one bit of one register has changed."
+}

@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_500	2016-03-30 02:15:08.853134300 +0100
+@@ -570,9 +570,6 @@
+     FILE* fp1;
+     char old_pontos[20];
+     fp1 = fopen("F_pontos.txt", "r");
+-    fgets(old_pontos, 20, fp1);
+-    fclose(fp1);
+-    desenhaPontosMenu(old_pontos);
+     glEnable (GL_TEXTURE_2D);
+     glBindTexture(GL_TEXTURE_2D, texture[10]);
+     glPushMatrix();

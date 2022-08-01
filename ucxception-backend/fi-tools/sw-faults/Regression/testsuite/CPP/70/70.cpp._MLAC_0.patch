@@ -1,0 +1,11 @@
+--- 70.cpp
++++ 70.cpp._MLAC_0	2016-03-30 01:45:18.214670100 +0100
+@@ -45,7 +45,7 @@
+ 
+         return;
+     }
+-    if ((ingrediente > 2) && (total(0, ingrediente - 1) > best)) 
++    if ((total(0, ingrediente - 1) > best)) 
+         return;
+ 
+     combinacao[ingrediente] = 1;

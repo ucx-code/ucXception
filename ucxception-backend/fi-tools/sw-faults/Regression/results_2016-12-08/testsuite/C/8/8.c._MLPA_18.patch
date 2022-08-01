@@ -1,0 +1,12 @@
+--- ./8.c
++++ ./8.c._MLPA_18	2016-12-08 00:51:08.351083260 +0000
+@@ -58,9 +58,6 @@
+                         tam = tamAux;
+                         idxI = idxAux;
+                     }
+-                    tamAux = 1;
+-                    idxAux = j + 1;
+-                    i = j + 2;
+                     j = i;
+                 }else
+                     if ((i + 1) == strlen(word) && (j + 1) == i) {

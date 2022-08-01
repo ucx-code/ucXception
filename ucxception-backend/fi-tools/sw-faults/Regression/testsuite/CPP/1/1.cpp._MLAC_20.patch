@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MLAC_20	2016-03-30 01:08:43.191881900 +0100
+@@ -47,7 +47,7 @@
+         }
+     }
+     if (buffer[pos] == '\\') {
+-        if ((buffer[pos + 1] == '/') && (buffer[pos + 2] == '\\')) {
++        if ((buffer[pos + 2] == '\\')) {
+             if (recurse(pos + 2, max, width) == 1) {
+                 answer.push(pos + 1);
+                 answer.push(pos);

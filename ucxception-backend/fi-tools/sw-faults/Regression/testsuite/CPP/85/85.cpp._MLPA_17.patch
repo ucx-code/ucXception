@@ -1,0 +1,12 @@
+--- 85.cpp
++++ 85.cpp._MLPA_17	2016-03-30 01:58:51.306984000 +0100
+@@ -126,9 +126,6 @@
+                 lista[abs(tmp) - 1][0][listaC[abs(tmp) - 1][0]++] = i;
+             else
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+-
+-            choices[i][a++] = tmp;
+-            scanf("%d", &tmp);
+         }
+     }
+     unsigned char tmpEstado[2000];

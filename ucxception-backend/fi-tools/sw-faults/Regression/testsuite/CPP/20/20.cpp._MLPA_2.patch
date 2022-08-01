@@ -1,0 +1,10 @@
+--- 20.cpp
++++ 20.cpp._MLPA_2	2016-03-30 01:22:26.225311600 +0100
+@@ -54,7 +54,5 @@
+         vizinhos[tmpA - 1][counter[tmpA - 1]++] = tmpB - 1;
+         vizinhos[tmpB - 1][counter[tmpB - 1]++] = tmpA - 1;
+     }
+-    rec(-1, 0);
+-    printf("%d\n", best);
+     return 0;
+ }

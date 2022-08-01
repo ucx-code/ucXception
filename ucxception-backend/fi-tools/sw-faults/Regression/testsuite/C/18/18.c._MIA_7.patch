@@ -1,0 +1,12 @@
+--- 18.c
++++ 18.c._MIA_7	2016-03-30 00:45:26.431300000 +0100
+@@ -71,9 +71,7 @@
+         for (j = 1;j <= n;j++){
+             if (i != j) {
+                 if (x > distancias[i][j]) {
+-                    if (x < y) 
+                         y = x;
+-
+                     x = distancias[i][j];
+                 }else
+                     if (y > distancias[i][j]) {

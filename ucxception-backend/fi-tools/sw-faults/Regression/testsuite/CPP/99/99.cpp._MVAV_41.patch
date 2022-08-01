@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_41	2016-03-30 02:58:56.275628600 +0100
+@@ -1730,7 +1730,6 @@
+         }else
+             if ((x > 104) && (x < 142) && (y > 279) && (y < 288)) {
+                 pos_seta_som_y = -1.2;
+-                som = 0;
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+             }
+ 

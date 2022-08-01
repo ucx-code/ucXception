@@ -1,0 +1,11 @@
+--- 34.cpp
++++ 34.cpp._WAEP_2	2016-03-30 01:30:49.058536300 +0100
+@@ -21,7 +21,7 @@
+     for (i = 0;i < n;i++){
+         if (estadosP[estadoCounter][i] == 0) {
+             todosTemAcesso = false;
+-            memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
++            memcpy(estadosP[estadoCounter + 1], estadosP, sizeof (int) * 35);
+             if (rec(i, n, count, estadoCounter + 1, limit) == 1) 
+                 return 1;
+         }

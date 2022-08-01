@@ -1,0 +1,20 @@
+--- 94.cpp
++++ 94.cpp._MIFS_0	2016-03-30 02:02:44.606319200 +0100
+@@ -11,15 +11,8 @@
+ {
+     mark[v] = true;
+     color[v] = cur;
+-    for (int i = 0;i < n;i++)
+-        if (a[v][i] == 1) {
+-            if (color[i] == cur) {
+-                bipartite = false;
+-                return;
+-            }
+-            if (mark[i] == false) 
+-                dfs(i, cur == 1 ? 2 : 1);
+-        }
++    for (int i = 0;i < n;i++);
++
+ }
+ 
+ int main()

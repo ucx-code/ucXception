@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MLPA_23	2016-12-08 00:51:12.435083187 +0000
+@@ -35,8 +35,6 @@
+     printTable(tableColumns, lines, columns);
+     for (i = 0;i < lines;i++){
+         free(table[i]);
+-        free(tableLines[i]);
+-        free(tableColumns[i]);
+     }
+     free(table);
+     free(tableLines);

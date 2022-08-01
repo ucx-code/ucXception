@@ -1,0 +1,12 @@
+--- ./4.c
++++ ./4.c._MIFS_3	2016-12-08 00:50:59.635083416 +0000
+@@ -44,9 +44,6 @@
+ int calc(int n, int nr, int b)
+ {
+     int i;
+-    if (b > best) {
+-        return 0;
+-    }
+     if (checkAll(nr) == 0) {
+         return 0;
+     }

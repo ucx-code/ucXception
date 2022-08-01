@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2941	2016-03-30 03:05:30.296034100 +0100
+@@ -2011,9 +2011,7 @@
+ 
+ void iniciarPrograma()
+ {
+-    glClearColor(1.0, 1.0, 1.0, 0.0);
+     glShadeModel (GL_SMOOTH);
+-    defineLuzes();
+     glEnable (GL_DEPTH_TEST);
+     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+     iniciarTexturas();

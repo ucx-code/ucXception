@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2884	2016-03-30 03:01:29.366957100 +0100
+@@ -1984,11 +1984,6 @@
+                             glStencilFunc(GL_ALWAYS, 1, 1);
+                             glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+                             desenhaSkyBox();
+-                            glColorMask(1, 1, 1, 1);
+-                            glEnable(GL_DEPTH_TEST);
+-                            glStencilFunc(GL_EQUAL, 1, 1);
+-                            glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
+-                            glPushMatrix();
+                             glScalef(1, -1, 1);
+                             glTranslatef(0.0, 27.0, 0);
+                             if (health > 0) 

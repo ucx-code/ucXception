@@ -1,0 +1,30 @@
+{
+	"component_name": "Probe Pidstat",
+	"component_file_name": "probe_pidstat.py",
+	"component_class_name": "Probe_Pidstat",
+	"constructor" : ["pid", "interval_str", "all_children"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"pid": {
+			"type": "integer",
+			"default": 500,
+			"condition": {"minValue": 0, "maxValue": 5000 , "step": 1},
+			"require": true
+		},
+		"interval_str": {
+			"type": "string",
+			"default": "1",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		},
+		"all_children": {
+			"type": "boolean",
+			"default": false,
+			"require": false
+		}
+	},
+	"information_help": "Somewhat similar to the SAR probe, since it also captures similar metrics, but focuses on a specific process."
+}

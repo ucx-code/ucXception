@@ -1,0 +1,21 @@
+{
+	"component_name": "App Output Md5",
+	"component_file_name": "app_output_md5.py",
+	"component_class_name": "App_Output_Md5",
+	"constructor" : "[self.app_output, expected_len, 'expected_md5']",
+	"parameters": {
+		"expected_len": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"expected_md5": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		}
+	},
+	"information_help": "Obtains the output of the workload application and computes its MD5 hash. Compares the obtained MD5 hash against a fixed, expected hash and stores whether both hashes match and the size of the produced application's output. Useful to detect silent data corruptions whenever the workload application produces a deterministic output."	
+}

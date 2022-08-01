@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MIA_3	2016-03-30 03:13:50.988559900 +0100
+@@ -39,7 +39,7 @@
+         skipChars(infile, 2);
+         int bitsPerPixel = readShort(infile);
+         skipChars(infile, 4 + 4 + 4 + 4 + 4 + 4);
+-        if (NumCols > 0 && NumCols <= 100000 && NumRows > 0 && NumRows <= 100000 && bitsPerPixel == 24 && !feof(infile)) {
++        {
+             fileFormatOK = true;
+         }
+     }

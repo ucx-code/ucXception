@@ -1,0 +1,12 @@
+--- 98.cpp
++++ 98.cpp._MIFS_4	2016-03-30 02:04:24.579770200 +0100
+@@ -53,9 +53,6 @@
+             if (bufferPosWidth1 == '|') {
+                 queue.push(pos - width - 1);
+             }
+-            if (bufferPosWidth2 == '\\') {
+-                queue.push(pos - width - 2);
+-            }
+         }
+         if ((bufferPos == '\\')) {
+             if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {

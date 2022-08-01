@@ -1,0 +1,11 @@
+--- 95.cpp
++++ 95.cpp._WAEP_6	2016-03-30 02:03:12.544427900 +0100
+@@ -45,7 +45,7 @@
+                 bipartite = true;
+         }
+         for (i = 0;i <= n;i++)
+-            memset(gr[i], 0, sizeof (int) * 500);
++            memset(gr[i], 0, sizeof (int));
+         if (bipartite == true) 
+             printf("NOT SURE\n");
+         else

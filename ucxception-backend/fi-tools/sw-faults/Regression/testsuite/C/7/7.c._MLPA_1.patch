@@ -1,0 +1,11 @@
+--- 7.c
++++ 7.c._MLPA_1	2016-03-30 00:30:38.787881600 +0100
+@@ -15,8 +15,6 @@
+             for (i = errpos;i < length;i++){
+                 word[i] = word[i + 1];
+             }
+-            errpos = perfect(word);
+-            length = strlen(word);
+         }
+         printf("%s\n", word);
+     }

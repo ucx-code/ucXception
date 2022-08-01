@@ -1,0 +1,11 @@
+--- 42.cpp
++++ 42.cpp._MIFS_2	2016-03-30 01:37:24.761414400 +0100
+@@ -32,8 +32,6 @@
+                             maximo2 = tmp;
+                     }
+                     K[agora][a][j] = maximo2;
+-                    if (maximo2 > maximoFinal) 
+-                        maximoFinal = maximo2;
+                 }
+             }
+         }

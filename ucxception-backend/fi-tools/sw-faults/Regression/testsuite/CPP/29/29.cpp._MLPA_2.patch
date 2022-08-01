@@ -1,0 +1,10 @@
+--- 29.cpp
++++ 29.cpp._MLPA_2	2016-03-30 01:27:06.286660000 +0100
+@@ -91,7 +91,5 @@
+     while (scanf("%d %d", &tmpA, &tmpB) != EOF){
+         vizinhos[tmpA][tmpB] = 1;
+     }
+-    mis(0, 0);
+-    printf("%d\n", best);
+     return 0;
+ }

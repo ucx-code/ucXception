@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MIA_20	2016-12-08 00:50:12.203084266 +0000
+@@ -335,7 +335,7 @@
+ n_argument++;
+ }
+ tipo2 = getArgumentType(prog, method_called, n_argument);
+-if (strcmp(tipo2, "void") != 0) {
++{
+ printf("Incompatible type of argument %d in call to method %s (got void, required %s)\n", n_argument, method_called, tipo2);
+ exit(0);
+ }

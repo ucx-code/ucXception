@@ -1,0 +1,11 @@
+--- 34.cpp
++++ 34.cpp._WPFV_3	2016-03-30 01:31:05.582136300 +0100
+@@ -50,7 +50,7 @@
+     int n;
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", estadosP);
+         return 0;
+     }
+     int tmpA, tmpB;

@@ -1,0 +1,11 @@
+--- 21.c
++++ 21.c._WAEP_0	2016-03-30 00:49:39.036262000 +0100
+@@ -11,7 +11,7 @@
+         for (i = 0;i < tabs;i++)
+             printf("  ");
+         if (node->id) 
+-            printf("%s(%s)\n", types[node->type], node->id);
++            printf("%s(%s)\n", types, node->id);
+         else
+             printf("%s\n", types[node->type]);
+     }

@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MLPA_1	2016-03-30 01:20:58.892260200 +0100
+@@ -91,8 +91,6 @@
+         }
+         if ((bufferPosN1 == '\\') && (bufferPosN2 == '/')) {
+             if (recurse(pos - 2, max, width) == 1) {
+-                answer.push(pos - 1);
+-                answer.push(pos);
+                 return 1;
+             }
+         }

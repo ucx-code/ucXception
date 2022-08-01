@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2853	2016-03-30 03:01:11.379604900 +0100
+@@ -1989,8 +1989,6 @@
+                             glStencilFunc(GL_EQUAL, 1, 1);
+                             glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
+                             glPushMatrix();
+-                            glScalef(1, -1, 1);
+-                            glTranslatef(0.0, 27.0, 0);
+                             if (health > 0) 
+                                 desenhaRobot();
+ 

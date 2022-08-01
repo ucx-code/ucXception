@@ -1,0 +1,12 @@
+--- 18.c
++++ 18.c._MIA_3	2016-03-30 00:44:25.881527900 +0100
+@@ -31,9 +31,7 @@
+         best = aux;
+         return;
+     }
+-    if (v != 0) 
+         shortestPath(0, len + distancias[v][0], maxCap, bound);
+-
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {
+             if (cap >= distancias[i][13]) {

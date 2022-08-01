@@ -1,0 +1,11 @@
+--- 75.cpp
++++ 75.cpp._WPFV_18	2016-03-30 01:50:09.526038400 +0100
+@@ -113,7 +113,7 @@
+         return;
+     }
+     if (forced[begin] != 3) {
+-        rec(c, begin + 1, end);
++        rec(c, begin + 1, m);
+         return;
+     }
+     int actual = calcB(c, begin, end);

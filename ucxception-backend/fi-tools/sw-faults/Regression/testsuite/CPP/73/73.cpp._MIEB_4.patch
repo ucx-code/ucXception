@@ -1,0 +1,14 @@
+--- 73.cpp
++++ 73.cpp._MIEB_4	2016-03-30 01:47:42.929615700 +0100
+@@ -206,11 +206,7 @@
+         scanf("%d", &tmp);
+         int a = 0;
+         while (tmp != 0){
+-            if (tmp < 0) 
+-                lista[abs(tmp) - 1][0][listaC[abs(tmp) - 1][0]++] = i;
+-            else
+                 lista[abs(tmp) - 1][1][listaC[abs(tmp) - 1][1]++] = i;
+-
+             choices[i][a++] = tmp;
+             k = tmp;
+             scanf("%d", &tmp);

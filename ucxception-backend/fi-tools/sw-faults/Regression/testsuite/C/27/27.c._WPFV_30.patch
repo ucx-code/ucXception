@@ -1,0 +1,11 @@
+--- 27.c
++++ 27.c._WPFV_30	2016-03-30 00:56:53.560804500 +0100
+@@ -63,7 +63,7 @@
+         for (i = 0;i < n;i++){
+             for (j = i + 1;j < n;j++){
+                 if (bridge[i][j] == 1) {
+-                    printf("%d %d\n", i, j);
++                    printf("%d %d\n", i, dfs);
+                     mark = TRUE;
+                     bridge[i][j] = 0;
+                 }

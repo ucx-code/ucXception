@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MFC_24	2016-03-30 03:16:46.738903400 +0100
+@@ -133,7 +133,7 @@
+     writeLong(40 + 14 + NumRows * rowLen, outfile);
+     writeShort(0, outfile);
+     writeShort(0, outfile);
+-    writeLong(40 + 14, outfile);
++    ;
+     writeLong(40, outfile);
+     writeLong(NumCols, outfile);
+     writeLong(NumRows, outfile);

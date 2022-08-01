@@ -1,0 +1,10 @@
+--- ./35.c
++++ ./35.c._MIA_0	2016-12-08 00:50:51.231083567 +0000
+@@ -23,7 +23,6 @@
+                             v[dept][j] = valor + v[dept - 1][j - custo];
+                     }
+                 }else{
+-                    if (v[dept][j] < valor + v[dept - 1][j - custo] && custo < j) 
+                         v[dept][j] = valor + v[dept - 1][j - custo];
+                 }
+             }

@@ -1,0 +1,11 @@
+--- 90.cpp
++++ 90.cpp._MVIV_0	2016-03-30 02:02:03.958263800 +0100
+@@ -48,7 +48,7 @@
+ {
+     int n, m;
+     int i;
+-    int it = 0;
++    int it = it;
+     while (true){
+         if (readLine(&n, &m) == -1) 
+             break;

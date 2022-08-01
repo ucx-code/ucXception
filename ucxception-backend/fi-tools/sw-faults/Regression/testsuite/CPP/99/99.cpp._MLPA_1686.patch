@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1686	2016-03-30 02:43:44.411870400 +0100
+@@ -958,11 +958,7 @@
+                 glTranslatef(enemysList[j].position[0], enemysList[j].position[1], enemysList[j].position[2]);
+                 glTranslatef(debris[i].position[0], debris[i].position[1], debris[i].position[2]);
+                 glRotatef(debris[i].orientation[0], 1.0, 0.0, 0.0);
+-                glRotatef(debris[i].orientation[1], 0.0, 1.0, 0.0);
+-                glRotatef(debris[i].orientation[2], 0.0, 0.0, 1.0);
+-                glScalef(debris[i].scale[0], debris[i].scale[1], debris[i].scale[2]);
+                 glBegin (GL_TRIANGLES);
+-                glVertex3f(0.0, 0.5, 0.0);
+                 glVertex3f(-0.25, 0.0, 0.0);
+                 glVertex3f(0.25, 0.0, 0.0);
+                 glEnd();

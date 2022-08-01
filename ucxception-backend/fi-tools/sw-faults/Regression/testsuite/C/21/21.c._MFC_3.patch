@@ -1,0 +1,9 @@
+--- 21.c
++++ 21.c._MFC_3	2016-03-30 00:49:49.219963500 +0100
+@@ -19,5 +19,5 @@
+         printAST(node->child, tabs + 1);
+ 
+     if (node->next) 
+-        printAST(node->next, tabs);
++        ;
+ }

@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WAEP_12	2016-03-30 01:53:02.528816600 +0100
+@@ -197,7 +197,7 @@
+         if (tmp < best) 
+             best = tmp;
+     }
+-    memset(c, 0, sizeof (unsigned char) * n);
++    memset(c, 0, sizeof (unsigned char));
+     for (i = 1;i < n;i++)
+         minas[i] = calcB2(c, i - 1, n);
+     rec(c, 0, n);

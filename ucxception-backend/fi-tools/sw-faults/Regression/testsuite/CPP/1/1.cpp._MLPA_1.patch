@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MLPA_1	2016-03-30 01:09:01.439201500 +0100
+@@ -58,8 +58,6 @@
+     if (buffer[pos] == '/') {
+         if ((buffer[pos - 1] == '\\') && (buffer[pos - 2] == '/')) {
+             if (recurse(pos - 2, max, width) == 1) {
+-                answer.push(pos - 1);
+-                answer.push(pos);
+                 return 1;
+             }
+         }

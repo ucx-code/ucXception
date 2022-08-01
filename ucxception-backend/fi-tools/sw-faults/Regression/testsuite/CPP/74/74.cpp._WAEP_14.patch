@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._WAEP_14	2016-03-30 01:49:16.480528200 +0100
+@@ -144,7 +144,7 @@
+         }
+     }
+     precalc(n);
+-    memset(forced, 3, sizeof (unsigned char) * n);
++    memset(forced, 3, sizeof (unsigned char));
+     for (i = 0;i < n;i++){
+         if (listaC[i][0] == 0) {
+             forced[i] = 1;

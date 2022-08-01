@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MLPA_3	2016-03-30 01:39:00.963283700 +0100
+@@ -21,8 +21,6 @@
+ 
+ void strcat2(char* text, int size)
+ {
+-    memcpy(outputBuffer + counter, text, size);
+-    counter += size;
+     if (counter >= 7000) {
+         fwrite(outputBuffer, 1, counter, stdout);
+         outputBuffer[0] = '\0';

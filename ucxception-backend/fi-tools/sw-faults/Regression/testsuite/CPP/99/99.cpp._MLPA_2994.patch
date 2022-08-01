@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2994	2016-03-30 03:07:05.426784200 +0100
+@@ -2023,11 +2023,6 @@
+ int main(int argc, char** argv)
+ {
+     textoPontos = (char*)malloc(sizeof (char*));
+-    glutInit(&argc, argv);
+-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_STENCIL);
+-    glutInitWindowSize(largura, altura);
+-    glutInitWindowPosition(340, 100);
+-    glutCreateWindow("Bombs away!! [Projeto CG 2014 by DiFa, JoPe, PeRe]");
+     iniciarPrograma();
+     init();
+     glutDisplayFunc(ecra);

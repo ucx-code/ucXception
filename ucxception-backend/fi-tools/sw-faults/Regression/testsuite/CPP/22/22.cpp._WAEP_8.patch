@@ -1,0 +1,11 @@
+--- 22.cpp
++++ 22.cpp._WAEP_8	2016-03-30 01:23:27.379583800 +0100
+@@ -34,7 +34,7 @@
+                 return 1;
+             }
+             memcpy(state[stateCounter++], novoEstado, sizeof (char) * 35);
+-            memcpy(novoEstado, estado, 35 * sizeof (char));
++            memcpy(novoEstado, estado, 35);
+         }
+     }
+     return 0;

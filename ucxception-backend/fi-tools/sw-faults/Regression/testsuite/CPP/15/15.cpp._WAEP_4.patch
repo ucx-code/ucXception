@@ -1,0 +1,11 @@
+--- 15.cpp
++++ 15.cpp._WAEP_4	2016-03-30 01:17:04.178228700 +0100
+@@ -28,7 +28,7 @@
+         }
+         for (i = 0;i < halfSquare;i++){
+             if (r == 2) 
+-                memcpy(matrix + ((i * 2) * halfSquare), tmpInv + halfSquare * i, halfSquare);
++                memcpy(matrix, tmpInv + halfSquare * i, halfSquare);
+             else
+                 memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+ 

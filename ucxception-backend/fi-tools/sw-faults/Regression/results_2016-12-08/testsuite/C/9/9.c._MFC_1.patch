@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MFC_1	2016-12-08 00:51:10.787083217 +0000
+@@ -21,7 +21,7 @@
+     for (i = 0;i < lines;i++){
+         table[i] = (int*)malloc(columns * sizeof (int));
+         for (j = 0;j < columns;j++){
+-            scanf("%d", &table[i][j]);
++            ;
+             if (checkNumber(table[i][j])) 
+                 j--;
+         }

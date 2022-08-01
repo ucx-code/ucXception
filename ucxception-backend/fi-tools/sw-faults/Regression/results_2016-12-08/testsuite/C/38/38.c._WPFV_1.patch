@@ -1,0 +1,11 @@
+--- ./38.c
++++ ./38.c._WPFV_1	2016-12-08 00:50:56.031083481 +0000
+@@ -14,7 +14,7 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &begin[i], &endTime[i]);
+     }
+-    qsort(begin, n, sizeof (int), sorting);
++    qsort(begin, endTime, sizeof (int), sorting);
+     qsort(endTime, n, sizeof (int), sorting);
+     for (i = 1;i < n;i++){
+         if (endTime[j] > begin[i]) {

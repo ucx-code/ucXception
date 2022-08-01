@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_42	2016-12-08 00:49:34.223084946 +0000
+@@ -227,7 +227,7 @@
+     c = (char*)malloc(sizeof (char*));
+     int hexa;
+     hexa = strtol(expr->id, NULL, 0);
+-    sprintf(c, "%d", hexa);
++    ;
+     return c;
+     break;
+ case BoolLit:

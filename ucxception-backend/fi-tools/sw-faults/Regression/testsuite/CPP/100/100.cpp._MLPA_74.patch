@@ -1,0 +1,14 @@
+--- 100.cpp
++++ 100.cpp._MLPA_74	2016-03-30 03:15:45.729626300 +0100
+@@ -104,11 +104,6 @@
+     byte3 = fgetc(infile);
+     long ret = byte3;
+     ret <<= 8;
+-    ret |= byte2;
+-    ret <<= 8;
+-    ret |= byte1;
+-    ret <<= 8;
+-    ret |= byte0;
+     return ret;
+ }
+ 

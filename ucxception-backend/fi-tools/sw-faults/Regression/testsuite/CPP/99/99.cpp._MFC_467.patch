@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_467	2016-03-30 02:44:15.104796600 +0100
+@@ -1020,7 +1020,7 @@
+         enemysList.erase(enemysList.begin() + indEl);
+ 
+     if (aux == 1) {
+-        newExplosion();
++        ;
+         return 1;
+     }
+     if (glIsEnabled (GL_LIGHT1)) 

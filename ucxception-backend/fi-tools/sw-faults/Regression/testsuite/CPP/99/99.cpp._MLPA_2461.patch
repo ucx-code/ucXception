@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2461	2016-03-30 02:53:35.333746600 +0100
+@@ -1352,11 +1352,6 @@
+             glTranslatef(0.75, 1.5, -2.2);
+             glRotatef(180.0, 1.0, 0.0, 0.0);
+             GLUquadricObj* tirodir;
+-            tirodir = gluNewQuadric();
+-            gluCylinder(tirodir, 0.1, 0.1, 5.0 * i, 32, 32);
+-            glPopMatrix();
+-            glPushMatrix();
+-            glTranslatef(-0.75, 1.5, -2.2);
+             glRotatef(180.0, 1.0, 0.0, 0.0);
+             GLUquadricObj* tiroesq;
+             tiroesq = gluNewQuadric();

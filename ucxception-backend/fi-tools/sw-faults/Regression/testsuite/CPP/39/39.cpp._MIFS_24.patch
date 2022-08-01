@@ -1,0 +1,18 @@
+--- 39.cpp
++++ 39.cpp._MIFS_24	2016-03-30 01:36:52.840240500 +0100
+@@ -141,15 +141,6 @@
+         }
+         bool encontrou = false;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+-            if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {
+-                recurseSize = 0;
+-                int result = recurse(i, matrixSize, width);
+-                if (result == 1) {
+-                    printf("\n");
+-                    encontrou = true;
+-                    break;
+-                }
+-            }
+             if (encontrou) 
+                 break;
+         }

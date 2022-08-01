@@ -1,0 +1,11 @@
+--- 8.cpp
++++ 8.cpp._MLPA_2	2016-03-30 01:14:30.502388000 +0100
+@@ -54,8 +54,6 @@
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+-            tmp[squared] = '\0';
+-            printf("%s\n", tmp);
+         }
+     }
+ }

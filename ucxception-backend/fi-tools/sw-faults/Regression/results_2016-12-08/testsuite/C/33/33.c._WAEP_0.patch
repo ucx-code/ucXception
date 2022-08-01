@@ -1,0 +1,11 @@
+--- ./33.c
++++ ./33.c._WAEP_0	2016-12-08 00:50:47.719083630 +0000
+@@ -47,7 +47,7 @@
+         return;
+     }
+     for (i = pos + 1;i < n;i++){
+-        addPrint(i, nPrint + 1, print);
++        addPrint(i, nPrint, print);
+     }
+     print[pos]--;
+     for (i = 0;i < n;i++){

@@ -1,0 +1,12 @@
+--- 86.cpp
++++ 86.cpp._MIFS_0	2016-03-30 01:59:49.785529700 +0100
+@@ -99,9 +99,6 @@
+ 
+     int soma = 0;
+     for (i = 0;i < m;i++){
+-        if (estado[i] == 0) 
+-            soma += friendship[i];
+-
+         if (estado2[i] == 0) 
+             soma2 += friendship[i];
+     }

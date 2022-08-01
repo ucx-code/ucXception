@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._WPFV_36	2016-03-30 00:54:51.367575400 +0100
+@@ -84,7 +84,7 @@
+                     verifica(l + 1, c - 1, '/', aux);
+ 
+                 if (encont == 0) 
+-                    verifica(l + 1, c, '|', aux);
++                    verifica(l + 1, nLinhas, '|', aux);
+ 
+                 if (encont == 0) 
+                     verifica(l + 1, c + 1, '\\', aux);

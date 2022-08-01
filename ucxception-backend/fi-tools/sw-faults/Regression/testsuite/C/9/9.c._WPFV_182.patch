@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WPFV_182	2016-03-30 00:33:29.755722200 +0100
+@@ -132,7 +132,7 @@
+ {
+     int j;
+     if (li < ls) {
+-        j = rearranjaCol(v, li, ls);
++        j = rearranjaCol(v, li, li);
+         QsortCol(v, li, j - 1);
+         QsortCol(v, j + 1, ls);
+     }

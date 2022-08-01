@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_26	2016-03-30 02:05:06.218810600 +0100
+@@ -165,9 +165,6 @@
+ 
+ void clear()
+ {
+-    iniciarjogo = 0;
+-    inicio = 1;
+-    enemysList.clear();
+     robotX = 0;
+     robotZ = 0;
+     robotY = 0;

@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MLPA_11	2016-03-30 00:47:26.947012000 +0100
+@@ -151,8 +151,6 @@
+ char* method_name;
+ while (aux != NULL){
+     if (aux->type == MethodDecl) {
+-        aux2 = aux->child;
+-        method_name = aux->child->next->id;
+         while (aux2 != NULL){
+             if (aux2->type == MethodBody) 
+                 semantic_statements(mySemantic, method_name, aux2->child);

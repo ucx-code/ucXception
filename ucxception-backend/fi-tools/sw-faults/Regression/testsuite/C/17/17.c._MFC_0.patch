@@ -1,0 +1,11 @@
+--- 17.c
++++ 17.c._MFC_0	2016-03-30 00:43:55.246281500 +0100
+@@ -30,7 +30,7 @@
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {
+             solution[i] = 1;
+-            shortestPath(i, len + distancias[v][i]);
++            ;
+             solution[i] = 0;
+         }
+     }

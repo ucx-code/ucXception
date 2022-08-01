@@ -1,0 +1,11 @@
+--- 91.cpp
++++ 91.cpp._MLPA_0	2016-03-30 02:02:15.907945200 +0100
+@@ -33,8 +33,6 @@
+ inline void readLine(int* a, int* b)
+ {
+     register char* tmp = src;
+-    *a = (*tmp - 48);
+-    ++tmp;
+     while (*tmp != ' '){
+         *a = *a * 10 + (*tmp - 48);
+         ++tmp;

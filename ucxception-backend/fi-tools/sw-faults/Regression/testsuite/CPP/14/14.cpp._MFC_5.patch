@@ -1,0 +1,11 @@
+--- 14.cpp
++++ 14.cpp._MFC_5	2016-03-30 01:16:50.040931800 +0100
+@@ -33,7 +33,7 @@
+         for (i = 0;i < halfSquare;i++){
+             switch (r){
+                 case 0:
+-                    memcpy(matrix + halfMatrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
++                    ;
+                     break;
+                 case 1:
+                     memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);

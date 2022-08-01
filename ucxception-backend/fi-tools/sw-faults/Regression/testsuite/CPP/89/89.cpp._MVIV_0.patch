@@ -1,0 +1,11 @@
+--- 89.cpp
++++ 89.cpp._MVIV_0	2016-03-30 02:01:48.473295800 +0100
+@@ -42,7 +42,7 @@
+ {
+     int n, m;
+     int i;
+-    int it = 0;
++    int it = it;
+     while (scanf("%d %d", &n, &m) != EOF){
+         for (i = 0;i < m;i++){
+             int a, b;

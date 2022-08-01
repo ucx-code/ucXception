@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MLPA_7	2016-03-30 00:34:26.804968200 +0100
+@@ -22,8 +22,6 @@
+     printf("@.str = private unnamed_addr constant [5 x i8] c\"true\\00\"\n");
+     printf("@.true = global i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0)\n");
+     printf("@.str1 = private unnamed_addr constant [6 x i8] c\"false\\00\"\n");
+-    printf("@.false = global i8* getelementptr inbounds ([6 x i8]* @.str1, i32 0, i32 0)\n\n");
+-    aux = node->child;
+     while (aux != NULL){
+         if (aux->type == VarDecl) {
+             if (aux->child->type == Int) {

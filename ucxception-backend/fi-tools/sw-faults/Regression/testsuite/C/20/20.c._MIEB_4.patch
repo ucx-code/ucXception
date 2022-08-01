@@ -1,0 +1,30 @@
+--- 20.c
++++ 20.c._MIEB_4	2016-03-30 00:48:44.569095400 +0100
+@@ -284,26 +284,7 @@
+ temp = prog->global;
+ environment_list* aux;
+ aux = prog->methods;
+-if (type == 0) {
+-while (temp != NULL){
+-    if (strcmp(temp->name, node->id) == 0 && strcmp(temp->type, "method") != 0) 
+-        found = 1;
+-
+-    temp = temp->next;
+-}
+-while (aux != NULL){
+-    if (strcmp(aux->name, method_name) == 0) {
+-        table_element* local = aux->locals;
+-        while (local != NULL){
+-            if (strcmp(local->name, node->id) == 0) 
+-                found = 1;
+-
+-            local = local->next;
+-        }
+-    }
+-    aux = aux->next;
+-}
+-}else{
++{
+ while (aux != NULL){
+     if (strcmp(aux->name, node->id) == 0) {
+         found = 1;

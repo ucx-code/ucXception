@@ -1,0 +1,10 @@
+--- 28.c
++++ 28.c._MVAE_2	2016-03-30 00:57:18.005514500 +0100
+@@ -44,7 +44,6 @@
+             per += (2 * (alt - alta));
+ 
+         area = area + ((begin[j][0] - begin[j - 1][0]) * (alt));
+-        per += 2 * (begin[j][0] - begin[j - 1][0]);
+         if (begin[j][0] < begin[j][2]) {
+             k = 0;
+             while (fila[k][0] != 0 && fila[k][0] < begin[j][1])

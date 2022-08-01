@@ -1,0 +1,12 @@
+--- 78.cpp
++++ 78.cpp._MIFS_11	2016-03-30 01:51:53.865958000 +0100
+@@ -177,9 +177,6 @@
+     int a;
+     for (i = 0;i < m;i++){
+         for (a = 0;a < 3;a++){
+-            if (choices[i][a] == 0) 
+-                break;
+-
+             int tmp = choices[i][a];
+             if (tmp < 0) 
+                 lista[abs(tmp) - 1][0][listaC[abs(tmp) - 1][0]++] = i;

@@ -1,0 +1,11 @@
+--- 39.cpp
++++ 39.cpp._MFC_13	2016-03-30 01:36:47.317538000 +0100
+@@ -90,7 +90,7 @@
+                     printf(",");
+ 
+                 printf("(%d,%d),", getY(pos - 1, width), getX(pos - 1, width));
+-                printf("(%d,%d)", getY(pos, width), getX(pos, width));
++                ;
+                 return 1;
+             }
+         }

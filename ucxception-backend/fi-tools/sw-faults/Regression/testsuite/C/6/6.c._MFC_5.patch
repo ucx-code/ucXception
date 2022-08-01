@@ -1,0 +1,11 @@
+--- 6.c
++++ 6.c._MFC_5	2016-03-30 00:30:34.526339900 +0100
+@@ -21,7 +21,7 @@
+         float eq = equilibrio(j, media);
+         printf("%d\n", jogadores[j][0]);
+         printf("Media: %g\n", media);
+-        printf("Equilibrio: %g\n", eq);
++        ;
+         if (media > eq) {
+             printf("Classificacao: %g\n", media);
+         }else{

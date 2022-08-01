@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MIA_0	2016-03-30 01:38:58.491468400 +0100
+@@ -12,7 +12,7 @@
+     int x = strlen(text);
+     memcpy(outputBuffer + counter, text, x);
+     counter += x;
+-    if (counter >= 7000) {
++    {
+         fwrite(outputBuffer, 1, counter, stdout);
+         outputBuffer[0] = '\0';
+         counter = 0;

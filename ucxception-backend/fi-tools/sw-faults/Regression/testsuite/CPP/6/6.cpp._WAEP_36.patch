@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._WAEP_36	2016-03-30 01:12:37.234043400 +0100
+@@ -51,7 +51,7 @@
+             memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+-        memcpy(matrix + (halfSquare * 2 * halfSquare), matrix, halfSquare * 2 * halfSquare);
++        memcpy(matrix + (halfSquare * 2 * halfSquare), matrix, halfSquare * 2);
+         for (i = 0;i < halfSquare;i++){
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }

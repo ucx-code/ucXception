@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_448	2016-03-30 02:13:57.737925600 +0100
+@@ -561,8 +561,6 @@
+     glTexCoord2f(0.0f, 0.0f);
+     glVertex2f(-10.0f, -10.0f);
+     glEnd();
+-    glPopMatrix();
+-    glDisable(GL_TEXTURE_2D);
+ }
+ 
+ void func_pontos()

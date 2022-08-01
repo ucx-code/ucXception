@@ -1,0 +1,11 @@
+--- 93.cpp
++++ 93.cpp._WAEP_1	2016-03-30 02:02:35.141616400 +0100
+@@ -14,7 +14,7 @@
+     for (w = 0;w < vizinhosC[v];w++){
+         if (marked[vizinhos[v][w]] == false) {
+             color[vizinhos[v][w]] = !color[v];
+-            dfs(vizinhos[v][w]);
++            dfs(w);
+         }else
+             if (color[vizinhos[v][w]] == color[v]) {
+                 is = false;

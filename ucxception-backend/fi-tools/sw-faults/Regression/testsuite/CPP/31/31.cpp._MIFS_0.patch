@@ -1,0 +1,12 @@
+--- 31.cpp
++++ 31.cpp._MIFS_0	2016-03-30 01:28:24.702137900 +0100
+@@ -9,9 +9,6 @@
+ int rec(int pos, int n, int count, int* estado)
+ {
+     ++count;
+-    if (count > n / 2) 
+-        return -1;
+-
+     estado[pos] = 2;
+     int i;
+     for (i = 0;i < counter[pos];i++){

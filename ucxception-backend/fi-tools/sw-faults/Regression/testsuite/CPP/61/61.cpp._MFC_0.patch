@@ -1,0 +1,11 @@
+--- 61.cpp
++++ 61.cpp._MFC_0	2016-03-30 01:41:54.952337000 +0100
+@@ -46,7 +46,7 @@
+ void insert(int v)
+ {
+     slot[++N].begin = v;
+-    upheap(N);
++    ;
+ }
+ 
+ void replace(int v)

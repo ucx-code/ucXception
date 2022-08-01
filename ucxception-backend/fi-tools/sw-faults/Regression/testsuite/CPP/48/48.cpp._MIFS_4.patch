@@ -1,0 +1,41 @@
+--- 48.cpp
++++ 48.cpp._MIFS_4	2016-03-30 01:39:05.773394400 +0100
+@@ -63,38 +63,6 @@
+     int bufferPos2 = (buffer[pos + 2] & 0x7F);
+     int bufferPosN1 = (buffer[pos - 1] & 0x7F);
+     int bufferPosN2 = (buffer[pos - 2] & 0x7F);
+-    if (bufferPos == '|') {
+-        if (bufferPosWidth == '/') {
+-            if (recurse(pos - width, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    strcat2((char*)",", 1);
+-
+-                sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
+-                return 1;
+-            }
+-        }
+-        if (bufferPosWidth1 == '|') {
+-            if (recurse(pos - width - 1, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    strcat2((char*)",", 1);
+-
+-                sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
+-                return 1;
+-            }
+-        }
+-        if (bufferPosWidth2 == '\\') {
+-            if (recurse(pos - width - 2, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    strcat2((char*)",", 1);
+-
+-                sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
+-                return 1;
+-            }
+-        }
+-    }
+     if ((bufferPos == '\\')) {
+         if ((bufferPosWidth2 == '|') || (bufferPosWidth2 == '\\')) {
+             if (recurse(pos - width - 2, max, width) == 1) {

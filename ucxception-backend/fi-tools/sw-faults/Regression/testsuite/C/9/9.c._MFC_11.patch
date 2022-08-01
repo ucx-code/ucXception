@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._MFC_11	2016-03-30 00:32:10.694336200 +0100
+@@ -39,7 +39,7 @@
+         free(tableColumns[i]);
+     }
+     free(table);
+-    free(tableLines);
++    ;
+     free(tableColumns);
+     return 0;
+ }

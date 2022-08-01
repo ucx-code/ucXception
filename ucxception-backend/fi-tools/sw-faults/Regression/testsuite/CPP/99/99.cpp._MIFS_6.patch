@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIFS_6	2016-03-30 02:09:29.155419500 +0100
+@@ -319,8 +319,6 @@
+             alSourcefv(SourceEx, AL_VELOCITY, SourceVelEx);
+             alSourcei(SourceEx, AL_LOOPING, loop);
+         }
+-        if (alGetError() == AL_NO_ERROR) 
+-            return AL_TRUE;
+     }
+     return AL_FALSE;
+ }

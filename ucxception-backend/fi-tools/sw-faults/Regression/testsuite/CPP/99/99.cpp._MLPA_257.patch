@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_257	2016-03-30 02:09:35.254194700 +0100
+@@ -328,10 +328,6 @@
+ void SetListenerValues()
+ {
+     alListenerfv(AL_POSITION, ListenerPos);
+-    alListenerfv(AL_VELOCITY, ListenerVel);
+-    alListenerfv(AL_ORIENTATION, ListenerOri);
+-    alListenerfv(AL_POSITION, ListenerPosEx);
+-    alListenerfv(AL_VELOCITY, ListenerVelEx);
+     alListenerfv(AL_ORIENTATION, ListenerOriEx);
+ }
+ 

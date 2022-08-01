@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._MLPA_26	2016-03-30 00:32:56.450756800 +0100
+@@ -90,8 +90,6 @@
+ int rearranjaLines(int vect[], int li, int ls)
+ {
+     int a, down, up, temp;
+-    a = vect[li];
+-    down = li;
+     up = ls;
+     while (down < up){
+         while (vect[down] <= a && down < ls)

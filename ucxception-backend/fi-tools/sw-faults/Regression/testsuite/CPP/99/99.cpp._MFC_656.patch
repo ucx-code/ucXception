@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_656	2016-03-30 02:53:20.043289800 +0100
+@@ -1323,7 +1323,7 @@
+     glTranslatef(0, 1.5, 0);
+     desenhaMira();
+     glPopMatrix();
+-    checkLimit();
++    ;
+     if (disparo == 1) {
+         if (op_robot == 1) {
+             glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, yellowRubberAmb);

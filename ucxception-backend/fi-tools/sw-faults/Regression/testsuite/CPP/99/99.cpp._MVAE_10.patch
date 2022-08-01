@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAE_10	2016-03-30 02:54:20.957343100 +0100
+@@ -1436,7 +1436,6 @@
+                 enemysList.push_back(newe);
+             }
+         }else{
+-            pastX = robotX;
+             pastZ = robotZ;
+         }
+     }

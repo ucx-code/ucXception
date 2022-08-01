@@ -1,0 +1,11 @@
+--- 56.cpp
++++ 56.cpp._MFC_3	2016-03-30 01:41:02.897947900 +0100
+@@ -39,7 +39,7 @@
+             }
+         }
+         if (master == lista.begin()) {
+-            lista.erase(master);
++            ;
+             break;
+         }else{
+             lista.erase(master);

@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLAC_9	2016-03-30 00:41:37.870798000 +0100
+@@ -393,7 +393,7 @@
+     if (stat != NULL && stat2 != NULL) 
+         stat->next = stat2;
+     else
+-        if (stat == NULL && stat2 != NULL) 
++        if (stat == NULL) 
+             return stat2;
+ 
+     return stat;

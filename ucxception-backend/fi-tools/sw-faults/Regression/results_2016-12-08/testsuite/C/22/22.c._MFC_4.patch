@@ -1,0 +1,11 @@
+--- ./22.c
++++ ./22.c._MFC_4	2016-12-08 00:50:15.815084201 +0000
+@@ -22,7 +22,7 @@
+             if (method_element->param == 1) 
+                 printf("%s\t%s\tparam\n", method_element->name, method_element->type);
+             else
+-                printf("%s\t%s\n", method_element->name, method_element->type);
++                ;
+ 
+             method_element = method_element->next;
+         }

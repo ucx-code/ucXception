@@ -1,0 +1,11 @@
+--- 89.cpp
++++ 89.cpp._WAEP_0	2016-03-30 02:01:55.122141400 +0100
+@@ -56,7 +56,7 @@
+         else
+             printf("NO\n");
+ 
+-        memset(vizinhosC, 0, sizeof (int) * (n + 1));
++        memset(vizinhosC, 0, sizeof (int));
+     }
+     return 0;
+ }

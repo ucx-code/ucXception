@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MIA_9	2016-03-30 01:51:10.295261700 +0100
+@@ -88,7 +88,7 @@
+         if (opinions[i][x] == 1) {
+             moods[i]--;
+         }
+-        if (moods[i] > 0) {
++        {
+             unhapiness -= valor_amizades[i];
+         }
+     }

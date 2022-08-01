@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_698	2016-03-30 02:54:01.876518900 +0100
+@@ -1390,7 +1390,7 @@
+     glPopMatrix();
+     glPushMatrix();
+     glTranslatef(0.0, torusin, 0.0);
+-    glRotatef(-90.0, 1.0, 0.0, 0.0);
++    ;
+     glutSolidTorus(0.05, 2.4, 32, 32);
+     glPopMatrix();
+     glPushMatrix();

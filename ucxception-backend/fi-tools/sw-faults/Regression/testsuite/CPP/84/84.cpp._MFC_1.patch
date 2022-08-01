@@ -1,0 +1,11 @@
+--- 84.cpp
++++ 84.cpp._MFC_1	2016-03-30 01:56:21.733457600 +0100
+@@ -23,7 +23,7 @@
+ {
+     int i, a;
+     unsigned char estado[2000];
+-    memset(estado, 0, sizeof (unsigned char) * m);
++    ;
+     for (i = 0;i < max;i++){
+         if (c[i] == 0) 
+             for (a = 0;a < listaC[i][0];a++){

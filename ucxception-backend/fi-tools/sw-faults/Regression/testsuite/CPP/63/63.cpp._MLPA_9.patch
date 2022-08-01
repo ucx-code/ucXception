@@ -1,0 +1,12 @@
+--- 63.cpp
++++ 63.cpp._MLPA_9	2016-03-30 01:42:35.479987200 +0100
+@@ -96,9 +96,7 @@
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+         naa[i] = slot[i].begin;
+     }
+-    radix_sort_unsigned(naa, n);
+     return 0;
+-    a[1] = slot[0].end;
+     for (i = 1;i < n;i++){
+         if (a[1] <= slot[i].begin) {
+             replace(slot[i].end);

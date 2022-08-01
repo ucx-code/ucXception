@@ -1,0 +1,11 @@
+--- 75.cpp
++++ 75.cpp._WPFV_57	2016-03-30 01:50:40.979035900 +0100
+@@ -156,7 +156,7 @@
+             }
+         }
+     }
+-    precalc(n);
++    precalc(tmp);
+     memset(forced, 3, sizeof (unsigned char) * n);
+     for (i = 0;i < n;i++){
+         if (listaC[i][0] == 0) {

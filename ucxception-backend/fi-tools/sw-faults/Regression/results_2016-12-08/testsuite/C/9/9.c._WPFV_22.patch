@@ -1,0 +1,18 @@
+--- ./9.c
++++ ./9.c._WPFV_22	2016-12-08 00:51:11.123083211 +0000
+@@ -1,6 +1,3 @@
+-#include <stdio.h>
+-#include <stdlib.h>
+-#include <string.h>
+ int checkNumber(int x);
+ void printTable(int** table, int lines, int columns);
+ int** copyTable(int** table, int lines, int columns);
+@@ -26,7 +23,7 @@
+                 j--;
+         }
+     }
+-    tableColumns = orderByColumns(table, lines, columns);
++    tableColumns = orderByColumns(table, lines, j);
+     tableLines = orderByLines(table, lines, columns);
+     printTable(table, lines, columns);
+     printf("\n");

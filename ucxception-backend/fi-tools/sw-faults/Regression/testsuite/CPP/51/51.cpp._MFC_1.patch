@@ -1,0 +1,11 @@
+--- 51.cpp
++++ 51.cpp._MFC_1	2016-03-30 01:40:04.965927000 +0100
+@@ -20,7 +20,7 @@
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &slot[i].begin, &slot[i].end);
+     }
+-    std::sort(slot, slot + n);
++    ;
+     int maior = 1;
+     int a;
+     for (i = 0;i <= n - maior;i++){

@@ -1,0 +1,11 @@
+--- 34.c
++++ 34.c._WPFV_10	2016-03-30 01:01:29.424825800 +0100
+@@ -49,7 +49,7 @@
+         matrix[y - 1][x - 1] = 1;
+     }
+     for (i = 0;i < n;i++)
+-        findPoint(i, 1, vector);
++        findPoint(x, 1, vector);
+     printf("%hd\n", best);
+     return 0;
+ }

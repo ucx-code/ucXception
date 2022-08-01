@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2904	2016-03-30 03:01:49.270376100 +0100
+@@ -1996,10 +1996,6 @@
+ 
+                             desenhaLagrima();
+                             desenhaBombas();
+-                            desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+-                            pufpuf();
+-                            glPopMatrix();
+-                            glDisable(GL_STENCIL_TEST);
+                             glEnable (GL_BLEND);
+                             glColor4f(1, 1, 1, 0.7);
+                             desenhaSkyBox();

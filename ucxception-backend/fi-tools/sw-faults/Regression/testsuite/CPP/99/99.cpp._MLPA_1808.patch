@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1808	2016-03-30 02:45:49.687891900 +0100
+@@ -1122,8 +1122,6 @@
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, rubyAmb);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, rubyDif);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, rubySpec);
+-    glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, rubyCoef);
+-    glLineWidth(2);
+     glPushMatrix();
+     glBegin (GL_LINES);
+     glVertex3f(0, -1.5, -avancoMira);

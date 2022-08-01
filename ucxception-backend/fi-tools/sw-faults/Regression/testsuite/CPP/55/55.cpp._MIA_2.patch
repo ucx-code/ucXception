@@ -1,0 +1,12 @@
+--- 55.cpp
++++ 55.cpp._MIA_2	2016-03-30 01:40:40.319984400 +0100
+@@ -55,9 +55,7 @@
+         struct _slotLL* tmp = newSlot(slot[i].begin, slot[i].end);
+         appendSlot(head, tmp);
+     }
+-    if (head->next != NULL) 
+         head->next->parent = head;
+-
+     struct _slotLL* master = head;
+     struct _slotLL* actual = master->next;
+     int conta;

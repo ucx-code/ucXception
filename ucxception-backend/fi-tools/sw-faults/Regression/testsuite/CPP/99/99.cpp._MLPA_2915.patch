@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2915	2016-03-30 03:02:15.084156600 +0100
+@@ -1920,9 +1920,6 @@
+                                 FILE* fp1;
+                                 char new_point[20];
+                                 int antigus_point = 0;
+-                                fp1 = fopen("F_pontos.txt", "r");
+-                                fscanf(fp1, "%d", &antigus_point);
+-                                fclose(fp1);
+                                 if (score > antigus_point) {
+                                     fp1 = fopen("F_pontos.txt", "w");
+                                     sprintf(new_point, "%d", score);

@@ -1,0 +1,12 @@
+--- ./26.c
++++ ./26.c._MIA_10	2016-12-08 00:50:26.407084011 +0000
+@@ -93,9 +93,7 @@
+                     if (encont == 0) 
+                         verifica(l + 1, c, '\\', aux);
+ 
+-                    if (encont == 0) 
+                         verifica(l + 1, c - 1, '/', aux);
+-
+                     if (encont == 0) 
+                         verifica(l + 1, c - 1, '|', aux);
+ 

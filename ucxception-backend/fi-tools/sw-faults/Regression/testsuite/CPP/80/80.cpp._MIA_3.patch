@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._MIA_3	2016-03-30 01:52:36.438121200 +0100
+@@ -61,7 +61,7 @@
+                 break;
+             }
+         }
+-        if (possuiIngredienteParcial == 1) {
++        {
+             int satisfeito = 0;
+             for (a = 0;a < 3;a++){
+                 if (choices[i][a] == 0) 

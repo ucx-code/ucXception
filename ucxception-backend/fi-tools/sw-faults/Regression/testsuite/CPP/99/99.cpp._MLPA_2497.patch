@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2497	2016-03-30 02:54:36.497629400 +0100
+@@ -1529,8 +1529,6 @@
+                     debris[i].position[1] += debris[i].speed[1] * 0.1;
+                     debris[i].position[2] += debris[i].speed[2] * 0.1;
+                     debris[i].orientation[0] += debris[i].orientationSpeed[0] * 10;
+-                    debris[i].orientation[1] += debris[i].orientationSpeed[1] * 10;
+-                    debris[i].orientation[2] += debris[i].orientationSpeed[2] * 10;
+                 }
+                 --enemysList[j].fuel;
+                 if (health == 0 && enemysList[j].fuel == 0) {

@@ -1,0 +1,14 @@
+--- 42.cpp
++++ 42.cpp._MIFS_0	2016-03-30 01:37:22.665648400 +0100
+@@ -18,9 +18,8 @@
+         int numberOfCoursesM1 = nCoursesDept[i - 1];
+         for (a = 1;a <= numberOfCourses;a++){
+             for (j = 1;j <= m;j++)
+-                for (k = 1;k <= numberOfCoursesM1;k++)
+-                    if (K[anterior][k][j] > maximo[j]) 
+-                        maximo[j] = K[anterior][k][j];
++                for (k = 1;k <= numberOfCoursesM1;k++);
++
+             for (j = 1;j <= m;j++){
+                 if (w[i][a] > j) {
+                     K[agora][a][j] = maximo[j];

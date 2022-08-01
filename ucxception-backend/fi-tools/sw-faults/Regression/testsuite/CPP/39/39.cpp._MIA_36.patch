@@ -1,0 +1,10 @@
+--- 39.cpp
++++ 39.cpp._MIA_36	2016-03-30 01:36:54.977011900 +0100
+@@ -153,7 +153,6 @@
+             if (encontrou) 
+                 break;
+         }
+-        if (!encontrou) 
+             printf("No Path!\n");
+     }
+     return 0;

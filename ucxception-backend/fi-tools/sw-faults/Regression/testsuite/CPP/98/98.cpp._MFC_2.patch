@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._MFC_2	2016-03-30 02:04:18.408985600 +0100
+@@ -25,7 +25,7 @@
+         pos = queue.top();
+         queue.pop();
+         if (pos <= width) {
+-            printf("%d,", pos);
++            ;
+             while (!queue.empty()){
+                 int val = queue.top();
+                 queue.pop();

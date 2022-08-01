@@ -1,0 +1,21 @@
+--- ./4.c
++++ ./4.c._WPFV_5	2016-12-08 00:50:59.811083413 +0000
+@@ -53,7 +53,7 @@
+     for (i = n;i < nr;i++){
+         if (printers[i] == '#') {
+             printers[i] = '1';
+-            calc(i, nr, b + 1);
++            calc(i, n, b + 1);
+             printers[i] = '#';
+         }
+     }
+@@ -72,4 +72,9 @@
+     printf("%d\n", best);
+     return 0;
+ }
++, nr, 1);
+ 
++    printf("%d\n", best);
++    
++    return 0;
++}

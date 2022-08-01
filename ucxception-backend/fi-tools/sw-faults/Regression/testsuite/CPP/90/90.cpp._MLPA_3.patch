@@ -1,0 +1,12 @@
+--- 90.cpp
++++ 90.cpp._MLPA_3	2016-03-30 02:02:02.150533800 +0100
+@@ -34,9 +34,6 @@
+         *a = *a * 10 + (tmp - 48);
+         tmp = getchar_unlocked();
+     }
+-    tmp = getchar_unlocked();
+-    *b = (tmp - 48);
+-    tmp = getchar_unlocked();
+     while (tmp != '\n'){
+         *b = *b * 10 + (tmp - 48);
+         tmp = getchar_unlocked();

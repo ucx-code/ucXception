@@ -1,0 +1,11 @@
+--- 63.cpp
++++ 63.cpp._MFC_5	2016-03-30 01:42:36.729146100 +0100
+@@ -93,7 +93,7 @@
+     scanf("%d\n", &n);
+     int i;
+     for (i = 0;i < n;i++){
+-        scanf("%d %d", &slot[i].begin, &slot[i].end);
++        ;
+         naa[i] = slot[i].begin;
+     }
+     radix_sort_unsigned(naa, n);

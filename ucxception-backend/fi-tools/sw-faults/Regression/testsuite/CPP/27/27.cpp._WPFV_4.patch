@@ -1,0 +1,11 @@
+--- 27.cpp
++++ 27.cpp._WPFV_4	2016-03-30 01:25:49.651666200 +0100
+@@ -51,7 +51,7 @@
+         }
+         if (feasible == true) {
+             visit[i] = 1;
+-            mis(i, size + 1);
++            mis(n, size + 1);
+             visit[i] = 0;
+         }
+     }

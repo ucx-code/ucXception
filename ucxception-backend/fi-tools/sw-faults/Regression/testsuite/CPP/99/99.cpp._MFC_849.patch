@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_849	2016-03-30 03:08:32.898401000 +0100
+@@ -2028,7 +2028,7 @@
+     glutInitWindowSize(largura, altura);
+     glutInitWindowPosition(340, 100);
+     glutCreateWindow("Bombs away!! [Projeto CG 2014 by DiFa, JoPe, PeRe]");
+-    iniciarPrograma();
++    ;
+     init();
+     glutDisplayFunc(ecra);
+     glutReshapeFunc(redimensionarJanela);

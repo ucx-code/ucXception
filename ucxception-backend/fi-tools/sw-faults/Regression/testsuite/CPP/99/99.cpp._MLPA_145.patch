@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_145	2016-03-30 02:06:22.701999800 +0100
+@@ -219,10 +219,6 @@
+     for (z = 0;z < 21;z++){
+         for (x = 0;x < 21;x++){
+             ground_points[x][z][0] = x - 10.0;
+-            ground_points[x][z][1] = accum;
+-            ground_points[x][z][2] = z - 10.0;
+-            ground_colors[z][x][0] = r;
+-            ground_colors[z][x][1] = g;
+             ground_colors[z][x][2] = b;
+             ground_colors[z][x][3] = 0.0;
+         }

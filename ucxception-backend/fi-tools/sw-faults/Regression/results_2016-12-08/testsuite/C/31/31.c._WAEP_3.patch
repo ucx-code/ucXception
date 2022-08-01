@@ -1,0 +1,11 @@
+--- ./31.c
++++ ./31.c._WAEP_3	2016-12-08 00:50:42.759083719 +0000
+@@ -31,7 +31,7 @@
+     int i;
+     if (R == 0) {
+         for (i = 0;i < comp;i++){
+-            memcpy(&tab[i][comp], &tab[i][0], comp * sizeof (char));
++            memcpy(&tab[i][comp], &tab[i][0], sizeof (char));
+             memcpy(&tab[i + comp][0], &tab[i][0], comp * sizeof (char));
+         }
+         invert(comp, comp, comp);

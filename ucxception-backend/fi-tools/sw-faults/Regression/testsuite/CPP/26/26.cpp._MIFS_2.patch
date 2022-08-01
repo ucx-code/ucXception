@@ -1,0 +1,14 @@
+--- 26.cpp
++++ 26.cpp._MIFS_2	2016-03-30 01:25:14.340677900 +0100
+@@ -60,11 +60,6 @@
+     std::vector<int> result1 = MSC(tmpS, tmpU, c + 1);
+     c1.insert(c1.end(), result1.begin(), result1.end());
+     std::vector<int> result2 = MSC(tmpS, U, c + 1);
+-    if ((result1.size() == 1) && (result2.size() == 1) && (result1[0] == -1) && (result2[0] == -1)) {
+-        std::vector<int> bad;
+-        bad.push_back(-1);
+-        return bad;
+-    }
+     return (result1.size() < result2.size()) ? result1 : result2;
+ }
+ void createAllSets()

@@ -1,0 +1,11 @@
+--- 40.cpp
++++ 40.cpp._MVIV_0	2016-03-30 01:36:58.689984100 +0100
+@@ -10,7 +10,7 @@
+ int knapsack2(int n, int m)
+ {
+     int j, i, a;
+-    int maximoFinal = 0;
++    int maximoFinal = maximoFinal;
+     int anterior = 0;
+     int agora = 1;
+     for (i = 1;i <= n;i++){

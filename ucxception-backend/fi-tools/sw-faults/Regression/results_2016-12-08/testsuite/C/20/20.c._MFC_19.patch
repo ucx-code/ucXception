@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MFC_19	2016-12-08 00:50:10.595084295 +0000
+@@ -186,7 +186,7 @@
+         expr_type = expr_recursive(prog, name, node->child);
+         if (strcmp(expr_type, "boolean") != 0 && strcmp(expr_type, "int") != 0) {
+             printf("Incompatible type in System.out.println statement (got %s, required boolean or int)\n", expr_type);
+-            exit(0);
++            ;
+     }
+     break;
+ case Return:

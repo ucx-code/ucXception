@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_31	2016-03-30 02:54:14.117162400 +0100
+@@ -1421,7 +1421,7 @@
+         if (pastX == robotX && pastZ == robotZ) {
+             printf("MESMO SITIO\n");
+             for (i = 0;i < enemysList.size();i++){
+-                if (enemysList[i].position[0] == pastX && enemysList[i].position[2] == pastZ) {
++                {
+                     aux = 1;
+                     break;
+                 }

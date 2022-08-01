@@ -1,0 +1,11 @@
+--- 16.c
++++ 16.c._WPFV_6	2016-03-30 00:43:17.174672900 +0100
+@@ -41,7 +41,7 @@
+         int m = l + (r - l) / 2;
+         mergeSort(arr, l, m);
+         mergeSort(arr, m + 1, r);
+-        merge(arr, l, m, r);
++        merge(arr, arr, m, r);
+     }
+ }
+ 

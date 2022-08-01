@@ -1,0 +1,12 @@
+--- 93.cpp
++++ 93.cpp._MIEB_0	2016-03-30 02:02:41.012363100 +0100
+@@ -41,9 +41,6 @@
+             if (!marked[i]) 
+                 dfs(i);
+         }
+-        if (is == true) 
+-            printf("NOT SURE\n");
+-        else
+             printf("NO\n");
+     }
+     return 0;

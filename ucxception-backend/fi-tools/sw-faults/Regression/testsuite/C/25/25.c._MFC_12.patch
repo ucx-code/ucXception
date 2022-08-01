@@ -1,0 +1,11 @@
+--- 25.c
++++ 25.c._MFC_12	2016-03-30 00:53:07.256773200 +0100
+@@ -55,7 +55,7 @@
+         for (i = 0;i < squared;i++){
+             memcpy(tmp, matrix + (i * squared), squared);
+             tmp[squared] = '\0';
+-            printf("%s\n", tmp);
++            ;
+         }
+     }
+ }

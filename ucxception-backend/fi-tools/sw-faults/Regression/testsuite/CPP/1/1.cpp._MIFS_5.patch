@@ -1,0 +1,18 @@
+--- 1.cpp
++++ 1.cpp._MIFS_5	2016-03-30 01:08:38.584796200 +0100
+@@ -46,15 +46,6 @@
+             return 1;
+         }
+     }
+-    if (buffer[pos] == '\\') {
+-        if ((buffer[pos + 1] == '/') && (buffer[pos + 2] == '\\')) {
+-            if (recurse(pos + 2, max, width) == 1) {
+-                answer.push(pos + 1);
+-                answer.push(pos);
+-                return 1;
+-            }
+-        }
+-    }
+     if (buffer[pos] == '/') {
+         if ((buffer[pos - 1] == '\\') && (buffer[pos - 2] == '/')) {
+             if (recurse(pos - 2, max, width) == 1) {

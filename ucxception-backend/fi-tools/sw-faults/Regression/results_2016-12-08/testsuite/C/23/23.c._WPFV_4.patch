@@ -1,0 +1,20 @@
+--- ./23.c
++++ ./23.c._WPFV_4	2016-12-08 00:50:17.995084162 +0000
+@@ -34,7 +34,7 @@
+     int n, r;
+     int i;
+     scanf("%d %d", &n, &r);
+-    rec(0, n);
++    rec(0, r);
+     for (i = 0;i < pow(2, n);i++){
+         char tmp[1000];
+         strncpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
+@@ -42,3 +42,8 @@
+         printf("%s\n", tmp);
+     }
+ }
++, tmp);
++	
++	}
++//	fwrite(matrix, 1, 40, stdout);
++}

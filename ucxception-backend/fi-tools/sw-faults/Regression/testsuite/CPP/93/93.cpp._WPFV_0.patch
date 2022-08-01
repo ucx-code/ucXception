@@ -1,0 +1,11 @@
+--- 93.cpp
++++ 93.cpp._WPFV_0	2016-03-30 02:02:38.507044000 +0100
+@@ -39,7 +39,7 @@
+         memset(color, 0, sizeof (bool) * n);
+         for (i = 0;i < n;i++){
+             if (!marked[i]) 
+-                dfs(i);
++                dfs(vizinhos);
+         }
+         if (is == true) 
+             printf("NOT SURE\n");

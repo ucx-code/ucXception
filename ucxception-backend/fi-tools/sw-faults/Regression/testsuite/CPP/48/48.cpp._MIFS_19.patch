@@ -1,0 +1,19 @@
+--- 48.cpp
++++ 48.cpp._MIFS_19	2016-03-30 01:39:29.654429400 +0100
+@@ -128,16 +128,6 @@
+         }
+     }
+     if (bufferPos == '/') {
+-        if ((bufferPosWidth == '|') || (bufferPosWidth == '/')) {
+-            if (recurse(pos - width, max, width) == 1) {
+-                if (recurseSize != 0) 
+-                    strcat2((char*)",", 1);
+-
+-                sprintf(tmp, "(%d,%d)", getY(pos, width), getX(pos, width));
+-                strcat2(tmp);
+-                return 1;
+-            }
+-        }
+         if (bufferPosWidth1 == '\\') {
+             if (recurse(pos - width - 1, max, width) == 1) {
+                 if (recurseSize != 0) 

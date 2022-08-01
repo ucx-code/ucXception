@@ -1,0 +1,10 @@
+--- 48.cpp
++++ 48.cpp._MVAE_0	2016-03-30 01:39:02.756010800 +0100
+@@ -22,7 +22,6 @@
+ void strcat2(char* text, int size)
+ {
+     memcpy(outputBuffer + counter, text, size);
+-    counter += size;
+     if (counter >= 7000) {
+         fwrite(outputBuffer, 1, counter, stdout);
+         outputBuffer[0] = '\0';

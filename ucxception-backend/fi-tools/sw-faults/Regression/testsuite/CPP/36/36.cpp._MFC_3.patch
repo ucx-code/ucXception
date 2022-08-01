@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._MFC_3	2016-03-30 01:32:16.853849100 +0100
+@@ -77,7 +77,7 @@
+     for (i = 0;i < maxi;i++){
+         if (estadosP[estadoCounter][translator[estadoCounter][i]] == 0) {
+             memcpy(estadosP[estadoCounter + 1], estadosP[estadoCounter], sizeof (int) * 35);
+-            rec(i, n, count, estadoCounter + 1, recurseLevel + 1);
++            ;
+         }
+     }
+     return 2;

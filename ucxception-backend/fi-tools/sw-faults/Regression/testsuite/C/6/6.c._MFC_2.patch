@@ -1,0 +1,11 @@
+--- 6.c
++++ 6.c._MFC_2	2016-03-30 00:30:32.098031000 +0100
+@@ -13,7 +13,7 @@
+     while (n != (-1)){
+         ad_jogador(n, i);
+         i++;
+-        scanf("%d", &n);
++        ;
+     }
+     for (j = 0;j < i;j++){
+         float soma = soma_golos(j);

@@ -1,0 +1,18 @@
+--- ./19.c
++++ ./19.c._WPFV_21	2016-12-08 00:50:03.479084422 +0000
+@@ -1,6 +1,3 @@
+-#include <stdio.h>
+-#include <math.h>
+-#include <limits.h>
+ int distancias[17][19];
+ float supermarkets[17][2];
+ int lista[17][17];
+@@ -39,7 +36,7 @@
+         return;
+     }
+     if (v != 0) 
+-        shortestPath(0, len + distancias[v][0], maxCap, bound);
++        shortestPath(0, len + distancias[v][0], maxCap, aux);
+ 
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {

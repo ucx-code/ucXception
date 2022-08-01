@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._MFC_2	2016-03-30 01:08:28.897565800 +0100
+@@ -36,7 +36,7 @@
+     }
+     if (((buffer[pos] == '|') && (buffer[pos + width + 1] == '|')) || ((buffer[pos] == '\\') && (buffer[pos + width + 1] == '/')) || ((buffer[pos] == '/') && (buffer[pos + width + 1] == '\\'))) {
+         if (recurse(pos + width + 1, max, width) == 1) {
+-            answer.push(pos);
++            ;
+             return 1;
+         }
+     }

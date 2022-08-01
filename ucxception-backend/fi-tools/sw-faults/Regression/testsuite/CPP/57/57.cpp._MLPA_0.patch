@@ -1,0 +1,11 @@
+--- 57.cpp
++++ 57.cpp._MLPA_0	2016-03-30 01:41:12.651187600 +0100
+@@ -29,8 +29,6 @@
+         bool can = false;
+         for (a = 0;a < d;a++)
+             if (room[a] < slot[i].begin) {
+-                can = true;
+-                room[a] = slot[i].end;
+                 break;
+             }
+         if (can == false) {

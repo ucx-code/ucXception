@@ -1,0 +1,13 @@
+--- 5.c
++++ 5.c._MIEB_5	2016-03-30 00:30:14.656419000 +0100
+@@ -68,9 +68,7 @@
+         }
+         if (troco / 0.1 >= 1 && moedas[4] > 0) {
+             x = troco / 0.1;
+-            if (x > moedas[4]) {
+-                moedasTroco[4] = moedas[4];
+-            }else{
++            {
+                 moedasTroco[4] = x;
+             }
+             moedas[4] = moedas[4] - moedasTroco[4];

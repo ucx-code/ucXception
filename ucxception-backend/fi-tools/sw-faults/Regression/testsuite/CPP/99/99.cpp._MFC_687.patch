@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_687	2016-03-30 02:53:59.702560200 +0100
+@@ -1379,7 +1379,7 @@
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+     glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+     glPushMatrix();
+-    glTranslatef(0.0, torusin, 0.0);
++    ;
+     glRotatef(-90.0, 1.0, 0.0, 0.0);
+     glutSolidTorus(0.05, 1.5, 32, 32);
+     glPopMatrix();

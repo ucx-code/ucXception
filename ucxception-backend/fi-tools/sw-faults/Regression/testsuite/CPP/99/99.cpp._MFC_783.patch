@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_783	2016-03-30 03:02:36.574388000 +0100
+@@ -1932,7 +1932,7 @@
+                             }
+                             glMatrixMode(GL_PROJECTION);
+                             glLoadIdentity();
+-                            gluPerspective(90, largura / altura, 1, 200);
++                            ;
+                             glMatrixMode(GL_MODELVIEW);
+                             if (CAMERA == -1) 
+                                 gluLookAt(50, 20, 50, robotX, obsPfin[1], robotZ, 0, 1, 0);

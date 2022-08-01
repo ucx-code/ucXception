@@ -1,0 +1,11 @@
+--- 2.c
++++ 2.c._MFC_10	2016-03-30 00:29:23.017147200 +0100
+@@ -54,7 +54,7 @@
+     while (scanf("%d %d", &n, &r) != EOF){
+         rec(0, n, r % 4);
+         for (i = 0;i < pow(2, n);i++){
+-            memcpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));
++            ;
+             tmp[(int)pow(2, n)] = '\0';
+             printf("%s\n", tmp);
+         }

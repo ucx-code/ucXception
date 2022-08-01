@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_2	2016-03-30 02:44:24.583520200 +0100
+@@ -1026,7 +1026,6 @@
+     if (glIsEnabled (GL_LIGHT1)) 
+         if (colx <= -49 && colz > 15 && colz < 25) {
+             printf("caixa 1\n");
+-            score += 50;
+             glDisable(GL_LIGHT1);
+             enemy box;
+             box.position[0] = -49;

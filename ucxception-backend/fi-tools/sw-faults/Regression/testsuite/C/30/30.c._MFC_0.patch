@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MFC_0	2016-03-30 00:58:32.134781900 +0100
+@@ -150,7 +150,7 @@
+             printf("No Path!\n");
+         }else{
+             i = 1;
+-            printf("(%hd,%hd)", path[0][0], path[0][1]);
++            ;
+             while (path[i][0] != 0){
+                 printf(",(%hd,%hd)", path[i][0], path[i][1]);
+                 path[i][0] = 0;

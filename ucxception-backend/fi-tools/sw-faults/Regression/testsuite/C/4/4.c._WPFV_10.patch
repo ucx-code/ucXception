@@ -1,0 +1,11 @@
+--- 4.c
++++ 4.c._WPFV_10	2016-03-30 00:29:59.282969200 +0100
+@@ -68,7 +68,7 @@
+         connections[i - 1][j - 1] = '1';
+     }
+     memset(printers, '#', nr * sizeof (char));
+-    calc(0, nr, 1);
++    calc(0, i, 1);
+     printf("%d\n", best);
+     return 0;
+ }

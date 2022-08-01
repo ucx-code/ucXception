@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1615	2016-03-30 02:42:14.116394100 +0100
+@@ -916,9 +916,6 @@
+     }
+     for (i = 0;i < NUM_DEBRIS;i++){
+         debris[i].position[0] = 0.0;
+-        debris[i].position[1] = 0.0;
+-        debris[i].position[2] = 0.0;
+-        debris[i].orientation[0] = 0.0;
+         debris[i].orientation[1] = 0.0;
+         debris[i].orientation[2] = 0.0;
+         debris[i].color[0] = 0.7;

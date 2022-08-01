@@ -1,0 +1,11 @@
+--- 65.cpp
++++ 65.cpp._MFC_2	2016-03-30 01:43:32.317711500 +0100
+@@ -95,7 +95,7 @@
+ int main()
+ {
+     int n;
+-    scanf("%d\n", &n);
++    ;
+     int i;
+     for (i = 0;i < n;i++){
+         scanf("%d %d", &slot[i].begin, &slot[i].end);

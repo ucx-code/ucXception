@@ -1,0 +1,12 @@
+--- 78.cpp
++++ 78.cpp._MIFS_12	2016-03-30 01:51:55.777201100 +0100
+@@ -195,9 +195,6 @@
+     for (i = 0;i < n;i++){
+         int k = unitClauseC[i][1];
+         int k2 = listaC[i][0];
+-        if (k2 <= k) {
+-            forced[i] = 1;
+-        }
+     }
+     showC(forced, n);
+     rec(c, 0, n);

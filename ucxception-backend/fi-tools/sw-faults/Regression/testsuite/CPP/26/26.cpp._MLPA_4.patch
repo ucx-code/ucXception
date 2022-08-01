@@ -1,0 +1,12 @@
+--- 26.cpp
++++ 26.cpp._MLPA_4	2016-03-30 01:25:02.280645300 +0100
+@@ -56,9 +56,7 @@
+         if (c < melhor) 
+             melhor = c;
+     }
+-    mostraVector(tmpS);
+     std::vector<int> result1 = MSC(tmpS, tmpU, c + 1);
+-    c1.insert(c1.end(), result1.begin(), result1.end());
+     std::vector<int> result2 = MSC(tmpS, U, c + 1);
+     if ((result1.size() == 1) && (result2.size() == 1) && (result1[0] == -1) && (result2[0] == -1)) {
+         std::vector<int> bad;

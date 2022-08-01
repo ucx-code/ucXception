@@ -1,0 +1,24 @@
+--- 1.c
++++ 1.c._MIEB_0	2016-03-30 00:28:38.809502700 +0100
+@@ -9,10 +9,7 @@
+     if (n > target) 
+         return;
+ 
+-    if (n == 0) {
+-        matrix[0] = '0';
+-        rec(n + 1, target);
+-    }else{
++    {
+         int halfSquare = pow(2, n) / 2;
+         int i;
+         char tmp[100];
+@@ -26,8 +23,7 @@
+             memset(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), '3', halfSquare);
+         }
+         rec(n + 1, target);
+-    }
+-}
++    }}
+ 
+ int main()
+ {

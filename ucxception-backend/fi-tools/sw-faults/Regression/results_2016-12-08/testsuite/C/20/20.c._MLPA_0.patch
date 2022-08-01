@@ -1,0 +1,11 @@
+--- ./20.c
++++ ./20.c._MLPA_0	2016-12-08 00:50:08.271084336 +0000
+@@ -10,8 +10,6 @@
+ prog_env* check_program(is_node* node)
+ {
+     prog_env* prog = (prog_env*)malloc(sizeof (prog_env));
+-    prog->global = NULL;
+-    prog->methods = NULL;
+     if (node->type == Program) 
+         check_class(node->child, prog);
+ 

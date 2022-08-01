@@ -1,0 +1,12 @@
+--- 36.cpp
++++ 36.cpp._MIEB_0	2016-03-30 01:31:55.505589600 +0100
+@@ -21,9 +21,6 @@
+         if (estadosP[estadoCounterT][vizinhos[pos][i]] == 0) 
+             ++count;
+     }
+-    if (count != 0) 
+-        return count;
+-    else
+         return -99999;
+ }
+ 

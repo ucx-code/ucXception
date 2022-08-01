@@ -1,0 +1,11 @@
+--- 3.c
++++ 3.c._MFC_9	2016-03-30 00:29:39.127911400 +0100
+@@ -41,7 +41,7 @@
+                         if (r == 3) 
+                             memcpy(matrix + halfMatrix + (i * 2 * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }
+-        rec(n + 1, target, r);
++        ;
+     }
+ }
+ 

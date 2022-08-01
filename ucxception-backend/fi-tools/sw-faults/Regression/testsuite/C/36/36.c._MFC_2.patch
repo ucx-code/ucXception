@@ -1,0 +1,11 @@
+--- 36.c
++++ 36.c._MFC_2	2016-03-30 01:02:05.973719800 +0100
+@@ -9,7 +9,7 @@
+     for (i = 1;i <= ndep;i++){
+         scanf("%hd", &n);
+         for (z = 0;z < n;z++){
+-            scanf("%hd %hd", &aux1, &aux2);
++            ;
+             if (z == 0) {
+                 for (k = 0;k < ects;k++){
+                     if (aux1 == (k + 1) && sack[i - 1][k] < aux2) {

@@ -1,0 +1,11 @@
+{
+	"component_name": "SAR 2 CSV",
+	"component_file_name": "sar_to_csv.py",
+	"component_class_name": "Sar_to_CSV",
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"components_allowed" : {"require": true, "values": [{"component_type": "preprobes", "filename": "probe_sar.py"}]},
+	"information_help": "Employs the sadf utility to convert the binary file produced by SAR probe into a CSV file."
+}

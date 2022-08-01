@@ -1,0 +1,11 @@
+--- 71.cpp
++++ 71.cpp._MFC_22	2016-03-30 01:46:08.593215900 +0100
+@@ -142,7 +142,7 @@
+                 recurseSize = 0;
+                 int result = recurse(i, matrixSize, width);
+                 if (result == 1) {
+-                    printf("\n");
++                    ;
+                     encontrou = true;
+                     break;
+                 }

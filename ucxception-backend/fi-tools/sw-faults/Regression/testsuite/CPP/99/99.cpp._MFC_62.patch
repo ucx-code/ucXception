@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_62	2016-03-30 02:10:19.754382600 +0100
+@@ -385,7 +385,7 @@
+                                             imag.LoadBmpFile("tex/check.bmp");
+                                         else
+                                             if (i == 9) 
+-                                                imag.LoadBmpFile("tex/autores.bmp");
++                                                ;
+                                             else
+                                                 if (i == 10) 
+                                                     imag.LoadBmpFile("tex/pontuacao.bmp");

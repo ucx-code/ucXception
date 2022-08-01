@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_209	2016-03-30 02:08:13.339393800 +0100
+@@ -289,8 +289,6 @@
+ 
+             alutLoadWAVFile((ALbyte*)"wav/laserGun.wav", &format, &data, &size, &freq, &loop);
+             alBufferData(Buffer, format, data, size, freq);
+-            alutUnloadWAV(format, data, size, freq);
+-            alGenSources(1, &Source);
+             if (alGetError() != AL_NO_ERROR) 
+                 return AL_FALSE;
+ 

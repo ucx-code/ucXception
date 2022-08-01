@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_184	2016-03-30 03:08:22.630096100 +0100
+@@ -2024,7 +2024,7 @@
+ {
+     textoPontos = (char*)malloc(sizeof (char*));
+     glutInit(&argc, argv);
+-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_STENCIL);
++    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+     glutInitWindowSize(largura, altura);
+     glutInitWindowPosition(340, 100);
+     glutCreateWindow("Bombs away!! [Projeto CG 2014 by DiFa, JoPe, PeRe]");

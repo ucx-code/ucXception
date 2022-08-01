@@ -1,0 +1,11 @@
+--- 53.cpp
++++ 53.cpp._MLPA_0	2016-03-30 01:40:18.592659200 +0100
+@@ -32,8 +32,6 @@
+         int master = begin;
+         for (i = master + 1;i < n;i++){
+             if ((slot[i].begin != -1) && (slot[master].end <= slot[i].begin)) {
+-                slot[master].begin = -1;
+-                slot[master].end = -1;
+                 ++maximo;
+                 master = i;
+             }else

@@ -1,0 +1,12 @@
+--- ./17.c
++++ ./17.c._MIFS_0	2016-12-08 00:49:57.879084522 +0000
+@@ -20,9 +20,6 @@
+ {
+     short i;
+     short aux = len + distancias[v][0];
+-    if (aux >= best) 
+-        return;
+-
+     if (isSolution() && aux < best) {
+         best = aux;
+         return;

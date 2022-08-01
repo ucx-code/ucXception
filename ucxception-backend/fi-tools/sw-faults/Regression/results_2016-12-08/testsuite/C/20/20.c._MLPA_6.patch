@@ -1,0 +1,12 @@
+--- ./20.c
++++ ./20.c._MLPA_6	2016-12-08 00:50:08.791084327 +0000
+@@ -36,9 +36,6 @@
+             }
+             break;
+         case MethodDecl:
+-            insert_global_table(prog, node->child->next->id, "method");
+-            insert_methods_table(prog, node->child->next->id, sem_type[node->child->type]);
+-            check_methodDecl(prog, node->child);
+             break;
+         default:
+             break;

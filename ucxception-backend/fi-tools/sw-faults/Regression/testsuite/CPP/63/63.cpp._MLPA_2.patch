@@ -1,0 +1,13 @@
+--- 63.cpp
++++ 63.cpp._MLPA_2	2016-03-30 01:42:13.282166100 +0100
+@@ -30,10 +30,6 @@
+     }
+     if (!(bit & *ll) && ll < to) 
+         ll++;
+-
+-    bit >>= 1;
+-    rad_sort_u(from, ll, bit);
+-    rad_sort_u(ll, to, bit);
+ }
+ 
+ inline static void radix_sort_unsigned(uint* a, const size_t len)

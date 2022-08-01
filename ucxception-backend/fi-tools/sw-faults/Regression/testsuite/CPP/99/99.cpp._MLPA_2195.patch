@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2195	2016-03-30 02:51:45.301885100 +0100
+@@ -1277,11 +1277,7 @@
+                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, rubyCoef);
+             }
+ 
+-    glPushMatrix();
+-    glRotatef(90.0, 1.0, 0.0, 0.0);
+     GLUquadricObj* quadratic;
+-    quadratic = gluNewQuadric();
+-    gluCylinder(quadratic, 3.0, 3.0, 10.0, 32, 32);
+     glPopMatrix();
+     glPushMatrix();
+     if (op_robot == 1) {

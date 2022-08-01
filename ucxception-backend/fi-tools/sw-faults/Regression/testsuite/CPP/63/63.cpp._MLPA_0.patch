@@ -1,0 +1,11 @@
+--- 63.cpp
++++ 63.cpp._MLPA_0	2016-03-30 01:42:12.597579800 +0100
+@@ -31,8 +31,6 @@
+     if (!(bit & *ll) && ll < to) 
+         ll++;
+ 
+-    bit >>= 1;
+-    rad_sort_u(from, ll, bit);
+     rad_sort_u(ll, to, bit);
+ }
+ 

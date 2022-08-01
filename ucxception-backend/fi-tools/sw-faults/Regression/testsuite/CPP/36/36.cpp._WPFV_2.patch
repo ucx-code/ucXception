@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._WPFV_2	2016-03-30 01:32:02.044466500 +0100
+@@ -53,7 +53,7 @@
+         estadosP[estadoCounter][vizinhos[translator[estadoCounter - 1][pos]][i]] = 1;
+     }
+     estadoCounterT = estadoCounter;
+-    qsort(translator[estadoCounter], n, sizeof (int), compare);
++    qsort(translator[estadoCounter], melhor, sizeof (int), compare);
+     estadoCounterT = estadoCounter;
+     int maxi = 1;
+     for (i = 1;i < n;i++){

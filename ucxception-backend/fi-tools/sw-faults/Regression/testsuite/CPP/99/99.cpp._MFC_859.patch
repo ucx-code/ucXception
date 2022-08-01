@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_859	2016-03-30 03:08:57.249495800 +0100
+@@ -2040,7 +2040,7 @@
+     alutInit(NULL, 0);
+     alGetError();
+     if (LoadALData() == AL_FALSE) {
+-        printf("Error loading data.");
++        ;
+         return 0;
+     }
+     SetListenerValues();

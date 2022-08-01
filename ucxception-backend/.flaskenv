@@ -1,0 +1,2 @@
+export FLASK_APP=api.api_ucXception
+export FLASK_ENV=development

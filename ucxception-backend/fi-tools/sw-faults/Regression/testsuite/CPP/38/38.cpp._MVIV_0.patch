@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._MVIV_0	2016-03-30 01:34:50.369158600 +0100
+@@ -32,7 +32,7 @@
+     for (i = 0;i < counter[pos];i++){
+         estadosP[estadoCounter][vizinhos[pos][i]] = 1;
+     }
+-    int faltam = 0;
++    int faltam = faltam;
+     std::vector<int> osQueFaltam;
+     for (i = 0;i < n;i++){
+         if (estadosP[estadoCounter][i] == 0) {

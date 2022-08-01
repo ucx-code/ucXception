@@ -1,0 +1,13 @@
+--- ./20.c
++++ ./20.c._MLPA_12	2016-12-08 00:50:10.159084302 +0000
+@@ -172,10 +172,8 @@
+ while (node != NULL){
+     switch (node->type){
+         case CompoundStat:
+-            semantic_statements(prog, name, node->child);
+             break;
+         case IfElse:
+-            expr_type = expr_recursive(prog, name, node->child);
+             if (strcmp(expr_type, "boolean") != 0) {
+                 printf("Incompatible type in if statement (got %s, required boolean)\n", expr_type);
+                 exit(0);

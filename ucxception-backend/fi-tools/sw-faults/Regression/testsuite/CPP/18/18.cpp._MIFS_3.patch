@@ -1,0 +1,15 @@
+--- 18.cpp
++++ 18.cpp._MIFS_3	2016-03-30 01:19:11.644818700 +0100
+@@ -36,12 +36,6 @@
+     int bufferPosN1 = (buffer[pos - 1] & 0x7F);
+     int bufferPosN2 = (buffer[pos - 2] & 0x7F);
+     if (bufferPos == '|') {
+-        if (bufferPosWidth == '/') {
+-            if (recurse(pos + width, max, width) == 1) {
+-                answer.push(pos);
+-                return 1;
+-            }
+-        }
+         if (bufferPosWidth1 == '|') {
+             if (recurse(pos + width + 1, max, width) == 1) {
+                 answer.push(pos);

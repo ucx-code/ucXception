@@ -1,0 +1,11 @@
+--- 26.c
++++ 26.c._MFC_0	2016-03-30 00:53:13.682590400 +0100
+@@ -13,7 +13,7 @@
+     while (scanf("%d ", &nLinhas) != EOF){
+         encont = 0;
+         int i, aux = 0, ant[2];
+-        scanf("%d", &nColunas);
++        ;
+         for (i = 0;i < nLinhas;i++)
+             scanf("%s", tab[i]);
+         coord[0][0] = coord[0][1] = -1;

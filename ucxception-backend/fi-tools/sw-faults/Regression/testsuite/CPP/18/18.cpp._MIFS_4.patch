@@ -1,0 +1,15 @@
+--- 18.cpp
++++ 18.cpp._MIFS_4	2016-03-30 01:19:15.199270800 +0100
+@@ -42,12 +42,6 @@
+                 return 1;
+             }
+         }
+-        if (bufferPosWidth1 == '|') {
+-            if (recurse(pos + width + 1, max, width) == 1) {
+-                answer.push(pos);
+-                return 1;
+-            }
+-        }
+         if (bufferPosWidth2 == '\\') {
+             if (recurse(pos + width + 2, max, width) == 1) {
+                 answer.push(pos);

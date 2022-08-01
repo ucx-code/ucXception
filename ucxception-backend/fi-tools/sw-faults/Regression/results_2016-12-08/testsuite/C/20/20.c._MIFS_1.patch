@@ -1,0 +1,12 @@
+--- ./20.c
++++ ./20.c._MIFS_1	2016-12-08 00:50:10.055084304 +0000
+@@ -154,9 +154,6 @@
+         aux2 = aux->child;
+         method_name = aux->child->next->id;
+         while (aux2 != NULL){
+-            if (aux2->type == MethodBody) 
+-                semantic_statements(mySemantic, method_name, aux2->child);
+-
+             aux2 = aux2->next;
+         }
+     }

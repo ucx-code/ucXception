@@ -1,0 +1,14 @@
+--- 10.c
++++ 10.c._MIEB_4	2016-03-30 00:36:23.183954100 +0100
+@@ -137,11 +137,7 @@
+         glob = verifyGlobal(node->child->id, prog, method_name);
+         type = get_type(node->child->id, prog, method_name);
+         expr = gen_expression(method_name, node->child->next, prog);
+-        if (!glob) 
+-            printf("\tstore %s %s, %s* %%%s\n", type, expr, type, node->child->id);
+-        else
+             printf("\tstore %s %s, %s* @%s\n", type, expr, type, node->child->id);
+-
+         break;
+     case StoreArray:
+         break;

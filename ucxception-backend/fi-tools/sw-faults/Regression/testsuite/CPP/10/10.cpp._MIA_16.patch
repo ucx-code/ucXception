@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._MIA_16	2016-03-30 01:15:23.653933000 +0100
+@@ -89,7 +89,7 @@
+         for (i = 0;i < width;i++){
+             if (((buffer[i] & 0x7F) == '|') || ((buffer[i] & 0x7F) == '\\') || ((buffer[i] & 0x7F) == '/')) {
+                 int result = recurse(i, matrixSize, width);
+-                if (result == 1) {
++                {
+                     int tamanhoCaminho = answer.size();
+                     int l;
+                     for (l = 0;l < tamanhoCaminho;l++){

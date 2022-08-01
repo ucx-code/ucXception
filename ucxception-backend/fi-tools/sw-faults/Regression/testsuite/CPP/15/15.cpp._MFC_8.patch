@@ -1,0 +1,11 @@
+--- 15.cpp
++++ 15.cpp._MFC_8	2016-03-30 01:17:10.839075500 +0100
+@@ -49,7 +49,7 @@
+                 memcpy(matrix + halfMatrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+             }
+         }
+-        rec(n + 1, target, r);
++        ;
+     }
+ }
+ 

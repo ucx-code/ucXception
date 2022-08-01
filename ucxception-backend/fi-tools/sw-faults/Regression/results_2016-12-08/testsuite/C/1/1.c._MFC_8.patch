@@ -1,0 +1,11 @@
+--- ./1.c
++++ ./1.c._MFC_8	2016-12-08 00:49:26.647085082 +0000
+@@ -34,7 +34,7 @@
+     int n, r;
+     int i;
+     scanf("%d %d", &n, &r);
+-    rec(0, n);
++    ;
+     for (i = 0;i < pow(2, n);i++){
+         char tmp[1000];
+         strncpy(tmp, matrix + (int)(i * pow(2, n)), pow(2, n));

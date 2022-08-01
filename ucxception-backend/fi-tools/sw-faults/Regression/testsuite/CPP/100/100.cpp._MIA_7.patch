@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MIA_7	2016-03-30 03:16:44.294092200 +0100
+@@ -122,7 +122,7 @@
+ bool RgbImage::WriteBmpFile(const char* filename)
+ {
+     FILE* outfile = fopen(filename, "wb");
+-    if (!outfile) {
++    {
+         fprintf(stderr, "Unable to open file: %s\n", filename);
+         ErrorCode = OpenError;
+         return false;

@@ -1,0 +1,11 @@
+--- 3.cpp
++++ 3.cpp._WAEP_6	2016-03-30 01:10:49.749124400 +0100
+@@ -22,7 +22,7 @@
+             tmpInv[i] = (tmp[i] == '0') ? '1' : '0';
+         for (i = 0;i < halfSquare;i++){
+             if (r == 2) 
+-                memcpy(matrix + ((i * 2) * halfSquare), tmpInv + halfSquare * i, halfSquare);
++                memcpy(matrix + ((i * 2) * halfSquare), tmpInv, halfSquare);
+             else
+                 memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+ 

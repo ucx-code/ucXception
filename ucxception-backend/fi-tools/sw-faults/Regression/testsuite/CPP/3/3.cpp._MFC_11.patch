@@ -1,0 +1,11 @@
+--- 3.cpp
++++ 3.cpp._MFC_11	2016-03-30 01:11:15.126350000 +0100
+@@ -56,7 +56,7 @@
+         for (i = 0;i < pow(2, n);i++){
+             memcpy(tmp, matrix + (int)(i * pow(2, n)), (int)pow(2, n));
+             tmp[(int)pow(2, n)] = '\0';
+-            printf("%s\n", tmp);
++            ;
+         }
+     }
+ }

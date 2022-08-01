@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2662	2016-03-30 02:57:49.391428100 +0100
+@@ -1686,8 +1686,6 @@
+                     }else
+                         if ((acerca == 0) && (x > 150) && (x < 350) && (y > 435) && (y < 470) && (iniciarjogo != 1)) {
+                             inicio = 0;
+-                            opcoes = 0;
+-                            pontos = 0;
+                             instrucoes = 0;
+                             acerca = 1;
+                             iniciarjogo = 0;

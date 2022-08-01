@@ -1,0 +1,11 @@
+--- 35.cpp
++++ 35.cpp._MVIV_0	2016-03-30 01:31:15.554404000 +0100
+@@ -10,7 +10,7 @@
+ 
+ int countVizinhos(int pos, int n, int estadoCounter)
+ {
+-    int count = 0;
++    int count = count;
+     int i;
+     for (i = 0;i < counter[pos];i++){
+         if (estadosP[estadoCounter][vizinhos[pos][i]] == 0) 

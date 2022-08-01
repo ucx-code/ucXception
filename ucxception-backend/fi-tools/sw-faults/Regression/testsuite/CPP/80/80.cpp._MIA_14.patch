@@ -1,0 +1,12 @@
+--- 80.cpp
++++ 80.cpp._MIA_14	2016-03-30 01:52:47.994590400 +0100
+@@ -146,9 +146,7 @@
+     }
+     if (begin == end) {
+         int soma = calc(c, end);
+-        if (soma < best) 
+             best = soma;
+-
+         return;
+     }
+     c[begin] = 0;

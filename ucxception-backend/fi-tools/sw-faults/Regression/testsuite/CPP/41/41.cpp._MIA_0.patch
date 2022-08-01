@@ -1,0 +1,10 @@
+--- 41.cpp
++++ 41.cpp._MIA_0	2016-03-30 01:37:12.743386800 +0100
+@@ -20,7 +20,6 @@
+                     int maximo = 0;
+                     int k;
+                     for (k = 1;k <= nCoursesDept[i - 1];k++)
+-                        if (K[anterior][k][j] > maximo) 
+                             maximo = K[anterior][k][j];
+                     if (maximo > maximoFinal) 
+                         maximoFinal = maximo;

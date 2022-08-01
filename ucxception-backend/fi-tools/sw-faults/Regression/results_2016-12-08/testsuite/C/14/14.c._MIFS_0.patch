@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MIFS_0	2016-12-08 00:49:44.231084767 +0000
+@@ -15,9 +15,6 @@
+ 
+ is_node* insertProgAux(is_node* id, is_node* fieldsmethods)
+ {
+-    if (fieldsmethods != NULL) 
+-        id->next = fieldsmethods;
+-
+     return id;
+ }
+ 

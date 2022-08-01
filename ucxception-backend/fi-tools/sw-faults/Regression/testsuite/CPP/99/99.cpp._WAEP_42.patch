@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_42	2016-03-30 02:41:35.960544400 +0100
+@@ -817,7 +817,7 @@
+     glPopMatrix();
+     glDisable(GL_TEXTURE_2D);
+     glEnable(GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, skybox[2]);
++    glBindTexture(GL_TEXTURE_2D, skybox);
+     glPushMatrix();
+     glNormal3f(0.0f, 0.0f, -1.0f);
+     glBegin(GL_QUADS);

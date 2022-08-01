@@ -1,0 +1,11 @@
+--- 10.c
++++ 10.c._MFC_37	2016-03-30 00:37:18.839358300 +0100
+@@ -204,7 +204,7 @@
+     c = (char*)malloc(sizeof (char*));
+     counter++;
+     printf("\t%%%d = sub i32 %%.argc, 1\n", counter);
+-    sprintf(c, "%%%d", counter);
++    ;
+     return c;
+     break;
+ case LoadArray:

@@ -1,0 +1,11 @@
+--- 94.cpp
++++ 94.cpp._MLPA_0	2016-03-30 02:02:44.470802400 +0100
+@@ -9,8 +9,6 @@
+ 
+ void dfs(int v, int cur)
+ {
+-    mark[v] = true;
+-    color[v] = cur;
+     for (int i = 0;i < n;i++)
+         if (a[v][i] == 1) {
+             if (color[i] == cur) {

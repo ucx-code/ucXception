@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MLPA_50	2016-12-08 00:49:32.271084981 +0000
+@@ -123,8 +123,6 @@
+             printf("\t%%%d = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i8* %%%d)\n", counter + 1, counter);
+             printf("\tbr label %%ifcount_%d\n", if_c);
+             counter++;
+-            printf("\telse_%d:\n", if_c);
+-            printf("\t%%%d = load i8** @.false\n", ++counter);
+             printf("\t%%%d = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i8* %%%d)\n", counter + 1, counter);
+             printf("\tbr label %%ifcount_%d\n", if_c);
+             counter++;

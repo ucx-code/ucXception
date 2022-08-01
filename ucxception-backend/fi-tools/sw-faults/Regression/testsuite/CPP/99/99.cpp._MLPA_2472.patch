@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2472	2016-03-30 02:54:17.300430300 +0100
+@@ -1432,8 +1432,6 @@
+                 newe.position[0] = pastX;
+                 newe.position[1] = 50.0;
+                 newe.position[2] = pastZ;
+-                newe.fuel = 150;
+-                enemysList.push_back(newe);
+             }
+         }else{
+             pastX = robotX;

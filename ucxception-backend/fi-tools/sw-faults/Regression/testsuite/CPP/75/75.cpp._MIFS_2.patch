@@ -1,0 +1,13 @@
+--- 75.cpp
++++ 75.cpp._MIFS_2	2016-03-30 01:49:58.481866200 +0100
+@@ -112,10 +112,6 @@
+ 
+         return;
+     }
+-    if (forced[begin] != 3) {
+-        rec(c, begin + 1, end);
+-        return;
+-    }
+     int actual = calcB(c, begin, end);
+     if (actual + boundz[begin] >= best) 
+         return;

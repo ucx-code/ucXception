@@ -1,0 +1,11 @@
+--- ./15.c
++++ ./15.c._MFC_2	2016-12-08 00:49:53.683084597 +0000
+@@ -63,7 +63,7 @@
+ int main(int argc, const char* argv[])
+ {
+     int nr, i, j;
+-    scanf("%d", &nr);
++    ;
+     while (scanf("%d %d", &i, &j) == 2){
+         connections[i - 1][j - 1] = '1';
+     }

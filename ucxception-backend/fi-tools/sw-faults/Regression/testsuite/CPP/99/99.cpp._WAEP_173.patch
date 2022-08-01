@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_173	2016-03-30 03:03:50.001477600 +0100
+@@ -1960,7 +1960,7 @@
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, blackPlasticSpec);
+                                 glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, blackPlasticCoef);
+                             }
+-                            glTranslatef(Pos2[0], Pos2[1], Pos2[2]);
++                            glTranslatef(0, Pos2[1], Pos2[2]);
+                             glutSolidSphere(1.0, 100, 100);
+                             glPopMatrix();
+                             glPushMatrix();

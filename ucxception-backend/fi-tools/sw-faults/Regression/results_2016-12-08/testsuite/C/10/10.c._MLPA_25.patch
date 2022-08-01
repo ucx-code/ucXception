@@ -1,0 +1,14 @@
+--- ./10.c
++++ ./10.c._MLPA_25	2016-12-08 00:49:29.391085032 +0000
+@@ -19,11 +19,6 @@
+     printf("declare i32 @atoi(i8*) nounwind readonly\n");
+     printf("@str = private unnamed_addr constant [4 x i8] c\"%%d\\0A\\00\"\n");
+     printf("@.str2 = private unnamed_addr constant [4 x i8] c\"%%s\\0A\\00\"\n");
+-    printf("@.str = private unnamed_addr constant [5 x i8] c\"true\\00\"\n");
+-    printf("@.true = global i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0)\n");
+-    printf("@.str1 = private unnamed_addr constant [6 x i8] c\"false\\00\"\n");
+-    printf("@.false = global i8* getelementptr inbounds ([6 x i8]* @.str1, i32 0, i32 0)\n\n");
+-    aux = node->child;
+     while (aux != NULL){
+         if (aux->type == VarDecl) {
+             if (aux->child->type == Int) {

@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2818	2016-03-30 03:01:00.207834400 +0100
+@@ -1930,9 +1930,6 @@
+                                     fclose(fp1);
+                                 }
+                             }
+-                            glMatrixMode(GL_PROJECTION);
+-                            glLoadIdentity();
+-                            gluPerspective(90, largura / altura, 1, 200);
+                             glMatrixMode(GL_MODELVIEW);
+                             if (CAMERA == -1) 
+                                 gluLookAt(50, 20, 50, robotX, obsPfin[1], robotZ, 0, 1, 0);

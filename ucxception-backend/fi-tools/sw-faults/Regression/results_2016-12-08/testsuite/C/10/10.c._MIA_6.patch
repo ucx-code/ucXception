@@ -1,0 +1,12 @@
+--- ./10.c
++++ ./10.c._MIA_6	2016-12-08 00:49:34.975084932 +0000
+@@ -393,9 +393,7 @@
+     if (strcmp(aux->name, method_name) == 0) {
+         table_element* local = aux->locals;
+         while (local != NULL){
+-            if (strcmp(local->name, var_name) == 0) 
+                 return gen_code_type(local->type);
+-
+             local = local->next;
+         }
+     }

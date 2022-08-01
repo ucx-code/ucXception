@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_719	2016-03-30 02:54:30.482760200 +0100
+@@ -1496,7 +1496,7 @@
+     if ((move_cha > 5.0) || (move_cha < 0.0)) {
+         cha_dir = cha_dir * -1.0;
+     }
+-    glutPostRedisplay();
++    ;
+     glutTimerFunc(delay_cha, TimerCha, 1);
+ }
+ 

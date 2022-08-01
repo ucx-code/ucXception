@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLAC_27	2016-03-30 02:54:13.256552700 +0100
+@@ -1418,7 +1418,7 @@
+ {
+     int i, aux = 0;
+     if (iniciarjogo == 1 && pausegame == 1) {
+-        if (pastX == robotX && pastZ == robotZ) {
++        if (pastX == robotX) {
+             printf("MESMO SITIO\n");
+             for (i = 0;i < enemysList.size();i++){
+                 if (enemysList[i].position[0] == pastX && enemysList[i].position[2] == pastZ) {

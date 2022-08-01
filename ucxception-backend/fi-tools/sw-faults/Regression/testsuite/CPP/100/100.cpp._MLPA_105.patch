@@ -1,0 +1,12 @@
+--- 100.cpp
++++ 100.cpp._MLPA_105	2016-03-30 03:16:33.016158900 +0100
+@@ -142,9 +142,6 @@
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+     writeLong(0, outfile);
+-    writeLong(0, outfile);
+-    writeLong(0, outfile);
+-    writeLong(0, outfile);
+     unsigned char* cPtr = ImagePtr;
+     for (int i = 0;i < NumRows;i++){
+         int j;

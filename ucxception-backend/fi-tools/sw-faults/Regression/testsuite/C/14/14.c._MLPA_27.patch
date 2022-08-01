@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_27	2016-03-30 00:39:46.244434900 +0100
+@@ -75,8 +75,6 @@
+     node->id = NULL;
+     MethodParamsnode->child = node;
+     MethodParamsnode->next = NULL;
+-    MethodParamsnode->id = NULL;
+-    MethodParamsnode->type = MethodParams;
+     return MethodParamsnode;
+ }
+ 

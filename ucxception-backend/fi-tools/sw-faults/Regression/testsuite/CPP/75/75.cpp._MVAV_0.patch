@@ -1,0 +1,10 @@
+--- 75.cpp
++++ 75.cpp._MVAV_0	2016-03-30 01:50:43.158813700 +0100
+@@ -180,7 +180,6 @@
+             forced[i] = 1;
+             continue;
+         }
+-        k = 0;
+         for (a = 0;a < unitClauseC[i][0];a++)
+             k += friendship[unitClause[i][0][a]];
+         k2 = 0;

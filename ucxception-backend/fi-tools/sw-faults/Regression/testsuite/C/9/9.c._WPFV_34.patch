@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WPFV_34	2016-03-30 00:31:32.718022300 +0100
+@@ -27,7 +27,7 @@
+         }
+     }
+     tableColumns = orderByColumns(table, lines, columns);
+-    tableLines = orderByLines(table, lines, columns);
++    tableLines = orderByLines(table, i, columns);
+     printTable(table, lines, columns);
+     printf("\n");
+     printTable(tableLines, lines, columns);

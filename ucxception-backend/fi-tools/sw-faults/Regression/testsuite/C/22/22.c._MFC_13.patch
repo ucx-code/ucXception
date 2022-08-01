@@ -1,0 +1,11 @@
+--- 22.c
++++ 22.c._MFC_13	2016-03-30 00:50:14.807403200 +0100
+@@ -64,7 +64,7 @@
+ {
+     environment_list* new_list = (environment_list*)malloc(sizeof (environment_list));
+     strcpy(new_list->name, name);
+-    strcpy(new_list->type, type);
++    ;
+     new_list->next = NULL;
+     return new_list;
+ }

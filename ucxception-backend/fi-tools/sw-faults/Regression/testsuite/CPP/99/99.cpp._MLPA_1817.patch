@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1817	2016-03-30 02:45:52.947306600 +0100
+@@ -1132,8 +1132,6 @@
+     glBegin(GL_LINES);
+     glVertex3f(1.5, 0, -avancoMira);
+     glVertex3f(-1.5, 0, -avancoMira);
+-    glEnd();
+-    glPopMatrix();
+     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whiteRubberAmb);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, whiteRubberDif);
+     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whiteRubberSpec);

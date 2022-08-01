@@ -1,0 +1,12 @@
+--- ./28.c
++++ ./28.c._MLPA_20	2016-12-08 00:50:32.323083905 +0000
+@@ -23,9 +23,6 @@
+     fila[0][0] = begin[0][1];
+     fila[0][1] = begin[0][3];
+     for (j = 1;j < i;j++){
+-        alta = alt;
+-        alt = fila[0][1] - fila[0][0];
+-        k = 1;
+         ant = 0;
+         while (fila[k][0] != 0){
+             if (fila[k][0] < fila[ant][1] && fila[k][1] > fila[ant][1]) {

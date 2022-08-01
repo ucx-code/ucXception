@@ -1,0 +1,11 @@
+--- 74.cpp
++++ 74.cpp._MFC_8	2016-03-30 01:49:11.940951400 +0100
+@@ -123,7 +123,7 @@
+         scanf("%d", &friendship[i]);
+         int tmp;
+         int k;
+-        scanf("%d", &tmp);
++        ;
+         int a = 0;
+         while (tmp != 0){
+             if (tmp < 0) 

@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_0	2016-12-08 00:49:43.635084777 +0000
+@@ -6,8 +6,6 @@
+ is_node* insertProgram(is_node* progbody)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = progbody;
+-    node->next = NULL;
+     node->type = Program;
+     node->id = NULL;
+     return node;

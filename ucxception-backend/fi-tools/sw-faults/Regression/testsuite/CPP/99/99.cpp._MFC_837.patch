@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_837	2016-03-30 03:05:26.042493500 +0100
+@@ -2003,7 +2003,7 @@
+                             glEnable (GL_BLEND);
+                             glColor4f(1, 1, 1, 0.7);
+                             desenhaSkyBox();
+-                            glDisable(GL_BLEND);
++                            ;
+                         }
+ 
+     glutSwapBuffers();

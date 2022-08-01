@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_477	2016-03-30 02:45:24.162092800 +0100
+@@ -1076,7 +1076,7 @@
+                 robotZ = lastRobotZ;
+                 robotX = lastRobotX;
+                 if (health == 0 && dead == 0) {
+-                    puts("morrest");
++                    ;
+                     dead = 1;
+                     enemy hero;
+                     hero.position[0] = robotX;

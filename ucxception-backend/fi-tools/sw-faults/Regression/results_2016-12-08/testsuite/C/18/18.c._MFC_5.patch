@@ -1,0 +1,11 @@
+--- ./18.c
++++ ./18.c._MFC_5	2016-12-08 00:50:01.075084465 +0000
+@@ -88,7 +88,7 @@
+         bound += distancias[i][14];
+     }
+     solution[0] = 1;
+-    shortestPath(0, 0, maxCap, bound);
++    ;
+     printf("%d\n", best);
+     return 0;
+ }

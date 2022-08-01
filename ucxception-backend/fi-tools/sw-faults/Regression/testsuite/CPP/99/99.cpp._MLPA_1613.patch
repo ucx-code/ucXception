@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1613	2016-03-30 02:42:12.852733900 +0100
+@@ -927,8 +927,6 @@
+         debris[i].scale[0] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+         debris[i].scale[1] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+         debris[i].scale[2] = (2.0 * ((GLfloat)rand()) / ((GLfloat)RAND_MAX)) - 1.0;
+-        newSpeed(debris[i].speed);
+-        newSpeed(debris[i].orientationSpeed);
+     }
+ }
+ 

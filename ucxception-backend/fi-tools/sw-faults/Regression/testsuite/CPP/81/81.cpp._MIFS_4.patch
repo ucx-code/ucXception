@@ -1,0 +1,16 @@
+--- 81.cpp
++++ 81.cpp._MIFS_4	2016-03-30 01:53:51.901911000 +0100
+@@ -132,13 +132,6 @@
+             k = tmp;
+             scanf("%d", &tmp);
+         }
+-        if (a == 1) {
+-            if (k < 0) {
+-                unitClause[abs(k) - 1][0][unitClauseC[abs(k) - 1][0]++] = i;
+-            }else{
+-                unitClause[abs(k) - 1][1][unitClauseC[abs(k) - 1][1]++] = i;
+-            }
+-        }
+     }
+     best = 999999;
+     rec(c, 0, n);

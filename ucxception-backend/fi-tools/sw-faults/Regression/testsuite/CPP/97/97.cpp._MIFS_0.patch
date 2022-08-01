@@ -1,0 +1,13 @@
+--- 97.cpp
++++ 97.cpp._MIFS_0	2016-03-30 02:03:50.331917000 +0100
+@@ -19,10 +19,6 @@
+ 
+ int recurse(int pos)
+ {
+-    if (pos <= width) {
+-        printf("(%d,%d)", getY(pos), getX(pos));
+-        return 1;
+-    }
+     ++recurseSize;
+     buffer[pos] |= 0x80;
+     if (buffer[pos] == ('|' | 0x80)) {

@@ -1,0 +1,13 @@
+--- 83.cpp
++++ 83.cpp._MIFS_6	2016-03-30 01:55:15.115490900 +0100
+@@ -78,10 +78,6 @@
+ {
+     int i;
+     int soma = calc(c);
+-    if ((c[0] == 1) && (c[1] == 0) && (c[2] == 1) && (c[3] == 1)) {
+-        showC(c, end);
+-        printf("%d\n", soma);
+-    }
+     if (soma < best) {
+         best = soma;
+     }

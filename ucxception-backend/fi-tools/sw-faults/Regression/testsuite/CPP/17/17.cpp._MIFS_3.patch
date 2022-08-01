@@ -1,0 +1,12 @@
+--- 17.cpp
++++ 17.cpp._MIFS_3	2016-03-30 01:18:26.715718200 +0100
+@@ -29,9 +29,6 @@
+     for (i = 0;i < counter[pos];i++){
+         estadosP[vizinhos[pos][i]] = 1;
+     }
+-    if (taTudo(n) == 1) 
+-        melhor = count;
+-
+     for (i = pos + 1;i < n;i++){
+         if (estadosP[i] == 0) {
+             rec(i, n, count);

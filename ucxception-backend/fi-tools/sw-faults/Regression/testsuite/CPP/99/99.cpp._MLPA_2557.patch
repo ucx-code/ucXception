@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2557	2016-03-30 02:55:09.840510800 +0100
+@@ -1585,9 +1585,6 @@
+     glLightf(GL_LIGHT2, GL_CONSTANT_ATTENUATION, Foco_ak);
+     glLightf(GL_LIGHT2, GL_LINEAR_ATTENUATION, Foco_al);
+     glLightf(GL_LIGHT2, GL_QUADRATIC_ATTENUATION, Foco_aq);
+-    glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, anguloFoco);
+-    glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, Foco_direccao);
+-    glLightf(GL_LIGHT2, GL_SPOT_EXPONENT, Foco_Expon);
+     glEnable (GL_LIGHT1);
+     glEnable (GL_LIGHT2);
+ }

@@ -1,0 +1,11 @@
+--- ./1.c
++++ ./1.c._WAEP_10	2016-12-08 00:49:26.495085084 +0000
+@@ -22,7 +22,7 @@
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);
+         }
+         for (i = 0;i < halfSquare;i++){
+-            memset(matrix + (halfSquare * 2 * halfSquare) + (i * 2 * halfSquare), '2', halfSquare);
++            memset(matrix + (halfSquare * 2 * halfSquare), '2', halfSquare);
+             memset(matrix + (halfSquare * 2 * halfSquare) + ((i * 2 + 1) * halfSquare), '3', halfSquare);
+         }
+         rec(n + 1, target);

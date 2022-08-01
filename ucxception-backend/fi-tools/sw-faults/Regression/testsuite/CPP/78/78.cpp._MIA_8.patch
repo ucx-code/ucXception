@@ -1,0 +1,11 @@
+--- 78.cpp
++++ 78.cpp._MIA_8	2016-03-30 01:51:21.368169500 +0100
+@@ -124,7 +124,7 @@
+ void rec(unsigned char* c, int begin, int end)
+ {
+     if (begin != end) {
+-        if (forced[begin] == 1) {
++        {
+             rec(c, begin + 1, end);
+             return;
+         }

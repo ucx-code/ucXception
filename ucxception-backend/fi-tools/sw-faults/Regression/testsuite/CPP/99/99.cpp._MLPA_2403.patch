@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2403	2016-03-30 02:53:10.770782800 +0100
+@@ -1291,8 +1291,6 @@
+         glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, chromeCoef);
+     }else
+         if (op_robot == 2) {
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, whitePlasticAmb);
+-            glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, whitePlasticDif);
+             glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, whitePlasticSpec);
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, whitePlasticCoef);
+         }else

@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._WPFV_6	2016-03-30 01:15:08.167465200 +0100
+@@ -37,7 +37,7 @@
+     int bufferPosN2 = (buffer[pos - 2] & 0x7F);
+     if (((bufferPos == '/') && (bufferPosWidth == '|')) || ((bufferPos == '/') && (bufferPosWidth == '/')) || ((bufferPos == '|') && (bufferPosWidth == '/'))) {
+         if (recurse(pos + width, max, width) == 1) {
+-            answer.push(pos);
++            answer.push(bufferPosWidth1);
+             return 1;
+         }
+     }

@@ -1,0 +1,11 @@
+--- 5.c
++++ 5.c._WAEP_2	2016-03-30 00:30:21.653325500 +0100
+@@ -109,7 +109,7 @@
+         if ((int)(troco * 100) > 0) {
+             printf("Troco: %.2f", recebido);
+             for (i = 0;i < 8;i++){
+-                printf(" %d", moedasRec[i]);
++                printf(" %d", moedasRec);
+             }
+             printf(" Troco indisponivel!");
+         }else{

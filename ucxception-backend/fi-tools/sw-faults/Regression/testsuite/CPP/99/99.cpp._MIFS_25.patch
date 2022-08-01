@@ -1,0 +1,39 @@
+--- 99.cpp
++++ 99.cpp._MIFS_25	2016-03-30 02:56:19.265555200 +0100
+@@ -1613,36 +1613,6 @@
+                             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+                         }
+     }
+-    if ((iniciarjogo != 1) && (opcoes == 1) && (pontos != 1) && (instrucoes != 1) && (acerca != 1)) {
+-        if ((x > 208) && (x < 320) && (y > 134) && (y < 150)) {
+-            glutSetCursor (GLUT_CURSOR_INFO);
+-        }else
+-            if ((x > 208) && (x < 320) && (y > 159) && (y < 175)) {
+-                glutSetCursor (GLUT_CURSOR_INFO);
+-            }else
+-                if ((x > 208) && (x < 320) && (y > 185) && (y < 205)) {
+-                    glutSetCursor (GLUT_CURSOR_INFO);
+-                }else
+-                    if ((x > 208) && (x < 320) && (y > 212) && (y < 230)) {
+-                        glutSetCursor (GLUT_CURSOR_INFO);
+-                    }else{
+-                        glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+-                    }
+-
+-        if ((x > 395) && (x < 475) && (y > 445) && (y < 490)) {
+-            glutSetCursor (GLUT_CURSOR_INFO);
+-        }else{
+-            glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+-        }
+-        if ((x > 105) && (x < 135) && (y > 253) && (y < 264)) {
+-            glutSetCursor (GLUT_CURSOR_INFO);
+-        }else
+-            if ((x > 104) && (x < 142) && (y > 279) && (y < 288)) {
+-                glutSetCursor (GLUT_CURSOR_INFO);
+-            }else{
+-                glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+-            }
+-    }
+ }
+ 
+ void cliqueRato(int butao, int estado, int x, int y)

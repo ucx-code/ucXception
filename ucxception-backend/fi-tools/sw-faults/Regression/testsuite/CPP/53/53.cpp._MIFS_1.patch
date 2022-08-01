@@ -1,0 +1,13 @@
+--- 53.cpp
++++ 53.cpp._MIFS_1	2016-03-30 01:40:20.048844600 +0100
+@@ -43,10 +43,6 @@
+             if (slot[i].begin != -1) 
+                 final = i;
+         }
+-        if ((slot[master].begin != -1) && (master == final)) {
+-            slot[master].begin = slot[master].end = -1;
+-            ++maximo;
+-        }
+         begin = nextBegin;
+         if (maximo != 0) {
+             linhas -= maximo;

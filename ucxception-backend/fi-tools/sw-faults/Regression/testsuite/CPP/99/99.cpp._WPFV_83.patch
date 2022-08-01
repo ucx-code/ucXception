@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WPFV_83	2016-03-30 02:07:36.630729100 +0100
+@@ -247,7 +247,7 @@
+             glMateriali(GL_FRONT_AND_BACK, GL_SHININESS, cyanPlasticCoef);
+             glBegin (GL_LINES);
+             glVertex3f(x, y, z);
+-            glVertex3f(x, y + 0.5, z);
++            glVertex3f(b, y + 0.5, z);
+             glEnd();
+             par_sys[loop].ypos += par_sys[loop].vel / (slowdown * 1000);
+             par_sys[loop].vel += par_sys[loop].gravity;

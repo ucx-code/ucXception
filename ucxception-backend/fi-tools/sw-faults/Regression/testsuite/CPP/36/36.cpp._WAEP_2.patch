@@ -1,0 +1,11 @@
+--- 36.cpp
++++ 36.cpp._WAEP_2	2016-03-30 01:32:10.171999700 +0100
+@@ -62,7 +62,7 @@
+     }
+     if (maxi > 1) {
+         estadoCounterT = estadoCounter - 1;
+-        qsort(translator[estadoCounter], maxi, sizeof (int), desempate);
++        qsort(translator, maxi, sizeof (int), desempate);
+     }
+     bool todosTemAcesso = true;
+     for (i = 0;i < n;i++)

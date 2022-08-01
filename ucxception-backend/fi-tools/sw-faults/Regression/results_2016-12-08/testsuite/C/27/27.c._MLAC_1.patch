@@ -1,0 +1,11 @@
+--- ./27.c
++++ ./27.c._MLAC_1	2016-12-08 00:50:29.707083952 +0000
+@@ -30,7 +30,7 @@
+                 }
+             }
+         }else
+-            if (color[vector[node][i]] == GREY && p[node] != vector[node][i]) {
++            if (color[vector[node][i]] == GREY) {
+                 if (low[node] > dfs[vector[node][i]]) 
+                     low[node] = dfs[vector[node][i]];
+             }

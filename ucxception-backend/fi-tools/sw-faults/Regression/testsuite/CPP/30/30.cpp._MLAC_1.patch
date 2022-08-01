@@ -1,0 +1,11 @@
+--- 30.cpp
++++ 30.cpp._MLAC_1	2016-03-30 01:27:44.174922500 +0100
+@@ -37,7 +37,7 @@
+ void mis(int v, int size)
+ {
+     int k = chegaPaTodos();
+-    if ((k == 1) && (size < best)) {
++    if ((k == 1)) {
+         best = size;
+     }
+     int i;

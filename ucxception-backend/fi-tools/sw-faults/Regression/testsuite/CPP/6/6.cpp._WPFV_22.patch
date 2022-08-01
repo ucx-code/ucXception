@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._WPFV_22	2016-03-30 01:13:10.252239900 +0100
+@@ -107,7 +107,7 @@
+         for (i = 0;i < halfSquare;i++){
+             memcpy(matrix + (halfSquare * 2 * halfSquare) + (i * 2 * halfSquare), tmpInv + halfSquare * i, halfSquare);
+         }
+-        rec3(n + 1, target);
++        rec3(n + 1, halfSquare);
+     }
+ }
+ 

@@ -1,0 +1,11 @@
+--- 51.cpp
++++ 51.cpp._MIFS_0	2016-03-30 01:40:05.481493000 +0100
+@@ -28,8 +28,6 @@
+             if (slot[a].begin > slot[i].end) 
+                 break;
+         }
+-        if (a - i - 1 > maior) 
+-            maior = a - i - 1;
+     }
+     printf("%d\n", maior);
+     return 0;

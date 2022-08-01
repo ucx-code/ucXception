@@ -1,0 +1,11 @@
+--- 24.cpp
++++ 24.cpp._WPFV_22	2016-03-30 01:24:27.442717600 +0100
+@@ -69,7 +69,7 @@
+         counter[tmpA - 1]++;
+         counter[tmpB - 1]++;
+     }
+-    shortPath(0, n, 1);
++    shortPath(0, visit, 1);
+     printf("%d\n", best);
+     return 0;
+ }

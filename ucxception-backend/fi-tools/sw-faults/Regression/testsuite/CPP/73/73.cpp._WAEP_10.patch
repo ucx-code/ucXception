@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._WAEP_10	2016-03-30 01:47:01.733603500 +0100
+@@ -133,7 +133,7 @@
+ {
+     register int i, a;
+     unsigned char estado[2000];
+-    memcpy(estado, preCalculated[begin - 1], sizeof (unsigned char) * m);
++    memcpy(estado, preCalculated[begin - 1], sizeof (unsigned char));
+     for (i = 0;i < begin;i++){
+         if (c[i] == 0) 
+             for (a = 0;a < listaC[i][0];a++){

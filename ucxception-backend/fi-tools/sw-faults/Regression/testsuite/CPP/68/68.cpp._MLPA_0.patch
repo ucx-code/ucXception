@@ -1,0 +1,11 @@
+--- 68.cpp
++++ 68.cpp._MLPA_0	2016-03-30 01:44:23.878764200 +0100
+@@ -23,8 +23,6 @@
+ inline void upheap(unsigned int k)
+ {
+     register unsigned int v;
+-    v = slot[k].begin;
+-    slot[0].begin = 0;
+     while (slot[k / 2].begin >= v){
+         slot[k].begin = slot[k / 2].begin;
+         k = k / 2;

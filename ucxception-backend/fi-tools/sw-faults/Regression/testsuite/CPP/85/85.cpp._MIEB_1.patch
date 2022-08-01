@@ -1,0 +1,14 @@
+--- 85.cpp
++++ 85.cpp._MIEB_1	2016-03-30 01:58:03.404894900 +0100
+@@ -65,11 +65,6 @@
+     unsigned char estado[2000];
+     memcpy(estado, preCalculated[begin - 1], sizeof (unsigned char) * m);
+     for (i = 0;i < begin;i++){
+-        if (c[i] == 0) 
+-            for (a = 0;a < listaC[i][0];a++){
+-                estado[lista[i][0][a]] = 1;
+-            }
+-        else
+             for (a = 0;a < listaC[i][1];a++){
+                 estado[lista[i][1][a]] = 1;
+             }

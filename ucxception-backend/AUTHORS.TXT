@@ -1,0 +1,16 @@
+This file lists the people who have contributed to
+ucXception project. Please update the list if you have
+made some contribution to ucXception, by listing your
+name as an Author and describing your Contribution.
+
+A: Frederico Cerveira - fmduarte at dei.uc.pt
+C: Lead developer and maintainer of the ucXception project.
+
+A: Raul Barbosa - rbarbosa at dei.uc.pt
+C: Conceptualization, ideas and project management.
+
+A: Gonçalo Pereira
+C: Creator of the software fault injection module.
+
+A: Luís Gonçalo
+C: Improvements to the software fault injection module.

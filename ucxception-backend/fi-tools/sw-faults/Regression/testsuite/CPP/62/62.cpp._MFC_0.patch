@@ -1,0 +1,11 @@
+--- 62.cpp
++++ 62.cpp._MFC_0	2016-03-30 01:42:06.034744400 +0100
+@@ -66,7 +66,7 @@
+ void insert(int v)
+ {
+     a[++N] = v;
+-    upheap(N);
++    ;
+ }
+ 
+ void replace(int v)

@@ -1,0 +1,10 @@
+--- 42.cpp
++++ 42.cpp._MIA_1	2016-03-30 01:37:24.510383000 +0100
+@@ -28,7 +28,6 @@
+                     int maximo2 = (maximo[j] > v[i][a]) ? maximo[j] : v[i][a];
+                     for (k = 1;k <= numberOfCoursesM1;k++){
+                         int tmp = K[anterior][k][j - w[i][a]] + v[i][a];
+-                        if (tmp > maximo2) 
+                             maximo2 = tmp;
+                     }
+                     K[agora][a][j] = maximo2;

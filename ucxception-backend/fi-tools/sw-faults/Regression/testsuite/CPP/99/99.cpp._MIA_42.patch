@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_42	2016-03-30 02:56:08.429178300 +0100
+@@ -1594,7 +1594,7 @@
+ 
+ void passivemotion(int x, int y)
+ {
+-    if ((iniciarjogo == 0) && (opcoes == 0) && (pontos == 0) && (instrucoes == 0) && (acerca == 0) && (inicio == 1)) {
++    {
+         if ((x > 150) && (x < 350) && (y > 140) && (y < 170)) {
+             glutSetCursor (GLUT_CURSOR_INFO);
+         }else

@@ -1,0 +1,13 @@
+--- 73.cpp
++++ 73.cpp._MIFS_8	2016-03-30 01:47:57.849703300 +0100
+@@ -249,10 +249,6 @@
+         k2 = 0;
+         for (a = 0;a < listaC[i][1];a++)
+             k2 += friendship[lista[i][1][a]];
+-        if (k >= k2) {
+-            forced[i] = 0;
+-            continue;
+-        }
+     }
+     rec(c, 0, n);
+     printf("%d\n", best);

@@ -1,0 +1,13 @@
+--- 32.c
++++ 32.c._MIEB_0	2016-03-30 00:59:39.841399000 +0100
+@@ -6,9 +6,7 @@
+ void gerarMatrix(short  lvl, short  rot)
+ {
+     short i, aux1, aux2, j;
+-    if (lvl == 0) {
+-        matrix[0][0] = '0';
+-    }else{
++    {
+         gerarMatrix(lvl - 1, rot);
+         aux1 = pow(2, lvl);
+         aux2 = pow(2, (lvl - 1));

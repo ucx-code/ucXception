@@ -1,0 +1,31 @@
+{
+	"component_name": "Probe Ping",
+	"component_file_name": "probe_ping.py",
+	"component_class_name": "Probe_Ping",
+	"constructor" : ["ip", "username", "rate"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"ip": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 15},
+			"require": true
+		},
+		"username": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 15},
+			"require": true
+		},
+		"rate": {
+			"type": "string",
+			"default": "0.1",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		}
+	},
+	"information_help": "A simple probe that performs pings at a user-specified interval between a source and a target computer and stores the results, along with the timestamps. Can be used as a rudimentary way of monitoring the state of various systems;"
+}

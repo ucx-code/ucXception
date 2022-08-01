@@ -1,0 +1,12 @@
+--- ./14.c
++++ ./14.c._MLPA_129	2016-12-08 00:49:50.343084657 +0000
+@@ -341,9 +341,6 @@
+ is_node* insert_ID(char* str)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = NULL;
+-    node->next = NULL;
+-    node->type = Id;
+     node->id = str;
+     return node;
+ }

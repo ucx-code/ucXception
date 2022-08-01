@@ -1,0 +1,10 @@
+--- ./5.c
++++ ./5.c._MVAE_14	2016-12-08 00:51:02.555083364 +0000
+@@ -104,7 +104,6 @@
+                 moedasTroco[7] = x;
+             }
+             moedas[7] = moedas[7] - moedasTroco[7];
+-            troco = troco - (moedasTroco[7] * 0.01);
+         }
+         if ((int)(troco * 100) > 0) {
+             printf("Troco: %.2f", recebido);

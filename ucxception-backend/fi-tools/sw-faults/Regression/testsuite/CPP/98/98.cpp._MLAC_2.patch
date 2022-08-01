@@ -1,0 +1,11 @@
+--- 98.cpp
++++ 98.cpp._MLAC_2	2016-03-30 02:04:32.362759300 +0100
+@@ -75,7 +75,7 @@
+             if (bufferPosWidth1 == '\\') {
+                 queue.push(pos - width - 1);
+             }
+-            if ((bufferPos1 == '\\') && (bufferPos2 == '/')) {
++            if ((bufferPos2 == '/')) {
+                 queue.push(pos + 2);
+             }
+         }

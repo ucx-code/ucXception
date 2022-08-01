@@ -1,0 +1,11 @@
+--- 30.cpp
++++ 30.cpp._MIA_4	2016-03-30 01:27:45.055534800 +0100
+@@ -42,7 +42,7 @@
+     }
+     int i;
+     for (i = v + 1;i <= n;i++){
+-        if (saoVizinhos(i, v) == 1) {
++        {
+             neighbor[i] = neighbor[i] + 1;
+         }
+     }

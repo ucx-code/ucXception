@@ -1,0 +1,10 @@
+--- 80.cpp
++++ 80.cpp._MVAV_0	2016-03-30 01:52:36.049072300 +0100
+@@ -57,7 +57,6 @@
+ 
+             int absChoice = abs(choices[i][a]) - 1;
+             if (absChoice <= begin) {
+-                possuiIngredienteParcial = 1;
+                 break;
+             }
+         }

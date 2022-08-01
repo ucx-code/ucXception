@@ -1,0 +1,10 @@
+--- 70.cpp
++++ 70.cpp._MIA_2	2016-03-30 01:45:13.011508900 +0100
+@@ -31,7 +31,6 @@
+     }
+     int soma = 0;
+     for (i = 0;i < m;i++)
+-        if (estado[i] == 0) 
+             soma += amizade[i];
+     return soma;
+ }

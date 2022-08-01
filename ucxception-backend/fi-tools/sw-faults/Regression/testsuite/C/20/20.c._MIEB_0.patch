@@ -1,0 +1,30 @@
+--- 20.c
++++ 20.c._MIEB_0	2016-03-30 00:47:17.906781800 +0100
+@@ -98,14 +98,12 @@
+ {
+ table_element* temp;
+ temp = prog->global;
+-if (prog->global == NULL) 
+-prog->global = insert_element(id, type, 0);
+-else{
+-    while (temp->next != NULL){
++{
++while (temp->next != NULL){
+         check_defined(temp->next->name, id);
+         temp = temp->next;
+-    }
+-    temp->next = insert_element(id, type, 0);
++}
++temp->next = insert_element(id, type, 0);
+ }
+ }
+ 
+@@ -114,7 +112,7 @@
+ environment_list* temp;
+ temp = prog->methods;
+ if (prog->methods == NULL) 
+-    prog->methods = insert_method(id, type);
++prog->methods = insert_method(id, type);
+ else{
+     while (temp->next != NULL)
+         temp = temp->next;

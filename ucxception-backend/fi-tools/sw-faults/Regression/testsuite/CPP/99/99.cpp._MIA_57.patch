@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIA_57	2016-03-30 03:00:31.492676800 +0100
+@@ -1832,9 +1832,7 @@
+                             }else
+                                 if (tecla == 'q') {
+                                     angR += 10;
+-                                    if (angR == 360) 
+                                         angR = 0;
+-
+                                     aVisao = (aVisao - 0.175);
+                                     checkLimit();
+                                     obsPini[0] = robotX + incVisao * cos(aVisao);

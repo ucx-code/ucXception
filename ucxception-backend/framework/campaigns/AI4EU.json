@@ -1,0 +1,28 @@
+{
+	"campaign_name": "AI4EU",
+	"campaign_file_name": "AI4EU.py",
+	"campaign_class_name": "AI4EU",
+	"configuration": {
+		"app_path" : {
+			"name": "App path",
+			"regex" : "^[a-zA-Z0-9_]+[\\.py]?$",
+			"require": true,
+			"information_help": "Upload code, it can be a python or executable file."
+		}
+	},
+	"parameters": {
+		"app_input": {
+			"type": "string",
+			"default": "20000",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		},
+		"watchdog_dur": {
+			"type": "integer",
+			"default": 30000,
+			"condition": {"minValue": 0, "maxValue": 50000 , "step": 1},
+			"require": true
+		}
+	},
+	"information_help": "Campaign used for Hardware fault injection."
+}

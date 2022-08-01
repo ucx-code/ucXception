@@ -1,0 +1,16 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2950	2016-03-30 03:05:45.992029000 +0100
+@@ -2011,13 +2011,8 @@
+ 
+ void iniciarPrograma()
+ {
+-    glClearColor(1.0, 1.0, 1.0, 0.0);
+     glShadeModel (GL_SMOOTH);
+-    defineLuzes();
+     glEnable (GL_DEPTH_TEST);
+-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+-    iniciarTexturas();
+-    iniciarSkyBox();
+ }
+ 
+ int main(int argc, char** argv)

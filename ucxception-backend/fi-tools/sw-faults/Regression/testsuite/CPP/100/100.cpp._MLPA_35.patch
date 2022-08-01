@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_35	2016-03-30 03:14:27.676176900 +0100
+@@ -76,8 +76,6 @@
+     if (feof(infile)) {
+         fprintf(stderr, "Premature end of file: %s.\n", filename);
+         Reset();
+-        ErrorCode = ReadError;
+-        fclose(infile);
+         return false;
+     }
+     fclose(infile);

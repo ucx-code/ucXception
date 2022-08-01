@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WPFV_33	2016-03-30 01:53:04.180732600 +0100
+@@ -199,7 +199,7 @@
+     }
+     memset(c, 0, sizeof (unsigned char) * n);
+     for (i = 1;i < n;i++)
+-        minas[i] = calcB2(c, i - 1, n);
++        minas[i] = calcB2(c, i - 1, m);
+     rec(c, 0, n);
+     printf("%d\n", best);
+ }

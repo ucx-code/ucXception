@@ -1,0 +1,11 @@
+--- 27.c
++++ 27.c._WPFV_7	2016-03-30 00:56:36.930190700 +0100
+@@ -58,7 +58,7 @@
+         }
+         for (i = 0;i < n;i++){
+             if (color[i] == WHITE) 
+-                TARJAN(i);
++                TARJAN(bridge);
+         }
+         for (i = 0;i < n;i++){
+             for (j = i + 1;j < n;j++){

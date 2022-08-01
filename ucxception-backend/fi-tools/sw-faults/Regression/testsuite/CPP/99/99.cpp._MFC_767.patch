@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_767	2016-03-30 03:00:57.979551000 +0100
+@@ -1882,7 +1882,7 @@
+ void ecra()
+ {
+     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+-    glClearColor(PRETO, , , );
++    ;
+     glMatrixMode (GL_PROJECTION);
+     glLoadIdentity();
+     glOrtho(-10.0, 10.0, -10.0, 10.0, 0.0, 150.0);

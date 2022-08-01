@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_29	2016-03-30 02:09:09.720674500 +0100
+@@ -305,7 +305,7 @@
+             if (alGetError() != AL_NO_ERROR) 
+                 return AL_FALSE;
+ 
+-            alutLoadWAVFile((ALbyte*)"wav/explosion.wav", &format, &data, &size, &freq, &loop);
++            ;
+             alBufferData(BufferEx, format, data, size, freq);
+             alutUnloadWAV(format, data, size, freq);
+             alGenSources(1, &SourceEx);

@@ -1,0 +1,12 @@
+--- 83.cpp
++++ 83.cpp._MIFS_2	2016-03-30 01:55:06.009153000 +0100
+@@ -33,9 +33,6 @@
+                 break;
+             }
+         }
+-        if (favoravel == false) {
+-            jk[i] = friendship[i];
+-        }
+     }
+ }
+ void upJK(int* c, int pos, int end)

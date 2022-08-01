@@ -1,0 +1,11 @@
+--- 76.cpp
++++ 76.cpp._MVIV_1	2016-03-30 01:50:51.728902100 +0100
+@@ -9,7 +9,7 @@
+ {
+     srand (time(NULL));
+     int n = 50;
+-    int m = 500;
++    int m = m;
+     printf("%d %d\n", n, m);
+     int i, a, j;
+     for (i = 0;i < m;i++){

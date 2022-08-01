@@ -1,0 +1,11 @@
+--- 18.cpp
++++ 18.cpp._MLAC_5	2016-03-30 01:20:56.727484700 +0100
+@@ -89,7 +89,7 @@
+                 return 1;
+             }
+         }
+-        if ((bufferPosN1 == '\\') && (bufferPosN2 == '/')) {
++        if ((bufferPosN1 == '\\')) {
+             if (recurse(pos - 2, max, width) == 1) {
+                 answer.push(pos - 1);
+                 answer.push(pos);

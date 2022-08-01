@@ -1,0 +1,11 @@
+--- 32.c
++++ 32.c._WAEP_1	2016-03-30 00:59:47.966931100 +0100
+@@ -9,7 +9,7 @@
+     if (lvl == 0) {
+         matrix[0][0] = '0';
+     }else{
+-        gerarMatrix(lvl - 1, rot);
++        gerarMatrix(1, rot);
+         aux1 = pow(2, lvl);
+         aux2 = pow(2, (lvl - 1));
+         if (rot == 0) {

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_33	2016-03-30 02:09:14.182241300 +0100
+@@ -312,7 +312,7 @@
+             if (alGetError() != AL_NO_ERROR) 
+                 return AL_FALSE;
+ 
+-            alSourcei(SourceEx, AL_BUFFER, BufferEx);
++            ;
+             alSourcef(SourceEx, AL_PITCH, 1.0);
+             alSourcef(SourceEx, AL_GAIN, 1.0);
+             alSourcefv(SourceEx, AL_POSITION, SourcePosEx);

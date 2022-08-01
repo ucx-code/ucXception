@@ -1,0 +1,16 @@
+--- 83.cpp
++++ 83.cpp._MIA_4	2016-03-30 01:55:08.127103300 +0100
+@@ -50,11 +50,10 @@
+             if (choices[i][a] == 0) 
+                 break;
+ 
+-            if ((choices[i][a] > 0) && (c[absoluto] == 1)) {
++            {
+                 favoravel = true;
+                 break;
+-            }
+-            if ((choices[i][a] < 0) && (c[absoluto] == 0)) {
++            }if ((choices[i][a] < 0) && (c[absoluto] == 0)) {
+                 favoravel = true;
+                 break;
+             }

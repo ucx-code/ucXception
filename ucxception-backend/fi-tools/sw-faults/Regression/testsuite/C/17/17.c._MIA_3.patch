@@ -1,0 +1,11 @@
+--- 17.c
++++ 17.c._MIA_3	2016-03-30 00:43:53.382045500 +0100
+@@ -28,7 +28,7 @@
+         return;
+     }
+     for (i = 1;i <= n;i++){
+-        if (solution[i] == 0) {
++        {
+             solution[i] = 1;
+             shortestPath(i, len + distancias[v][i]);
+             solution[i] = 0;

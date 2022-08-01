@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_59	2016-03-30 02:10:16.518971300 +0100
+@@ -376,7 +376,7 @@
+                                 imag.LoadBmpFile("tex/instructions.bmp");
+                             else
+                                 if (i == 6) 
+-                                    imag.LoadBmpFile("tex/about.bmp");
++                                    ;
+                                 else
+                                     if (i == 7) 
+                                         imag.LoadBmpFile("tex/opcoes.bmp");

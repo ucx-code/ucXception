@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_836	2016-03-30 03:05:24.868344700 +0100
+@@ -2002,7 +2002,7 @@
+                             glDisable(GL_STENCIL_TEST);
+                             glEnable (GL_BLEND);
+                             glColor4f(1, 1, 1, 0.7);
+-                            desenhaSkyBox();
++                            ;
+                             glDisable(GL_BLEND);
+                         }
+ 

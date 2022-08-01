@@ -1,0 +1,11 @@
+--- ./30.c
++++ ./30.c._MIA_2	2016-12-08 00:50:39.211083782 +0000
+@@ -14,7 +14,7 @@
+                 return 1;
+             }else
+                 if (map[line][col] == '\\') {
+-                    if (checkPath(line + 1, col, '/', count + 1, line, col) == 1) {
++                    {
+                         path[count][0] = line + 1;
+                         path[count][1] = col + 1;
+                         return 1;

@@ -1,0 +1,10 @@
+--- 31.cpp
++++ 31.cpp._MFC_5	2016-03-30 01:28:42.380885000 +0100
+@@ -55,6 +55,6 @@
+         memset(estado, 0, sizeof (int) * 35);
+         rec(i, n, 0, estado);
+     }
+-    printf("%d\n", melhor);
++    ;
+     return 0;
+ }

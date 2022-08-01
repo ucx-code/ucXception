@@ -1,0 +1,13 @@
+--- 14.c
++++ 14.c._MLPA_60	2016-03-30 00:40:13.630910200 +0100
+@@ -101,10 +101,6 @@
+ is_node* insertFPRepetition(is_node* type, is_node* id, is_node* extra_node)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->child = type;
+-    type->next = id;
+-    node->type = ParamDeclaration;
+-    node->id = NULL;
+     if (extra_node != NULL) 
+         node->next = extra_node;
+ 

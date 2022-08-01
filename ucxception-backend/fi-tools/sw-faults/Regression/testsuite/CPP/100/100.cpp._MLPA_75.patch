@@ -1,0 +1,11 @@
+--- 100.cpp
++++ 100.cpp._MLPA_75	2016-03-30 03:16:08.484541100 +0100
+@@ -127,8 +127,6 @@
+         ErrorCode = OpenError;
+         return false;
+     }
+-    fputc('B', outfile);
+-    fputc('M', outfile);
+     int rowLen = GetNumBytesPerRow();
+     writeLong(40 + 14 + NumRows * rowLen, outfile);
+     writeShort(0, outfile);

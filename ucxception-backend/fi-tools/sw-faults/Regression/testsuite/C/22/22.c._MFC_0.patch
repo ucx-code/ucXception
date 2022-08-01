@@ -1,0 +1,11 @@
+--- 22.c
++++ 22.c._MFC_0	2016-03-30 00:49:55.162904000 +0100
+@@ -9,7 +9,7 @@
+ {
+     table_element* glob_table = program->global;
+     environment_list* methods_list = program->methods;
+-    printf("===== Class %s Symbol Table =====\n", glob_table->name);
++    ;
+     glob_table = glob_table->next;
+     while (glob_table != NULL){
+         printf("%s\t%s\n", glob_table->name, glob_table->type);

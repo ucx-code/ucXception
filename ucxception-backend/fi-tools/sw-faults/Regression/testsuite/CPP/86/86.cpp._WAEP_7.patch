@@ -1,0 +1,11 @@
+--- 86.cpp
++++ 86.cpp._WAEP_7	2016-03-30 01:59:46.748643800 +0100
+@@ -87,7 +87,7 @@
+                 estado[lista[i][1][a]]++;
+             }
+     }
+-    memcpy(estado2, estado, sizeof (unsigned char) * m);
++    memcpy(estado2, estado, m);
+     if (c[begin] == 0) 
+         for (a = 0;a < listaC[begin][0];a++){
+             estado[lista[begin][0][a]]++;

@@ -1,0 +1,11 @@
+--- 9.cpp
++++ 9.cpp._MFC_1	2016-03-30 01:14:41.198028000 +0100
+@@ -20,7 +20,7 @@
+         int halfSquare2 = halfSquare * halfSquare;
+         int halfMatrix = halfSquare2 * 2;
+         int i;
+-        memcpy(tmp, matrix, halfSquare2);
++        ;
+         for (i = 0;i < halfSquare;i++){
+             memcpy(matrix + ((i * 2) * halfSquare), tmp + halfSquare * i, halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);

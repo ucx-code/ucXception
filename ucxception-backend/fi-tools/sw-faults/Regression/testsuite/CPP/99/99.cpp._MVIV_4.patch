@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MVIV_4	2016-03-30 02:55:58.693941500 +0100
+@@ -1570,7 +1570,7 @@
+     GLfloat Foco2_cor[] = {1, 0, 0, 1};
+     GLfloat Foco_ak = 1.0;
+     GLfloat Foco_al = 0.05f;
+-    GLfloat Foco_aq = 0.0f;
++    GLfloat Foco_aq = Foco_aq;
+     GLfloat Foco_Expon = 2.0;
+     glLightfv(GL_LIGHT1, GL_POSITION, Pos1);
+     glLightfv(GL_LIGHT1, GL_DIFFUSE, Foco1_cor);

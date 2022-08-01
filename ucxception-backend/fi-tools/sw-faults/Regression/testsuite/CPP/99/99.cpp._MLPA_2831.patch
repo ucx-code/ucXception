@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2831	2016-03-30 03:01:04.680903000 +0100
+@@ -1944,10 +1944,6 @@
+                                 desenhaRobot();
+ 
+                             desenhaLagrima();
+-                            desenhaBombas();
+-                            desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+-                            colisoesInimigos();
+-                            pufpuf();
+                             glPushMatrix();
+                             if (glIsEnabled (GL_LIGHT1)) {
+                                 glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, greenPlasticAmb);

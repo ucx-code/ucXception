@@ -1,0 +1,12 @@
+--- 61.cpp
++++ 61.cpp._MIFS_0	2016-03-30 01:41:52.055968400 +0100
+@@ -31,9 +31,6 @@
+     v = slot[k].begin;
+     while (k <= N / 2){
+         j = k + k;
+-        if (j < N && slot[j].begin > slot[j + 1].begin) 
+-            j++;
+-
+         if (v <= slot[j].begin) 
+             break;
+ 

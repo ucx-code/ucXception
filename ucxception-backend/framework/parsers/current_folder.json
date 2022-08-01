@@ -1,0 +1,7 @@
+{
+	"component_name": "Current Folder",
+	"component_file_name": "current_folder.py",
+	"component_class_name": "Current_Folder",
+	"constructor" : "[]",
+	"information_help": "Minimalistic parser that just stores the path of the results folder of the current run."	
+}

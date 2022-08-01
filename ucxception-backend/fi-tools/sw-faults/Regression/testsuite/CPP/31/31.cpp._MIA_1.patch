@@ -1,0 +1,11 @@
+--- 31.cpp
++++ 31.cpp._MIA_1	2016-03-30 01:28:26.857912300 +0100
+@@ -19,7 +19,7 @@
+     }
+     bool todosTemAcesso = true;
+     for (i = 0;i < n;i++){
+-        if (estado[i] <= 0) {
++        {
+             todosTemAcesso = false;
+             rec(i, n, count, estado);
+         }

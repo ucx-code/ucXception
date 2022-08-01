@@ -1,0 +1,12 @@
+--- 10.c
++++ 10.c._MIA_4	2016-03-30 00:37:38.078031600 +0100
+@@ -376,9 +376,7 @@
+     aux = aux->next;
+ }
+ while (temp != NULL){
+-    if (strcmp(temp->name, var_name) == 0 && strcmp(temp->type, "method") != 0) 
+         return 1;
+-
+     temp = temp->next;
+ }
+ return 0;

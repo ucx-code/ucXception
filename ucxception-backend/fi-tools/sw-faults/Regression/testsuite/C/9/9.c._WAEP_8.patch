@@ -1,0 +1,11 @@
+--- 9.c
++++ 9.c._WAEP_8	2016-03-30 00:32:14.293293100 +0100
+@@ -61,7 +61,7 @@
+             if (j != (columns - 1)) 
+                 printf("%d-", table[i][j]);
+             else
+-                printf("%d", table[i][j]);
++                printf("%d", table[i]);
+         }
+         putchar('\n');
+     }

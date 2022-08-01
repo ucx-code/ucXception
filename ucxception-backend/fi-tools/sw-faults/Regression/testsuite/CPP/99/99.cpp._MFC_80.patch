@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_80	2016-03-30 02:10:53.150126500 +0100
+@@ -432,7 +432,7 @@
+                             imagS.LoadBmpFile("tex/jf_nuke/nuke_lf.bmp");
+                         else
+                             if (i == 4) 
+-                                imagS.LoadBmpFile("tex/jf_nuke/nuke_ft.bmp");
++                                ;
+                             else
+                                 if (i == 5) 
+                                     imagS.LoadBmpFile("tex/jf_nuke/nuke_rt.bmp");

@@ -1,0 +1,11 @@
+--- 80.cpp
++++ 80.cpp._WAEP_8	2016-03-30 01:52:54.068362600 +0100
+@@ -152,7 +152,7 @@
+         return;
+     }
+     c[begin] = 0;
+-    rec(c, begin + 1, end);
++    rec(c, begin, end);
+     c[begin] = 1;
+     rec(c, begin + 1, end);
+ }

@@ -1,0 +1,16 @@
+--- 100.cpp
++++ 100.cpp._MIFS_3	2016-03-30 03:13:57.140842000 +0100
+@@ -43,13 +43,6 @@
+             fileFormatOK = true;
+         }
+     }
+-    if (!fileFormatOK) {
+-        Reset();
+-        ErrorCode = FileFormatError;
+-        fprintf(stderr, "Not a valid 24-bit bitmap file: %s.\n", filename);
+-        fclose(infile);
+-        return false;
+-    }
+     ImagePtr = new unsigned char[NumRows * GetNumBytesPerRow()];
+     if (!ImagePtr) {
+         fprintf(stderr, "Unable to allocate memory for %ld x %ld bitmap: %s.\n", NumRows, NumCols, filename);

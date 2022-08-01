@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_620	2016-03-30 02:53:06.257626200 +0100
+@@ -1278,7 +1278,7 @@
+             }
+ 
+     glPushMatrix();
+-    glRotatef(90.0, 1.0, 0.0, 0.0);
++    ;
+     GLUquadricObj* quadratic;
+     quadratic = gluNewQuadric();
+     gluCylinder(quadratic, 3.0, 3.0, 10.0, 32, 32);

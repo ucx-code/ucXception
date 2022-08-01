@@ -1,0 +1,11 @@
+--- 96.cpp
++++ 96.cpp._MLPA_5	2016-03-30 02:03:27.314492400 +0100
+@@ -25,8 +25,6 @@
+ 
+             if (visited[v] == 0) {
+                 visited[v] = 1;
+-                partition[v] = 3 - partition[u];
+-                Q.push(v);
+             }
+         }
+     }

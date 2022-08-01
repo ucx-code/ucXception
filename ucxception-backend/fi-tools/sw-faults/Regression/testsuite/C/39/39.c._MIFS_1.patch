@@ -1,0 +1,16 @@
+--- 39.c
++++ 39.c._MIFS_1	2016-03-30 01:03:00.786198300 +0100
+@@ -20,13 +20,6 @@
+                 break;
+             }
+         }
+-        if (pos == TRUE) {
+-            color[v] = i;
+-            if (GCP(v + 1) == TRUE) 
+-                return TRUE;
+-
+-            color[v] = 0;
+-        }
+     }
+     return FALSE;
+ }

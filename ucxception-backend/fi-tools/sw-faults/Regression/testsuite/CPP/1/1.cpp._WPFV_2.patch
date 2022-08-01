@@ -1,0 +1,11 @@
+--- 1.cpp
++++ 1.cpp._WPFV_2	2016-03-30 01:08:19.615885300 +0100
+@@ -30,7 +30,7 @@
+     }
+     if (((buffer[pos] == '/') && (buffer[pos + width] == '|')) || ((buffer[pos] == '/') && (buffer[pos + width] == '/')) || ((buffer[pos] == '|') && (buffer[pos + width] == '/'))) {
+         if (recurse(pos + width, max, width) == 1) {
+-            answer.push(pos);
++            answer.push(max);
+             return 1;
+         }
+     }

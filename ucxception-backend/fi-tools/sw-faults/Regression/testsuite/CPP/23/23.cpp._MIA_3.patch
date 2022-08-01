@@ -1,0 +1,10 @@
+--- 23.cpp
++++ 23.cpp._MIA_3	2016-03-30 01:23:49.770929100 +0100
+@@ -48,7 +48,6 @@
+ {
+     int a;
+     for (a = 0;a < counter[i];a++)
+-        if (vizinhos[i][a] == j) 
+             return 1;
+     return 0;
+ }

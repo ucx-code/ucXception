@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._MLPA_1	2016-03-30 00:30:49.265533300 +0100
+@@ -13,8 +13,6 @@
+     scanf("%s", numStrings);
+     while (checkWord(numStrings) == 1)
+         scanf("%s", numStrings);
+-    nString = atoi(numStrings);
+-    free(numStrings);
+     pWord = (char**)malloc(nString * sizeof (char*));
+     finalWord = (char*)malloc(51 * sizeof (char));
+     actWord = (char*)malloc(51 * sizeof (char));

@@ -1,0 +1,11 @@
+--- 14.c
++++ 14.c._MLPA_68	2016-03-30 00:40:22.214500300 +0100
+@@ -141,8 +141,6 @@
+ is_node* insertST_if_else(is_node* expr, is_node* stat, is_node* stat2)
+ {
+     is_node* node = (is_node*)malloc(sizeof (is_node));
+-    node->type = IfElse;
+-    node->id = NULL;
+     node->child = expr;
+     if (stat != NULL && stat2 != NULL) {
+         expr->next = stat;

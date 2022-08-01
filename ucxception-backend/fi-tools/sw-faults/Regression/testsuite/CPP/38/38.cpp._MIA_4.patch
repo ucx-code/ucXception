@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._MIA_4	2016-03-30 01:35:03.877017700 +0100
+@@ -40,7 +40,7 @@
+             osQueFaltam.push_back(i);
+         }
+     }
+-    if (faltam != 0) {
++    {
+         int a, z;
+         bool aindaDaMais = false;
+         for (i = 0;i < osQueFaltam.size();i++){

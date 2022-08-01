@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIA_63	2016-03-30 03:02:06.321542900 +0100
+@@ -1910,9 +1910,7 @@
+                             if (cenario == 3) 
+                                 initNevoeiro();
+ 
+-                            if (cenario == 2) 
+                                 desenhaChuva();
+-
+                             if (cenario != 3) 
+                                 glDisable (GL_FOG);
+ 

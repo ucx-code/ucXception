@@ -1,0 +1,24 @@
+{
+	"component_name": "Probe Logs",
+	"component_file_name": "probe_logs.py",
+	"component_class_name": "Probe_Logs",
+	"constructor" : ["local_dir", "wanted"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"local_dir": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"wanted": {
+			"type": "multiple",
+			"values": [{ "value": "xen", "label": "XEN" }, { "value": "linux", "label": "Linux" }, { "value": "openstack", "label": "OpenStack" }],
+			"require": true
+		}
+	},
+	"information_help": "A simple probe that extracts logs from the target system during the Post finish phase. It is ready to extract logs specific to Linux, Xen and Openstack. The user can easily configure it to support other types of logs."	
+}

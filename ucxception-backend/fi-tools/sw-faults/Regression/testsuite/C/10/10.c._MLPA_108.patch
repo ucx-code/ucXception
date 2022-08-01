@@ -1,0 +1,14 @@
+--- 10.c
++++ 10.c._MLPA_108	2016-03-30 00:36:36.810357300 +0100
+@@ -220,11 +220,9 @@
+     counter += 2;
+     printf("\t%%%d = call i32 @atoi(i8* %%%d)\n", counter, counter - 1);
+     c = (char*)malloc(sizeof (char*));
+-    sprintf(c, "%%%d", counter);
+     return c;
+     break;
+ case IntLit:
+-    c = (char*)malloc(sizeof (char*));
+     int hexa;
+     hexa = strtol(expr->id, NULL, 0);
+     sprintf(c, "%d", hexa);

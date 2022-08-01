@@ -1,0 +1,12 @@
+--- 75.cpp
++++ 75.cpp._MIA_5	2016-03-30 01:50:15.426788300 +0100
+@@ -117,9 +117,7 @@
+         return;
+     }
+     int actual = calcB(c, begin, end);
+-    if (actual + boundz[begin] >= best) 
+         return;
+-
+     c[begin] = 1;
+     rec(c, begin + 1, end);
+     c[begin] = 0;

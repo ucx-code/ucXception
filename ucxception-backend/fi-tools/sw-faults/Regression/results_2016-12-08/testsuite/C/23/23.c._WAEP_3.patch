@@ -1,0 +1,11 @@
+--- ./23.c
++++ ./23.c._WAEP_3	2016-12-08 00:50:17.763084166 +0000
+@@ -16,7 +16,7 @@
+         int halfSquare = pow(2, n) / 2;
+         int i;
+         char tmp[100];
+-        memcpy(tmp, matrix, halfSquare * halfSquare);
++        memcpy(tmp, matrix, halfSquare);
+         for (i = 0;i < halfSquare;i++){
+             memset(matrix + (i * 2 * halfSquare), '1', halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);

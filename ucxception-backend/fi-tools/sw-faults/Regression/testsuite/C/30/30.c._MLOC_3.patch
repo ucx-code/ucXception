@@ -1,0 +1,11 @@
+--- 30.c
++++ 30.c._MLOC_3	2016-03-30 00:58:04.938201600 +0100
+@@ -36,7 +36,7 @@
+                             return 1;
+                         }
+ 
+-                    if ((line != x) || (col - 1 != y)) {
++                    if ((line != x)) {
+                         if (checkPath(line, col - 1, '/', count + 1, line, col) == 1) {
+                             path[count][0] = line + 1;
+                             path[count][1] = col + 1;

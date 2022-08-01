@@ -1,0 +1,14 @@
+--- 100.cpp
++++ 100.cpp._MLPA_63	2016-03-30 03:15:24.716455700 +0100
+@@ -99,11 +99,7 @@
+ {
+     unsigned char byte0, byte1, byte2, byte3;
+     byte0 = fgetc(infile);
+-    byte1 = fgetc(infile);
+-    byte2 = fgetc(infile);
+-    byte3 = fgetc(infile);
+     long ret = byte3;
+-    ret <<= 8;
+     ret |= byte2;
+     ret <<= 8;
+     ret |= byte1;

@@ -1,0 +1,11 @@
+--- 8.c
++++ 8.c._MIA_3	2016-03-30 00:31:12.000935400 +0100
+@@ -65,7 +65,7 @@
+                 }else
+                     if ((i + 1) == strlen(word) && (j + 1) == i) {
+                         tamAux++;
+-                        if (tam < tamAux) {
++                        {
+                             tam = tamAux;
+                             idxI = idxAux;
+                         }

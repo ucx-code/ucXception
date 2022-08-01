@@ -1,0 +1,11 @@
+--- 77.cpp
++++ 77.cpp._MLPA_0	2016-03-30 01:50:58.976823000 +0100
+@@ -38,8 +38,6 @@
+             unhapiness += valor_amizades[i];
+         }
+     }
+-    select_ingredients(-1);
+-    printf("%d\n", l_unhapiness);
+     return 0;
+ }
+ 

@@ -1,0 +1,12 @@
+--- 12.c
++++ 12.c._MIFS_1	2016-03-30 00:38:15.814372600 +0100
+@@ -9,9 +9,6 @@
+     if (nSlots == 0 && n > exam) 
+         return 0;
+ 
+-    if (n == exam) {
+-        return 1;
+-    }
+     for (i = 1;i <= k;i++){
+         for (z = 0;z < n;z++){
+             if (vec[z] == i && tab[exam][z] == 1) {

@@ -1,0 +1,12 @@
+--- 24.cpp
++++ 24.cpp._MIFS_1	2016-03-30 01:24:10.893614100 +0100
+@@ -29,9 +29,6 @@
+             }
+         }
+     }
+-    if (count < end) 
+-        return -1;
+-
+     if ((tmpBest < best) && (tmpBest != 0)) {
+         best = tmpBest;
+     }

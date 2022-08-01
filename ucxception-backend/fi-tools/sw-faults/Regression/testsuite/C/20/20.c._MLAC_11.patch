@@ -1,0 +1,11 @@
+--- 20.c
++++ 20.c._MLAC_11	2016-03-30 00:49:24.549542200 +0100
+@@ -376,7 +376,7 @@
+ aux = aux->next;
+ }
+ while (temp != NULL){
+-if (strcmp(temp->name, nameP) == 0 && strcmp(temp->type, "method") != 0) 
++if (strcmp(temp->type, "method") != 0) 
+     return temp->type;
+ 
+ temp = temp->next;

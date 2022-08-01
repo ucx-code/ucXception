@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._WAEP_3	2016-03-30 01:26:06.545414200 +0100
+@@ -24,7 +24,7 @@
+     memcpy(marca, state, sizeof (int) * 36);
+     printf("Novo verifica com ");
+     for (i = 0;i <= n;i++)
+-        printf("%d", state[i]);
++        printf("%d", i);
+     printf("\n");
+     for (i = 1;i <= n;i++){
+         if (state[i] == 2) {

@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._WAEP_80	2016-03-30 02:44:14.257689000 +0100
+@@ -1017,7 +1017,7 @@
+             indEl = i;
+     }
+     if (indEl != -1) 
+-        enemysList.erase(enemysList.begin() + indEl);
++        enemysList.erase(enemysList.begin());
+ 
+     if (aux == 1) {
+         newExplosion();

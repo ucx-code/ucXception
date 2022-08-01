@@ -1,0 +1,11 @@
+--- ./10.c
++++ ./10.c._MFC_41	2016-12-08 00:49:34.167084947 +0000
+@@ -220,7 +220,7 @@
+     counter += 2;
+     printf("\t%%%d = call i32 @atoi(i8* %%%d)\n", counter, counter - 1);
+     c = (char*)malloc(sizeof (char*));
+-    sprintf(c, "%%%d", counter);
++    ;
+     return c;
+     break;
+ case IntLit:

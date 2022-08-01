@@ -1,0 +1,11 @@
+--- ./17.c
++++ ./17.c._MLPA_1	2016-12-08 00:49:57.979084520 +0000
+@@ -30,8 +30,6 @@
+     for (i = 1;i <= n;i++){
+         if (solution[i] == 0) {
+             solution[i] = 1;
+-            shortestPath(i, len + distancias[v][i]);
+-            solution[i] = 0;
+         }
+     }
+ }

@@ -1,0 +1,11 @@
+--- ./1.c
++++ ./1.c._MFC_1	2016-12-08 00:49:26.347085087 +0000
+@@ -16,7 +16,7 @@
+         int halfSquare = pow(2, n) / 2;
+         int i;
+         char tmp[100];
+-        memcpy(tmp, matrix, halfSquare * halfSquare);
++        ;
+         for (i = 0;i < halfSquare;i++){
+             memset(matrix + (i * 2 * halfSquare), '1', halfSquare);
+             memcpy(matrix + ((i * 2 + 1) * halfSquare), tmp + halfSquare * i, halfSquare);

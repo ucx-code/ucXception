@@ -1,0 +1,11 @@
+--- ./9.c
++++ ./9.c._MLAC_3	2016-12-08 00:51:13.691083165 +0000
+@@ -94,7 +94,7 @@
+     down = li;
+     up = ls;
+     while (down < up){
+-        while (vect[down] <= a && down < ls)
++        while (vect[down] <= a)
+             down++;
+         while (vect[up] > a)
+             up--;

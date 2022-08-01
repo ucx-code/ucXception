@@ -1,0 +1,11 @@
+--- 28.cpp
++++ 28.cpp._MLAC_1	2016-03-30 01:26:12.242137700 +0100
+@@ -45,7 +45,7 @@
+         return;
+ 
+     int k = chegaPaTodos();
+-    if ((k == 1) && (size < best)) {
++    if ((k == 1)) {
+         best = size;
+         if (best == 1) {
+             printf("1\n");

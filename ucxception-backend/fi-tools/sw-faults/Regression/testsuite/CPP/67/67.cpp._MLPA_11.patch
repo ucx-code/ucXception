@@ -1,0 +1,12 @@
+--- 67.cpp
++++ 67.cpp._MLPA_11	2016-03-30 01:44:15.861744900 +0100
+@@ -69,9 +69,6 @@
+ {
+     unsigned int i;
+     fstat(STDIN_FILENO, &statbuf);
+-    src = (char*)mmap(0, statbuf.st_size, PROT_READ, MAP_PRIVATE, 0, 0);
+-    madvise(src, statbuf.st_size, MADV_WILLNEED | MADV_SEQUENTIAL);
+-    readM();
+     madvise(src, statbuf.st_size, MADV_DONTNEED);
+     quick_sort(&begin[0], n);
+     quick_sort(&end[0], n);

@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MLPA_641	2016-03-30 02:17:11.118257300 +0100
+@@ -628,9 +628,6 @@
+     glPopMatrix();
+     glDisable(GL_TEXTURE_2D);
+     glEnable(GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, texture[8]);
+-    glPushMatrix();
+-    glTranslatef(-6.7, pos_seta_robot_y, 0);
+     glBegin(GL_QUADS);
+     glNormal3f(0.0f, 1.0f, 0.0f);
+     glTexCoord2f(0.0f, 1.0f);

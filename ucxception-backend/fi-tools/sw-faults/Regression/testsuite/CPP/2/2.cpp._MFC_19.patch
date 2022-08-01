@@ -1,0 +1,11 @@
+--- 2.cpp
++++ 2.cpp._MFC_19	2016-03-30 01:10:31.130757600 +0100
+@@ -121,7 +121,7 @@
+             break;
+ 
+         matrixSize = (width + 1) * height;
+-        fread(buffer, 1, matrixSize, stdin);
++        ;
+         for (i = matrixSize - width - 1;i < matrixSize;i++){
+             if ((buffer[i] == '|') || (buffer[i] == '\\') || (buffer[i] == '/')) {
+                 recurseSize = 0;

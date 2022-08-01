@@ -1,0 +1,12 @@
+--- 99.cpp
++++ 99.cpp._MIFS_0	2016-03-30 02:07:46.749014600 +0100
+@@ -252,9 +252,6 @@
+             par_sys[loop].ypos += par_sys[loop].vel / (slowdown * 1000);
+             par_sys[loop].vel += par_sys[loop].gravity;
+             par_sys[loop].life -= par_sys[loop].fade;
+-            if (par_sys[loop].ypos <= -10) {
+-                par_sys[loop].life = -1.0;
+-            }
+             if (par_sys[loop].life < 0.0) {
+                 iniciaParticulasChuva(loop);
+             }

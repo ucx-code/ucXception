@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_598	2016-03-30 02:52:57.616685700 +0100
+@@ -1249,7 +1249,7 @@
+     glRotatef(angB, 1.0, 0.0, 0.0);
+     glTranslatef(0.0, 0.0, -2.0);
+     glScalef(1.0, 1.0, 3.0);
+-    glutSolidCube(1.5);
++    ;
+     glPopMatrix();
+     glPushMatrix();
+     glTranslatef(-3.5, -3.0, -1.5);

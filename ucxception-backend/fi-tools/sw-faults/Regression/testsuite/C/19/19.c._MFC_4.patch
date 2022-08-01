@@ -1,0 +1,11 @@
+--- 19.c
++++ 19.c._MFC_4	2016-03-30 00:46:36.795761500 +0100
+@@ -65,7 +65,7 @@
+     for (i = 1;i <= n;i++)
+         scanf("%f %f %d", &supermarkets[i][0], &supermarkets[i][1], &distancias[i][17]);
+     scanf("%f %f %d", &supermarkets[0][0], &supermarkets[0][1], &distancias[i][17]);
+-    scanf("%d", &maxCap);
++    ;
+     while (scanf("%d %d", &x, &y) != EOF)
+         lista[y][++lista[y][0]] = x;
+     for (i = 0;i < n;i++){

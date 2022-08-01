@@ -1,0 +1,11 @@
+--- ./27.c
++++ ./27.c._WAEP_1	2016-12-08 00:50:29.619083954 +0000
+@@ -18,7 +18,7 @@
+     for (i = 1;i <= vector[node][0];i++){
+         if (color[vector[node][i]] == WHITE) {
+             p[vector[node][i]] = node;
+-            TARJAN(vector[node][i]);
++            TARJAN(i);
+             if (low[node] > low[vector[node][i]]) 
+                 low[node] = low[vector[node][i]];
+ 

@@ -1,0 +1,11 @@
+--- ./8.c
++++ ./8.c._MFC_6	2016-12-08 00:51:08.227083262 +0000
+@@ -36,7 +36,7 @@
+             tam = strlen(finalWord);
+         }
+     }
+-    printf("%s\n", finalWord);
++    ;
+     for (i = 0;i < nString;i++)
+         free(pWord[i]);
+     free(actWord);

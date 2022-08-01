@@ -1,0 +1,7 @@
+{
+	"component_name": "App Returncode",
+	"component_file_name": "app_returncode.py",
+	"component_class_name": "App_Returncode",
+	"constructor" : "[self.app_returncode]",
+	"information_help": "Stores the return code of the workload process. Can signal a successful termination or an abrupt termination (e.g., killed by the operating system due to a segmentation fault)."	
+}

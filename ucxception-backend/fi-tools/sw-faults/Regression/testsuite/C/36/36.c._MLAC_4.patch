@@ -1,0 +1,11 @@
+--- 36.c
++++ 36.c._MLAC_4	2016-03-30 01:02:12.168006200 +0100
+@@ -23,7 +23,7 @@
+                 }
+             }else{
+                 for (k = 0;k < ects;k++){
+-                    if (aux1 == (k + 1) && sack[i][k] < aux2) {
++                    if (sack[i][k] < aux2) {
+                         sack[i][k] = aux2;
+                     }else
+                         if (aux1 < (k + 1) && sack[i][k] < (aux = (aux2 + sack[i - 1][k - aux1]))) {

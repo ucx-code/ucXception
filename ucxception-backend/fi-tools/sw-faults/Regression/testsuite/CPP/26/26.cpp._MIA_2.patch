@@ -1,0 +1,11 @@
+--- 26.cpp
++++ 26.cpp._MIA_2	2016-03-30 01:25:13.660591600 +0100
+@@ -52,7 +52,7 @@
+     }
+     printf("OLHA O NOVO UNIVERSO: %d\n", c);
+     mostraVector(tmpU);
+-    if (tmpU.size() == 0) {
++    {
+         if (c < melhor) 
+             melhor = c;
+     }

@@ -1,0 +1,10 @@
+--- 22.cpp
++++ 22.cpp._MIA_3	2016-03-30 01:23:31.898658300 +0100
+@@ -46,7 +46,6 @@
+     int oldCounter = stateCounter;
+     stateCounter = 0;
+     for (i = 0;i < oldCounter;i++){
+-        if (criaEstados(stateOld[i], nivel) == 1) 
+             return;
+     }
+     dfs(nivel + 1);

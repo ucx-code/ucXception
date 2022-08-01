@@ -1,0 +1,12 @@
+--- 76.cpp
++++ 76.cpp._MLPA_0	2016-03-30 01:50:51.928927200 +0100
+@@ -13,9 +13,7 @@
+     printf("%d %d\n", n, m);
+     int i, a, j;
+     for (i = 0;i < m;i++){
+-        printf("%d", rand() % 99 + 1);
+         int max = rand() % 2 + 1;
+-        memset(lista, 0, sizeof (int) * 3);
+         for (a = 0;a < max;a++){
+             bool no = true;
+             while (no == true){

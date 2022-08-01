@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_830	2016-03-30 03:05:13.630915500 +0100
+@@ -1995,7 +1995,7 @@
+                                 desenhaRobot();
+ 
+                             desenhaLagrima();
+-                            desenhaBombas();
++                            ;
+                             desenhaEletricidade(glIsEnabled(GL_LIGHT1), glIsEnabled(GL_LIGHT2));
+                             pufpuf();
+                             glPopMatrix();

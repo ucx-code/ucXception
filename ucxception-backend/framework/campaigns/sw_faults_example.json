@@ -1,0 +1,44 @@
+{
+	"campaign_name": "Sw fault experiment",
+	"campaign_file_name": "sw_faults_example.py",
+	"campaign_class_name": "SW_Faults_Example",
+	"configuration": {
+		"app_path" : {
+			"name": "App path",
+			"regex" : "^[a-zA-Z0-9_]+$",
+			"require": true,
+			"information_help": "Must be an executable."
+		},
+		"source_path": {
+			"name": "Source path",
+			"regex" : "^[a-zA-Z0-9_]+(\\.)c$",
+			"require": true,
+			"information_help": "Must be a .c file."
+		}
+	},
+	"parameters": {
+		"app_input": {
+			"type": "string",
+			"default": "20000",
+			"condition": {"minLength": 0, "maxLength": 10},
+			"require": true
+		},
+		"watchdog_dur": {
+			"type": "integer",
+			"default": 30000,
+			"condition": {"minValue": 0, "maxValue": 100000, "step": 1},
+			"require": true
+		},
+		"patch_files":{
+			"type": "multiple",
+			"require": true,
+			"values": [{ "value": "MFC", "label": "MFC" }, { "value": "MIA", "label": "MIA" }, { "value": "MIEB", "label": "MIEB" }, { "value": "MIFS", "label": "MIFS" } , { "value": "MLAC", "label": "MLAC" }]
+		},
+		"keep_patches": {
+			"type": "boolean",
+			"default": false,
+			"require": false
+		}
+	},
+	"information_help": "Campaign used for Software fault injection."
+}

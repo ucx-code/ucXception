@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIA_44	2016-03-30 02:56:34.545263400 +0100
+@@ -1647,7 +1647,7 @@
+ 
+ void cliqueRato(int butao, int estado, int x, int y)
+ {
+-    if (inicio == 1) {
++    {
+         if ((iniciarjogo == 0) && (x > 150) && (x < 350) && (y > 140) && (y < 170) && (opcoes != 1)) {
+             inicio = 0;
+             opcoes = 0;

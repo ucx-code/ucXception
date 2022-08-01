@@ -1,0 +1,11 @@
+--- 11.cpp
++++ 11.cpp._MFC_12	2016-03-30 01:15:56.192982500 +0100
+@@ -55,7 +55,7 @@
+         rec(0, n, r % 4);
+         for (i = 0;i < squared;i++){
+             fwrite(matrix + (squared * i), 1, squared, stdout);
+-            putchar('\n');
++            ;
+         }
+     }
+ }

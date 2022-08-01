@@ -1,0 +1,11 @@
+--- 38.cpp
++++ 38.cpp._WPFV_50	2016-03-30 01:36:07.178936700 +0100
+@@ -82,7 +82,7 @@
+ {
+     scanf("%d", &n);
+     if (n <= 1) {
+-        printf("%d\n", n);
++        printf("%d\n", melhor);
+         return 0;
+     }
+     int tmpA, tmpB;

@@ -1,0 +1,37 @@
+{
+	"component_name": "Probe Tcpdump",
+	"component_file_name": "probe_tcpdump.py",
+	"component_class_name": "Probe_Tcpdump",
+	"constructor" : ["local_dir", "if_name", "outfile", "rule"],
+	"target": {
+		"display": "Target",
+		"require": true
+	},
+	"parameters": {
+		"local_dir": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"if_name": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 20},
+			"require": true
+		},
+		"outfile": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"rule": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 20},
+			"require": true
+		}
+	},
+	"information_help": "Monitors and stores all the network traffic in a specific interface. Supports passing TCPDump [141] rules to filter the packets that are captured."
+}

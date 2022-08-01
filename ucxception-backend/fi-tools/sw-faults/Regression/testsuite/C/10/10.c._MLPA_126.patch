@@ -1,0 +1,13 @@
+--- 10.c
++++ 10.c._MLPA_126	2016-03-30 00:36:52.628527500 +0100
+@@ -224,10 +224,7 @@
+     return c;
+     break;
+ case IntLit:
+-    c = (char*)malloc(sizeof (char*));
+     int hexa;
+-    hexa = strtol(expr->id, NULL, 0);
+-    sprintf(c, "%d", hexa);
+     return c;
+     break;
+ case BoolLit:

@@ -1,0 +1,11 @@
+--- 48.cpp
++++ 48.cpp._MFC_3	2016-03-30 01:39:03.356587000 +0100
+@@ -24,7 +24,7 @@
+     memcpy(outputBuffer + counter, text, size);
+     counter += size;
+     if (counter >= 7000) {
+-        fwrite(outputBuffer, 1, counter, stdout);
++        ;
+         outputBuffer[0] = '\0';
+         counter = 0;
+     }

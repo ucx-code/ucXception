@@ -1,0 +1,17 @@
+--- 32.c
++++ 32.c._MIEB_3	2016-03-30 01:00:03.551912300 +0100
+@@ -43,13 +43,7 @@
+             }else
+                 if (rot == 2) {
+                     for (i = 0;i < aux1;i++){
+-                        if (i < aux2) {
+-                            memcpy(&matrix[i][aux2], &matrix[i][0], sizeof (char) * aux2);
+-                            for (j = 0;j < aux2;j++){
+-                                matrix[i][j] = matrix[i][j] ^ 1;
+-                            }
+-                            matrix[i][aux1] = '\0';
+-                        }else{
++                        {
+                             memcpy(&matrix[i][0], &matrix[i - aux2][aux2], sizeof (char) * aux2);
+                             memcpy(&matrix[i][aux2], &matrix[i][0], sizeof (char) * aux2);
+                             matrix[i][aux1] = '\0';

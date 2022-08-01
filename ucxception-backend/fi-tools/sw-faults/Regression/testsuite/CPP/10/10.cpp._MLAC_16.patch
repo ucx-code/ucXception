@@ -1,0 +1,11 @@
+--- 10.cpp
++++ 10.cpp._MLAC_16	2016-03-30 01:15:14.231736100 +0100
+@@ -47,7 +47,7 @@
+             return 1;
+         }
+     }
+-    if (((bufferPos == '\\') && (bufferPosWidth2 == '|')) || ((bufferPos == '\\') && (bufferPosWidth2 == '\\')) || ((bufferPos == '|') && (bufferPosWidth2 == '\\'))) {
++    if (((bufferPos == '\\') && (bufferPosWidth2 == '|')) || ((bufferPosWidth2 == '\\')) || ((bufferPos == '|') && (bufferPosWidth2 == '\\'))) {
+         if (recurse(pos + width + 2, max, width) == 1) {
+             answer.push(pos);
+             return 1;

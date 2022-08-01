@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_54	2016-03-30 02:10:12.745491600 +0100
+@@ -361,7 +361,7 @@
+             imag.LoadBmpFile("tex/chao.bmp");
+         else
+             if (i == 1) 
+-                imag.LoadBmpFile("tex/fundo.bmp");
++                ;
+             else
+                 if (i == 2) 
+                     imag.LoadBmpFile("tex/start.bmp");

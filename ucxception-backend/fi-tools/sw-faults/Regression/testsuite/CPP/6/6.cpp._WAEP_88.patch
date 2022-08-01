@@ -1,0 +1,11 @@
+--- 6.cpp
++++ 6.cpp._WAEP_88	2016-03-30 01:13:14.755832500 +0100
+@@ -132,7 +132,7 @@
+                 break;
+         }
+         for (i = 0;i < squared;i++){
+-            memcpy(tmp, matrix + (i * squared), squared);
++            memcpy(tmp, matrix, squared);
+             tmp[squared] = '\0';
+             printf("%s\n", tmp);
+         }

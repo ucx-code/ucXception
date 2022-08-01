@@ -1,0 +1,13 @@
+--- 99.cpp
++++ 99.cpp._MLPA_1404	2016-03-30 02:36:28.579352800 +0100
+@@ -799,10 +799,6 @@
+     glVertex3f(-50.0, -15.0, -50);
+     glEnd();
+     glPopMatrix();
+-    glDisable(GL_TEXTURE_2D);
+-    glEnable(GL_TEXTURE_2D);
+-    glBindTexture(GL_TEXTURE_2D, skybox[1]);
+-    glPushMatrix();
+     glNormal3f(0.0f, -1.0f, 0.0f);
+     glBegin(GL_QUADS);
+     glTexCoord2f(0.0f, 1.0f);

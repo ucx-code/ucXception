@@ -1,0 +1,13 @@
+--- 66.cpp
++++ 66.cpp._MIEB_0	2016-03-30 01:44:04.952358900 +0100
+@@ -125,9 +125,7 @@
+     quick_sort(&slot[0], n);
+     slot[1] = slot[1 + 150010];
+     for (i = 2;i <= n;i++){
+-        if (slot[1] <= slot[i + 150010]) {
+-            replace(slot[i + 150010]);
+-        }else{
++        {
+             insert(slot[i + 150010]);
+         }
+     }

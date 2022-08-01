@@ -1,0 +1,11 @@
+--- 24.cpp
++++ 24.cpp._MVIV_0	2016-03-30 01:24:06.020994800 +0100
+@@ -9,7 +9,7 @@
+ 
+ int verifica(int end)
+ {
+-    int count = 0;
++    int count = count;
+     int tmpBest = 0;
+     int i, a;
+     int tmp[36];

@@ -1,0 +1,14 @@
+--- 30.c
++++ 30.c._MIFS_7	2016-03-30 00:58:10.169867000 +0100
+@@ -55,11 +55,6 @@
+                             path[count][1] = col + 1;
+                             return 1;
+                         }
+-                        if (checkPath(line + 1, col, '\\', count + 1, line, col) == 1) {
+-                            path[count][0] = line + 1;
+-                            path[count][1] = col + 1;
+-                            return 1;
+-                        }
+                         if ((line != x) || (col + 1 != y)) 
+                             if (checkPath(line, col + 1, '\\', count + 1, line, col) == 1) {
+                                 path[count][0] = line + 1;

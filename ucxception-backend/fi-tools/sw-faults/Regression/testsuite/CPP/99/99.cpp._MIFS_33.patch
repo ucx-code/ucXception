@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MIFS_33	2016-03-30 03:00:15.255545400 +0100
+@@ -1799,8 +1799,6 @@
+         }else
+             if (tecla == '2') {
+                 angB -= 10;
+-                if (angB <= -45) 
+-                    angB = -45;
+             }else
+                 if (tecla == 'w') {
+                     robotZ -= 1 * cos(angR * PI / 180);

@@ -1,0 +1,11 @@
+--- 14.cpp
++++ 14.cpp._MFC_11	2016-03-30 01:16:55.964184500 +0100
+@@ -58,7 +58,7 @@
+         squared = quickPow[n];
+         rec(0, n, r % 4);
+         for (ia = 0;ia < squared;ia++){
+-            fwrite(matrix + (squared * ia), 1, squared, stdout);
++            ;
+             putchar('\n');
+         }
+     }

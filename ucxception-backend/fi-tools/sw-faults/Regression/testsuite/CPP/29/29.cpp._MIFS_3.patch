@@ -1,0 +1,12 @@
+--- 29.cpp
++++ 29.cpp._MIFS_3	2016-03-30 01:26:53.886025400 +0100
+@@ -53,9 +53,6 @@
+ }
+ void mis(int v, int size)
+ {
+-    if (size > best) 
+-        return;
+-
+     int k = chegaPaTodos();
+     if (k == 1) 
+         return;

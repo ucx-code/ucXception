@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2622	2016-03-30 02:56:50.876164700 +0100
+@@ -1661,8 +1661,6 @@
+                 inicio = 0;
+                 opcoes = 1;
+                 pontos = 0;
+-                instrucoes = 0;
+-                acerca = 0;
+                 iniciarjogo = 0;
+                 glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+             }else

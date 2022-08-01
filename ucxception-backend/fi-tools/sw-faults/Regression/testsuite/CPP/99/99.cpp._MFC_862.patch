@@ -1,0 +1,11 @@
+--- 99.cpp
++++ 99.cpp._MFC_862	2016-03-30 03:09:04.703943200 +0100
+@@ -2045,7 +2045,7 @@
+     }
+     SetListenerValues();
+     atexit(KillALData);
+-    glutTimerFunc(enemyCreateDelay, dropEnemy, 1);
++    ;
+     glutTimerFunc(enemyDelay, Enemy, 1);
+     glutTimerFunc(msecDelay, Timer, 1);
+     glutTimerFunc(msecDelayRobot, TimerRobot, 1);

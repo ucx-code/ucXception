@@ -1,0 +1,11 @@
+--- 73.cpp
++++ 73.cpp._MVIV_3	2016-03-30 01:47:03.486826600 +0100
+@@ -144,7 +144,7 @@
+                 estado[lista[i][1][a]] = 1;
+             }
+     }
+-    int soma = 0;
++    int soma = soma;
+     for (i = 0;i < m;i++){
+         if (estado[i] == 0) 
+             soma += friendship[i];

@@ -1,0 +1,11 @@
+--- ./14.c
++++ ./14.c._MLPA_62	2016-12-08 00:49:47.271084712 +0000
+@@ -118,8 +118,6 @@
+     if (moreIDS != NULL) 
+         id->next = moreIDS;
+ 
+-    node->type = VarDecl;
+-    node->id = NULL;
+     return node;
+ }
+ is_node* insertST_compoundstat(is_node* stat)

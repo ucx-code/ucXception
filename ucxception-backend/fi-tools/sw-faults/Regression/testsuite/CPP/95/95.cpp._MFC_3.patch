@@ -1,0 +1,11 @@
+--- 95.cpp
++++ 95.cpp._MFC_3	2016-03-30 02:03:13.142503000 +0100
+@@ -47,7 +47,7 @@
+         for (i = 0;i <= n;i++)
+             memset(gr[i], 0, sizeof (int) * 500);
+         if (bipartite == true) 
+-            printf("NOT SURE\n");
++            ;
+         else
+             printf("NO\n");
+     }

@@ -1,0 +1,14 @@
+--- 99.cpp
++++ 99.cpp._MLPA_2789	2016-03-30 03:00:35.708037600 +0100
+@@ -1844,11 +1844,6 @@
+                                         angR -= 10;
+                                         if (angR == -360) 
+                                             angR = 0;
+-
+-                                        aVisao = (aVisao + 0.175);
+-                                        checkLimit();
+-                                        obsPini[0] = robotX + incVisao * cos(aVisao);
+-                                        obsPini[2] = robotZ + incVisao * sin(aVisao);
+                                     }else
+                                         if (tecla == 'c') 
+                                             CAMERA = CAMERA * -1;

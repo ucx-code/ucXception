@@ -1,0 +1,13 @@
+--- 20.c
++++ 20.c._MIFS_16	2016-03-30 00:49:04.690801800 +0100
+@@ -327,10 +327,6 @@
+ while (call != NULL){
+ tipo = expr_recursive(prog, method_name, call);
+ tipo2 = getArgumentType(prog, method_called, n_argument);
+-if (strcmp(tipo, tipo2) != 0) {
+-    printf("Incompatible type of argument %d in call to method %s (got %s, required %s)\n", n_argument, method_called, tipo, tipo2);
+-    exit(0);
+-}
+ call = call->next;
+ n_argument++;
+ }

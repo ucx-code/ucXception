@@ -1,0 +1,10 @@
+--- 99.cpp
++++ 99.cpp._MVAV_54	2016-03-30 03:00:00.458036700 +0100
+@@ -1764,7 +1764,6 @@
+             opcoes = 0;
+             pontos = 0;
+             instrucoes = 0;
+-            acerca = 0;
+             iniciarjogo = 0;
+             glutSetCursor (GLUT_CURSOR_LEFT_ARROW);
+         }
