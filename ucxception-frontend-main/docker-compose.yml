@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: react-ui
+    build:
+      context: ./
+    volumes:
+      - ./src:/app/src
+      - /app/node_modules
+    stdin_open: true
+    env_file:
+      - .env
+    environment:
+      - PORT=${REACT_APP_PORT}
+      - API_URL=${REACT_APP_API_URL}
+    ports:
+      - ${IP_ADDRESS}:${REACT_APP_PORT}:3000
