@@ -14,3 +14,6 @@ C: Creator of the software fault injection module.
 
 A: Luís Gonçalo
 C: Improvements to the software fault injection module.
+
+A: Pedro Almeida - Pedro705 on Github
+C: Developed frontend (web interface) for ucXception, the REST API to connect the backend and frontend and made the necessary changes to the backend so that the frontend can be effectively used. Created failure injection tool.
