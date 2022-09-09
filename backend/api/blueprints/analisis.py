@@ -19,7 +19,7 @@ def get_campaign_statistics(current_user,campaign_id):
         return abort('The specified campaign cannot be accessed!', 422)
 
     if campaign["csvfilename"]:
-        filepath = os.path.join(root_dir, "csvFiles", campaign["csvfilename"]+".csv")
+        filepath = os.path.join(root_dir, "csv-files", campaign["csvfilename"]+".csv")
         statistics = utils.statistics_parser(filepath)
     else:
         return abort('Could not retrieve csv filename!', 422)
@@ -43,7 +43,7 @@ def get_csvfile_columns(current_user,campaign_id):
         return abort('The specified campaign cannot be accessed!', 422)
 
     if campaign["csvfilename"]:
-        filepath = os.path.join(root_dir, "csvFiles", campaign["csvfilename"]+".csv")
+        filepath = os.path.join(root_dir, "csv-files", campaign["csvfilename"]+".csv")
         columns = utils.columns_parser(filepath)
     else:
         return abort('Could not retrieve csv filename!', 422)
@@ -73,7 +73,7 @@ def get_campaign_chart(current_user,campaign_id):
         return abort('The specified campaign cannot be accessed!', 422)
 
     if campaign["csvfilename"]:
-        filepath = os.path.join(root_dir, "csvFiles", campaign["csvfilename"]+".csv")
+        filepath = os.path.join(root_dir, "csv-files", campaign["csvfilename"]+".csv")
         chartdata = utils.chart_parser(filepath, data["x_axis"], data["y_axis"])
     else:
         return abort('Could not retrieve csv filename!', 422)
@@ -93,7 +93,7 @@ def download_csv(current_user, campaign_id):
         return abort("Malformed request syntax!", 400)
 
     campaign = database.get_basic_campaign(campaign_id, current_user["id"])
-    path_folder = os.path.join(root_dir, "csvFiles", campaign["csvfilename"]+".csv")
+    path_folder = os.path.join(root_dir, "csv-files", campaign["csvfilename"]+".csv")
 
     if not os.path.exists(path_folder):
         return abort('Could not access file! (Campaign must be executed first)', 422)

@@ -266,7 +266,7 @@ def main(dicio_configuration, campaign, files, executions, campaign_target, faul
 		print("No components defined.")
 
 	#Plans	
-	main_csv_path = os.path.join(root_dir, "csvFiles" , campaign["csvfilename"]+".csv")
+	main_csv_path = os.path.join(root_dir, "csv-files" , campaign["csvfilename"]+".csv")
 	plans = ((class_),)
 
 	#Execute faul injection

@@ -10,8 +10,8 @@ COPY . /app
 # install python requirements
 RUN pip3 install -r requirements.txt
 # set private key
-RUN echo "IdentityFile /app/private_key/chave.pem" >> /etc/ssh/ssh_config
-RUN chmod 400 /app/private_key/chave.pem
+RUN echo "IdentityFile /app/private-key/chave.pem" >> /etc/ssh/ssh_config
+RUN chmod 400 /app/private-key/chave.pem
 
 ENTRYPOINT ["python3"]
 CMD ["call_api.py"]
