@@ -1,9 +1,0 @@
---- ./6.c
-+++ ./6.c._MVAE_0	2016-12-08 00:51:04.515083329 +0000
-@@ -57,6 +57,5 @@
-         val = (jogadores[jogador][k] - media);
-         somatorio += (val * val);
-     }
--    eq = somatorio / 4;
-     return eq;
- }
