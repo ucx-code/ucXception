@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+   backend:
+      image: "ucxcode/ucxception:backend"
+      ports:
+         - "8080:5000"
+      environment:
+         - PYTHONIOENCODING=utf-8
+      logging:
+         driver: "json-file"
+         options:
+            max-file: "1"
+            max-size: "100m"
+
+   frontend:
+      image: "ucxcode/ucxception:frontend"
+      ports:
+         - "80:3000"
+      environment:
+         - REACT_APP_API_URL=http://10.3.3.236:8080
+         - PYTHONIOENCODING=utf-8
+      logging:
+         driver: "json-file"
+         options:
+            max-file: "1"
+            max-size: "100m"
