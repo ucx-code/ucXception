@@ -17,3 +17,7 @@ The organization of this repo is as follows:
 	* public - Unimportant files for the webpage
 	* src - Source code of the web UI (React)
 * docs - Contains various docs that were used during the development
+
+# Docker images
+
+There are pre-made Docker images available at https://hub.docker.com/r/ucxcode/ucxception/tags and there is an example docker-compose.yml that you can adapt and use. You can also choose to manually build the Docker images using the Dockerfiles available in the frontend and backend folders.
