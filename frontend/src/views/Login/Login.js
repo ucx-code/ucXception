@@ -38,7 +38,7 @@ const Login = () => {
   }, []);
 
   const Prefunction = (values) => {
-    saveLogin(values);
+    saveLogin(values["user"]);
   };
 
   const Postfunction = () => {
