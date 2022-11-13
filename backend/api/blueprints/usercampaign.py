@@ -96,7 +96,7 @@ def create_campaign(current_user):
                     if not database.create_parameter(parameter,byte_data,id_campaign):
                         return abort("Error saving data!", 500)
     
-    return make_response({"campaign-id": id_campaign, "message": "Campaign created with success"}, 202, {'Content-Type': 'application/json'})
+    return make_response({"campaign_id": id_campaign, "message": "Campaign created with success"}, 202, {'Content-Type': 'application/json'})
 
 
 #GET CAMPAINGS
