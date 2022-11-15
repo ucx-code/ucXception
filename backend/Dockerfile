@@ -12,6 +12,7 @@ RUN pip3 install -r requirements.txt
 # set private key
 RUN echo "IdentityFile /app/private-key/chave.pem" >> /etc/ssh/ssh_config
 RUN chmod 400 /app/private-key/chave.pem
+RUN chmod -R 777 /app/fi-tools
 RUN mkdir /app/csv-files
 
 ENTRYPOINT ["python3"]
