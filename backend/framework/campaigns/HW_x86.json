@@ -1,0 +1,64 @@
+{
+	"campaign_name": "Transient HW FI (x86)",
+	"campaign_file_name": "HW_x86.py",
+	"campaign_class_name": "HW_x86",
+	"configuration": {
+		"app_path" : {
+			"name": "Application Executable",
+			"regex" : "^[a-zA-Z0-9_]+$",
+			"require": true,
+			"information_help": "Upload executable file."
+		}
+	},
+	"parameters": {
+		"app_input": {
+			"type": "string",
+			"default": "20000",
+			"condition": {"minLength": 0, "maxLength": 50},
+			"require": true
+		},
+		"watchdog_dur": {
+			"type": "integer",
+			"default": 30000,
+			"condition": {"minValue": 0, "maxValue": 5000000 , "step": 60},
+			"require": true
+		},
+		"min_wait": {
+			"type": "integer",
+			"default": 0,
+			"condition": {"minValue": 0, "maxValue": 5000000 , "step": 1},
+			"require": true
+		},
+		"max_wait": {
+			"type": "integer",
+			"default": 0,
+			"condition": {"minValue": 0, "maxValue": 5000000 , "step": 1},
+			"require": true
+		},
+		"min_reg": {
+			"type": "integer",
+			"default": -1,
+			"condition": {"minValue": -1, "maxValue": 26 , "step": 1},
+			"require": true
+		},
+		"max_reg": {
+			"type": "integer",
+			"default": -1,
+			"condition": {"minValue": -1, "maxValue": 26 , "step": 1},
+			"require": true
+		},
+		"min_bit": {
+			"type": "integer",
+			"default": -1,
+			"condition": {"minValue": -1, "maxValue": 64 , "step": 1},
+			"require": true
+		},
+		"max_bit": {
+			"type": "integer",
+			"default": -1,
+			"condition": {"minValue": -1, "maxValue": 64 , "step": 1},
+			"require": true
+		}
+	},
+	"information_help": "Campaign for performing fault injection of transient HW faults (single bit-flip fault model) in x86 applications."
+}
