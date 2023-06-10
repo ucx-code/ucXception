@@ -39,8 +39,8 @@ export const AuthProvider = ({ children }) => {
   }
 
   function saveLogin(values) {
-    localStorage.setItem("token", values["token"]);
-    localStorage.setItem("public_id", values["public_id"]);
+    localStorage.setItem("token", values.user.token);
+    localStorage.setItem("public_id", values.user.user["public-id"]);
     setAuth(true);
   }
 
