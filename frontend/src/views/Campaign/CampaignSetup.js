@@ -85,7 +85,7 @@ const CampaignSetup = () => {
   function changePage(values) {
     setAlert({});
     navigate(from_execution, {
-      state: { campaign_id: values["campaign_id"] },
+      state: { campaign_id: values["campaign-id"] },
       replace: true,
     });
   }
