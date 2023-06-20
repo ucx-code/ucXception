@@ -9,6 +9,8 @@ import api.database as database
 # General imports
 import time, signal, logging,sys, os, pickle, imp, zipfile, re, shutil, datetime
 
+logger = logging.getLogger(__name__)
+
 #Validate file name
 def validate_file(regex, filename):
 	if(bool(re.match(regex,filename))==False):
@@ -22,7 +24,7 @@ def read_extract_zip(campaign_path, files, configuration, class_):
 	try:
 		os.mkdir(campaign_path)
 	except FileExistsError:
-		print("Folder with that name already created")
+		logger.warning("Folder with that name already created")
 
 	#Name for zip file
 	for upload_file in files:
@@ -57,7 +59,7 @@ def read_extract_zip(campaign_path, files, configuration, class_):
 								os.chmod(outfile, 0o777)
 
 				except zipfile.BadZipFile as error:
-					print(error)
+					logger.error(error)
 			else:
 				filepath_str = pickle.loads(upload_file["data"])
 				setattr(class_, upload_file["name"], str(filepath_str))
@@ -204,6 +206,8 @@ def set_components(class_, components, basedir_framework):
 
 #Main
 def main(dicio_configuration, campaign, files, executions, campaign_target, fault_injector_target, parameters, components):
+	logging.basicConfig(level=logging.DEBUG)
+
 	# Root Dir
 	root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 	# Get path for file -> root_dir/framework
@@ -230,7 +234,7 @@ def main(dicio_configuration, campaign, files, executions, campaign_target, faul
 	if campaign_target:
 		set_target(class_, campaign_target)
 	else:
-		print("No target defined.")
+		logger.error("No target defined.")
 		return 0
 
 	#SET FI VARIABLE (TARGET , INJECTOR PATH)
@@ -256,14 +260,14 @@ def main(dicio_configuration, campaign, files, executions, campaign_target, faul
 	if len(executions) != 0:
 		set_executions(class_,executions)
 	else:
-		print("No executions defined.")
+		logger.error("No executions defined.")
 		return 0
 
 	#SET COMPONENTS
 	if len(components) != 0:
 		set_components(class_, components, basedir_framework)
 	else:
-		print("No components defined.")
+		logger.info("No components defined.")
 
 	#Plans	
 	main_csv_path = os.path.join(root_dir, "csv-files" , campaign["csvfilename"]+".csv")
@@ -277,12 +281,13 @@ def main(dicio_configuration, campaign, files, executions, campaign_target, faul
 
 		#Update campaign after end everything
 		if not database.update_end_campaign_state(campaign["idcampaign"],"ended",datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
-			print("Could not update campaign state!")
-	except:
+			logger.error("Could not update campaign state!")
+	except Exception as e:
+		logger.error(e)
 		shutil.rmtree(campaign_path) 
   
 		if not database.update_end_campaign_state(campaign["idcampaign"],"ended with error",datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
-			print("Could not update campaign state!")
+			logger.error("Could not update campaign state!")
 
 #Execute framework
 def execute_framework(plans, main_csv_path, predefined_cols, idcampaign):
@@ -293,9 +298,6 @@ def execute_framework(plans, main_csv_path, predefined_cols, idcampaign):
 		# Telling the REST service that we are terminating
 		# if (rest_enabled): req = requests.delete(endpoint)
 		sys.exit(0)
-
-	logging.basicConfig(level=logging.DEBUG)
-	logger = logging.getLogger(__name__)
 
 	# ====== main() ============
 	#assert(os.getuid() == 0)
@@ -311,7 +313,6 @@ def execute_framework(plans, main_csv_path, predefined_cols, idcampaign):
 	for plan in plans:
 
 		for campaign in plan.campaigns:
-			#print campaign
 			(campaign_name, n_runs, input) = campaign
 			
 
@@ -334,7 +335,7 @@ def execute_framework(plans, main_csv_path, predefined_cols, idcampaign):
 				logger.debug("end_time: %f" % end_time)
 				
 				if not database.update_execution_current_run(idcampaign, campaign_name, run, input[0]):
-					print("Could not update execution current run!")
+					logger.error("Could not update execution current run!")
 				
 				del plan_obj
        

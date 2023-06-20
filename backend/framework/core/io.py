@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import csv
+import logging
+
+logger = logging.getLogger(__name__)
 
 def read_or_create_table(path, columns, typecasting = True):
 
@@ -21,7 +24,7 @@ def read_or_create_table(path, columns, typecasting = True):
 		else:
 			table = pd.read_csv(path, header=0, na_filter=False, float_precision="round_trip", quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
 	except Exception as e:
-		print("Failed to read CSV file with exception", e)
+		logger.info("Failed to read CSV file with exception", e)
 		table = pd.DataFrame(columns=columns)
 
 		"""if (typecasting):
@@ -38,7 +41,7 @@ def save_csv(path, table):
 		with open(path + ".schema", "w") as f:
 			for dt in table.columns:
 				#print >> f, dt, str(table[dt].dtype)
-				print(dt, str(table[dt].dtype), file=f)
+				logger.debug(dt, str(table[dt].dtype), file=f)
 
 def enforce_schema(table, row):
 	for i in row:
