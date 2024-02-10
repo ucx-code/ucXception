@@ -40,8 +40,7 @@ def save_csv(path, table):
 		# Store the schema for future use...
 		with open(path + ".schema", "w") as f:
 			for dt in table.columns:
-				#print >> f, dt, str(table[dt].dtype)
-				logger.debug(dt, str(table[dt].dtype), file=f)
+				print(f, dt, str(table[dt].dtype), file=f)
 
 def enforce_schema(table, row):
 	for i in row:
