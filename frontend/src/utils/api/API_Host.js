@@ -26,9 +26,11 @@ export default function API_Host(setLogout, addAlert) {
     processing_function,
     post_function
   ) {
+    let body = {"host_id" : idhost};
+
     API_Generic(setLogout, addAlert).genericCall(
-      "/campaigns/hosts/" + id + "?idhost=" + idhost,
-      API_Generic(setLogout, addAlert).requestOptions("DELETE", token, null),
+      "/campaigns/hosts/" + id,
+      API_Generic(setLogout, addAlert).requestOptions("DELETE", token, body),
       true,
       setObject,
       processing_function,
