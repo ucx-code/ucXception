@@ -26,9 +26,11 @@ export default function API_Execution(setLogout, addAlert) {
     processing_function,
     post_function
   ) {
+    let body = {"execution_id" : idexecution};
+
     API_Generic(setLogout, addAlert).genericCall(
-      "/campaigns/executions/" + id + "?idexecution=" + idexecution,
-      API_Generic(setLogout, addAlert).requestOptions("DELETE", token, null),
+      "/campaigns/executions/" + id ,
+      API_Generic(setLogout, addAlert).requestOptions("DELETE", token, body),
       true,
       setObject,
       processing_function,
