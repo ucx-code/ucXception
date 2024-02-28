@@ -41,8 +41,16 @@ const Menu = () => {
 
   const [campaignsMenu, setCampaignsMenu] = useState();
   const [totalCount, setTotalCount] = useState(0);
-  const [itemsPage, setItemsPage] = useState(5);
   const [page, setPage] = useState(1);
+
+  const [itemsPage, setItemsPage] = useState(() => { 
+    const storedPageSize = localStorage.getItem('pageSize');
+    return storedPageSize ? parseInt(storedPageSize, 10) : 5;
+  });
+
+  useEffect(() => {                                     // Passed number of items to local Storage
+    localStorage.setItem('pageSize', itemsPage.toString());
+  }, [itemsPage]);
 
   useEffect(() => {
     if (logout === true) {
@@ -58,7 +66,7 @@ const Menu = () => {
     }
 
     API_Generic(setLogout, addAlert).genericCall(
-      "/campaigns" + "?page=" + "1" + "&page_size=" + "5",
+      "/campaigns" + "?page=" + "1" + "&page_size=" + itemsPage,
       API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
       false,
       setCampaignsMenu,
@@ -97,13 +105,13 @@ const Menu = () => {
     );
   };
 
-  const handleChangePageSize = (e) => {
-    if (e.target.value) {
-      setItemsPage(e.target.value);
+  const handleChangePageSize = (value) => {
+    if (value) {
+      setItemsPage(value);
 
       let aux = 0;
-      if (page * parseInt(e.target.value) > totalCount) {
-        aux = Math.ceil(totalCount / e.target.value);
+      if (page * parseInt(value) > totalCount) {
+        aux = Math.ceil(totalCount / value);
         setPage(aux);
       } else {
         aux = page;
@@ -112,7 +120,7 @@ const Menu = () => {
       filterCallAPI(
         document.getElementById("searchbar").value,
         aux,
-        e.target.value
+        value
       );
     }
   };
@@ -189,12 +197,13 @@ const Menu = () => {
                   <CCol xs={4} sm={3} md={2} lg={2} xl={1}>
                     <CFormSelect
                       aria-label="Page"
-                      onChange={(e) => handleChangePageSize(e)}
+                      onChange={(e) => handleChangePageSize(e.target.value)}
                       options={[
                         { label: "5", value: "5" },
                         { label: "10", value: "10" },
                         { label: "25", value: "25" },
                       ]}
+                      value = {itemsPage}
                     />
                   </CCol>
                   <CCol xs={12} sm={5} md={4} lg={3} xl={3}>
