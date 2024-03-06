@@ -24,8 +24,9 @@ import {
   CFormSelect,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-import { cilWarning, cilChart, cilMagnifyingGlass } from "@coreui/icons";
+import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash } from "@coreui/icons";
 import "@coreui/coreui/dist/css/coreui.min.css";
+import API_Campaign from "../../utils/api/API_Campaign";
 
 const Menu = () => {
   //Authenticaton
@@ -64,17 +65,9 @@ const Menu = () => {
       addAlert("Need to login first!", "warning", cilWarning);
       navigate(from_login, { replace: true });
     }
-
-    API_Generic(setLogout, addAlert).genericCall(
-      "/campaigns" + "?page=" + "1" + "&page_size=" + itemsPage,
-      API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
-      false,
-      setCampaignsMenu,
-      null,
-      null,
-      getHeaders
-    );
+    handleGetCampaignsList();
   }, []);
+  
 
   const getHeaders = (headers) => {
     setTotalCount(parseInt(headers.get("X-Total-Count")));
@@ -150,6 +143,30 @@ const Menu = () => {
       getHeaders
     );
   }
+
+  //Handles the campaigns displayed
+  const handleGetCampaignsList =() =>  {
+  API_Generic(setLogout, addAlert).genericCall(
+    "/campaigns" + "?page=" + "1" + "&page_size=" + itemsPage,
+    API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
+    false,
+    setCampaignsMenu,
+    null,
+    null,
+    getHeaders
+  );
+  }
+
+
+    //Function will call api to delete Campaign
+    const handleDeleteCampaign = (e, campaignId) => {
+      API_Campaign(setLogout, addAlert).deleteCampaign(
+        campaignId,
+        token,
+        null,
+        handleGetCampaignsList
+      );
+    };
 
   function create_url(searchbartext, page, pagesize) {
     let url =
@@ -252,7 +269,8 @@ const Menu = () => {
                             <CTableHeaderCell scope="col">
                               <h5>Start date</h5>
                             </CTableHeaderCell>
-                            <CTableHeaderCell scope="col"></CTableHeaderCell>
+                            <CTableHeaderCell scope="col">   
+                            </CTableHeaderCell>
                           </CTableRow>
                         </CTableHead>
                         <CTableBody>
@@ -302,7 +320,14 @@ const Menu = () => {
                                   >
                                     <CIcon icon={cilChart} size="lg" />
                                   </CButton>
-                                ) : null}
+                                ) :                                 
+                                <CButton
+                                color="danger"
+                                variant="ghost"
+                                onClick={(e) =>
+                                  handleDeleteCampaign(e, object["idcampaign"])}>
+                                <CIcon icon={cilTrash} size="lg" />
+                              </CButton>}
                               </CTableDataCell>
                             </CTableRow>
                           ))}

@@ -211,6 +211,8 @@ const CampaignSatistics = () => {
                   {statistics !== null && statistics !== undefined ? (
                     <>
                       <CCol>
+                      {statistics["golden_run_min_peak_duration"] ? (
+                        <>
                         <CRow>
                           <h4>Golden Runs</h4>
                         </CRow>
@@ -253,7 +255,10 @@ const CampaignSatistics = () => {
                             </CTableRow>
                           </CTableBody>
                         </CTable>
+                        </>) : null}
 
+                        {statistics["data_chart_crashes"] ? (  
+                        <>
                         <CRow>
                           <h4>Fault Runs</h4>
                         </CRow>
@@ -327,7 +332,7 @@ const CampaignSatistics = () => {
                             </CTableRow>
                           </CTableBody>
                         </CTable>
-
+                        </>) : null}
                         {"percentage_incorrect_output" in statistics ? (
                           <CTable responsive>
                             <CTableHead>

@@ -41,9 +41,27 @@ export default function API_Campaign(setLogout, addAlert) {
       getHeaders
     );
   }
+  
+  function deleteCampaign(
+    id,
+    token,
+    setObject,
+    processing_function,
+    post_function
+  ) {
+    API_Generic(setLogout, addAlert).genericCall(
+      "/campaigns/" + id,
+      API_Generic(setLogout, addAlert).requestOptions("DELETE", token, null),
+      true,
+      setObject,
+      processing_function,
+      post_function
+    );
+  }
 
   return {
     getCampaignsData,
     sendUserCampaign,
+    deleteCampaign,
   };
 }

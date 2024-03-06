@@ -80,3 +80,24 @@ def get_component_information(current_user, component_type, component_choice):
         return abort("No data is available with the specifications provided!", 422)
     else:
         return abort("No data relative to components and/or campaigns!", 422)
+
+
+# Delete Campaign
+@campaign.route('/campaigns/<campaign_id>', methods=['DELETE'])
+@token_required
+def delete_campaign(current_user,campaign_id):
+
+    #Verify and validate campaign id
+    if campaign_id is None:
+        return abort("Malformed request syntax!", 400)
+
+    value = database.verify_campaign_belong_user_returnable(campaign_id, current_user["id"])
+
+    if not value:
+        return abort("Campaign not reachable.", 422)
+    
+    #Delete Campaign
+    if not database.delete_campaign(campaign_id):
+        return abort('Could not delete campaign!', 500)
+
+    return make_response({'message': 'Campaign deleted successfully!'}, 200, {'Content-Type': 'application/json'})
