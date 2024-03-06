@@ -1,0 +1,44 @@
+{
+	"campaign_name": "Hardware faults in CPUs of an application",
+	"campaign_file_name": "HW_CPU_Exec.py",
+	"campaign_class_name": "HW_CPU_Exec",
+	"configuration": {
+		"app_path" : {
+			"name": "App path",
+			"regex" : "^[a-zA-Z0-9_]+[\\.py]?$",
+			"require": true,
+			"information_help": "Upload executable file inside ZIP file of the same name"
+		}
+	},
+	"parameters": {
+		"app_input": {
+			"type": "string",
+			"default": "",
+			"condition": {"minLength": 0, "maxLength": 100},
+			"require": true,
+			"information_help": "Input to be provided to the application"
+		},
+		"watchdog_dur": {
+			"type": "integer",
+			"default": 5000,
+			"condition": {"minValue": 0, "maxValue": 500000 , "step": 1},
+			"require": true,
+			"information_help": "Maximum amount of time to wait before abruptly stopping the program execution and declaring a hang"
+		},
+		"fi_min": {
+			"type": "integer",
+			"default": 0,
+			"condition": { "minValue": 0, "maxValue": 500000, "step": 100},
+			"require": false,
+			"information_help": "First moment from which a fault can be injected (in ms)"
+		},
+		"fi_max": {
+			"type": "integer",
+			"default": 0,
+			"condition": { "minValue": 0, "maxValue": 500000, "step": 100},
+			"require": false,
+			"information_help": "Last moment until when fault can be injected (in ms)"
+		}
+	},
+	"information_help": "Example campaign for the VALU3S Summer School. Injects bit-flips in CPU registers."
+}
