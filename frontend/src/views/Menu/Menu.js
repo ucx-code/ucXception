@@ -22,6 +22,11 @@ import {
   CInputGroup,
   CFormInput,
   CFormSelect,
+  CSpinner,
+  CAccordionItem,
+  CAccordionHeader,
+  CAccordionBody,
+  CAccordion,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash } from "@coreui/icons";
@@ -49,7 +54,8 @@ const Menu = () => {
     return storedPageSize ? parseInt(storedPageSize, 10) : 5;
   });
 
-  useEffect(() => {                                     // Passed number of items to local Storage
+  // Passes the number of items displayed to local Storage
+  useEffect(() => {
     localStorage.setItem('pageSize', itemsPage.toString());
   }, [itemsPage]);
 
@@ -137,20 +143,47 @@ const Menu = () => {
       create_url(searchbartext, page, pagesize),
       API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
       false,
-      setCampaignsMenu,
+      sort_array,
       null,
       null,
       getHeaders
     );
   }
 
-  //Handles the campaigns displayed
+  // Function that arranges the array with types of runs that have the same campaign id
+  const sort_array =(campaignsMenu) => {
+    let novo_array = [], novo_index = 0;
+    for (let index = 0; index < campaignsMenu.length - 1; index++) {
+      novo_array[novo_index] = { "campaignName" : campaignsMenu[index]["campaignName"] };
+      if(campaignsMenu[index]["idcampaign"] === campaignsMenu[index+1]["idcampaign"]){
+        if (campaignsMenu[index]["hasfault"] === 0 && campaignsMenu[index+1]["hasfault"] === 1){
+          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index], "faulty": campaignsMenu[index+1]};
+          index++;
+        }
+        else{
+          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index+1], "faulty": campaignsMenu[index]};
+          index++;          
+        }
+      }
+      else{
+        if (campaignsMenu[index]["hasfault"] === 1){
+          novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
+        }
+        else{
+          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
+        }
+      }
+    }
+    setCampaignsMenu(novo_array);  
+  }
+
+  // Handles the campaigns displayed
   const handleGetCampaignsList =() =>  {
   API_Generic(setLogout, addAlert).genericCall(
     "/campaigns" + "?page=" + "1" + "&page_size=" + itemsPage,
     API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
     false,
-    setCampaignsMenu,
+    sort_array,
     null,
     null,
     getHeaders
@@ -158,15 +191,16 @@ const Menu = () => {
   }
 
 
-    //Function will call api to delete Campaign
-    const handleDeleteCampaign = (e, campaignId) => {
-      API_Campaign(setLogout, addAlert).deleteCampaign(
-        campaignId,
-        token,
-        null,
-        handleGetCampaignsList
-      );
-    };
+  // Function will call api to delete Campaign
+  const handleDeleteCampaign = (campaignId) => {
+    API_Campaign(setLogout, addAlert).deleteCampaign(
+      campaignId,
+      token,
+      null,
+      null,
+      handleGetCampaignsList
+    );
+  };
 
   function create_url(searchbartext, page, pagesize) {
     let url =
@@ -181,6 +215,172 @@ const Menu = () => {
     return url;
   }
 
+  // Function that renders a single row
+  function render(tipo,object,key){
+    return(
+    <CTableRow key={key}>
+      <CTableHeaderCell>
+      {object["type"][tipo]["campaignName"]}
+      </CTableHeaderCell>
+      <CTableHeaderCell>
+        {object["type"][tipo]["executionName"]}
+      </CTableHeaderCell>
+      <CTableHeaderCell>
+        {tipo === "faulty" ? (
+          <p className="fw-normal">Fault run</p>
+        ) : (
+          <p className="fw-normal">Golden run</p>
+        )}
+      </CTableHeaderCell>
+      <CTableDataCell>
+        {object["type"][tipo]["ncurrentruns"]}/{object["type"][tipo]["ntargetruns"]}
+      </CTableDataCell>
+      <CTableDataCell>{object["type"][tipo]["type"]}</CTableDataCell>
+      <CTableDataCell>
+        {object["type"][tipo]["state"].charAt(0).toUpperCase() + object["type"][tipo]["state"].slice(1)}
+      </CTableDataCell>
+      <CTableDataCell>
+        {object["type"][tipo]["startdate"] ? (
+          object["type"][tipo]["startdate"]
+        ) : (
+          <p>Not started yet</p>
+        )}
+      </CTableDataCell>
+      <CTableDataCell>
+        {object["type"][tipo]["state"] === "ended" ? (
+          <CButton
+            color="info"
+            variant="ghost"
+            onClick={(e) => handleChangePage("/campaign/" + object["type"][tipo]["idcampaign"] + "/statistics", e)} >
+            <CIcon icon={cilChart} size="lg" className="text-primary" />
+          </CButton>
+        ) : object["type"][tipo]["state"] === "ended with error" ? (                                
+          <CButton
+            color="danger"
+            variant="ghost"
+            onClick={(e) => handleDeleteCampaign(object["type"][tipo]["idcampaign"])} >
+            <CIcon icon={cilTrash} size="lg" className="text-primary"/>
+          </CButton>
+        ) : object["type"][tipo]["state"] === "executing" ? (
+          <CSpinner color="primary" />
+        ) : null}
+      </CTableDataCell>
+    </CTableRow>
+    )}
+
+  // Function that renders a single row for accordion
+  function render_accordion_row(tipo,object,key){
+    return(
+    <CTableRow key={key}>
+      <CTableHeaderCell>
+      </CTableHeaderCell>
+      <CTableHeaderCell>
+        {object["type"][tipo]["executionName"]}
+      </CTableHeaderCell>
+      <CTableHeaderCell>
+        {tipo === "faulty" ? (
+          <p className="fw-normal">Fault run</p>
+        ) : (
+          <p className="fw-normal">Golden run</p>
+        )}
+      </CTableHeaderCell>
+      <CTableDataCell>
+        {object["type"][tipo]["ncurrentruns"]}/{object["type"][tipo]["ntargetruns"]}
+      </CTableDataCell>
+      <CTableDataCell></CTableDataCell>
+      <CTableDataCell>
+        {object["type"][tipo]["state"].charAt(0).toUpperCase() + object["type"][tipo]["state"].slice(1)}
+      </CTableDataCell>
+      <CTableDataCell>
+      </CTableDataCell>
+      <CTableDataCell>
+        {object["type"][tipo]["state"] === "ended" ? (
+          <CButton
+            color="info"
+            variant="ghost"
+            onClick={(e) => handleChangePage("/campaign/" + object["type"][tipo]["idcampaign"] + "/statistics", e)} >
+            <CIcon icon={cilChart} size="lg" className="text-primary" />
+          </CButton>
+        ) : object["type"][tipo]["state"] === "ended with error" ? (                                
+          <CButton
+            color="danger"
+            variant="ghost"
+            onClick={(e) => handleDeleteCampaign(object["type"][tipo]["idcampaign"])} >
+            <CIcon icon={cilTrash} size="lg" className="text-primary"/>
+          </CButton>
+        ) : object["type"][tipo]["state"] === "executing" ? (
+          <CSpinner color="primary" />
+        ) : null}
+      </CTableDataCell>
+    </CTableRow>
+    )}
+
+// Function that renders the dropdown (accordion) when the same campaign has golden and fault run
+function render_accordion(object,key){
+  return(
+    <CTableRow>
+      <CTableDataCell colSpan={8}>
+        <CAccordion>
+          <CAccordionItem>
+            <CAccordionHeader>
+              <CTable colSpan={8}>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <CTableDataCell>{object["type"]["golden"]["campaignName"]}</CTableDataCell>
+                <CTableDataCell></CTableDataCell>
+                <CTableDataCell></CTableDataCell>
+                <CTableDataCell></CTableDataCell>
+                <CTableDataCell>{object["type"]["golden"]["type"]}</CTableDataCell>
+                <CTableDataCell>
+                  {object["type"]["golden"]["startdate"] ? (
+                    object["type"]["golden"]["startdate"]
+                  ) : (
+                    <p>Not started yet</p>
+                  )}
+                </CTableDataCell>
+                </div>
+              </CTable>
+            </CAccordionHeader>
+            <CAccordionBody>
+              <CTable>
+                <CTableHead>
+                  <CTableRow>
+                    <CTableHeaderCell scope="col">
+                      <h5 style={{ visibility: 'hidden' }}>Campaign name</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5>Execution name</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5>Run type</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5>Number of runs</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5 style={{ visibility: 'hidden' }}>Campaign type</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5>Execution</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">
+                      <h5 style={{ visibility: 'hidden' }}>Start date</h5>
+                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col">   
+                    </CTableHeaderCell>
+                  </CTableRow>
+                </CTableHead>
+                <CTableBody>
+                {render_accordion_row("golden", object, key + "golden")}
+                {render_accordion_row("faulty", object, key + "faulty")}
+                </CTableBody>
+              </CTable>
+            </CAccordionBody>
+          </CAccordionItem>
+        </CAccordion>
+      </CTableDataCell>
+    </CTableRow>
+  )}
+  
   return (
     <>
       <CContainer>
@@ -275,61 +475,11 @@ const Menu = () => {
                         </CTableHead>
                         <CTableBody>
                           {campaignsMenu.map((object, key) => (
-                            <CTableRow key={key}>
-                              <CTableHeaderCell>
-                                {object["campaignName"]}
-                              </CTableHeaderCell>
-                              <CTableHeaderCell>
-                                {object["executionName"]}
-                              </CTableHeaderCell>
-                              <CTableHeaderCell>
-                                {object["hasfault"] === 1 ? (
-                                  <p className="fw-normal">Fault run</p>
-                                ) : (
-                                  <p className="fw-normal">Golden run</p>
-                                )}
-                              </CTableHeaderCell>
-                              <CTableDataCell>
-                                {object["ncurrentruns"]}/{object["ntargetruns"]}
-                              </CTableDataCell>
-                              <CTableDataCell>{object["type"]}</CTableDataCell>
-                              <CTableDataCell>
-                                {object["state"].charAt(0).toUpperCase() +
-                                  object["state"].slice(1)}
-                              </CTableDataCell>
-                              <CTableDataCell>
-                                {object["startdate"] ? (
-                                  object["startdate"]
-                                ) : (
-                                  <p>Not started yet</p>
-                                )}
-                              </CTableDataCell>
-                              <CTableDataCell>
-                                {object["state"] === "ended" ? (
-                                  <CButton
-                                    color="info"
-                                    variant="ghost"
-                                    onClick={(e) =>
-                                      handleChangePage(
-                                        "/campaign/" +
-                                          object["idcampaign"] +
-                                          "/statistics",
-                                        e
-                                      )
-                                    }
-                                  >
-                                    <CIcon icon={cilChart} size="lg" />
-                                  </CButton>
-                                ) :                                 
-                                <CButton
-                                color="danger"
-                                variant="ghost"
-                                onClick={(e) =>
-                                  handleDeleteCampaign(e, object["idcampaign"])}>
-                                <CIcon icon={cilTrash} size="lg" />
-                              </CButton>}
-                              </CTableDataCell>
-                            </CTableRow>
+                            <>
+                            {object["type"].hasOwnProperty("faulty") && object["type"].hasOwnProperty("golden") ? (render_accordion(object,key)) : 
+                            object["type"].hasOwnProperty("golden") ? (render("golden",object,key)) : 
+                            object["type"].hasOwnProperty("faulty") ? (render("faulty",object,key)) : null}
+                            </>
                           ))}
                         </CTableBody>
                       </CTable>
