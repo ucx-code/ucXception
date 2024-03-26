@@ -215,84 +215,41 @@ const Menu = () => {
     return url;
   }
 
-  // Function that renders a single row
-  function render(tipo,object,key){
+  // Function that renders a single row (if number = 2, it will render rows for accordion)
+  function render(tipo,object,key,number){
     return(
     <CTableRow key={key}>
+      {number === 2 ? ( 
+        <CTableDataCell></CTableDataCell>
+      ) : ( 
+        <CTableHeaderCell>{object["type"][tipo]["campaignName"]}</CTableHeaderCell>
+      )}
+      <CTableDataCell>{object["type"][tipo]["executionName"]}</CTableDataCell>
       <CTableHeaderCell>
-      {object["type"][tipo]["campaignName"]}
+      {tipo === "faulty" ? (
+        <p>Fault run</p>
+      ) : (
+        <p>Golden run</p>
+      )}
       </CTableHeaderCell>
-      <CTableHeaderCell>
-        {object["type"][tipo]["executionName"]}
-      </CTableHeaderCell>
-      <CTableHeaderCell>
-        {tipo === "faulty" ? (
-          <p className="fw-normal">Fault run</p>
-        ) : (
-          <p className="fw-normal">Golden run</p>
-        )}
-      </CTableHeaderCell>
-      <CTableDataCell>
-        {object["type"][tipo]["ncurrentruns"]}/{object["type"][tipo]["ntargetruns"]}
-      </CTableDataCell>
-      <CTableDataCell>{object["type"][tipo]["type"]}</CTableDataCell>
-      <CTableDataCell>
-        {object["type"][tipo]["state"].charAt(0).toUpperCase() + object["type"][tipo]["state"].slice(1)}
-      </CTableDataCell>
-      <CTableDataCell>
+      <CTableDataCell>{object["type"][tipo]["ncurrentruns"]}/{object["type"][tipo]["ntargetruns"]}</CTableDataCell>
+      {number === 2 ? ( 
+        <CTableDataCell></CTableDataCell>
+      ) : ( 
+        <CTableHeaderCell>{object["type"][tipo]["type"]}</CTableHeaderCell>
+      )}
+      <CTableDataCell>{object["type"][tipo]["state"].charAt(0).toUpperCase() + object["type"][tipo]["state"].slice(1)}</CTableDataCell>
+      {number === 2 ? ( 
+        <CTableDataCell></CTableDataCell>
+      ) : ( 
+        <CTableDataCell>
         {object["type"][tipo]["startdate"] ? (
           object["type"][tipo]["startdate"]
         ) : (
           <p>Not started yet</p>
         )}
-      </CTableDataCell>
-      <CTableDataCell>
-        {object["type"][tipo]["state"] === "ended" ? (
-          <CButton
-            color="info"
-            variant="ghost"
-            onClick={(e) => handleChangePage("/campaign/" + object["type"][tipo]["idcampaign"] + "/statistics", e)} >
-            <CIcon icon={cilChart} size="lg" className="text-primary" />
-          </CButton>
-        ) : object["type"][tipo]["state"] === "ended with error" ? (                                
-          <CButton
-            color="danger"
-            variant="ghost"
-            onClick={(e) => handleDeleteCampaign(object["type"][tipo]["idcampaign"])} >
-            <CIcon icon={cilTrash} size="lg" className="text-primary"/>
-          </CButton>
-        ) : object["type"][tipo]["state"] === "executing" ? (
-          <CSpinner color="primary" />
-        ) : null}
-      </CTableDataCell>
-    </CTableRow>
-    )}
-
-  // Function that renders a single row for accordion
-  function render_accordion_row(tipo,object,key){
-    return(
-    <CTableRow key={key}>
-      <CTableHeaderCell>
-      </CTableHeaderCell>
-      <CTableHeaderCell>
-        {object["type"][tipo]["executionName"]}
-      </CTableHeaderCell>
-      <CTableHeaderCell>
-        {tipo === "faulty" ? (
-          <p className="fw-normal">Fault run</p>
-        ) : (
-          <p className="fw-normal">Golden run</p>
-        )}
-      </CTableHeaderCell>
-      <CTableDataCell>
-        {object["type"][tipo]["ncurrentruns"]}/{object["type"][tipo]["ntargetruns"]}
-      </CTableDataCell>
-      <CTableDataCell></CTableDataCell>
-      <CTableDataCell>
-        {object["type"][tipo]["state"].charAt(0).toUpperCase() + object["type"][tipo]["state"].slice(1)}
-      </CTableDataCell>
-      <CTableDataCell>
-      </CTableDataCell>
+        </CTableDataCell>
+      )}
       <CTableDataCell>
         {object["type"][tipo]["state"] === "ended" ? (
           <CButton
@@ -320,16 +277,16 @@ function render_accordion(object,key){
   return(
     <CTableRow>
       <CTableDataCell colSpan={8}>
-        <CAccordion>
+        <CAccordion><style>{`.accordion-button::after{background-image:initial;}.accordion-button:not(.collapsed)::after{background-image:initial;}`}</style>
           <CAccordionItem>
             <CAccordionHeader>
               <CTable colSpan={8}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <CTableDataCell>{object["type"]["golden"]["campaignName"]}</CTableDataCell>
+                <CTableHeaderCell>{object["type"]["golden"]["campaignName"]}</CTableHeaderCell>
                 <CTableDataCell></CTableDataCell>
                 <CTableDataCell></CTableDataCell>
                 <CTableDataCell></CTableDataCell>
-                <CTableDataCell>{object["type"]["golden"]["type"]}</CTableDataCell>
+                <CTableHeaderCell>{object["type"]["golden"]["type"]}</CTableHeaderCell>
                 <CTableDataCell>
                   {object["type"]["golden"]["startdate"] ? (
                     object["type"]["golden"]["startdate"]
@@ -370,8 +327,8 @@ function render_accordion(object,key){
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
-                {render_accordion_row("golden", object, key + "golden")}
-                {render_accordion_row("faulty", object, key + "faulty")}
+                {render("golden", object, key + "golden",2)}
+                {render("faulty", object, key + "faulty",2)}
                 </CTableBody>
               </CTable>
             </CAccordionBody>
@@ -477,8 +434,8 @@ function render_accordion(object,key){
                           {campaignsMenu.map((object, key) => (
                             <>
                             {object["type"].hasOwnProperty("faulty") && object["type"].hasOwnProperty("golden") ? (render_accordion(object,key)) : 
-                            object["type"].hasOwnProperty("golden") ? (render("golden",object,key)) : 
-                            object["type"].hasOwnProperty("faulty") ? (render("faulty",object,key)) : null}
+                            object["type"].hasOwnProperty("golden") ? (render("golden",object,key,1)) : 
+                            object["type"].hasOwnProperty("faulty") ? (render("faulty",object,key,1)) : null}
                             </>
                           ))}
                         </CTableBody>
