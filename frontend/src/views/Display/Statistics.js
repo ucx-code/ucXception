@@ -211,7 +211,7 @@ const CampaignSatistics = () => {
                   {statistics !== null && statistics !== undefined ? (
                     <>
                       <CCol>
-                      {statistics["golden_run_min_peak_duration"] ? (
+                      {statistics["golden_run_total_duration"] ? (
                         <>
                         <CRow>
                           <h4>Golden Runs</h4>
