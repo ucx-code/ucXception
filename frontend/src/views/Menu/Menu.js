@@ -29,7 +29,7 @@ import {
   CAccordion,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash } from "@coreui/icons";
+import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash, cilCopy } from "@coreui/icons";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import API_Campaign from "../../utils/api/API_Campaign";
 
@@ -47,14 +47,29 @@ const Menu = () => {
 
   const [campaignsMenu, setCampaignsMenu] = useState();
   const [totalCount, setTotalCount] = useState(0);
-  const [page, setPage] = useState(1);
 
+  // Function that clears local storage values if the token changes (For example, account change)  
+  useEffect(() => {
+    localStorage.removeItem('pageNumber');
+    localStorage.removeItem('pageSize');
+  }, [token]);
+      
+  // Passes the number of a page to local Storage
+  const [page, setPage] = useState(() => { 
+    const storedPageNumber = localStorage.getItem('pageNumber');
+    return storedPageNumber ? parseInt(storedPageNumber, 10) : 1;
+  }); 
+
+  useEffect(() => {
+    localStorage.setItem('pageNumber', page.toString());
+  }, [page]);
+
+  // Passes the number of items displayed to local Storage
   const [itemsPage, setItemsPage] = useState(() => { 
     const storedPageSize = localStorage.getItem('pageSize');
     return storedPageSize ? parseInt(storedPageSize, 10) : 5;
-  });
+  }); 
 
-  // Passes the number of items displayed to local Storage
   useEffect(() => {
     localStorage.setItem('pageSize', itemsPage.toString());
   }, [itemsPage]);
@@ -152,25 +167,35 @@ const Menu = () => {
 
   // Function that arranges the array with types of runs that have the same campaign id
   const sort_array =(campaignsMenu) => {
-    let novo_array = [], novo_index = 0;
-    for (let index = 0; index < campaignsMenu.length - 1; index++) {
+    let novo_array = [], novo_index = 0, len = campaignsMenu.length;
+    for (let index = 0; index < len; index++) {
       novo_array[novo_index] = { "campaignName" : campaignsMenu[index]["campaignName"] };
-      if(campaignsMenu[index]["idcampaign"] === campaignsMenu[index+1]["idcampaign"]){
-        if (campaignsMenu[index]["hasfault"] === 0 && campaignsMenu[index+1]["hasfault"] === 1){
-          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index], "faulty": campaignsMenu[index+1]};
-          index++;
-        }
-        else{
-          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index+1], "faulty": campaignsMenu[index]};
-          index++;          
-        }
-      }
-      else{
+      if (index === len - 1) {
         if (campaignsMenu[index]["hasfault"] === 1){
           novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
         }
         else{
           novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
+        }   
+      }
+      else{
+        if(campaignsMenu[index]["idcampaign"] === campaignsMenu[index+1]["idcampaign"]){
+          if (campaignsMenu[index]["hasfault"] === 0 && campaignsMenu[index+1]["hasfault"] === 1){
+            novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index], "faulty": campaignsMenu[index+1]};
+            index++;
+          }
+          else{
+            novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index+1], "faulty": campaignsMenu[index]};
+            index++;          
+          }
+        }
+        else{
+          if (campaignsMenu[index]["hasfault"] === 1){
+            novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
+          }
+          else{
+            novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
+          }
         }
       }
     }
@@ -180,7 +205,7 @@ const Menu = () => {
   // Handles the campaigns displayed
   const handleGetCampaignsList =() =>  {
   API_Generic(setLogout, addAlert).genericCall(
-    "/campaigns" + "?page=" + "1" + "&page_size=" + itemsPage,
+    "/campaigns" + "?page=" + page + "&page_size=" + itemsPage,
     API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
     false,
     sort_array,
@@ -189,7 +214,6 @@ const Menu = () => {
     getHeaders
   );
   }
-
 
   // Function will call api to delete Campaign
   const handleDeleteCampaign = (campaignId) => {
@@ -213,6 +237,11 @@ const Menu = () => {
       searchbartext;
 
     return url;
+  }
+
+  // Function that Copies to clipboard information about a specific Campaign
+  const copy_clipboard = () => {
+  
   }
 
   // Function that renders a single row (if number = 2, it will render rows for accordion)
@@ -269,6 +298,15 @@ const Menu = () => {
           <CSpinner color="primary" />
         ) : null}
       </CTableDataCell>
+      {number === 1 ? ( 
+        <CTableDataCell> 
+          <CButton
+            color="info"
+            variant="ghost">
+            <CIcon icon={cilCopy} size="lg" className="text-primary"/>
+          </CButton>
+        </CTableDataCell>
+      ): <CTableDataCell></CTableDataCell>}
     </CTableRow>
     )}
 
@@ -276,11 +314,11 @@ const Menu = () => {
 function render_accordion(object,key){
   return(
     <CTableRow>
-      <CTableDataCell colSpan={8}>
+      <CTableDataCell colSpan={9}>
         <CAccordion><style>{`.accordion-button::after{background-image:initial;}.accordion-button:not(.collapsed)::after{background-image:initial;}`}</style>
           <CAccordionItem>
             <CAccordionHeader>
-              <CTable colSpan={8}>
+              <CTable colSpan={9}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <CTableHeaderCell>{object["type"]["golden"]["campaignName"]}</CTableHeaderCell>
                 <CTableDataCell></CTableDataCell>
@@ -294,6 +332,14 @@ function render_accordion(object,key){
                     <p>Not started yet</p>
                   )}
                 </CTableDataCell>
+                <CTableDataCell> 
+                  <CButton
+                    color="info"
+                    variant="ghost"
+                    onClick={() => copy_clipboard()}>
+                    <CIcon icon={cilCopy} size="lg" className="text-primary"/>
+                  </CButton>
+                 </CTableDataCell>
                 </div>
               </CTable>
             </CAccordionHeader>
@@ -322,8 +368,8 @@ function render_accordion(object,key){
                     <CTableHeaderCell scope="col">
                       <h5 style={{ visibility: 'hidden' }}>Start date</h5>
                     </CTableHeaderCell>
-                    <CTableHeaderCell scope="col">   
-                    </CTableHeaderCell>
+                    <CTableHeaderCell scope="col"></CTableHeaderCell>
+                    <CTableHeaderCell scope="col"></CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
@@ -371,13 +417,13 @@ function render_accordion(object,key){
                   <CCol xs={4} sm={3} md={2} lg={2} xl={1}>
                     <CFormSelect
                       aria-label="Page"
+                      value = {itemsPage}
                       onChange={(e) => handleChangePageSize(e.target.value)}
                       options={[
                         { label: "5", value: "5" },
                         { label: "10", value: "10" },
                         { label: "25", value: "25" },
                       ]}
-                      value = {itemsPage}
                     />
                   </CCol>
                   <CCol xs={12} sm={5} md={4} lg={3} xl={3}>
@@ -426,8 +472,8 @@ function render_accordion(object,key){
                             <CTableHeaderCell scope="col">
                               <h5>Start date</h5>
                             </CTableHeaderCell>
-                            <CTableHeaderCell scope="col">   
-                            </CTableHeaderCell>
+                            <CTableHeaderCell scope="col"></CTableHeaderCell>
+                            <CTableHeaderCell scope="col"></CTableHeaderCell>
                           </CTableRow>
                         </CTableHead>
                         <CTableBody>
@@ -445,7 +491,7 @@ function render_accordion(object,key){
                     )}
                   </CCol>
                 </CRow>
-                {campaignsMenu !== undefined && campaignsMenu.length !== 0 ? (
+                {campaignsMenu !== undefined && campaignsMenu.length !== 0 && (totalCount > itemsPage || page !== 1) ? (
                   <CRow>
                     <CPagination
                       align="center"
