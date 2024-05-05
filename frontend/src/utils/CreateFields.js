@@ -68,7 +68,8 @@ export default function CreateFields() {
     placeholderValue,
     setObject,
     hasError,
-    errorMessage
+    errorMessage,
+    isDisabled
   ) {
     return (
       <CCol key={index} className="my-2" md={size}>
@@ -86,9 +87,8 @@ export default function CreateFields() {
           maxLength={maxLength}
           defaultValue={defaultValue}
           placeholder={placeholderValue}
-          onChange={(e) =>
-            setObject != null ? setObject(e.target.name, e.target.value) : null
-          }
+          onChange={(e) => setObject != null ? setObject(e.target.name, e.target.value) : null}
+          disabled={isDisabled}
         />
         {hasError ? (
           <CFormFeedback invalid>{errorMessage}</CFormFeedback>
@@ -108,7 +108,8 @@ export default function CreateFields() {
     setObject,
     objectList,
     objectValue,
-    objectDisplay
+    objectDisplay,
+    campaign_name
   ) {
     return (
       <CCol key={index} className="my-2" md={size}>
@@ -121,22 +122,34 @@ export default function CreateFields() {
           name={objectName}
           id={inputName}
           required={isRequired}
-          placeholder={placeholderValue}
           onChange={(e) =>
             setObject != null ? setObject(e.target.name, e.target.value) : null
           }
         >
           {objectList !== undefined && objectList !== null
             ? objectList.map((object, key) => (
-                <option
+                (campaign_name === object[objectValue]) ? 
+                (
+                  <option
                   className="text-primary"
                   key={key}
                   value={object[objectValue]}
-                >
+                  selected
+                  >
                   {object[objectDisplay]}
-                </option>
-              ))
-            : null}
+                  </option>
+                ):(                
+                  <option
+                  className="text-primary"
+                  key={key}
+                  value={object[objectValue]}
+                  >
+                  {object[objectDisplay]}
+                  </option>
+                )
+              )
+            )
+          : null}
         </CFormSelect>
       </CCol>
     );

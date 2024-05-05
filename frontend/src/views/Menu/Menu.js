@@ -47,13 +47,7 @@ const Menu = () => {
 
   const [campaignsMenu, setCampaignsMenu] = useState();
   const [totalCount, setTotalCount] = useState(0);
-
-  // Function that clears local storage values if the token changes (For example, account change)  
-  useEffect(() => {
-    localStorage.removeItem('pageNumber');
-    localStorage.removeItem('pageSize');
-  }, [token]);
-      
+       
   // Passes the number of a page to local Storage
   const [page, setPage] = useState(() => { 
     const storedPageNumber = localStorage.getItem('pageNumber');
@@ -239,9 +233,20 @@ const Menu = () => {
     return url;
   }
 
+  // Function that stores copied information to localStorage
+  function copy_campaign(messagem) {
+    localStorage.setItem('Copied', JSON.stringify(messagem));
+  }
+
   // Function that Copies to clipboard information about a specific Campaign
-  const copy_clipboard = () => {
-  
+  const copy_clipboard = (id_campaign) => {
+    API_Campaign(setLogout, addAlert).get_campaign(
+      id_campaign,
+      token,
+      null,
+      copy_campaign,
+      null,
+    );
   }
 
   // Function that renders a single row (if number = 2, it will render rows for accordion)
@@ -298,15 +303,14 @@ const Menu = () => {
           <CSpinner color="primary" />
         ) : null}
       </CTableDataCell>
-      {number === 1 ? ( 
-        <CTableDataCell> 
-          <CButton
-            color="info"
-            variant="ghost">
-            <CIcon icon={cilCopy} size="lg" className="text-primary"/>
-          </CButton>
-        </CTableDataCell>
-      ): <CTableDataCell></CTableDataCell>}
+      <CTableDataCell>
+        <CButton
+          color="info"
+          variant="ghost"
+          onClick={(e) => copy_clipboard(object["type"][tipo]["idcampaign"])}>
+          <CIcon icon={cilCopy} size="lg" className="text-primary" />
+        </CButton>
+      </CTableDataCell>
     </CTableRow>
     )}
 
@@ -320,26 +324,21 @@ function render_accordion(object,key){
             <CAccordionHeader>
               <CTable colSpan={9}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <CTableHeaderCell>{object["type"]["golden"]["campaignName"]}</CTableHeaderCell>
-                <CTableDataCell></CTableDataCell>
-                <CTableDataCell></CTableDataCell>
-                <CTableDataCell></CTableDataCell>
-                <CTableHeaderCell>{object["type"]["golden"]["type"]}</CTableHeaderCell>
-                <CTableDataCell>
-                  {object["type"]["golden"]["startdate"] ? (
-                    object["type"]["golden"]["startdate"]
-                  ) : (
-                    <p>Not started yet</p>
-                  )}
-                </CTableDataCell>
-                <CTableDataCell> 
-                  <CButton
-                    color="info"
-                    variant="ghost"
-                    onClick={() => copy_clipboard()}>
-                    <CIcon icon={cilCopy} size="lg" className="text-primary"/>
-                  </CButton>
-                 </CTableDataCell>
+                  <CTableHeaderCell>{object["type"]["golden"]["campaignName"]}</CTableHeaderCell>
+                  <CTableDataCell></CTableDataCell>
+                  <CTableDataCell></CTableDataCell>
+                  <CTableDataCell></CTableDataCell>
+                  <CTableDataCell></CTableDataCell>
+                  <CTableHeaderCell>{object["type"]["golden"]["type"]}</CTableHeaderCell>
+                  <CTableDataCell></CTableDataCell>
+                  <CTableDataCell>
+                    {object["type"]["golden"]["startdate"] ? (
+                      object["type"]["golden"]["startdate"]
+                    ) : (
+                      <p>Not started yet</p>
+                    )}
+                  </CTableDataCell>
+                  <CTableDataCell></CTableDataCell>
                 </div>
               </CTable>
             </CAccordionHeader>

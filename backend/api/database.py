@@ -2,6 +2,8 @@ import sqlite3
 from api.script_tables import return_script
 import os
 import errno
+import pickle
+import base64
 
 DATABASE_NAME = "ucxception.db"
 DIRECTORY = "database" 
@@ -263,9 +265,15 @@ def create_file(name, data, savedonstorage, idcampaign):
     return generic_access(statement, parameters_list)
 
 def get_files(idcampaign):
-    statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ?;"
+    statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ? AND name='app_path';"
     parameters_list = [idcampaign]
-    return retrieve_generic_access(statement, parameters_list, True)
+    temp = retrieve_generic_access(statement, parameters_list, True)
+    if (temp is not None):
+        return temp
+    else:
+        statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ?;"
+        parameters_list = [idcampaign]
+        return retrieve_generic_access(statement, parameters_list, True)
 
 
 
@@ -413,9 +421,25 @@ def get_component_host(idcomponent):
     parameters_list = [idcomponent]
     return retrieve_generic_access(statement, parameters_list, False)
 
-
-
-
+# Function that will copy all information of a single campaign 
+def COPY_CAMPAIGN(idcampaign,userid):
+    campaign_info = get_campaign(idcampaign)
+    executions = get_executions(idcampaign)
+    parametros = get_campaign_parameters(idcampaign)
+    hosts = get_hosts(idcampaign,userid["id"])
+    campaign_data = {
+        'Campaign_Type': campaign_info['type'],
+        'Project_Name': campaign_info['name'],
+        'Fault_Injector_Path': campaign_info['fipath'],
+        'app_input': pickle.loads(parametros[0]['data']),
+        'fi_max': pickle.loads(parametros[3]['data']),
+        'fi_min': pickle.loads(parametros[2]['data']),
+        'watchdog_dur': pickle.loads(parametros[1]['data']),
+        'Executions': executions,
+        'Hosts': hosts,
+        'id': int(idcampaign)
+    }
+    return campaign_data
 
 def database_main():
     create_tables()

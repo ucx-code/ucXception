@@ -51,6 +51,9 @@ const CampaignExecution = () => {
   //List of executions
   const [executions, setExecutions] = useState();
 
+  // Head of Campaign Information copied from local Storage
+  const head = JSON.parse(localStorage.getItem("Copied"));
+
   useEffect(() => {
     if (logout === true) {
       handleLogout();
@@ -145,6 +148,22 @@ const CampaignExecution = () => {
       setValidated(false);
     }
   };
+
+  // This will retrieve data from local storage and create the hosts from the selected campaign
+  useEffect(() => {
+    if (head && campaignId!== undefined) {
+      for (let i = 0; i < head['Executions'].length; i++){
+        {(head['Executions'][i]['hasfault'] === 1)? (head['Executions'][i]['hasfault'] = true) : (head['Executions'][i]['hasfault'] = false)};
+        const execution = {
+          campaign_id: campaignId,
+          type: head['Executions'][i]['hasfault'],
+          name: head['Executions'][i]['name'],
+          n_target_runs: head['Executions'][i]['ntargetruns'],
+        };
+        handleCreateExecution(execution);
+      }
+    }
+  }, [campaignId]);
 
   return (
     <>

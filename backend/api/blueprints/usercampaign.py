@@ -73,6 +73,10 @@ def create_campaign(current_user):
                             
                         if not database.create_file(key, path_blob, 0, id_campaign):
                             return abort("Error saving path file!", 500)
+                elif request.form.get('Cloned_Campaign') != -1:
+                    files = database.get_files(request.form.get('Cloned_Campaign'))
+                    if not database.create_file(key, files[0]['data'], 1, id_campaign):
+                        return abort("Error saving file!", 500)
                 else:
                     if require:
                         return abort("Must upload a file or give a path to "+key+" field!", 422)
