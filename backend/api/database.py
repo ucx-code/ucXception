@@ -165,52 +165,59 @@ def create_campaign(project_name, campaign_type, fipath, iduser):
         conn.close()
     return idcampaign
 
-def get_campaigns(isGet, iduser, searchbar, campaignstate, currentpage, numberelements):
-    #Basic Statment
-    if isGet:
-    #statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName,  execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM execution, campaign WHERE execution.campaign_idcampaign = campaign.idcampaign AND user_iduser = ? "
-        statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName,  execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM execution, campaign WHERE "
-    else:
-        statement = "SELECT COUNT(*) AS Total FROM execution, campaign WHERE "
-
-    parameters_list = []
-    statement = statement + "execution.campaign_idcampaign = campaign.idcampaign AND campaign.user_iduser = ? AND campaign.state != 'waiting' "
-    parameters_list.append(iduser)
-    
-    #Columns filter
+#Gets Total number of campaigns
+def get_total(iduser,searchbar):
+    parameters_list = [iduser]
     if searchbar:
-        
-        statement = statement + "AND (campaign.name LIKE ? "
+        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total, campaign.name, campaign.type FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?)"
         parameters_list.append("%"+searchbar+"%")
-
-        statement = statement + "OR campaign.type LIKE ? "
         parameters_list.append("%"+searchbar+"%")
+    else:
+        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+    return retrieve_generic_access(statement, parameters_list, True)
 
-        statement = statement + "OR execution.name LIKE ?)"
+#Gets Campaigns Filtered and Gets SearchBar
+def get_campaigns(iduser, searchbar, currentpage, numberelements):
+
+    parameters_list = [iduser]
+
+    #SearchBar
+    if searchbar:
+        statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?) "
         parameters_list.append("%"+searchbar+"%")
-
-    # if campaignstate:
-    #     statement = statement + " AND campaign.state LIKE ? "
-    #     parameters_list.append("%"+campaignstate+"%")
+        parameters_list.append("%"+searchbar+"%")
+    else:
+        statement = "SELECT campaign.idcampaign FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
 
     #Pagination
-    if isGet:
-        if currentpage:
-            statement = statement + "LIMIT ?,"
-            if numberelements:
-                parameters_list.append((int(currentpage)*int(numberelements))-int(numberelements))
-            else:
-                parameters_list.append(currentpage)
-        else:
-            statement = statement + "LIMIT 1,"
-
+    if currentpage:
+        statement += "LIMIT ?,"
         if numberelements:
-            statement = statement + "?;"
-            parameters_list.append(numberelements)
+            parameters_list.append((int(currentpage)*int(numberelements))-int(numberelements))
         else:
-            statement = statement + "20;"
-
-
+            parameters_list.append(currentpage)
+    else:
+        statement += "LIMIT 1,"
+    
+    if numberelements:
+        statement += "?;"
+        parameters_list.append(numberelements)
+    else:
+        statement += "20;"
+    
+    # We get X (numberelements) number of ID of campaigns
+    id_campaigns = retrieve_generic_access(statement, parameters_list, True)
+    parameters_list = [iduser]
+    ids = []
+    for i in range(len(id_campaigns)):  
+        ids.append(id_campaigns[i]['idcampaign']) 
+    statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName, execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM campaign JOIN execution ON campaign.idcampaign = execution.campaign_idcampaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' AND "
+    if len(ids) != 1:
+        statement += f"campaign.idcampaign IN {tuple(ids)}"
+    else:
+        statement += f"campaign.idcampaign = {ids[0]}"
     return retrieve_generic_access(statement, parameters_list, True)
 
 def get_campaign(idcampaign):
