@@ -73,6 +73,10 @@ def create_campaign(current_user):
                             
                         if not database.create_file(key, path_blob, 0, id_campaign):
                             return abort("Error saving path file!", 500)
+                elif request.form.get('Cloned_Campaign') != -1:
+                    files = database.get_files(request.form.get('Cloned_Campaign'))
+                    if not database.create_file(key, files[0]['data'], 1, id_campaign):
+                        return abort("Error saving file!", 500)
                 else:
                     if require:
                         return abort("Must upload a file or give a path to "+key+" field!", 422)
@@ -122,10 +126,10 @@ def get_campaign_user(current_user):
     if args.get("page_size") and not utils.validate_string_number(args.get("page_size")):
         return abort('Parameters must match the required type', 400)
     
-    #Gets campaigns filtered
-    campaings = database.get_campaigns(True, current_user["id"], args.get("searchbar"), args.get("campaign_state"), args.get("page") , args.get("page_size"))
-    #Total number of campaigns
-    total = database.get_campaigns(False, current_user["id"], args.get("searchbar"), args.get("campaign_state"), args.get("page") , args.get("page_size"))
+    #Gets Campaigns Filtered and Gets SearchBar
+    campaings = database.get_campaigns(current_user["id"], args.get("searchbar"), args.get("page") , args.get("page_size"))
+    #Gets Total number of campaigns
+    total = database.get_total(current_user["id"],args.get("searchbar"))
 
     if campaings == False or total == False:
         return abort('Unexpected error!', 500)

@@ -2,6 +2,8 @@ import sqlite3
 from api.script_tables import return_script
 import os
 import errno
+import pickle
+import base64
 
 DATABASE_NAME = "ucxception.db"
 DIRECTORY = "database" 
@@ -163,52 +165,59 @@ def create_campaign(project_name, campaign_type, fipath, iduser):
         conn.close()
     return idcampaign
 
-def get_campaigns(isGet, iduser, searchbar, campaignstate, currentpage, numberelements):
-    #Basic Statment
-    if isGet:
-    #statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName,  execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM execution, campaign WHERE execution.campaign_idcampaign = campaign.idcampaign AND user_iduser = ? "
-        statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName,  execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM execution, campaign WHERE "
-    else:
-        statement = "SELECT COUNT(*) AS Total FROM execution, campaign WHERE "
-
-    parameters_list = []
-    statement = statement + "execution.campaign_idcampaign = campaign.idcampaign AND campaign.user_iduser = ? AND campaign.state != 'waiting' "
-    parameters_list.append(iduser)
-    
-    #Columns filter
+#Gets Total number of campaigns
+def get_total(iduser,searchbar):
+    parameters_list = [iduser]
     if searchbar:
-        
-        statement = statement + "AND (campaign.name LIKE ? "
+        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total, campaign.name, campaign.type FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?)"
         parameters_list.append("%"+searchbar+"%")
-
-        statement = statement + "OR campaign.type LIKE ? "
         parameters_list.append("%"+searchbar+"%")
+    else:
+        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+    return retrieve_generic_access(statement, parameters_list, True)
 
-        statement = statement + "OR execution.name LIKE ?)"
+#Gets Campaigns Filtered and Gets SearchBar
+def get_campaigns(iduser, searchbar, currentpage, numberelements):
+
+    parameters_list = [iduser]
+
+    #SearchBar
+    if searchbar:
+        statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
+        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?) "
         parameters_list.append("%"+searchbar+"%")
-
-    # if campaignstate:
-    #     statement = statement + " AND campaign.state LIKE ? "
-    #     parameters_list.append("%"+campaignstate+"%")
+        parameters_list.append("%"+searchbar+"%")
+    else:
+        statement = "SELECT campaign.idcampaign FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
 
     #Pagination
-    if isGet:
-        if currentpage:
-            statement = statement + "LIMIT ?,"
-            if numberelements:
-                parameters_list.append((int(currentpage)*int(numberelements))-int(numberelements))
-            else:
-                parameters_list.append(currentpage)
-        else:
-            statement = statement + "LIMIT 1,"
-
+    if currentpage:
+        statement += "LIMIT ?,"
         if numberelements:
-            statement = statement + "?;"
-            parameters_list.append(numberelements)
+            parameters_list.append((int(currentpage)*int(numberelements))-int(numberelements))
         else:
-            statement = statement + "20;"
-
-
+            parameters_list.append(currentpage)
+    else:
+        statement += "LIMIT 1,"
+    
+    if numberelements:
+        statement += "?;"
+        parameters_list.append(numberelements)
+    else:
+        statement += "20;"
+    
+    # We get X (numberelements) number of ID of campaigns
+    id_campaigns = retrieve_generic_access(statement, parameters_list, True)
+    parameters_list = [iduser]
+    ids = []
+    for i in range(len(id_campaigns)):  
+        ids.append(id_campaigns[i]['idcampaign']) 
+    statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName, execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM campaign JOIN execution ON campaign.idcampaign = execution.campaign_idcampaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' AND "
+    if len(ids) != 1:
+        statement += f"campaign.idcampaign IN {tuple(ids)}"
+    else:
+        statement += f"campaign.idcampaign = {ids[0]}"
     return retrieve_generic_access(statement, parameters_list, True)
 
 def get_campaign(idcampaign):
@@ -263,9 +272,15 @@ def create_file(name, data, savedonstorage, idcampaign):
     return generic_access(statement, parameters_list)
 
 def get_files(idcampaign):
-    statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ?;"
+    statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ? AND name='app_path';"
     parameters_list = [idcampaign]
-    return retrieve_generic_access(statement, parameters_list, True)
+    temp = retrieve_generic_access(statement, parameters_list, True)
+    if (temp is not None):
+        return temp
+    else:
+        statement =  "SELECT name, data, savedonstorage FROM file WHERE campaign_idcampaign = ?;"
+        parameters_list = [idcampaign]
+        return retrieve_generic_access(statement, parameters_list, True)
 
 
 
@@ -413,9 +428,25 @@ def get_component_host(idcomponent):
     parameters_list = [idcomponent]
     return retrieve_generic_access(statement, parameters_list, False)
 
-
-
-
+# Function that will copy all information of a single campaign 
+def COPY_CAMPAIGN(idcampaign,userid):
+    campaign_info = get_campaign(idcampaign)
+    executions = get_executions(idcampaign)
+    parametros = get_campaign_parameters(idcampaign)
+    hosts = get_hosts(idcampaign,userid["id"])
+    campaign_data = {
+        'Campaign_Type': campaign_info['type'],
+        'Project_Name': campaign_info['name'],
+        'Fault_Injector_Path': campaign_info['fipath'],
+        'app_input': pickle.loads(parametros[0]['data']),
+        'fi_max': pickle.loads(parametros[3]['data']),
+        'fi_min': pickle.loads(parametros[2]['data']),
+        'watchdog_dur': pickle.loads(parametros[1]['data']),
+        'Executions': executions,
+        'Hosts': hosts,
+        'id': int(idcampaign)
+    }
+    return campaign_data
 
 def database_main():
     create_tables()

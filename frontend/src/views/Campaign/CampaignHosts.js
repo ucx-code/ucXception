@@ -58,6 +58,9 @@ const CampaignExecution = () => {
   const [hasCampaignTarget, setHasCampaignTarget] = useState(false);
   const [hasFaultInjectorTarget, setHasFaultInjectorTarget] = useState(false);
 
+  // Head of Campaign Information copied from local Storage
+  const head = JSON.parse(localStorage.getItem("Copied"));
+
   useEffect(() => {
     if (logout === true) {
       handleLogout();
@@ -111,7 +114,7 @@ const CampaignExecution = () => {
   };
 
   //Function will call api to delete host
-  const handleDeleteHost = (e, idhost) => {
+  const handleDeleteHost = (idhost) => {
     API_Host(setLogout, addAlert).deleteHost(
       campaignId,
       token,
@@ -175,6 +178,38 @@ const CampaignExecution = () => {
       setValidated(false);
     }
   };
+
+  // This function will retrieve data from local storage and create the hosts from the selected campaign
+  function copy_hosts(){
+    if (head && campaignId !== undefined) {
+      for(let i = 0; i < head['Hosts'].length; i++){
+        let id = head['Hosts'][i]['idhost'];
+        {(head['Hosts'][i]['campaign_fault_injector_target'] === id) ? (head['Hosts'][i]['campaign_fault_injector_target'] = true) : (head['Hosts'][i]['campaign_fault_injector_target'] = false)};
+        {(head['Hosts'][i]['campaign_target'] === id) ? (head['Hosts'][i]['campaign_target'] = true) : (head['Hosts'][i]['campaign_target'] = false)};
+        const host = {
+          campaign_id: campaignId,
+          type: head['Hosts'][i]['type'],
+          domain: head['Hosts'][i]['domain'],
+          username: head['Hosts'][i]['username'],
+          campaign_target: head['Hosts'][i]['campaign_target'],
+          fault_injector_target: head['Hosts'][i]['campaign_fault_injector_target'],
+        };
+        handleCreateHost(host);
+      }
+    }
+  }
+
+  useEffect(() => {copy_hosts()}, [campaignId]);
+
+  // Function that manages hosts, not allowing for repeated roles ( every time 'hosts' changes it delets the useless hosts )
+  useEffect(() => {
+    if (hosts !== undefined) {
+      for (let i = 0; i < hosts.length; i++) {
+        if (hosts[i]['idhost'] !== hosts[i]['campaign_target'] && hosts[i]['idhost'] !== hosts[i]['campaign_fault_injector_target'])
+          handleDeleteHost(hosts[i]['idhost']);        
+      }
+    }
+  }, [hosts]);
 
   return (
     <>
@@ -270,9 +305,7 @@ const CampaignExecution = () => {
                                 <CButton
                                   color="danger"
                                   variant="ghost"
-                                  onClick={(e) =>
-                                    handleDeleteHost(e, object["idhost"])
-                                  }
+                                  onClick={() => handleDeleteHost(object["idhost"])}
                                 >
                                   <CIcon icon={cilTrash} size="lg" />
                                 </CButton>

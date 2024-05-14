@@ -42,6 +42,7 @@ export default function API_Campaign(setLogout, addAlert) {
     );
   }
   
+  // Function to delete a Campaign
   function deleteCampaign(
     id,
     token,
@@ -59,9 +60,28 @@ export default function API_Campaign(setLogout, addAlert) {
     );
   }
 
+  // Function to get information about a single campaign
+  function get_campaign(
+    id,
+    token,
+    setObject,
+    processing_function,
+    post_function
+  ) {
+    API_Generic(setLogout, addAlert).genericCall(
+      "/campaigns/" + id,
+      API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
+      true,
+      setObject,
+      processing_function,
+      post_function
+    );
+  }
+
   return {
     getCampaignsData,
     sendUserCampaign,
     deleteCampaign,
+    get_campaign,
   };
 }

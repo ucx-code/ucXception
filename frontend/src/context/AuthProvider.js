@@ -4,7 +4,6 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [isAuth, setAuth] = useState(false);
-  //const api_url = process.env.REACT_APP_API_URL;
 
   function hasToken() {
     const token = localStorage.getItem("token");
@@ -25,6 +24,10 @@ export const AuthProvider = ({ children }) => {
   function deleteInfoInLocalStorage() {
     localStorage.removeItem("token");
     localStorage.removeItem("public_id");
+    localStorage.removeItem('pageNumber');
+    localStorage.removeItem('pageSize');
+    localStorage.removeItem('Copied');
+    localStorage.removeItem("User");
   }
 
   function isAuthenticated() {
@@ -41,6 +44,7 @@ export const AuthProvider = ({ children }) => {
   function saveLogin(values) {
     localStorage.setItem("token", values.user.token);
     localStorage.setItem("public_id", values.user.user["public-id"]);
+    localStorage.setItem('User', JSON.stringify(values.user.user));
     setAuth(true);
   }
 

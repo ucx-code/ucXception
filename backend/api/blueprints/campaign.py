@@ -101,3 +101,28 @@ def delete_campaign(current_user,campaign_id):
         return abort('Could not delete campaign!', 500)
 
     return make_response({'message': 'Campaign deleted successfully!'}, 200, {'Content-Type': 'application/json'})
+
+
+# Get and Copy Information about a single Campaign
+@campaign.route('/campaigns/<campaign_id>', methods=['GET'])
+@token_required
+def get_campaign(current_user, campaign_id):
+    
+    #Verify and validate campaign id
+    if campaign_id is None:
+        return abort("Malformed request syntax!", 400)
+
+    value = database.verify_campaign_belong_user_returnable(campaign_id, current_user["id"])
+
+    if not value:
+        return abort("Campaign not reachable.", 422)
+
+    campaign_info = database.COPY_CAMPAIGN(campaign_id,current_user)
+
+    campaign_info['message'] = f"Campaign with ID: {campaign_id} and NAME: '{campaign_info['Project_Name']}' copied successfully!"
+
+    #Get Campaign Data
+    if campaign_info:
+        return make_response(jsonify(campaign_info), 200, {'Content-Type': 'application/json'})
+    else:
+        return abort("No data is available with the specifications provided!", 422)

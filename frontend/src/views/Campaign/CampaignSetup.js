@@ -45,6 +45,9 @@ const CampaignSetup = () => {
   const [campaignsApiData, setApiCampaignsData] = useState();
   const [campaignType, setCampaignType] = useState("");
 
+  // Head of Campaign Information copied from local Storage
+  const head = JSON.parse(localStorage.getItem("Copied"));
+
   useEffect(() => {
     if (logout === true) {
       handleLogout();
@@ -69,15 +72,15 @@ const CampaignSetup = () => {
     );
   }, []);
 
-  // Handler change type of campaign
+  // Handles change type of campaign
   const handleCampaignChange = (name, value) => {
     setCampaignType(value);
   };
 
-  // function used to set firts campaign type
+  // Function used to set first campaign type
   function setFirstCampaignType(values) {
     if (values) {
-      setCampaignType(values[0]["campaign_name"]);
+      setCampaignType((null != head) ? (head["Campaign_Type"]):(values[0]["campaign_name"]));
     }
     return values;
   }
@@ -149,6 +152,30 @@ const CampaignSetup = () => {
     setValidated(true);
   };
 
+  // Function that will replace app_input / f_min / f_max / watchdog_dur depending if there is Copied information on localStorage
+  function function_campaignsApiData(name,array){
+    if (array != null){
+      for(let i = 0; i < array.length; i++){
+        if (array[i]["campaign_name"] === name && head != null){
+          array[i]["parameters"]["app_input"]["default"] = head["app_input"]
+          array[i]["parameters"]["fi_max"]["default"] = head["fi_max"]
+          array[i]["parameters"]["fi_min"]["default"] = head["fi_min"]
+          array[i]["parameters"]["watchdog_dur"]["default"] = head["watchdog_dur"]
+        }
+      }
+    }
+    return array
+  } 
+
+  // Exibes a message if there is anything in copied in LocalStorage
+  useEffect(() => {
+    if ( head != null)
+      addAlert("To delete the copied values, click on the 'Home' icon", "warning", cilWarning);
+    return () => {
+      setAlert({});
+    }
+  }, []);
+
   return (
     <>
       <CContainer>
@@ -179,7 +206,8 @@ const CampaignSetup = () => {
                       handleCampaignChange,
                       campaignsApiData,
                       "campaign_name",
-                      "campaign_name"
+                      "campaign_name",
+                      campaignType,
                     )}
 
                     {campaignsApiData !== undefined &&
@@ -210,7 +238,7 @@ const CampaignSetup = () => {
                       true,
                       1,
                       20,
-                      "",
+                      (head != null) ? (head["Project_Name"]):(""),
                       "",
                       null,
                       true,
@@ -226,7 +254,7 @@ const CampaignSetup = () => {
                       false,
                       1,
                       100,
-                      "",
+                      (head != null) ? (head["Fault_Injector_Path"]):(""),
                       "",
                       null,
                       false,
@@ -270,12 +298,14 @@ const CampaignSetup = () => {
                                         ) : null}
                                       </CCol>
                                     </CRow>
-                                    <CFormInput
-                                      type="file"
-                                      name={folder[0]}
-                                      id={folder[0]}
-                                      accept=".zip"
-                                    />
+                                    {(head==null)? (
+                                      <CFormInput
+                                        type="file"
+                                        name={folder[0]}
+                                        id={folder[0]}
+                                        accept=".zip"
+                                      />
+                                    ) : null}
                                     {CreateFields().createInputText(
                                       2,
                                       "12",
@@ -286,12 +316,11 @@ const CampaignSetup = () => {
                                       1,
                                       100,
                                       "",
-                                      "File path for " +
-                                        folder[0] +
-                                        " (case user do not upload file)",
+                                      (head != null) ? (`File Copied from campaign with id: ${head['id']}`):("File path for " + folder[0] + " (case user do not upload file)"),
                                       null,
                                       false,
-                                      "Project must have a file path!"
+                                      "Project must have a file path!",
+                                      (head != null) ? (true):(false)
                                     )}
                                   </div>
                                 )
@@ -311,14 +340,14 @@ const CampaignSetup = () => {
                 </CCardHeader>
                 <CCardBody>
                   <CampaignParameters
-                    campaignData={campaignsApiData}
+                    campaignData={function_campaignsApiData(campaignType,campaignsApiData)}
                     campaignType={campaignType}
                   />
                 </CCardBody>
               </CCard>
             </CCol>
           </CRow>
-
+          <input type='hidden' id='Cloned_Campaign' name='Cloned_Campaign' value={(head!=null) ? (head['id']) : (-1) }></input>
           <CCol xs={12} className="text-center">
             <CButton color="primary" type="submit">
               Create campaign
