@@ -160,14 +160,13 @@ const Menu = () => {
   }
 
   // Function that arranges the array with types of runs that have the same campaign id
-  const sort_array =(campaignsMenu) => {
+  const sort_array = (campaignsMenu) => {
     let novo_array = [], novo_index = 0, len = campaignsMenu.length;
     for (let index = 0; index < len; index++) {
       novo_array[novo_index] = { "campaignName" : campaignsMenu[index]["campaignName"] };
       if (index === len - 1) {
-        if (campaignsMenu[index]["hasfault"] === 1){
+        if (campaignsMenu[index]["hasfault"] === 1)
           novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
-        }
         else{
           novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
         }   
@@ -184,9 +183,8 @@ const Menu = () => {
           }
         }
         else{
-          if (campaignsMenu[index]["hasfault"] === 1){
+          if (campaignsMenu[index]["hasfault"] === 1)
             novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
-          }
           else{
             novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
           }

@@ -80,7 +80,7 @@ def get_hosts(current_user, campaign_id):
 @token_required
 def delete_host(current_user, campaign_id):
 
-    #Verify and valiudate campaign id
+    #Verify and validate campaign id
     if campaign_id is None:
         return abort("Malformed request syntax!", 400)
 
