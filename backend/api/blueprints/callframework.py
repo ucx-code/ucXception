@@ -1,10 +1,26 @@
-from flask import Blueprint, request, make_response, jsonify, current_app
+from flask import Blueprint, request, make_response, current_app
 from api.core.abort import abort
 from framework.main import main
 import api.database as database
 from api.core.decorators import token_required
-from multiprocessing import Process
-import datetime
+from multiprocessing import Process, Manager
+import datetime, time, os
+
+# Create a list with Manager to store the processes
+worker_proce = False
+manager = Manager()
+lista = manager.list()
+
+# Function to execute the processes
+def worker():
+    current_process = None
+    while True:
+            if len(lista) > 0 and (current_process is None or not current_process.is_alive()):
+                current_process = Process(target=main, args=lista[0])
+                current_process.start()
+                current_process.join() # Wait for the process to finish
+                lista.pop(0)
+            time.sleep(2)
 
 callframework = Blueprint("callframework", __name__)
 
@@ -12,6 +28,7 @@ callframework = Blueprint("callframework", __name__)
 @callframework.route('/execute', methods=['POST'])
 @token_required
 def call_framework_process(current_user):
+    global worker_proce # Define the worker_proce as global
     
     data = request.get_json()
 
@@ -100,11 +117,25 @@ def call_framework_process(current_user):
         if not database.update_begin_campaign_state(campaign_id,"executing",datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
             return abort("Couldnt update state campaign!", 422)
         
-        #Start process for each host defined
-        p = Process(target=main, args=(dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
-        #p = Process(target=main)
-        p.start()
-        
-        return make_response({'message': 'Started execution for campaign '+ str(campaign_id)}, 200, {'Content-Type': 'application/json'})
+        # Check the user option to use queue to manage the Campaigns
+        # Without Manager
+        if int(os.environ['USEQUEUE']) == 0:
+            p = Process(target=main, args=(dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
+            p.start()
+            return make_response({'message': f'Started execution for campaign {campaign_id}'}, 200, {'Content-Type': 'application/json'})
+        # With Manager
+        else:
+            # Start the worker_proce as a separate process to manage the list with all the processes
+            if worker_proce is False:
+                worker_proce = Process(target=worker)
+                worker_proce.start()
+
+            # Add the new process to the list
+            lista.append((dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
+
+            if len(lista) == 1:
+                return make_response({'message': f'Started execution for campaign {campaign_id}'}, 200, {'Content-Type': 'application/json'})
+            else:
+                return make_response({'message': f'Added campaign {campaign_id} to the queue'}, 200, {'Content-Type': 'application/json'})
     else:
         return abort("No data relative to components and/or campaigns!", 422)

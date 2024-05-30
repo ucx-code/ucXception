@@ -6,6 +6,7 @@ services:
          - "8080:5000"
       environment:
          - PYTHONIOENCODING=utf-8
+         - USEQUEUE = 0
       logging:
          driver: "json-file"
          options:
