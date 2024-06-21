@@ -99,7 +99,7 @@ def validate_password(password):
         return False
 
 def validate_string(string):
-    if(bool(re.match('^[a-zA-Z0-9_-]*$',string))==False):
+    if(bool(re.match('^[a-zA-Z0-9_/:-]*$',string))==False):
         return False
     return True
 

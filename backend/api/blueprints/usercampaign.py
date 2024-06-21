@@ -127,7 +127,8 @@ def get_campaign_user(current_user):
         return abort('Parameters must match the required type', 400)
     
     #Gets Campaigns Filtered and Gets SearchBar
-    campaings = database.get_campaigns(current_user["id"], args.get("searchbar"), args.get("page") , args.get("page_size"))
+    campaings = database.get_campaigns(current_user["id"], args.get("searchbar"), args.get("page") , args.get("page_size"), args.get("toggleValue"))
+    
     #Gets Total number of campaigns
     total = database.get_total(current_user["id"],args.get("searchbar"))
 

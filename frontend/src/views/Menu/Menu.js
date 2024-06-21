@@ -47,6 +47,27 @@ const Menu = () => {
 
   const [campaignsMenu, setCampaignsMenu] = useState();
   const [totalCount, setTotalCount] = useState(0);
+  
+  // Passes the Value of Toogle Switch
+  const [toggleValue, setToggleValue] = useState(() => { 
+    const storedtoggleValue = localStorage.getItem('toggleValue');
+    return storedtoggleValue ? parseInt(storedtoggleValue, 10) : 0;
+  }); 
+
+  useEffect(() => {
+    localStorage.setItem('toggleValue', toggleValue.toString());
+  }, [toggleValue]);
+
+  // Function to handle sort and order changes
+  const handleSortOrderChange = (newToggleValue) => {
+    setToggleValue(newToggleValue);
+    filterCallAPI(
+      document.getElementById("searchbar").value,
+      page,
+      itemsPage,
+      newToggleValue
+    );
+  };
        
   // Passes the number of a page to local Storage
   const [page, setPage] = useState(() => { 
@@ -99,7 +120,8 @@ const Menu = () => {
     filterCallAPI(
       document.getElementById("searchbar").value,
       page - 1,
-      itemsPage
+      itemsPage,
+      toggleValue
     );
   };
 
@@ -109,7 +131,8 @@ const Menu = () => {
     filterCallAPI(
       document.getElementById("searchbar").value,
       page + 1,
-      itemsPage
+      itemsPage,
+      toggleValue
     );
   };
 
@@ -128,13 +151,14 @@ const Menu = () => {
       filterCallAPI(
         document.getElementById("searchbar").value,
         aux,
-        value
+        value,
+        toggleValue
       );
     }
   };
 
   const handleSearchBar = () => {
-    filterCallAPI(document.getElementById("searchbar").value, page, itemsPage);
+    filterCallAPI(document.getElementById("searchbar").value, page, itemsPage, toggleValue);
   };
 
   const handleKeyPress = (e) => {
@@ -142,14 +166,15 @@ const Menu = () => {
       filterCallAPI(
         document.getElementById("searchbar").value,
         page,
-        itemsPage
+        itemsPage,
+        toggleValue
       );
     }
   };
 
-  function filterCallAPI(searchbartext, page, pagesize) {
+  function filterCallAPI(searchbartext, page, pagesize, toggleValue) {
     API_Generic(setLogout, addAlert).genericCall(
-      create_url(searchbartext, page, pagesize),
+      create_url(searchbartext, page, pagesize, toggleValue),
       API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
       false,
       sort_array,
@@ -197,7 +222,7 @@ const Menu = () => {
   // Handles the campaigns displayed
   const handleGetCampaignsList =() =>  {
   API_Generic(setLogout, addAlert).genericCall(
-    "/campaigns" + "?page=" + page + "&page_size=" + itemsPage,
+    create_url(document.getElementById("searchbar").value,page,itemsPage,toggleValue),
     API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
     false,
     sort_array,
@@ -218,7 +243,7 @@ const Menu = () => {
     );
   };
 
-  function create_url(searchbartext, page, pagesize) {
+  function create_url(searchbartext, page, pagesize, toggleValue) {
     let url =
       "/campaigns" +
       "?page=" +
@@ -226,8 +251,9 @@ const Menu = () => {
       "&page_size=" +
       pagesize +
       "&searchbar=" +
-      searchbartext;
-
+      searchbartext +
+      "&toggleValue=" +
+      toggleValue;
     return url;
   }
 
@@ -403,13 +429,25 @@ function render_accordion(object,key){
             <CCard>
               <CCardBody>
                 <CRow>
-                  <CCol xs={8} sm={4} md={6} lg={7} xl={8}>
+                  <CCol xs={8} sm={4} md={6} lg={7} xl={5}>
                     <CButton
                       color="primary"
                       onClick={(e) => handleChangePage("/campaign/setup", e)}
                     >
                       New campaign
                     </CButton>
+                  </CCol>
+                  <CCol xl= {3}>
+                    <CFormSelect 
+                      onChange = {(e) => handleSortOrderChange(e.target.value)}
+                      value={toggleValue}
+                      options={[
+                      { label: "Start date: Oldest to Newest", value: "0" },
+                      { label: "Start date: Newest to Oldest", value: "1" },
+                      { label: "Campaign name: A - Z", value: "2" },
+                      { label: "Campaign name: Z - A", value: "3" }
+                      ]}>
+                    </CFormSelect>
                   </CCol>
                   <CCol xs={4} sm={3} md={2} lg={2} xl={1}>
                     <CFormSelect

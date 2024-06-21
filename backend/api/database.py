@@ -168,56 +168,54 @@ def create_campaign(project_name, campaign_type, fipath, iduser):
 #Gets Total number of campaigns
 def get_total(iduser,searchbar):
     parameters_list = [iduser]
+    statement = "SELECT COUNT(DISTINCT idcampaign) AS Total FROM campaign WHERE user_iduser = ? AND state != 'waiting' "
     if searchbar:
-        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total, campaign.name, campaign.type FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
-        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?)"
+        statement += "AND (name LIKE ? OR startdate LIKE ?)"
         parameters_list.append("%"+searchbar+"%")
         parameters_list.append("%"+searchbar+"%")
-    else:
-        statement = "SELECT COUNT(DISTINCT campaign.idcampaign) AS Total FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
     return retrieve_generic_access(statement, parameters_list, True)
 
 #Gets Campaigns Filtered and Gets SearchBar
-def get_campaigns(iduser, searchbar, currentpage, numberelements):
-
+def get_campaigns(iduser, searchbar, currentpage, numberelements, toggleValue):
+    
     parameters_list = [iduser]
-
-    #SearchBar
+    statement = "SELECT idcampaign FROM campaign WHERE user_iduser = ? AND state != 'waiting' "
+    
+    # SearchBar
     if searchbar:
-        statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
-        statement += "AND (campaign.name LIKE ? OR campaign.type LIKE ?) "
+        statement += "AND (name LIKE ? OR startdate LIKE ?) "
         parameters_list.append("%"+searchbar+"%")
         parameters_list.append("%"+searchbar+"%")
-    else:
-        statement = "SELECT campaign.idcampaign FROM campaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' "
 
-    #Pagination
-    if currentpage:
-        statement += "LIMIT ?,"
-        if numberelements:
-            parameters_list.append((int(currentpage)*int(numberelements))-int(numberelements))
-        else:
-            parameters_list.append(currentpage)
+    # Sorting Depending on the toggleValue (no "if" for toggleValue == '0' because it is the default sort)
+    if toggleValue == '1': statement += " ORDER BY idcampaign DESC"
+    elif toggleValue == '2': statement += " ORDER BY UPPER(name)"
+    elif toggleValue == '3': statement += " ORDER BY UPPER(name) DESC"
+
+    # We get all campaigns that match the search criteria and sort them if necessary
+    all_campaigns = retrieve_generic_access(statement, parameters_list, True)
+
+    # Pagination
+    if currentpage and numberelements:
+        start = (int(currentpage) - 1) * int(numberelements)
+        end = start + int(numberelements)
+        paginated_campaigns = all_campaigns[start:end]
     else:
-        statement += "LIMIT 1,"
-    
-    if numberelements:
-        statement += "?;"
-        parameters_list.append(numberelements)
-    else:
-        statement += "20;"
-    
-    # We get X (numberelements) number of ID of campaigns
-    id_campaigns = retrieve_generic_access(statement, parameters_list, True)
-    parameters_list = [iduser]
-    ids = []
-    for i in range(len(id_campaigns)):  
-        ids.append(id_campaigns[i]['idcampaign']) 
+        paginated_campaigns = all_campaigns
+
+    ids = [campaign['idcampaign'] for campaign in paginated_campaigns]
     statement = "SELECT campaign.idcampaign, campaign.type, campaign.name AS campaignName, campaign.state, campaign.startdate, execution.name AS executionName, execution.hasfault, execution.ntargetruns, execution.ncurrentruns FROM campaign JOIN execution ON campaign.idcampaign = execution.campaign_idcampaign WHERE campaign.user_iduser = ? AND campaign.state != 'waiting' AND "
     if len(ids) != 1:
         statement += f"campaign.idcampaign IN {tuple(ids)}"
     else:
         statement += f"campaign.idcampaign = {ids[0]}"
+
+    # Apply sorting to the final query as well so that the current page is also sorted
+    if toggleValue == '1': statement += " ORDER BY campaign.idcampaign DESC"            # Newest to oldest
+    elif toggleValue == '2': statement += " ORDER BY UPPER(campaign.name)"              # A - Z
+    elif toggleValue == '3': statement += " ORDER BY UPPER(campaign.name) DESC"         # Z - A
+    parameters_list = [iduser]
+    
     return retrieve_generic_access(statement, parameters_list, True)
 
 def get_campaign(idcampaign):
