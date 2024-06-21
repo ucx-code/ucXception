@@ -119,7 +119,7 @@ def call_framework_process(current_user):
         
         # Check the user option to use queue to manage the Campaigns
         # Without Manager
-        if int(os.environ['USEQUEUE']) == 0:
+        if 'USEQUEUE' not in os.environ or int(os.environ['USEQUEUE']) == 0:
             p = Process(target=main, args=(dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
             p.start()
             return make_response({'message': f'Started execution for campaign {campaign_id}'}, 200, {'Content-Type': 'application/json'})
