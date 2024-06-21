@@ -17,3 +17,6 @@ C: Improvements to the software fault injection module.
 
 A: Pedro Almeida - Pedro705 on Github
 C: Developed frontend (web interface) for ucXception, the REST API to connect the backend and frontend and made the necessary changes to the backend so that the frontend can be effectively used. Created failure injection tool.
+
+A: Henrique Diz - HenriqueDiz on Github  
+C: Fixed issues on both the frontend and backend of the ucXception project, improving functionalities and user experience.
