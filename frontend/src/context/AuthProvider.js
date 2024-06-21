@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('pageSize');
     localStorage.removeItem('Copied');
     localStorage.removeItem("User");
+    localStorage.removeItem("toggleValue");
   }
 
   function isAuthenticated() {
