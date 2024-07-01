@@ -71,6 +71,13 @@ export default function CreateFields() {
     errorMessage,
     isDisabled
   ) {
+    
+    const handleInput = (e) => {
+      e.target.value = e.target.value.replace(/[^a-zA-Z0-9_]/g, '');
+      if (setObject != null) 
+        setObject(e.target.name, e.target.value);
+    };
+  
     return (
       <CCol key={index} className="my-2" md={size}>
         {labelText !== "" ? (
@@ -87,7 +94,7 @@ export default function CreateFields() {
           maxLength={maxLength}
           defaultValue={defaultValue}
           placeholder={placeholderValue}
-          onChange={(e) => setObject != null ? setObject(e.target.name, e.target.value) : null}
+          onInput={handleInput}
           disabled={isDisabled}
         />
         {hasError ? (
