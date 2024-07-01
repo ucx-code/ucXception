@@ -3,24 +3,24 @@ from api.core.abort import abort
 from framework.main import main
 import api.database as database
 from api.core.decorators import token_required
-from multiprocessing import Process, Manager
-import datetime, time, os
+from multiprocessing import Process, Manager, Condition
+import datetime, os
 
-# Create a list with Manager to store the processes
-worker_proce = False
-manager = Manager()
-lista = manager.list()
+# Create a process to manage all processes, a list to store all of them and a Condition to control the list
+work_process = False
+lista = Manager().list()
+condition = Condition()
 
-# Function to execute the processes
+# Function to manage the list with all the processes
 def worker():
-    current_process = None
     while True:
-            if len(lista) > 0 and (current_process is None or not current_process.is_alive()):
-                current_process = Process(target=main, args=lista[0])
-                current_process.start()
-                current_process.join() # Wait for the process to finish
-                lista.pop(0)
-            time.sleep(2)
+        with condition:
+            while not lista:
+                condition.wait()  # if the list is empty, wait for a notification
+            current_process = Process(target=main, args=lista[0])
+            current_process.start()
+            current_process.join()  # Wait for the process to finish
+            lista.pop(0)
 
 callframework = Blueprint("callframework", __name__)
 
@@ -28,7 +28,7 @@ callframework = Blueprint("callframework", __name__)
 @callframework.route('/execute', methods=['POST'])
 @token_required
 def call_framework_process(current_user):
-    global worker_proce # Define the worker_proce as global
+    global work_process
     
     data = request.get_json()
 
@@ -117,21 +117,22 @@ def call_framework_process(current_user):
         if not database.update_begin_campaign_state(campaign_id,"executing",datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
             return abort("Couldnt update state campaign!", 422)
         
-        # Check the user option to use queue to manage the Campaigns
-        # Without Manager
-        if int(os.environ['USEQUEUE']) == 0:
+        # Without QUEUE
+        if 'USEQUEUE' not in os.environ or int(os.environ['USEQUEUE']) == 0:
             p = Process(target=main, args=(dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
             p.start()
             return make_response({'message': f'Started execution for campaign {campaign_id}'}, 200, {'Content-Type': 'application/json'})
-        # With Manager
+        # With QUEUE
         else:
-            # Start the worker_proce as a separate process to manage the list with all the processes
-            if worker_proce is False:
-                worker_proce = Process(target=worker)
-                worker_proce.start()
+            # Start the work_process if it is not running
+            if work_process is False:
+                work_process = Process(target=worker)
+                work_process.start()
 
-            # Add the new process to the list
-            lista.append((dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
+            # Add the new process to the list with a condition to notify the work_process
+            with condition:
+                lista.append((dicio_configuration, campaign_database, files, executions, campaign_target, fault_injector_target, parameters, user_components))
+                condition.notify() 
 
             if len(lista) == 1:
                 return make_response({'message': f'Started execution for campaign {campaign_id}'}, 200, {'Content-Type': 'application/json'})
