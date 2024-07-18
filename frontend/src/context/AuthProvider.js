@@ -24,11 +24,13 @@ export const AuthProvider = ({ children }) => {
   function deleteInfoInLocalStorage() {
     localStorage.removeItem("token");
     localStorage.removeItem("public_id");
-    localStorage.removeItem('pageNumber');
-    localStorage.removeItem('pageSize');
-    localStorage.removeItem('Copied');
+    localStorage.removeItem("pageNumber");
+    localStorage.removeItem("pageSize");
+    localStorage.removeItem("Copied");
     localStorage.removeItem("User");
     localStorage.removeItem("toggleValue");
+    localStorage.removeItem("Suggestion_Values");
+    localStorage.removeItem("archiveValue");
   }
 
   function isAuthenticated() {

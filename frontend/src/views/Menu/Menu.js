@@ -27,9 +27,10 @@ import {
   CAccordionHeader,
   CAccordionBody,
   CAccordion,
+  CFormCheck,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash, cilCopy } from "@coreui/icons";
+import { cilWarning, cilChart, cilMagnifyingGlass, cilTrash, cilCopy, cilFolderOpen, cilFolder } from "@coreui/icons";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import API_Campaign from "../../utils/api/API_Campaign";
 
@@ -59,13 +60,14 @@ const Menu = () => {
   }, [toggleValue]);
 
   // Function to handle sort and order changes
-  const handleSortOrderChange = (newToggleValue) => {
+  const handleSort = (newToggleValue) => {
     setToggleValue(newToggleValue);
     filterCallAPI(
       document.getElementById("searchbar").value,
       page,
       itemsPage,
-      newToggleValue
+      newToggleValue,
+      archiveValue
     );
   };
        
@@ -88,6 +90,17 @@ const Menu = () => {
   useEffect(() => {
     localStorage.setItem('pageSize', itemsPage.toString());
   }, [itemsPage]);
+
+    // Toggle Value for Archived Campaigns
+    const [archiveValue, setarchiveValue] = useState(() => { 
+      const storedarchiveValue = localStorage.getItem('archiveValue');
+      return storedarchiveValue ? parseInt(storedarchiveValue, 10) : 0;
+    }); 
+  
+    useEffect(() => {
+      localStorage.setItem('archiveValue', archiveValue.toString());
+      handleGetCampaignsList();
+    }, [archiveValue]);
 
   useEffect(() => {
     if (logout === true) {
@@ -121,7 +134,8 @@ const Menu = () => {
       document.getElementById("searchbar").value,
       page - 1,
       itemsPage,
-      toggleValue
+      toggleValue,
+      archiveValue
     );
   };
 
@@ -132,7 +146,8 @@ const Menu = () => {
       document.getElementById("searchbar").value,
       page + 1,
       itemsPage,
-      toggleValue
+      toggleValue,
+      archiveValue
     );
   };
 
@@ -152,13 +167,14 @@ const Menu = () => {
         document.getElementById("searchbar").value,
         aux,
         value,
-        toggleValue
+        toggleValue,
+        archiveValue
       );
     }
   };
 
   const handleSearchBar = () => {
-    filterCallAPI(document.getElementById("searchbar").value, page, itemsPage, toggleValue);
+    filterCallAPI(document.getElementById("searchbar").value, page, itemsPage, toggleValue, archiveValue);
   };
 
   const handleKeyPress = (e) => {
@@ -167,14 +183,15 @@ const Menu = () => {
         document.getElementById("searchbar").value,
         page,
         itemsPage,
-        toggleValue
+        toggleValue,
+        archiveValue
       );
     }
   };
 
-  function filterCallAPI(searchbartext, page, pagesize, toggleValue) {
+  function filterCallAPI(searchbartext, page, pagesize, toggleValue,archiveValue) {
     API_Generic(setLogout, addAlert).genericCall(
-      create_url(searchbartext, page, pagesize, toggleValue),
+      create_url(searchbartext, page, pagesize, toggleValue,archiveValue),
       API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
       false,
       sort_array,
@@ -190,11 +207,8 @@ const Menu = () => {
     for (let index = 0; index < len; index++) {
       novo_array[novo_index] = { "campaignName" : campaignsMenu[index]["campaignName"] };
       if (index === len - 1) {
-        if (campaignsMenu[index]["hasfault"] === 1)
-          novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
-        else{
-          novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
-        }   
+        if (campaignsMenu[index]["hasfault"] === 1) novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
+        else novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]}; 
       }
       else{
         if(campaignsMenu[index]["idcampaign"] === campaignsMenu[index+1]["idcampaign"]){
@@ -208,11 +222,8 @@ const Menu = () => {
           }
         }
         else{
-          if (campaignsMenu[index]["hasfault"] === 1)
-            novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
-          else{
-            novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
-          }
+          if (campaignsMenu[index]["hasfault"] === 1) novo_array[novo_index++]["type"] = {"faulty":campaignsMenu[index]};
+          else novo_array[novo_index++]["type"] = {"golden":campaignsMenu[index]};
         }
       }
     }
@@ -222,7 +233,7 @@ const Menu = () => {
   // Handles the campaigns displayed
   const handleGetCampaignsList =() =>  {
   API_Generic(setLogout, addAlert).genericCall(
-    create_url(document.getElementById("searchbar").value,page,itemsPage,toggleValue),
+    create_url(document.getElementById("searchbar").value,page,itemsPage,toggleValue,archiveValue),
     API_Generic(setLogout, addAlert).requestOptions("GET", token, null),
     false,
     sort_array,
@@ -243,7 +254,7 @@ const Menu = () => {
     );
   };
 
-  function create_url(searchbartext, page, pagesize, toggleValue) {
+  function create_url(searchbartext, page, pagesize, toggleValue,archiveValue) {
     let url =
       "/campaigns" +
       "?page=" +
@@ -253,7 +264,9 @@ const Menu = () => {
       "&searchbar=" +
       searchbartext +
       "&toggleValue=" +
-      toggleValue;
+      toggleValue +
+      "&archiveValue=" +
+      archiveValue;
     return url;
   }
 
@@ -263,7 +276,7 @@ const Menu = () => {
   }
 
   // Function that Copies to clipboard information about a specific Campaign
-  const copy_clipboard = (id_campaign) => {
+  const handleCopyCampaign = (id_campaign) => {
     API_Campaign(setLogout, addAlert).get_campaign(
       id_campaign,
       token,
@@ -272,6 +285,17 @@ const Menu = () => {
       null,
     );
   }
+
+  // Function that Archives or Unarchives a campaign
+  const handleArchiveCampaign = (campaignId) => {
+    API_Campaign(setLogout, addAlert).archiveCampaign(
+      campaignId,
+      token,
+      null,
+      null,
+      handleGetCampaignsList,
+    );
+  };
 
   // Function that renders a single row (if number = 2, it will render rows for accordion)
   function render(tipo,object,key,number){
@@ -331,8 +355,16 @@ const Menu = () => {
         <CButton
           color="info"
           variant="ghost"
-          onClick={(e) => copy_clipboard(object["type"][tipo]["idcampaign"])}>
+          onClick={(e) => handleCopyCampaign(object["type"][tipo]["idcampaign"])}>
           <CIcon icon={cilCopy} size="lg" className="text-primary" />
+        </CButton>
+      </CTableDataCell>
+      <CTableDataCell>
+        <CButton
+          color="info"
+          variant="ghost"
+          onClick={(e) => handleArchiveCampaign(object["type"][tipo]["idcampaign"])}>
+          <CIcon icon={archiveValue === 0 ? cilFolder : cilFolderOpen} size="lg" className="text-primary" />
         </CButton>
       </CTableDataCell>
     </CTableRow>
@@ -342,11 +374,11 @@ const Menu = () => {
 function render_accordion(object,key){
   return(
     <CTableRow>
-      <CTableDataCell colSpan={9}>
+      <CTableDataCell colSpan={10}>
         <CAccordion><style>{`.accordion-button::after{background-image:initial;}.accordion-button:not(.collapsed)::after{background-image:initial;}`}</style>
           <CAccordionItem>
             <CAccordionHeader>
-              <CTable colSpan={9}>
+              <CTable colSpan={10}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <CTableHeaderCell>{object["type"]["golden"]["campaignName"]}</CTableHeaderCell>
                   <CTableDataCell></CTableDataCell>
@@ -393,6 +425,7 @@ function render_accordion(object,key){
                     </CTableHeaderCell>
                     <CTableHeaderCell scope="col"></CTableHeaderCell>
                     <CTableHeaderCell scope="col"></CTableHeaderCell>
+                    <CTableHeaderCell scope="col"></CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
@@ -406,7 +439,7 @@ function render_accordion(object,key){
       </CTableDataCell>
     </CTableRow>
   )}
-  
+
   return (
     <>
       <CContainer>
@@ -429,7 +462,7 @@ function render_accordion(object,key){
             <CCard>
               <CCardBody>
                 <CRow>
-                  <CCol xs={8} sm={4} md={6} lg={7} xl={5}>
+                  <CCol xs={8} sm={4} md={6} lg={7} xl={2}>
                     <CButton
                       color="primary"
                       onClick={(e) => handleChangePage("/campaign/setup", e)}
@@ -437,9 +470,18 @@ function render_accordion(object,key){
                       New campaign
                     </CButton>
                   </CCol>
+                  <CCol xl={3} style={{ textAlign: 'right' }}>
+                    <CFormCheck button={{ color: 'primary', variant: 'outline' }} 
+                                id="btn-check-2-outlined" 
+                                label="Archived Campaigns" 
+                                onChange={(e) => {
+                                  setarchiveValue(e.target.checked ? 1 : 0);
+                                }}
+                                checked={archiveValue === 1}/>
+                  </CCol>
                   <CCol xl= {3}>
                     <CFormSelect 
-                      onChange = {(e) => handleSortOrderChange(e.target.value)}
+                      onChange = {(e) => handleSort(e.target.value)}
                       value={toggleValue}
                       options={[
                       { label: "Start date: Oldest to Newest", value: "0" },
@@ -509,6 +551,7 @@ function render_accordion(object,key){
                             </CTableHeaderCell>
                             <CTableHeaderCell scope="col"></CTableHeaderCell>
                             <CTableHeaderCell scope="col"></CTableHeaderCell>
+                            <CTableHeaderCell scope="col"></CTableHeaderCell>
                           </CTableRow>
                         </CTableHead>
                         <CTableBody>
@@ -522,7 +565,23 @@ function render_accordion(object,key){
                         </CTableBody>
                       </CTable>
                     ) : (
-                      <h3>No campaigns created</h3>
+                      document.getElementById("searchbar")?.value !== "" ? (
+                        archiveValue === 1 ? (
+                          <h3>Archived Campaign containing "{document.getElementById("searchbar")?.value}" in Name or Stardate was not found</h3>
+                        ) : (
+                          <h3>Campaign containing "{document.getElementById("searchbar")?.value}" in Name or Stardate was not found</h3>
+                        )
+                      ) : (
+                        archiveValue === 1 ? (
+                          <h3>No Archived Campaigns</h3>
+                        ) : (
+                          totalCount === 0 ? (
+                            <h3>No Campaigns Created</h3>
+                          ) : (
+                            null
+                          )
+                        )
+                      )
                     )}
                   </CCol>
                 </CRow>

@@ -21,7 +21,7 @@ import {
   CPopover,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-import { cilWarning, cilInfo } from "@coreui/icons";
+import { cilWarning, cilInfo, cilSync } from "@coreui/icons";
 import "@coreui/coreui/dist/css/coreui.min.css";
 
 const CampaignSetup = () => {
@@ -45,8 +45,11 @@ const CampaignSetup = () => {
   const [campaignsApiData, setApiCampaignsData] = useState();
   const [campaignType, setCampaignType] = useState("");
 
-  // Head of Campaign Information copied from local Storage
-  const head = JSON.parse(localStorage.getItem("Copied"));
+  // Head of Campaign Information copied from local Storage and for suggestion values
+  const head_copy = JSON.parse(localStorage.getItem("Copied"));
+  const head_suggestion = JSON.parse(localStorage.getItem("Suggestion_Values"));
+
+  const[allow_simulation, setAllowSimulation] = useState(false);
 
   useEffect(() => {
     if (logout === true) {
@@ -80,7 +83,7 @@ const CampaignSetup = () => {
   // Function used to set first campaign type
   function setFirstCampaignType(values) {
     if (values) {
-      setCampaignType((null != head) ? (head["Campaign_Type"]):(values[0]["campaign_name"]));
+      setCampaignType((null != head_copy) ? (head_copy["Campaign_Type"]):(values[0]["campaign_name"]));
     }
     return values;
   }
@@ -152,29 +155,50 @@ const CampaignSetup = () => {
     setValidated(true);
   };
 
-  // Function that will replace app_input / f_min / f_max / watchdog_dur depending if there is Copied information on localStorage
-  function function_campaignsApiData(name,array){
+  // Function that will replace app_input / f_min / f_max / watchdog_dur depending if there is Copied information on localStorage 
+  // or replace f_min / f_max if there are suggestion values from the API
+  function function_campaignsApiData(CampaignType,array){
     if (array != null){
       for(let i = 0; i < array.length; i++){
-        if (array[i]["campaign_name"] === name && head != null){
-          array[i]["parameters"]["app_input"]["default"] = head["app_input"]
-          array[i]["parameters"]["fi_max"]["default"] = head["fi_max"]
-          array[i]["parameters"]["fi_min"]["default"] = head["fi_min"]
-          array[i]["parameters"]["watchdog_dur"]["default"] = head["watchdog_dur"]
+        // Copy Functionality
+        if (array[i]["campaign_name"] === CampaignType && head_copy !== null){
+          array[i]["parameters"]["app_input"]["default"] = head_copy["app_input"];
+          array[i]["parameters"]["fi_max"]["default"] = head_copy["fi_max"];
+          array[i]["parameters"]["fi_min"]["default"] = head_copy["fi_min"];
+          array[i]["parameters"]["watchdog_dur"]["default"] = head_copy["watchdog_dur"];
+          break;
+        }
+        // Suggestion Functionality
+        else if (array[i]["campaign_name"] === CampaignType && head_suggestion !== null){
+          array[i]["parameters"]["fi_max"]["default"] = head_suggestion["fi_max"];
+          array[i]["parameters"]["fi_min"]["default"] = head_suggestion["fi_min"];
+          array[i]["parameters"]["app_input"]["default"] = head_suggestion["app_input"];
+          break;
         }
       }
     }
     return array
   } 
 
-  // Exibes a message if there is anything in copied in LocalStorage
-  useEffect(() => {
-    if ( head != null)
-      addAlert("To delete the copied values, click on the 'Home' icon", "warning", cilWarning);
-    return () => {
-      setAlert({});
-    }
-  }, []);
+  // Function that will send : file, campaign type and app_input to the API
+  function handle_suggestion_run(){
+    setAllowSimulation(true);
+    const formData = new FormData();
+    formData.append("campaign_type", campaignType);
+    formData.append("app_input", document.getElementById("app_input").value);
+    formData.append("file", document.getElementById("app_path").files[0]);
+    addAlert("Simulation Run - Starting Simulation Runs [Please Wait]", "warning", cilWarning);
+    API_Campaign(setLogout, addAlert).sendCampaignFormData(token,formData,null,message => {localStorage.setItem("Suggestion_Values", JSON.stringify(message))
+                                                                                          setTimeout(() => {window.location.reload();}, 1500);
+                                                                                          }, null);
+    };
+
+  // Exibes a message if there is anything in copied or in suggestion in LocalStorage
+  useEffect(() => { 
+    if ( head_copy != null) addAlert("To delete the copied values, click on the 'Home' icon", "warning", cilWarning);
+    else if ( head_suggestion != null) addAlert("To delete the suggestion values, click on the 'Home' icon", "warning", cilWarning);
+    return () => {setAlert({});
+  }}, []);
 
   return (
     <>
@@ -238,7 +262,7 @@ const CampaignSetup = () => {
                       true,
                       1,
                       20,
-                      (head != null) ? (head["Project_Name"]):(""),
+                      (head_copy !== null) ? (head_copy["Project_Name"]):(""),
                       "",
                       null,
                       true,
@@ -254,7 +278,7 @@ const CampaignSetup = () => {
                       false,
                       1,
                       100,
-                      (head != null) ? (head["Fault_Injector_Path"]):(""),
+                      (head_copy != null) ? (head_copy["Fault_Injector_Path"]):(""),
                       "",
                       null,
                       false,
@@ -298,7 +322,7 @@ const CampaignSetup = () => {
                                         ) : null}
                                       </CCol>
                                     </CRow>
-                                    {(head==null)? (
+                                    {(head_copy===null)? (
                                       <CFormInput
                                         type="file"
                                         name={folder[0]}
@@ -316,11 +340,11 @@ const CampaignSetup = () => {
                                       1,
                                       100,
                                       "",
-                                      (head != null) ? (`File Copied from campaign with id: ${head['id']}`):("File path for " + folder[0] + " (case user do not upload file)"),
+                                      (head_copy !== null) ? (`File Copied from campaign with id: ${head_copy['id']}`):("File path for " + folder[0] + " (case user do not upload file)"),
                                       null,
                                       false,
                                       "Project must have a file path!",
-                                      (head != null) ? (true):(false)
+                                      (head_copy !== null) ? (true):(false)
                                     )}
                                   </div>
                                 )
@@ -343,11 +367,21 @@ const CampaignSetup = () => {
                     campaignData={function_campaignsApiData(campaignType,campaignsApiData)}
                     campaignType={campaignType}
                   />
+                  <CRow>
+                    <CCol sm={4} style={{ display: 'flex', alignItems: 'center' }}>
+                      <h6 style={{ margin: 0 }}>Calculate Times</h6>
+                    </CCol>
+                    <CCol sm={1} style={{ display: 'flex', alignItems: 'center' }}>
+                      <CButton color="info" variant="ghost" style={{ margin: 0 }} onClick={handle_suggestion_run} disabled={head_copy !== null || head_suggestion !== null || allow_simulation}>
+                        <CIcon icon={cilSync} size="lg" className="text-primary"/>
+                      </CButton>
+                    </CCol>
+                  </CRow>
                 </CCardBody>
               </CCard>
             </CCol>
           </CRow>
-          <input type='hidden' id='Cloned_Campaign' name='Cloned_Campaign' value={(head!=null) ? (head['id']) : (-1) }></input>
+          <input type='hidden' id='Cloned_Campaign' name='Cloned_Campaign' value={(head_copy!=null) ? (head_copy['id']) : (-1) }></input>
           <CCol xs={12} className="text-center">
             <CButton color="primary" type="submit">
               Create campaign

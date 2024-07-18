@@ -127,10 +127,10 @@ def get_campaign_user(current_user):
         return abort('Parameters must match the required type', 400)
     
     #Gets Campaigns Filtered and Gets SearchBar
-    campaings = database.get_campaigns(current_user["id"], args.get("searchbar"), args.get("page") , args.get("page_size"), args.get("toggleValue"))
+    campaings = database.get_campaigns(current_user["id"], args.get("searchbar"), args.get("page") , args.get("page_size"), args.get("toggleValue"),args.get("archiveValue"))
     
     #Gets Total number of campaigns
-    total = database.get_total(current_user["id"],args.get("searchbar"))
+    total = database.get_total(current_user["id"],args.get("searchbar"),args.get("archiveValue"))
 
     if campaings == False or total == False:
         return abort('Unexpected error!', 500)
