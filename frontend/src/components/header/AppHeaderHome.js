@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const handleClick = () => {
   localStorage.removeItem("Copied");
+  localStorage.removeItem("Suggestion_Values");
 };
 
 const AppHeaderHome = () => {

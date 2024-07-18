@@ -1,9 +1,6 @@
 import sqlite3
 from api.script_tables import return_script
-import os
-import errno
-import pickle
-import base64
+import os, errno, pickle
 
 DATABASE_NAME = "ucxception.db"
 DIRECTORY = "database" 
@@ -100,7 +97,7 @@ def verify_campaign_belong_user(campaign_id, user_id):
     return generic_access(statement, parameters_list)
 
 def verify_campaign_belong_user_returnable(campaign_id, user_id):
-    statement = "SELECT idcampaign, type, name, csvfilename, campaigntarget, faultinjectortarget FROM campaign WHERE idcampaign = ? AND user_iduser = ?;"
+    statement = "SELECT idcampaign, type, name, csvfilename, campaigntarget, faultinjectortarget, archived FROM campaign WHERE idcampaign = ? AND user_iduser = ?;"
     parameters_list = [campaign_id, user_id]
     return retrieve_generic_access(statement, parameters_list, True)
 
@@ -165,22 +162,32 @@ def create_campaign(project_name, campaign_type, fipath, iduser):
         conn.close()
     return idcampaign
 
-#Gets Total number of campaigns
-def get_total(iduser,searchbar):
+# Gets Total number of campaigns
+def get_total(iduser,searchbar, archiveValue):
     parameters_list = [iduser]
     statement = "SELECT COUNT(DISTINCT idcampaign) AS Total FROM campaign WHERE user_iduser = ? AND state != 'waiting' "
+    statement += "AND startdate IS NOT NULL AND campaigntarget IS NOT NULL AND faultinjectortarget IS NOT NULL " # Added to prevent to prevent simulation runs from being counted
+    # Archive
+    if archiveValue == '1': statement += "AND archived = True "
+    else : statement += "AND archived = False "
+
     if searchbar:
         statement += "AND (name LIKE ? OR startdate LIKE ?)"
         parameters_list.append("%"+searchbar+"%")
         parameters_list.append("%"+searchbar+"%")
     return retrieve_generic_access(statement, parameters_list, True)
 
-#Gets Campaigns Filtered and Gets SearchBar
-def get_campaigns(iduser, searchbar, currentpage, numberelements, toggleValue):
+# Gets Campaigns Filtered and Gets SearchBar
+def get_campaigns(iduser, searchbar, currentpage, numberelements, toggleValue, archiveValue):
     
     parameters_list = [iduser]
     statement = "SELECT idcampaign FROM campaign WHERE user_iduser = ? AND state != 'waiting' "
-    
+    statement += "AND startdate IS NOT NULL AND campaigntarget IS NOT NULL AND faultinjectortarget IS NOT NULL " # Added to prevent to prevent simulation runs from being displayed
+   
+    # Archive
+    if archiveValue == '1': statement += "AND archived = True "
+    else : statement += "AND archived = False "
+
     # SearchBar
     if searchbar:
         statement += "AND (name LIKE ? OR startdate LIKE ?) "
@@ -261,6 +268,15 @@ def update_begin_campaign_state(idcampaign, state, datetime):
 def update_end_campaign_state(idcampaign, state, datetime):
     statement = "UPDATE campaign SET state = ?, enddate = ? WHERE idcampaign = ?;"
     parameters_list = [state, datetime, idcampaign]
+    return generic_access(statement, parameters_list)
+
+# Function that will archive a Campaign
+def archive_campaign(idcampaign, archive):
+    if archive == 0: 
+        statement = "UPDATE campaign SET archived = TRUE WHERE idcampaign = ?;"
+    else: 
+        statement = "UPDATE campaign SET archived = FALSE WHERE idcampaign = ?;"
+    parameters_list = [idcampaign]
     return generic_access(statement, parameters_list)
 
 #FILES
@@ -427,7 +443,7 @@ def get_component_host(idcomponent):
     return retrieve_generic_access(statement, parameters_list, False)
 
 # Function that will copy all information of a single campaign 
-def COPY_CAMPAIGN(idcampaign,userid):
+def copy_campaign(idcampaign,userid):
     campaign_info = get_campaign(idcampaign)
     executions = get_executions(idcampaign)
     parametros = get_campaign_parameters(idcampaign)

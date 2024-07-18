@@ -78,10 +78,52 @@ export default function API_Campaign(setLogout, addAlert) {
     );
   }
 
+  // Function that sends the form data (app_input, campaign_type and file) to run a suggestion campaign
+  function sendCampaignFormData(
+    token, 
+    formData, 
+    setObject, 
+    processing_function, 
+    post_function
+  ) {
+    const requestOptions = {
+      method: "POST",
+      headers: { Authentication: token },
+      body: formData,
+    };
+    API_Generic(setLogout, addAlert).genericCall(
+      "/campaign/setup/suggestion_run",
+      requestOptions,
+      true,
+      setObject,
+      processing_function,
+      post_function
+    );
+  }
+
+  function archiveCampaign(
+    id,
+    token,
+    setObject,
+    processing_function,
+    post_function
+  ) {
+    API_Generic(setLogout, addAlert).genericCall(
+      "/campaigns/archive/" + id,
+      API_Generic(setLogout, addAlert).requestOptions("PUT", token, null),
+      true,
+      setObject,
+      processing_function,
+      post_function
+    );
+  }
+
   return {
     getCampaignsData,
     sendUserCampaign,
     deleteCampaign,
     get_campaign,
+    sendCampaignFormData,
+    archiveCampaign,
   };
 }

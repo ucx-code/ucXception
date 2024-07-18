@@ -21,6 +21,7 @@ def return_script():
 			campaigntarget	 INTEGER,
 			faultinjectortarget INTEGER,
 			user_iduser INTEGER NOT NULL,
+			archived BOOLEAN NOT NULL DEFAULT FALSE,
 			PRIMARY KEY(idcampaign),
 			FOREIGN KEY (user_iduser) REFERENCES user(iduser)
 		);""",
