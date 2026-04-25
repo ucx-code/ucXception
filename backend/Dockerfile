@@ -2,7 +2,7 @@
 FROM ubuntu:18.04
 # install packages
 RUN apt-get update && \
-    apt-get install -y python3.8 python3-pip python3.8-dev ssh rsync
+    apt-get install -y python3.8 python3-pip python3.8-dev ssh rsync openjdk-17-jdk
 # set working direction
 WORKDIR /app
 # copy files
