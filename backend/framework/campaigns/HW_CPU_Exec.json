@@ -40,5 +40,5 @@
 			"information_help": "Last moment until when fault can be injected (in ms)"
 		}
 	},
-	"information_help": "Example campaign for the VALU3S Summer School. Injects bit-flips in CPU registers."
+	"information_help": "Campaign for compiled C/C++ code. Injects bit-flips in CPU registers."
 }

@@ -1,7 +1,7 @@
 {
-	"campaign_name": "Hardware faults in CPU registers for Python",
-	"campaign_file_name": "HW_CPU_Python.py",
-	"campaign_class_name": "HW_CPU_Python",
+	"campaign_name": "Hardware faults in CPU registers for Java",
+	"campaign_file_name": "HW_CPU_Java.py",
+	"campaign_class_name": "HW_CPU_Java",
 	"configuration": {
 		"app_path" : {
 			"name": "App path",
@@ -40,5 +40,5 @@
 			"information_help": "Last moment until when fault can be injected (in ms)"
 		}
 	},
-	"information_help": "Campaign for Python applications. Injects bit-flips in CPU registers."
+	"information_help": "Campaign for Java applications. Injects bit-flips in CPU registers."
 }
