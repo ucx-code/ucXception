@@ -3,9 +3,6 @@ import framework.core.watchdog as watchdog
 from framework.core.eval_it import Eval_It
 from framework.core.ssh_config import *
 
-from framework.preprobes import probe_sar
-from framework.postprobes import probe_pidstat
-
 from framework.parsers.ucXception_fi_parser import *
 
 import time

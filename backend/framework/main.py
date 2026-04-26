@@ -3,7 +3,6 @@ from framework.conf.current import *
 import framework.core.io as io
 from framework.parsers.info_parser import *
 from framework.core.ssh_config import *
-from framework.transformers.sar_to_csv import Sar_to_CSV
 import api.database as database
 
 # General imports
@@ -52,7 +51,8 @@ def read_extract_zip(campaign_path, files, configuration, class_):
 								if "regex" in configuration[upload_file["name"]]:
 									if(validate_file(configuration[upload_file["name"]]["regex"], name)):
 										setattr(class_, upload_file["name"], str(outfile))
-							
+									else:
+										logger.warn(f"Failed filename validation for: % (regex %s)", name, configuration[upload_file["name"]]["regex"])
 								fh = os.open(outfile, os.O_CREAT | os.O_WRONLY, perm)
 								os.write(fh, zip_ref.read(name))
 								os.close(fh)
