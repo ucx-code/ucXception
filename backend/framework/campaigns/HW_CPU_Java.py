@@ -4,23 +4,7 @@ from framework.core.eval_it import Eval_It
 
 from framework.core.ssh_config import *
 
-from framework.preprobes.probe_sar import Probe_Sar
-from framework.postprobes.probe_pidstat import Probe_Pidstat
-
-from framework.validators.ensure_injection import Ensure_Injection
-
 from framework.fi import hw_fi
-
-from framework.transformers.sar_to_csv import Sar_to_CSV
-from framework.transformers.save_output import Save_Output
-from framework.transformers.pidstat_to_csv import Pidstat_to_CSV
-from framework.transformers.save_output import Save_Output
-
-from framework.parsers.ucXception_fi_parser import *
-from framework.parsers.current_folder import Current_Folder
-from framework.parsers.app_returncode import App_Returncode
-from framework.parsers.app_output_md5 import App_Output_Md5
-
 from framework.campaigns.base_campaign import Base_Campaign
 
 import time
@@ -126,10 +110,10 @@ class HW_CPU_Java(Base_Campaign):
         self._start_clock()
         self.run_folder = os.path.dirname(self.app_path)
         self.class_name = os.path.basename(self.app_path).split(".")[0]
-        if not os.path.exists(self.app_path +".java"):
-            os.rename(self.app_path, self.app_path + ".java") # Add .java extension
+        if not os.path.exists(self.run_folder +self.class_name +".class"):
+            #os.rename(self.app_path, self.app_path + ".java") # Add .java extension
             # Compile with javac
-            utils.run_anywhere(self.target, "javac", self.app_path + ".java", True, True, False)
+            utils.run_anywhere(self.target, "javac", self.app_path, True, True, False)
         self.p = utils.run_anywhere(self.target, "java", "-cp " + self.run_folder + " " + self.class_name + " " + self.app_input, True, True, True)
         self._stop_clock("launch")
 
