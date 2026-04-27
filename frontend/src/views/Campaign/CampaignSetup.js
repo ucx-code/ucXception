@@ -245,7 +245,7 @@ const CampaignSetup = () => {
                       "Project must have a name!"
                     )}
 
-                    {CreateFields().createInputText(
+                    {/*{CreateFields().createInputText(
                       2,
                       "8",
                       "Fault Injector path",
@@ -259,7 +259,7 @@ const CampaignSetup = () => {
                       null,
                       false,
                       "Project must have a fi!"
-                    )}
+                    )}*/}
 
                     {campaignsApiData !== undefined &&
                     campaignsApiData.length > 0
@@ -306,7 +306,7 @@ const CampaignSetup = () => {
                                         accept=".zip"
                                       />
                                     ) : null}
-                                    {CreateFields().createInputText(
+                                    {/*{CreateFields().createInputText(
                                       2,
                                       "12",
                                       "",
@@ -321,7 +321,7 @@ const CampaignSetup = () => {
                                       false,
                                       "Project must have a file path!",
                                       (head != null) ? (true):(false)
-                                    )}
+                                    )}*/}
                                   </div>
                                 )
                               )

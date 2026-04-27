@@ -357,14 +357,14 @@ const CampaignExecution = () => {
                             defaultChecked
                             onClick={(e) => handleChangeHostType(e, false)}
                           />
-                          <CFormCheck
+                          {/*<CFormCheck
                             type="radio"
                             name="gridRadios"
                             id="gridRadios2"
                             value="remote"
                             label="Remote host"
                             onClick={(e) => handleChangeHostType(e, true)}
-                          />
+                          />*/}
                         </CCol>
                       </fieldset>
 
@@ -375,12 +375,14 @@ const CampaignExecution = () => {
                           name="campaign_target"
                           id="campaign_target"
                           value={true}
+			defaultChecked
                         />
                         <CFormSwitch
                           label="Fault injector target"
                           name="fault_injector_target"
                           id="fault_injector_target"
                           value={true}
+defaultChecked
                         />
                       </CFormLabel>
 
