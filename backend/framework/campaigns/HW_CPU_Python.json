@@ -5,7 +5,7 @@
 	"configuration": {
 		"app_path" : {
 			"name": "App path",
-			"regex" : "^[a-zA-Z0-9_ -]+\\.java$",
+			"regex" : "^[a-zA-Z0-9_ -]+\\.py$",
 			"require": true,
 			"information_help": "Upload Python file inside ZIP file of the same name"
 		}
