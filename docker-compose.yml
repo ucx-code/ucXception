@@ -1,6 +1,8 @@
 version: "3.3"
 services:
    backend:
+      cap_add:
+         - SYS_PTRACE
       image: "ucxcode/ucxception:backend"
       ports:
          - "8080:5000"
